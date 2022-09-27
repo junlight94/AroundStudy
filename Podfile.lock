@@ -1,0 +1,42 @@
+PODS:
+  - Alamofire (5.6.2)
+  - FSCalendar (2.8.4)
+  - Kingfisher (7.3.2)
+  - Mantis (2.1.1)
+  - Realm (10.30.0):
+    - Realm/Headers (= 10.30.0)
+  - Realm/Headers (10.30.0)
+  - RealmSwift (10.30.0):
+    - Realm (= 10.30.0)
+  - SnapKit (5.6.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - FSCalendar
+  - Kingfisher
+  - Mantis
+  - RealmSwift
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - FSCalendar
+    - Kingfisher
+    - Mantis
+    - Realm
+    - RealmSwift
+    - SnapKit
+
+SPEC CHECKSUMS:
+  Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
+  FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
+  Kingfisher: 0086ad83719761ba9b2cdaf6ef4d5b4878cbae23
+  Mantis: 2ff1333b395b546a137be302e1deb98bf48f1cdc
+  Realm: 247ccacf72e656c6ee09b242f7d24d5cf99cc058
+  RealmSwift: b3f5c52afa6ac480bd9c3e791c2576f55b3ecb44
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+
+PODFILE CHECKSUM: 62f7190d050454f2c6b2e914cd450ca7c5d157a2
+
+COCOAPODS: 1.11.3
