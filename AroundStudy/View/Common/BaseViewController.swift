@@ -5,4 +5,8 @@
 //  Created by Junyoung on 2022/09/27.
 //
 
-import Foundation
+import UIKit
+
+class BaseViewController: UIViewController {
+    
+}
