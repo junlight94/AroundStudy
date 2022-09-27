@@ -27,6 +27,7 @@
 		088A62D228E32B8D00442E6C /* Nofile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nofile.swift; sourceTree = "<group>"; };
 		132B1B51ED5CA8B98EE79822 /* Pods_AroundStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AroundStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82395ECBC730C264D56A62EC /* Pods-AroundStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundStudy.release.xcconfig"; path = "Target Support Files/Pods-AroundStudy/Pods-AroundStudy.release.xcconfig"; sourceTree = "<group>"; };
+		DF56234E28E3322000A00258 /* AroundStudy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AroundStudy.entitlements; sourceTree = "<group>"; };
 		DFE0373228E27B5B00BE9E35 /* AroundStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AroundStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE0373528E27B5B00BE9E35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFE0373928E27B5B00BE9E35 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +151,7 @@
 		DFE0373428E27B5B00BE9E35 /* AroundStudy */ = {
 			isa = PBXGroup;
 			children = (
+				DF56234E28E3322000A00258 /* AroundStudy.entitlements */,
 				088A62C428E3199D00442E6C /* Util */,
 				088A62C328E3198900442E6C /* Resource */,
 				088A62C128E3197300442E6C /* Model */,
@@ -430,6 +432,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AroundStudy/AroundStudy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W4V6WYCP8W;
@@ -460,6 +463,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AroundStudy/AroundStudy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W4V6WYCP8W;
