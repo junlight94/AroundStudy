@@ -18,6 +18,7 @@
 		08DC523928E478D700B058ED /* RootTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC523728E478D700B058ED /* RootTabViewController.swift */; };
 		08DC523A28E478D700B058ED /* RootTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DC523828E478D700B058ED /* RootTabViewController.xib */; };
 		CC7CC9DA10D494D83221F8DF /* Pods_AroundStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 132B1B51ED5CA8B98EE79822 /* Pods_AroundStudy.framework */; };
+		DF7B4C5628E47C350031B56B /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7B4C5528E47C350031B56B /* Authorization.swift */; };
 		DFE0373628E27B5B00BE9E35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE0373528E27B5B00BE9E35 /* AppDelegate.swift */; };
 		DFE0373A28E27B5B00BE9E35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE0373928E27B5B00BE9E35 /* ViewController.swift */; };
 		DFE0373D28E27B5B00BE9E35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE0373B28E27B5B00BE9E35 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 		132B1B51ED5CA8B98EE79822 /* Pods_AroundStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AroundStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82395ECBC730C264D56A62EC /* Pods-AroundStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundStudy.release.xcconfig"; path = "Target Support Files/Pods-AroundStudy/Pods-AroundStudy.release.xcconfig"; sourceTree = "<group>"; };
 		DF56234E28E3322000A00258 /* AroundStudy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AroundStudy.entitlements; sourceTree = "<group>"; };
+		DF7B4C5528E47C350031B56B /* Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
 		DFE0373228E27B5B00BE9E35 /* AroundStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AroundStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE0373528E27B5B00BE9E35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFE0373928E27B5B00BE9E35 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				088A62C928E31A7F00442E6C /* Extension */,
 				08DC522E28E4662B00B058ED /* Delegate.swift */,
 				08DC523028E4663B00B058ED /* DataManager.swift */,
+				DF7B4C5528E47C350031B56B /* Authorization.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				088A62D328E32B8D00442E6C /* Nofile.swift in Sources */,
 				08DC523528E467CE00B058ED /* LoginDto.swift in Sources */,
 				088A62CF28E32B5500442E6C /* APIManager.swift in Sources */,
+				DF7B4C5628E47C350031B56B /* Authorization.swift in Sources */,
 				DFE0373A28E27B5B00BE9E35 /* ViewController.swift in Sources */,
 				DFE0373628E27B5B00BE9E35 /* AppDelegate.swift in Sources */,
 				08DC522F28E4662B00B058ED /* Delegate.swift in Sources */,
