@@ -29,6 +29,10 @@ class BaseViewController: UIViewController {
     //******************************************************
     /// 커스텀 네비게이션 바 초기화
     let customNavigationBar = CustomNavigationBar()
+    /// 권한 요청
+    let authorization = Authorization.shared
+    /// 데이터 매니저
+    let dataManager = DataManager.shared
     
     //******************************************************
     //MARK: - LifeCycle
@@ -156,7 +160,9 @@ extension BaseViewController {
     }
 }
 
+//MARK: - 권한 요청 처리
 extension BaseViewController: CLLocationManagerDelegate {
+    /// 위치 권한 처리 (권한 요청값이 바뀔때 델리게이트 호출)
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         print("*** BaseViewController.swift, locationManagerDidChangeAuthorization - status: \(manager.authorizationStatus.rawValue)")
         dataManager.isAuthorizationLocation = manager.authorizationStatus.rawValue
