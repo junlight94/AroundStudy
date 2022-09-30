@@ -489,6 +489,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5NACCZGM3F;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 5NACCZGM3F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AroundStudy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -505,6 +506,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.studyaround.AroundStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = AroundStudyDevelopment;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = AroundStudyDevelopment;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -522,6 +524,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5NACCZGM3F;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 5NACCZGM3F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AroundStudy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -538,6 +541,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.studyaround.AroundStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = AroundStudyDistribution;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = AroundStudyDistribution;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

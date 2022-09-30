@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import AVFoundation
+import Photos
 import CoreLocation
 import UserNotifications
 
@@ -38,23 +40,47 @@ extension Authorization {
         let center = UNUserNotificationCenter.current()
         let authOptions = UNAuthorizationOptions(arrayLiteral: .alert, .badge, .sound)
         center.requestAuthorization(options: authOptions) { granted, error in
-            if let error = error {
-                print("[ERROR] Authorization.swift, requestNotificationAuthorization\n - error: \(error)")
+            if let _ = error {
                 self.dataManager.isAuthorizationLocation = nil
                 completion(nil)
             } else {
-                if granted {
-                    self.dataManager.isAuthorizationLocation = true
-                    completion(true)
-                } else {
-                    self.dataManager.isAuthorizationLocation = false
-                    completion(false)
-                }
+                self.dataManager.isAuthorizationLocation = granted
+                completion(granted)
             }
         }
     }
     
+    /**
+     카메라 권한 요청
+     > 사용자에게 카메라 권한을 허용할 것인지 묻습니다.
+     */
+    func requestCameraAuthorization(completion: @escaping (Bool) -> ()) {
+        AVCaptureDevice.requestAccess(for: .video) { granted in
+            completion(granted)
+        }
+    }
     
-    //MARK: - 권한 요청 응답 처리
+    /**
+     포토 라이브러리 권한 요청
+     > 사용자에게 카메라 권한을 허용할 것인지 묻습니다.
+        - true : 사용자가 권한을 승인하여 포토 라이브러리에 접근할 수 있습니다.
+        - false : 사용자가 권한을 거부하여 포토라이브러리에 접근할 수 없습니다.
+        - nil : 사용자가 권한 승인 여부를 결정하지 않았습니다.
+        - Returns:Optional(Bool)
+     */
+    func requestPhotoLibraryAuthorization(completion: @escaping (Bool?) -> ()) {
+        PHPhotoLibrary.requestAuthorization(for: .readWrite) { result in
+            switch result {
+            case .authorized, .limited:
+                completion(true)
+            case .restricted, .denied:
+                completion(false)
+            default:
+                completion(nil)
+            }
+        }
+    }
+    
+
 
 }
