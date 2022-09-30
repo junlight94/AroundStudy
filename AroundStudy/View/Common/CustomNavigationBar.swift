@@ -15,11 +15,11 @@ class CustomNavigationBar: UIView {
     /// 네비게이션 바 타이틀
     let navigationTitleLabel = UILabel()
     /// 네비게이션 바 높이 설정
-    var navigationBarHeight: Int? {
-        willSet {
+    var navigationBarHeight: Int = 60 {
+        didSet {
             self.containerView.snp.updateConstraints { make in
-                if newValue != navigationBarHeight {
-                    make.height.equalTo(navigationBarHeight ?? 60)
+                if oldValue != navigationBarHeight {
+                    make.height.equalTo(navigationBarHeight)
                 }
             }
         }
@@ -71,7 +71,6 @@ class CustomNavigationBar: UIView {
         navigationTitleLabel.snp.makeConstraints {
             $0.centerX.centerY.equalTo(self.containerView)
             $0.width.equalTo(newSize.width)
-            
         }
     }
     
@@ -117,6 +116,7 @@ extension CustomNavigationBar {
         containerView.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview()
             $0.top.equalTo(self.safeAreaLayoutGuide)
+            $0.height.greaterThanOrEqualTo(60)
         }
         
         // 타이틀 생성
