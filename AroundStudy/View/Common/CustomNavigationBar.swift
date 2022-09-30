@@ -24,23 +24,6 @@ class CustomNavigationBar: UIView {
             }
         }
     }
-    /// 네비게이션 바 타이틀 히든 설정
-    var isVisibleTitleLabel: Bool = true {
-        willSet {
-            navigationTitleLabel.isHidden = isVisibleTitleLabel
-        }
-    }
-    /// 네비게이션 바 쉐도우 설정
-    var isDrawShadow: Bool = false {
-        willSet {
-            if newValue {
-                //Rect 계산 필요함
-                self.layer.setShadow()
-            } else {
-                self.layer.removeShadow()
-            }
-        }
-    }
     
     //******************************************************
     //MARK: - Initializer
