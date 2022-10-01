@@ -12,14 +12,124 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RootTabViewController" customModule="AroundStudy" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewContainer" destination="ZgB-73-cWX" id="4ph-Fh-INb"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Xe-T9-4My" userLabel="viewTabbar">
+                    <rect key="frame" x="0.0" y="806" width="414" height="56"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="iQ1-pe-5Jb">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="izm-48-Z7H" userLabel="viewHome">
+                                    <rect key="frame" x="0.0" y="0.0" width="103.5" height="56"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGv-E8-fKa">
+                                            <rect key="frame" x="0.0" y="0.0" width="103.5" height="56"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <connections>
+                                                <action selector="btnChangeTab:" destination="-1" eventType="touchUpInside" id="xXj-bE-agf"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="IGv-E8-fKa" firstAttribute="top" secondItem="izm-48-Z7H" secondAttribute="top" id="8xr-x3-oeK"/>
+                                        <constraint firstAttribute="bottom" secondItem="IGv-E8-fKa" secondAttribute="bottom" id="AK1-F0-HJR"/>
+                                        <constraint firstAttribute="trailing" secondItem="IGv-E8-fKa" secondAttribute="trailing" id="SsO-Hv-g24"/>
+                                        <constraint firstItem="IGv-E8-fKa" firstAttribute="leading" secondItem="izm-48-Z7H" secondAttribute="leading" id="rIS-6D-H1z"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ApE-6H-dS7" userLabel="viewStudy">
+                                    <rect key="frame" x="103.5" y="0.0" width="103.5" height="56"/>
+                                    <subviews>
+                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6a-Z6-43q">
+                                            <rect key="frame" x="0.0" y="0.0" width="103.5" height="56"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <connections>
+                                                <action selector="btnChangeTab:" destination="-1" eventType="touchUpInside" id="uBm-tn-wy5"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="f6a-Z6-43q" secondAttribute="bottom" id="6rT-Va-Jis"/>
+                                        <constraint firstItem="f6a-Z6-43q" firstAttribute="top" secondItem="ApE-6H-dS7" secondAttribute="top" id="AWQ-cY-NRO"/>
+                                        <constraint firstItem="f6a-Z6-43q" firstAttribute="leading" secondItem="ApE-6H-dS7" secondAttribute="leading" id="S9V-vT-RHF"/>
+                                        <constraint firstAttribute="trailing" secondItem="f6a-Z6-43q" secondAttribute="trailing" id="hc8-JA-DzI"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R6c-Ji-Avx" userLabel="viewChatting">
+                                    <rect key="frame" x="207" y="0.0" width="103.5" height="56"/>
+                                    <subviews>
+                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9h-LE-l6C">
+                                            <rect key="frame" x="0.0" y="0.0" width="103.5" height="56"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <connections>
+                                                <action selector="btnChangeTab:" destination="-1" eventType="touchUpInside" id="15P-j3-Xwl"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="f9h-LE-l6C" secondAttribute="trailing" id="LZb-62-cEZ"/>
+                                        <constraint firstItem="f9h-LE-l6C" firstAttribute="top" secondItem="R6c-Ji-Avx" secondAttribute="top" id="OYG-Rk-ggE"/>
+                                        <constraint firstItem="f9h-LE-l6C" firstAttribute="leading" secondItem="R6c-Ji-Avx" secondAttribute="leading" id="dyy-jM-KzI"/>
+                                        <constraint firstAttribute="bottom" secondItem="f9h-LE-l6C" secondAttribute="bottom" id="oUQ-8e-C2S"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I3d-BJ-Le2" userLabel="viewMore">
+                                    <rect key="frame" x="310.5" y="0.0" width="103.5" height="56"/>
+                                    <subviews>
+                                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cvs-cz-QnX">
+                                            <rect key="frame" x="0.0" y="0.0" width="103.5" height="56"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <connections>
+                                                <action selector="btnChangeTab:" destination="-1" eventType="touchUpInside" id="WIm-0G-Wyg"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Cvs-cz-QnX" secondAttribute="trailing" id="E49-I4-kFL"/>
+                                        <constraint firstAttribute="bottom" secondItem="Cvs-cz-QnX" secondAttribute="bottom" id="ivq-CR-O1M"/>
+                                        <constraint firstItem="Cvs-cz-QnX" firstAttribute="top" secondItem="I3d-BJ-Le2" secondAttribute="top" id="tji-d4-dUi"/>
+                                        <constraint firstItem="Cvs-cz-QnX" firstAttribute="leading" secondItem="I3d-BJ-Le2" secondAttribute="leading" id="xbh-LV-T4g"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="2eL-8L-jZg"/>
+                        <constraint firstAttribute="trailing" secondItem="iQ1-pe-5Jb" secondAttribute="trailing" id="4Ar-jA-Ok5"/>
+                        <constraint firstAttribute="bottom" secondItem="iQ1-pe-5Jb" secondAttribute="bottom" id="CqC-ZV-TGq"/>
+                        <constraint firstItem="iQ1-pe-5Jb" firstAttribute="top" secondItem="3Xe-T9-4My" secondAttribute="top" id="Dbp-oz-vHr"/>
+                        <constraint firstItem="iQ1-pe-5Jb" firstAttribute="leading" secondItem="3Xe-T9-4My" secondAttribute="leading" id="kd7-xs-LFJ"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZgB-73-cWX" userLabel="viewContainer">
+                    <rect key="frame" x="0.0" y="44" width="414" height="762"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="3Xe-T9-4My" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5v7-Zl-Zb2"/>
+                <constraint firstItem="ZgB-73-cWX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="9iC-yK-Tsc"/>
+                <constraint firstItem="3Xe-T9-4My" firstAttribute="top" secondItem="ZgB-73-cWX" secondAttribute="bottom" id="9iw-lr-Tcv"/>
+                <constraint firstItem="ZgB-73-cWX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="F8G-07-dCP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="3Xe-T9-4My" secondAttribute="bottom" id="MyJ-s5-xcP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3Xe-T9-4My" secondAttribute="trailing" id="RMs-my-YkV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZgB-73-cWX" secondAttribute="trailing" id="u7j-qn-htf"/>
+            </constraints>
             <point key="canvasLocation" x="139" y="121"/>
         </view>
     </objects>

@@ -17,6 +17,14 @@
 		08DC523528E467CE00B058ED /* LoginDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC523428E467CE00B058ED /* LoginDto.swift */; };
 		08DC523928E478D700B058ED /* RootTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC523728E478D700B058ED /* RootTabViewController.swift */; };
 		08DC523A28E478D700B058ED /* RootTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DC523828E478D700B058ED /* RootTabViewController.xib */; };
+		08DC524928E8652C00B058ED /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC524728E8652C00B058ED /* HomeViewController.swift */; };
+		08DC524A28E8652C00B058ED /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DC524828E8652C00B058ED /* HomeViewController.xib */; };
+		08DC524D28E8653800B058ED /* StudyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC524B28E8653800B058ED /* StudyViewController.swift */; };
+		08DC524E28E8653800B058ED /* StudyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DC524C28E8653800B058ED /* StudyViewController.xib */; };
+		08DC525128E8654400B058ED /* ChattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC524F28E8654400B058ED /* ChattingViewController.swift */; };
+		08DC525228E8654400B058ED /* ChattingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DC525028E8654400B058ED /* ChattingViewController.xib */; };
+		08DC525528E8654D00B058ED /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC525328E8654D00B058ED /* MoreViewController.swift */; };
+		08DC525628E8654D00B058ED /* MoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DC525428E8654D00B058ED /* MoreViewController.xib */; };
 		192C3DAF28E55FCF003563D3 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C3DAE28E55FCF003563D3 /* CustomNavigationBar.swift */; };
 		192C3DB328E56BAF003563D3 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C3DB228E56BAF003563D3 /* Notification+Extension.swift */; };
 		192C3DB528E56DAA003563D3 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C3DB428E56DAA003563D3 /* CALayer+Extension.swift */; };
@@ -48,6 +56,14 @@
 		08DC523428E467CE00B058ED /* LoginDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDto.swift; sourceTree = "<group>"; };
 		08DC523728E478D700B058ED /* RootTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabViewController.swift; sourceTree = "<group>"; };
 		08DC523828E478D700B058ED /* RootTabViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootTabViewController.xib; sourceTree = "<group>"; };
+		08DC524728E8652C00B058ED /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		08DC524828E8652C00B058ED /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		08DC524B28E8653800B058ED /* StudyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyViewController.swift; sourceTree = "<group>"; };
+		08DC524C28E8653800B058ED /* StudyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudyViewController.xib; sourceTree = "<group>"; };
+		08DC524F28E8654400B058ED /* ChattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewController.swift; sourceTree = "<group>"; };
+		08DC525028E8654400B058ED /* ChattingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChattingViewController.xib; sourceTree = "<group>"; };
+		08DC525328E8654D00B058ED /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		08DC525428E8654D00B058ED /* MoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreViewController.xib; sourceTree = "<group>"; };
 		132B1B51ED5CA8B98EE79822 /* Pods_AroundStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AroundStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		192C3DAE28E55FCF003563D3 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		192C3DB228E56BAF003563D3 /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
@@ -120,6 +136,10 @@
 				088A62C728E319FE00442E6C /* 시작-온보딩 */,
 				088A62C828E31A1200442E6C /* 시작-접근권한 */,
 				08DC523628E478A600B058ED /* 홈 */,
+				08DC524628E8651100B058ED /* 홈-메인 */,
+				08DC524328E864BB00B058ED /* 스터디 */,
+				08DC524428E864D400B058ED /* 채팅 */,
+				08DC524528E864EB00B058ED /* 더보기 */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -182,6 +202,42 @@
 				08DC523828E478D700B058ED /* RootTabViewController.xib */,
 			);
 			name = "홈";
+			sourceTree = "<group>";
+		};
+		08DC524328E864BB00B058ED /* 스터디 */ = {
+			isa = PBXGroup;
+			children = (
+				08DC524B28E8653800B058ED /* StudyViewController.swift */,
+				08DC524C28E8653800B058ED /* StudyViewController.xib */,
+			);
+			name = "스터디";
+			sourceTree = "<group>";
+		};
+		08DC524428E864D400B058ED /* 채팅 */ = {
+			isa = PBXGroup;
+			children = (
+				08DC524F28E8654400B058ED /* ChattingViewController.swift */,
+				08DC525028E8654400B058ED /* ChattingViewController.xib */,
+			);
+			name = "채팅";
+			sourceTree = "<group>";
+		};
+		08DC524528E864EB00B058ED /* 더보기 */ = {
+			isa = PBXGroup;
+			children = (
+				08DC525328E8654D00B058ED /* MoreViewController.swift */,
+				08DC525428E8654D00B058ED /* MoreViewController.xib */,
+			);
+			name = "더보기";
+			sourceTree = "<group>";
+		};
+		08DC524628E8651100B058ED /* 홈-메인 */ = {
+			isa = PBXGroup;
+			children = (
+				08DC524728E8652C00B058ED /* HomeViewController.swift */,
+				08DC524828E8652C00B058ED /* HomeViewController.xib */,
+			);
+			name = "홈-메인";
 			sourceTree = "<group>";
 		};
 		A6E5688C91D72101AD1D6F16 /* Pods */ = {
@@ -339,9 +395,13 @@
 				DFE0374228E27B5D00BE9E35 /* LaunchScreen.storyboard in Resources */,
 				DFE0373F28E27B5D00BE9E35 /* Assets.xcassets in Resources */,
 				DF15CBE028E85AB0009F24CB /* Pretendard-Regular.otf in Resources */,
+				08DC525628E8654D00B058ED /* MoreViewController.xib in Resources */,
 				DF15CBE128E85AB0009F24CB /* Pretendard-SemiBold.otf in Resources */,
+				08DC524A28E8652C00B058ED /* HomeViewController.xib in Resources */,
+				08DC525228E8654400B058ED /* ChattingViewController.xib in Resources */,
 				DFE0373D28E27B5B00BE9E35 /* Main.storyboard in Resources */,
 				DF15CBDE28E85AB0009F24CB /* Pretendard-Medium.otf in Resources */,
+				08DC524E28E8653800B058ED /* StudyViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,20 +454,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08DC525528E8654D00B058ED /* MoreViewController.swift in Sources */,
 				192C3DAF28E55FCF003563D3 /* CustomNavigationBar.swift in Sources */,
 				088A62D328E32B8D00442E6C /* Nofile.swift in Sources */,
 				DF5EC62128E6D522003411D3 /* TestViewController.swift in Sources */,
 				08DC523528E467CE00B058ED /* LoginDto.swift in Sources */,
 				088A62CF28E32B5500442E6C /* APIManager.swift in Sources */,
+				08DC524928E8652C00B058ED /* HomeViewController.swift in Sources */,
 				DF7B4C5628E47C350031B56B /* Authorization.swift in Sources */,
 				DFE0373A28E27B5B00BE9E35 /* ViewController.swift in Sources */,
 				DFE0373628E27B5B00BE9E35 /* AppDelegate.swift in Sources */,
 				08DC522F28E4662B00B058ED /* Delegate.swift in Sources */,
 				DF89A80D28E6F0D10039E364 /* ThumbnailImageView.swift in Sources */,
+				08DC524D28E8653800B058ED /* StudyViewController.swift in Sources */,
 				088A62D128E32B6800442E6C /* String+Extension.swift in Sources */,
 				088A62CD28E32B4A00442E6C /* BaseViewController.swift in Sources */,
 				192C3DB528E56DAA003563D3 /* CALayer+Extension.swift in Sources */,
 				192C3DB328E56BAF003563D3 /* Notification+Extension.swift in Sources */,
+				08DC525128E8654400B058ED /* ChattingViewController.swift in Sources */,
 				08DC523928E478D700B058ED /* RootTabViewController.swift in Sources */,
 				08DC523128E4663B00B058ED /* DataManager.swift in Sources */,
 				08DC522D28E4647400B058ED /* Button+General.swift in Sources */,
