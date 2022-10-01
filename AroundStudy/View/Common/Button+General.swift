@@ -22,9 +22,9 @@ class Button_General: UIButton {
     override var isHighlighted: Bool {
         didSet {
             if isHighlighted {
-                
+                backgroundColor = UIColor(named: "40")?.withAlphaComponent(0.9)
             } else {
-                
+                backgroundColor = UIColor(named: "40")
             }
         }
     }
@@ -32,15 +32,21 @@ class Button_General: UIButton {
     override var isEnabled: Bool {
         didSet {
             if isEnabled {
-                
+                setTitleColor(.white, for: .normal)
+                backgroundColor = UIColor(named: "40")
             } else {
-                
+                setTitleColor(UIColor(named: "212"), for: .normal)
+                backgroundColor = UIColor(named: "248")
             }
         }
     }
     
     func setupView() {
-        
+        titleLabel?.font = UIFont(name: "Pretendard-SemiBold", size: 17)
+        setTitleColor(.white, for: .normal)
+        setTitleColor(.white, for: .highlighted)
+        backgroundColor = UIColor(named: "40")
+        layer.cornerRadius = 8
     }
     
 }
