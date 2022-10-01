@@ -21,12 +21,18 @@
 		192C3DB328E56BAF003563D3 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C3DB228E56BAF003563D3 /* Notification+Extension.swift */; };
 		192C3DB528E56DAA003563D3 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C3DB428E56DAA003563D3 /* CALayer+Extension.swift */; };
 		CC7CC9DA10D494D83221F8DF /* Pods_AroundStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 132B1B51ED5CA8B98EE79822 /* Pods_AroundStudy.framework */; };
+		DF5EC62128E6D522003411D3 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5EC61F28E6D522003411D3 /* TestViewController.swift */; };
+		DF5EC62228E6D522003411D3 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5EC62028E6D522003411D3 /* TestViewController.xib */; };
 		DF7B4C5628E47C350031B56B /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7B4C5528E47C350031B56B /* Authorization.swift */; };
+		DF89A80D28E6F0D10039E364 /* ThumbnailImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF89A80C28E6F0D10039E364 /* ThumbnailImageView.swift */; };
 		DFE0373628E27B5B00BE9E35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE0373528E27B5B00BE9E35 /* AppDelegate.swift */; };
 		DFE0373A28E27B5B00BE9E35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE0373928E27B5B00BE9E35 /* ViewController.swift */; };
 		DFE0373D28E27B5B00BE9E35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE0373B28E27B5B00BE9E35 /* Main.storyboard */; };
 		DFE0373F28E27B5D00BE9E35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFE0373E28E27B5D00BE9E35 /* Assets.xcassets */; };
 		DFE0374228E27B5D00BE9E35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE0374028E27B5D00BE9E35 /* LaunchScreen.storyboard */; };
+		DFFDFAB028E6B86B00E3E446 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DFFDFAAD28E6B86B00E3E446 /* Pretendard-Regular.otf */; };
+		DFFDFAB128E6B86B00E3E446 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = DFFDFAAE28E6B86B00E3E446 /* Pretendard-Medium.otf */; };
+		DFFDFAB228E6B86B00E3E446 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DFFDFAAF28E6B86B00E3E446 /* Pretendard-Bold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +53,10 @@
 		192C3DB428E56DAA003563D3 /* CALayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
 		82395ECBC730C264D56A62EC /* Pods-AroundStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundStudy.release.xcconfig"; path = "Target Support Files/Pods-AroundStudy/Pods-AroundStudy.release.xcconfig"; sourceTree = "<group>"; };
 		DF56234E28E3322000A00258 /* AroundStudy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AroundStudy.entitlements; sourceTree = "<group>"; };
+		DF5EC61F28E6D522003411D3 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		DF5EC62028E6D522003411D3 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		DF7B4C5528E47C350031B56B /* Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
+		DF89A80C28E6F0D10039E364 /* ThumbnailImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailImageView.swift; sourceTree = "<group>"; };
 		DFE0373228E27B5B00BE9E35 /* AroundStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AroundStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE0373528E27B5B00BE9E35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFE0373928E27B5B00BE9E35 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +64,9 @@
 		DFE0373E28E27B5D00BE9E35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFE0374128E27B5D00BE9E35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFE0374328E27B5D00BE9E35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFFDFAAD28E6B86B00E3E446 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Regular.otf"; path = "../../../../../../../Downloads/Pretendard-1.3.3/public/static/Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		DFFDFAAE28E6B86B00E3E446 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Medium.otf"; path = "../../../../../../../Downloads/Pretendard-1.3.3/public/static/Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		DFFDFAAF28E6B86B00E3E446 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Bold.otf"; path = "../../../../../../../Downloads/Pretendard-1.3.3/public/static/Pretendard-Bold.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +94,7 @@
 		088A62C328E3198900442E6C /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				DFFDFAAB28E6B7D700E3E446 /* Fonts */,
 				088A62D228E32B8D00442E6C /* Nofile.swift */,
 			);
 			path = Resource;
@@ -112,6 +125,8 @@
 		088A62C628E319DA00442E6C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				DF5EC61E28E6D50E003411D3 /* 테스트 */,
+				DFFDFAA628E6B6BC00E3E446 /* 공통-썸네일 */,
 				088A62CC28E32B4A00442E6C /* BaseViewController.swift */,
 				08DC522C28E4647400B058ED /* Button+General.swift */,
 				192C3DAE28E55FCF003563D3 /* CustomNavigationBar.swift */,
@@ -184,6 +199,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DF5EC61E28E6D50E003411D3 /* 테스트 */ = {
+			isa = PBXGroup;
+			children = (
+				DF5EC61F28E6D522003411D3 /* TestViewController.swift */,
+				DF5EC62028E6D522003411D3 /* TestViewController.xib */,
+			);
+			name = "테스트";
+			sourceTree = "<group>";
+		};
 		DFE0372928E27B5B00BE9E35 = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +242,32 @@
 				DFE0374328E27B5D00BE9E35 /* Info.plist */,
 			);
 			path = AroundStudy;
+			sourceTree = "<group>";
+		};
+		DFFDFAA628E6B6BC00E3E446 /* 공통-썸네일 */ = {
+			isa = PBXGroup;
+			children = (
+				DF89A80C28E6F0D10039E364 /* ThumbnailImageView.swift */,
+			);
+			name = "공통-썸네일";
+			sourceTree = "<group>";
+		};
+		DFFDFAAB28E6B7D700E3E446 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				DFFDFAAC28E6B7E200E3E446 /* Pretendard */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		DFFDFAAC28E6B7E200E3E446 /* Pretendard */ = {
+			isa = PBXGroup;
+			children = (
+				DFFDFAAF28E6B86B00E3E446 /* Pretendard-Bold.otf */,
+				DFFDFAAE28E6B86B00E3E446 /* Pretendard-Medium.otf */,
+				DFFDFAAD28E6B86B00E3E446 /* Pretendard-Regular.otf */,
+			);
+			path = Pretendard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,7 +330,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFFDFAB128E6B86B00E3E446 /* Pretendard-Medium.otf in Resources */,
+				DFFDFAB228E6B86B00E3E446 /* Pretendard-Bold.otf in Resources */,
 				08DC523A28E478D700B058ED /* RootTabViewController.xib in Resources */,
+				DFFDFAB028E6B86B00E3E446 /* Pretendard-Regular.otf in Resources */,
+				DF5EC62228E6D522003411D3 /* TestViewController.xib in Resources */,
 				DFE0374228E27B5D00BE9E35 /* LaunchScreen.storyboard in Resources */,
 				DFE0373F28E27B5D00BE9E35 /* Assets.xcassets in Resources */,
 				DFE0373D28E27B5B00BE9E35 /* Main.storyboard in Resources */,
@@ -338,12 +392,14 @@
 			files = (
 				192C3DAF28E55FCF003563D3 /* CustomNavigationBar.swift in Sources */,
 				088A62D328E32B8D00442E6C /* Nofile.swift in Sources */,
+				DF5EC62128E6D522003411D3 /* TestViewController.swift in Sources */,
 				08DC523528E467CE00B058ED /* LoginDto.swift in Sources */,
 				088A62CF28E32B5500442E6C /* APIManager.swift in Sources */,
 				DF7B4C5628E47C350031B56B /* Authorization.swift in Sources */,
 				DFE0373A28E27B5B00BE9E35 /* ViewController.swift in Sources */,
 				DFE0373628E27B5B00BE9E35 /* AppDelegate.swift in Sources */,
 				08DC522F28E4662B00B058ED /* Delegate.swift in Sources */,
+				DF89A80D28E6F0D10039E364 /* ThumbnailImageView.swift in Sources */,
 				088A62D128E32B6800442E6C /* String+Extension.swift in Sources */,
 				088A62CD28E32B4A00442E6C /* BaseViewController.swift in Sources */,
 				192C3DB528E56DAA003563D3 /* CALayer+Extension.swift in Sources */,
