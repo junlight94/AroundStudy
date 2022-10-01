@@ -11,7 +11,17 @@
 		088A62CF28E32B5500442E6C /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088A62CE28E32B5500442E6C /* APIManager.swift */; };
 		088A62D128E32B6800442E6C /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088A62D028E32B6800442E6C /* String+Extension.swift */; };
 		088A62D328E32B8D00442E6C /* Nofile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088A62D228E32B8D00442E6C /* Nofile.swift */; };
+		08DC522D28E4647400B058ED /* Button+General.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC522C28E4647400B058ED /* Button+General.swift */; };
+		08DC522F28E4662B00B058ED /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC522E28E4662B00B058ED /* Delegate.swift */; };
+		08DC523128E4663B00B058ED /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC523028E4663B00B058ED /* DataManager.swift */; };
+		08DC523528E467CE00B058ED /* LoginDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC523428E467CE00B058ED /* LoginDto.swift */; };
+		08DC523928E478D700B058ED /* RootTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC523728E478D700B058ED /* RootTabViewController.swift */; };
+		08DC523A28E478D700B058ED /* RootTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DC523828E478D700B058ED /* RootTabViewController.xib */; };
+		192C3DAF28E55FCF003563D3 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C3DAE28E55FCF003563D3 /* CustomNavigationBar.swift */; };
+		192C3DB328E56BAF003563D3 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C3DB228E56BAF003563D3 /* Notification+Extension.swift */; };
+		192C3DB528E56DAA003563D3 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C3DB428E56DAA003563D3 /* CALayer+Extension.swift */; };
 		CC7CC9DA10D494D83221F8DF /* Pods_AroundStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 132B1B51ED5CA8B98EE79822 /* Pods_AroundStudy.framework */; };
+		DF7B4C5628E47C350031B56B /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7B4C5528E47C350031B56B /* Authorization.swift */; };
 		DFE0373628E27B5B00BE9E35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE0373528E27B5B00BE9E35 /* AppDelegate.swift */; };
 		DFE0373A28E27B5B00BE9E35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE0373928E27B5B00BE9E35 /* ViewController.swift */; };
 		DFE0373D28E27B5B00BE9E35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE0373B28E27B5B00BE9E35 /* Main.storyboard */; };
@@ -25,9 +35,19 @@
 		088A62CE28E32B5500442E6C /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		088A62D028E32B6800442E6C /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		088A62D228E32B8D00442E6C /* Nofile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nofile.swift; sourceTree = "<group>"; };
+		08DC522C28E4647400B058ED /* Button+General.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+General.swift"; sourceTree = "<group>"; };
+		08DC522E28E4662B00B058ED /* Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
+		08DC523028E4663B00B058ED /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		08DC523428E467CE00B058ED /* LoginDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDto.swift; sourceTree = "<group>"; };
+		08DC523728E478D700B058ED /* RootTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabViewController.swift; sourceTree = "<group>"; };
+		08DC523828E478D700B058ED /* RootTabViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootTabViewController.xib; sourceTree = "<group>"; };
 		132B1B51ED5CA8B98EE79822 /* Pods_AroundStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AroundStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		192C3DAE28E55FCF003563D3 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
+		192C3DB228E56BAF003563D3 /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
+		192C3DB428E56DAA003563D3 /* CALayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
 		82395ECBC730C264D56A62EC /* Pods-AroundStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundStudy.release.xcconfig"; path = "Target Support Files/Pods-AroundStudy/Pods-AroundStudy.release.xcconfig"; sourceTree = "<group>"; };
 		DF56234E28E3322000A00258 /* AroundStudy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AroundStudy.entitlements; sourceTree = "<group>"; };
+		DF7B4C5528E47C350031B56B /* Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
 		DFE0373228E27B5B00BE9E35 /* AroundStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AroundStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE0373528E27B5B00BE9E35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFE0373928E27B5B00BE9E35 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +72,8 @@
 		088A62C128E3197300442E6C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				08DC523328E4679100B058ED /* DB */,
+				08DC523228E4675A00B058ED /* Struct */,
 				088A62CE28E32B5500442E6C /* APIManager.swift */,
 			);
 			path = Model;
@@ -69,6 +91,9 @@
 			isa = PBXGroup;
 			children = (
 				088A62C928E31A7F00442E6C /* Extension */,
+				08DC522E28E4662B00B058ED /* Delegate.swift */,
+				08DC523028E4663B00B058ED /* DataManager.swift */,
+				DF7B4C5528E47C350031B56B /* Authorization.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -79,6 +104,7 @@
 				088A62C628E319DA00442E6C /* Common */,
 				088A62C728E319FE00442E6C /* 시작-온보딩 */,
 				088A62C828E31A1200442E6C /* 시작-접근권한 */,
+				08DC523628E478A600B058ED /* 홈 */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -87,6 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				088A62CC28E32B4A00442E6C /* BaseViewController.swift */,
+				08DC522C28E4647400B058ED /* Button+General.swift */,
+				192C3DAE28E55FCF003563D3 /* CustomNavigationBar.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -109,8 +137,34 @@
 			isa = PBXGroup;
 			children = (
 				088A62D028E32B6800442E6C /* String+Extension.swift */,
+				192C3DB228E56BAF003563D3 /* Notification+Extension.swift */,
+				192C3DB428E56DAA003563D3 /* CALayer+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		08DC523228E4675A00B058ED /* Struct */ = {
+			isa = PBXGroup;
+			children = (
+				08DC523428E467CE00B058ED /* LoginDto.swift */,
+			);
+			path = Struct;
+			sourceTree = "<group>";
+		};
+		08DC523328E4679100B058ED /* DB */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
+		08DC523628E478A600B058ED /* 홈 */ = {
+			isa = PBXGroup;
+			children = (
+				08DC523728E478D700B058ED /* RootTabViewController.swift */,
+				08DC523828E478D700B058ED /* RootTabViewController.xib */,
+			);
+			name = "홈";
 			sourceTree = "<group>";
 		};
 		A6E5688C91D72101AD1D6F16 /* Pods */ = {
@@ -226,6 +280,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08DC523A28E478D700B058ED /* RootTabViewController.xib in Resources */,
 				DFE0374228E27B5D00BE9E35 /* LaunchScreen.storyboard in Resources */,
 				DFE0373F28E27B5D00BE9E35 /* Assets.xcassets in Resources */,
 				DFE0373D28E27B5B00BE9E35 /* Main.storyboard in Resources */,
@@ -281,12 +336,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				192C3DAF28E55FCF003563D3 /* CustomNavigationBar.swift in Sources */,
 				088A62D328E32B8D00442E6C /* Nofile.swift in Sources */,
+				08DC523528E467CE00B058ED /* LoginDto.swift in Sources */,
 				088A62CF28E32B5500442E6C /* APIManager.swift in Sources */,
+				DF7B4C5628E47C350031B56B /* Authorization.swift in Sources */,
 				DFE0373A28E27B5B00BE9E35 /* ViewController.swift in Sources */,
 				DFE0373628E27B5B00BE9E35 /* AppDelegate.swift in Sources */,
+				08DC522F28E4662B00B058ED /* Delegate.swift in Sources */,
 				088A62D128E32B6800442E6C /* String+Extension.swift in Sources */,
 				088A62CD28E32B4A00442E6C /* BaseViewController.swift in Sources */,
+				192C3DB528E56DAA003563D3 /* CALayer+Extension.swift in Sources */,
+				192C3DB328E56BAF003563D3 /* Notification+Extension.swift in Sources */,
+				08DC523928E478D700B058ED /* RootTabViewController.swift in Sources */,
+				08DC523128E4663B00B058ED /* DataManager.swift in Sources */,
+				08DC522D28E4647400B058ED /* Button+General.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +501,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5NACCZGM3F;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 5NACCZGM3F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AroundStudy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -453,6 +518,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.studyaround.AroundStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = AroundStudyDevelopment;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = AroundStudyDevelopment;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -470,6 +536,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5NACCZGM3F;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 5NACCZGM3F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AroundStudy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -486,6 +553,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.studyaround.AroundStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = AroundStudyDistribution;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = AroundStudyDistribution;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
