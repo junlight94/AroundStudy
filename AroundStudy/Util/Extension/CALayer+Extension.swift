@@ -27,6 +27,31 @@ extension CALayer {
     }
     
     /**
+     * @제플린 쉐도우 그대로 사용
+     * @creator : 이준영
+     * @param color : 그림자 색상
+     * @param alpha : 그림자 투명도
+     * @param x : 그림자 위치 X
+     * @param y : 그림자 위치 Y
+     * @param blur : 그림자 블러
+     * @param spread : 그림자 커스텀 기능 (디폴트 0: nil)
+     */
+    public func zeplinShadow(color: UIColor, alpha: Float, x: CGFloat, y: CGFloat, blur: CGFloat, spread: CGFloat) {
+        masksToBounds = false
+        shadowColor = color.cgColor
+        shadowOpacity = alpha
+        shadowOffset = CGSize(width: x, height: y)
+        shadowRadius = blur / 2.0
+        if spread == 0 {
+            shadowPath = nil
+        } else {
+            let dx = -spread
+            let rect = bounds.insetBy(dx: dx, dy: dx)
+            shadowPath = UIBezierPath(rect: rect).cgPath
+        }
+    }
+    
+    /**
      * @쉐도우 삭제
      * @creator : coder3306
      */
