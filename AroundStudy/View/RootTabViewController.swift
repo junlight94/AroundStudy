@@ -11,8 +11,6 @@ class RootTabViewController: UIViewController {
 
     @IBOutlet weak var viewContainer: UIView!
     
-    var selectedTabIndex = 0
-    
     lazy var viewControllers = [
         HomeViewController(nibName: "HomeViewController", bundle: nil),
         StudyViewController(nibName: "StudyViewController", bundle: nil),
@@ -22,10 +20,14 @@ class RootTabViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupView()
         // Do any additional setup after loading the view.
     }
     //MARK: - General Function
+    func setupView() {
+        changeTap(view: 0)
+    }
+    
     func changeTap(view: Int) {
         if let sub = viewContainer.subviews.first {
             sub.removeFromSuperview()
@@ -38,7 +40,7 @@ class RootTabViewController: UIViewController {
         viewContainer.addSubview(vc.view)
         
         vc.view.snp.makeConstraints { make in
-            make.centerX.centerY.width.height.equalToSuperview()
+            make.leading.trailing.top.bottom.equalToSuperview()
         }
         
         vc.didMove(toParent: self)
@@ -50,8 +52,5 @@ class RootTabViewController: UIViewController {
     @IBAction func btnChangeTab(_ sender: UIButton) {
         changeTap(view: sender.tag)
     }
-    
-
-
 }
 //MARK: - Extension
