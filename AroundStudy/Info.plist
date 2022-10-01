@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Pretendard-Regular.otf</string>
+		<string>Pretendard-Bold.otf</string>
+		<string>Pretendard-Medium.otf</string>
+	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>채팅 및 프로필 사진 설정을 위해 권한을 허용해주세요.</string>
 	<key>NSCameraUsageDescription</key>

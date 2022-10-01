@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TestViewController" customModule="AroundStudy" customModuleProvider="target">
+            <connections>
+                <outlet property="testThumbnailView" destination="2RA-TL-nkx" id="CHo-9K-1Fw"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2RA-TL-nkx" customClass="ThumbnailImageView" customModule="AroundStudy" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="47" width="390" height="195"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="195" id="1DF-Sa-3cI"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="2RA-TL-nkx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="GpZ-y5-Kj9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2RA-TL-nkx" secondAttribute="trailing" id="Or2-U6-o03"/>
+                <constraint firstItem="2RA-TL-nkx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="PSb-bz-TtC"/>
+            </constraints>
+            <point key="canvasLocation" x="250.76923076923077" y="-102.3696682464455"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

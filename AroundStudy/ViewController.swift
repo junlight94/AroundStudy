@@ -6,13 +6,13 @@
 //
 
 import UIKit
+import SnapKit
 
 class ViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         print("스플래쉬 화면")
-        
         /// 위치 권한 요청
         authorizationLocation()
         /// 알림 권한 요청
@@ -46,6 +46,14 @@ class ViewController: BaseViewController {
                 print("*** ViewController.swift, 포토 라이브러리 권한: 설정하지 않음")
             }
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let testVC = TestViewController(nibName: "TestViewController", bundle: nil)
+        testVC.modalTransitionStyle = .crossDissolve
+        testVC.modalPresentationStyle = .fullScreen
+        self.present(testVC, animated: false)
     }
 }
 
