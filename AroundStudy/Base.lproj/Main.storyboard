@@ -16,8 +16,21 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="내용을 입력해주세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lrj-wS-KLk" customClass="TextField_General" customModule="AroundStudy" customModuleProvider="target">
+                                <rect key="frame" x="50" y="431" width="314" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lrj-wS-KLk" secondAttribute="trailing" constant="50" id="1Le-Nk-H6s"/>
+                            <constraint firstItem="lrj-wS-KLk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j8I-HP-kOC"/>
+                            <constraint firstItem="lrj-wS-KLk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="kOE-Ca-X4m"/>
+                            <constraint firstItem="lrj-wS-KLk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="scH-tu-8Ht"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
