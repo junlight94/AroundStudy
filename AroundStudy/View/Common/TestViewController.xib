@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +11,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TestViewController" customModule="AroundStudy" customModuleProvider="target">
             <connections>
-                <outlet property="boxLabel" destination="wYY-wW-yvp" id="KJk-D8-zIw"/>
                 <outlet property="testThumbnailView" destination="2RA-TL-nkx" id="CHo-9K-1Fw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -22,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2RA-TL-nkx" customClass="ThumbnailImageView" customModule="AroundStudy" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="44" width="390" height="195"/>
+                    <rect key="frame" x="0.0" y="47" width="390" height="195"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="195" id="1DF-Sa-3cI"/>
                     </constraints>
@@ -33,27 +32,35 @@
                         <constraint firstAttribute="height" constant="50" id="JDO-c2-QAb"/>
                     </constraints>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="테스트 팝업"/>
+                    <buttonConfiguration key="configuration" style="plain" title="테스트 팝업 첫번째"/>
                     <connections>
                         <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="owG-JE-Lgg"/>
                     </connections>
                 </button>
-                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wYY-wW-yvp" customClass="BoxLabel" customModule="AroundStudy" customModuleProvider="target">
-                    <rect key="frame" x="20" y="605" width="240" height="128"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L15-Bb-sW8" customClass="Button_General" customModule="AroundStudy" customModuleProvider="target">
+                    <rect key="frame" x="20" y="700" width="350" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="n5p-mb-VAl"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="테스트 팝업 두번째"/>
+                    <connections>
+                        <action selector="didTapButtonSecond:" destination="-1" eventType="touchUpInside" id="07m-cB-JQd"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="wYY-wW-yvp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="7bi-iK-FSC"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="urR-ij-kHA" secondAttribute="trailing" constant="20" id="Aet-4z-9Fa"/>
+                <constraint firstItem="L15-Bb-sW8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="BX6-IJ-xXK"/>
                 <constraint firstItem="2RA-TL-nkx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="GpZ-y5-Kj9"/>
                 <constraint firstItem="urR-ij-kHA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Hzb-1L-M9c"/>
-                <constraint firstItem="urR-ij-kHA" firstAttribute="top" secondItem="wYY-wW-yvp" secondAttribute="bottom" constant="20" id="IhS-v5-S44"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2RA-TL-nkx" secondAttribute="trailing" id="Or2-U6-o03"/>
                 <constraint firstItem="2RA-TL-nkx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="PSb-bz-TtC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="L15-Bb-sW8" secondAttribute="trailing" constant="20" id="Via-MC-gNQ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="urR-ij-kHA" secondAttribute="bottom" id="bQr-u2-efK"/>
+                <constraint firstItem="urR-ij-kHA" firstAttribute="top" secondItem="L15-Bb-sW8" secondAttribute="bottom" constant="10" id="yJz-mw-gMc"/>
             </constraints>
             <point key="canvasLocation" x="-498" y="-161"/>
         </view>
