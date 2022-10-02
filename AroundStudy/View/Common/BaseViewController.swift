@@ -158,6 +158,21 @@ extension BaseViewController {
     @objc func keyboardWillHide(_ notification: Notification) {
         self.view.frame.origin.y = 0
     }
+    
+    /**
+     팝업 생성
+     > 팝업을 생성하여 띄웁니다.
+     - coder: **sanghyeon**
+     */
+    func showPopup(_ target: UIViewController, title: String, message: String, oneButtonTitle: String, twoButtonTitle: String = "") {
+        let popupVC = CommonPopupViewController(nibName: "CommonPopupViewController", bundle: nil)
+        popupVC.modalTransitionStyle = .coverVertical
+        popupVC.modalPresentationStyle = .overCurrentContext
+        target.present(popupVC, animated: false)
+        popupVC.setupPopup(title, message: message, oneButtonTitle: oneButtonTitle, twoButtonTitle: twoButtonTitle)
+        popupVC.delegate = target as! any PopupProtocol
+    }
+
 }
 
 //MARK: - 권한 요청 처리
