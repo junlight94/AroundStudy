@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TestViewController" customModule="AroundStudy" customModuleProvider="target">
             <connections>
+                <outlet property="boxLabel" destination="wYY-wW-yvp" id="KJk-D8-zIw"/>
                 <outlet property="testThumbnailView" destination="2RA-TL-nkx" id="CHo-9K-1Fw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -26,15 +27,35 @@
                         <constraint firstAttribute="height" constant="195" id="1DF-Sa-3cI"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urR-ij-kHA" customClass="Button_General" customModule="AroundStudy" customModuleProvider="target">
+                    <rect key="frame" x="20" y="760" width="350" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="JDO-c2-QAb"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="테스트 팝업"/>
+                    <connections>
+                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="owG-JE-Lgg"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wYY-wW-yvp" customClass="BoxLabel" customModule="AroundStudy" customModuleProvider="target">
+                    <rect key="frame" x="20" y="605" width="240" height="128"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="wYY-wW-yvp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="7bi-iK-FSC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="urR-ij-kHA" secondAttribute="trailing" constant="20" id="Aet-4z-9Fa"/>
                 <constraint firstItem="2RA-TL-nkx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="GpZ-y5-Kj9"/>
+                <constraint firstItem="urR-ij-kHA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Hzb-1L-M9c"/>
+                <constraint firstItem="urR-ij-kHA" firstAttribute="top" secondItem="wYY-wW-yvp" secondAttribute="bottom" constant="20" id="IhS-v5-S44"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2RA-TL-nkx" secondAttribute="trailing" id="Or2-U6-o03"/>
                 <constraint firstItem="2RA-TL-nkx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="PSb-bz-TtC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="urR-ij-kHA" secondAttribute="bottom" id="bQr-u2-efK"/>
             </constraints>
-            <point key="canvasLocation" x="250.76923076923077" y="-102.3696682464455"/>
+            <point key="canvasLocation" x="-498" y="-161"/>
         </view>
     </objects>
     <resources>

@@ -33,10 +33,13 @@
 		DF15CBDF28E85AB0009F24CB /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DF15CBDB28E85AB0009F24CB /* Pretendard-Bold.otf */; };
 		DF15CBE028E85AB0009F24CB /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DF15CBDC28E85AB0009F24CB /* Pretendard-Regular.otf */; };
 		DF15CBE128E85AB0009F24CB /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DF15CBDD28E85AB0009F24CB /* Pretendard-SemiBold.otf */; };
-		DF5EC62128E6D522003411D3 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5EC61F28E6D522003411D3 /* TestViewController.swift */; };
+		DF15CBE328E861E1009F24CB /* BoxLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF15CBE228E861E1009F24CB /* BoxLabel.swift */; };
 		DF5EC62228E6D522003411D3 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5EC62028E6D522003411D3 /* TestViewController.xib */; };
 		DF7B4C5628E47C350031B56B /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7B4C5528E47C350031B56B /* Authorization.swift */; };
 		DF89A80D28E6F0D10039E364 /* ThumbnailImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF89A80C28E6F0D10039E364 /* ThumbnailImageView.swift */; };
+		DFCBDD7D28E91403008A7E02 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5EC61F28E6D522003411D3 /* TestViewController.swift */; };
+		DFCBDD8028E93714008A7E02 /* CommonPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCBDD7E28E93714008A7E02 /* CommonPopupViewController.swift */; };
+		DFCBDD8128E93714008A7E02 /* CommonPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFCBDD7F28E93714008A7E02 /* CommonPopupViewController.xib */; };
 		DFE0373628E27B5B00BE9E35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE0373528E27B5B00BE9E35 /* AppDelegate.swift */; };
 		DFE0373A28E27B5B00BE9E35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE0373928E27B5B00BE9E35 /* ViewController.swift */; };
 		DFE0373D28E27B5B00BE9E35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE0373B28E27B5B00BE9E35 /* Main.storyboard */; };
@@ -73,11 +76,14 @@
 		DF15CBDB28E85AB0009F24CB /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		DF15CBDC28E85AB0009F24CB /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		DF15CBDD28E85AB0009F24CB /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		DF15CBE228E861E1009F24CB /* BoxLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxLabel.swift; sourceTree = "<group>"; };
 		DF56234E28E3322000A00258 /* AroundStudy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AroundStudy.entitlements; sourceTree = "<group>"; };
 		DF5EC61F28E6D522003411D3 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		DF5EC62028E6D522003411D3 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		DF7B4C5528E47C350031B56B /* Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
 		DF89A80C28E6F0D10039E364 /* ThumbnailImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailImageView.swift; sourceTree = "<group>"; };
+		DFCBDD7E28E93714008A7E02 /* CommonPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonPopupViewController.swift; sourceTree = "<group>"; };
+		DFCBDD7F28E93714008A7E02 /* CommonPopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonPopupViewController.xib; sourceTree = "<group>"; };
 		DFE0373228E27B5B00BE9E35 /* AroundStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AroundStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE0373528E27B5B00BE9E35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFE0373928E27B5B00BE9E35 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -147,11 +153,13 @@
 		088A62C628E319DA00442E6C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				DFCBDD7828E91273008A7E02 /* 공통-팝업 */,
 				DF5EC61E28E6D50E003411D3 /* 테스트 */,
-				DFFDFAA628E6B6BC00E3E446 /* 공통-썸네일 */,
 				088A62CC28E32B4A00442E6C /* BaseViewController.swift */,
 				08DC522C28E4647400B058ED /* Button+General.swift */,
 				192C3DAE28E55FCF003563D3 /* CustomNavigationBar.swift */,
+				DF89A80C28E6F0D10039E364 /* ThumbnailImageView.swift */,
+				DF15CBE228E861E1009F24CB /* BoxLabel.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -266,6 +274,15 @@
 			name = "테스트";
 			sourceTree = "<group>";
 		};
+		DFCBDD7828E91273008A7E02 /* 공통-팝업 */ = {
+			isa = PBXGroup;
+			children = (
+				DFCBDD7E28E93714008A7E02 /* CommonPopupViewController.swift */,
+				DFCBDD7F28E93714008A7E02 /* CommonPopupViewController.xib */,
+			);
+			name = "공통-팝업";
+			sourceTree = "<group>";
+		};
 		DFE0372928E27B5B00BE9E35 = {
 			isa = PBXGroup;
 			children = (
@@ -300,14 +317,6 @@
 				DFE0374328E27B5D00BE9E35 /* Info.plist */,
 			);
 			path = AroundStudy;
-			sourceTree = "<group>";
-		};
-		DFFDFAA628E6B6BC00E3E446 /* 공통-썸네일 */ = {
-			isa = PBXGroup;
-			children = (
-				DF89A80C28E6F0D10039E364 /* ThumbnailImageView.swift */,
-			);
-			name = "공통-썸네일";
 			sourceTree = "<group>";
 		};
 		DFFDFAAB28E6B7D700E3E446 /* Fonts */ = {
@@ -391,6 +400,7 @@
 			files = (
 				08DC523A28E478D700B058ED /* RootTabViewController.xib in Resources */,
 				DF5EC62228E6D522003411D3 /* TestViewController.xib in Resources */,
+				DFCBDD8128E93714008A7E02 /* CommonPopupViewController.xib in Resources */,
 				DF15CBDF28E85AB0009F24CB /* Pretendard-Bold.otf in Resources */,
 				DFE0374228E27B5D00BE9E35 /* LaunchScreen.storyboard in Resources */,
 				DFE0373F28E27B5D00BE9E35 /* Assets.xcassets in Resources */,
@@ -457,7 +467,7 @@
 				08DC525528E8654D00B058ED /* MoreViewController.swift in Sources */,
 				192C3DAF28E55FCF003563D3 /* CustomNavigationBar.swift in Sources */,
 				088A62D328E32B8D00442E6C /* Nofile.swift in Sources */,
-				DF5EC62128E6D522003411D3 /* TestViewController.swift in Sources */,
+				DF15CBE328E861E1009F24CB /* BoxLabel.swift in Sources */,
 				08DC523528E467CE00B058ED /* LoginDto.swift in Sources */,
 				088A62CF28E32B5500442E6C /* APIManager.swift in Sources */,
 				08DC524928E8652C00B058ED /* HomeViewController.swift in Sources */,
