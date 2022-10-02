@@ -37,10 +37,6 @@ class ThumbnailImageView: UIView {
     var image: String? = "" {
         willSet {
             if let newValue = newValue, newValue != "" {
-                let url = URL(string: newValue)!
-                //if let data = try? Data(contentsOf: url) {
-                    
-                //}
                 AF.request(newValue, method: .get).responseData { (response) in
                     switch response.result {
                     case .success(let data):
@@ -60,13 +56,6 @@ class ThumbnailImageView: UIView {
         setupView()
     }
     
-}
-
-extension ThumbnailImageView {
-    /**
-     * @ 초기 레이아웃 설정
-     * coder : sanghyeon
-     */
     func setupView() {
         //MARK: ViewPropertyManual
         /// 슈퍼뷰 속성
@@ -106,11 +95,5 @@ extension ThumbnailImageView {
             make.top.bottom.equalTo(categoryWrapView).inset(3)
             
         }
-        
-        
-        //MARK: ViewAddTarget
-        
-        
-        //MARK: Delegate
     }
 }
