@@ -61,9 +61,9 @@ class TestViewController: BaseViewController {
         let popupID = UUID().uuidString
         let popupVC = CommonPopupViewController(nibName: "CommonPopupViewController", bundle: nil)
         popupVC.modalTransitionStyle = .coverVertical
-        popupVC.modalPresentationStyle = .overFullScreen
+        popupVC.modalPresentationStyle = .overCurrentContext
         self.present(popupVC, animated: false)
-        popupVC.setupPopup(popupID, title: "스터디 가입신청", message: "스터디 참여 신청을 위해\n스터디 그룹장과 채팅을 시작합니다.", oneButtonTitle: "좋아요", twoButtonTitle: "다음에 할게요")
+        popupVC.setupPopup("스터디 가입신청", message: "스터디 참여 신청을 위해\n스터디 그룹장과 채팅을 시작합니다.", oneButtonTitle: "좋아요", twoButtonTitle: "다음에 할게요")
         popupVC.delegate = self
     }
     

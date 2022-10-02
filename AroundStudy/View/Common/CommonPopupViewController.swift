@@ -16,27 +16,15 @@ class CommonPopupViewController: UIViewController {
     @IBOutlet weak var popupImageView: UIImageView!
     @IBOutlet weak var popupTitle: UILabel!
     @IBOutlet weak var popupDesc: UILabel!
-    
     @IBOutlet weak var oneButton: Button_General!
     @IBOutlet weak var twoButton: UIButton!
-    
-    /// 팝업의 고유 값
-    var popupID: String = ""
-    
+
     /// 델리게이트 설정
     var delegate: PopupProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        if popupID == "" {
-            /// 팝없값이 넘어오지 않은 경우 그대로 창을 닫아버림
-            self.dismiss(animated: false)
-        }
     }
 
     @IBAction func didTapOneButton(_ sender: Any) {
@@ -59,10 +47,6 @@ extension CommonPopupViewController {
      * coder : sanghyeon
      */
     func setupView() {
-        //MARK: ViewDefine
-        let safeArea = view.safeAreaLayoutGuide
-        
-        
         //MARK: ViewPropertyManual
         /// 백그라운드 색상 반투명 처리
         view.backgroundColor = .black.withAlphaComponent(0.5)
@@ -85,8 +69,7 @@ extension CommonPopupViewController {
      - oneButtonTitle : 기본 FilledButton, 빈 값일 경우 확인으로 표시됩니다.
      - twoButtonTitle : 보조버튼, 빈 값일경우 보이지 않습니다.
      */
-    func setupPopup(_ popupID: String, title: String, message: String, oneButtonTitle: String, twoButtonTitle: String = "") {
-        self.popupID = popupID
+    func setupPopup(_ title: String, message: String, oneButtonTitle: String, twoButtonTitle: String = "") {
         self.popupTitle.text = title
         self.popupDesc.text = message
         self.oneButton.setTitle(oneButtonTitle, for: .normal)

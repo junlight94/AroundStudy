@@ -37,9 +37,9 @@
 		DF5EC62228E6D522003411D3 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5EC62028E6D522003411D3 /* TestViewController.xib */; };
 		DF7B4C5628E47C350031B56B /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7B4C5528E47C350031B56B /* Authorization.swift */; };
 		DF89A80D28E6F0D10039E364 /* ThumbnailImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF89A80C28E6F0D10039E364 /* ThumbnailImageView.swift */; };
-		DFCBDD7D28E91403008A7E02 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5EC61F28E6D522003411D3 /* TestViewController.swift */; };
-		DFCBDD8028E93714008A7E02 /* CommonPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCBDD7E28E93714008A7E02 /* CommonPopupViewController.swift */; };
 		DFCBDD8128E93714008A7E02 /* CommonPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFCBDD7F28E93714008A7E02 /* CommonPopupViewController.xib */; };
+		DFCBDD8228E94240008A7E02 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5EC61F28E6D522003411D3 /* TestViewController.swift */; };
+		DFCBDD8328E94244008A7E02 /* CommonPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCBDD7E28E93714008A7E02 /* CommonPopupViewController.swift */; };
 		DFE0373628E27B5B00BE9E35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE0373528E27B5B00BE9E35 /* AppDelegate.swift */; };
 		DFE0373A28E27B5B00BE9E35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE0373928E27B5B00BE9E35 /* ViewController.swift */; };
 		DFE0373D28E27B5B00BE9E35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE0373B28E27B5B00BE9E35 /* Main.storyboard */; };
@@ -464,6 +464,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFCBDD8328E94244008A7E02 /* CommonPopupViewController.swift in Sources */,
+				DFCBDD8228E94240008A7E02 /* TestViewController.swift in Sources */,
 				08DC525528E8654D00B058ED /* MoreViewController.swift in Sources */,
 				192C3DAF28E55FCF003563D3 /* CustomNavigationBar.swift in Sources */,
 				088A62D328E32B8D00442E6C /* Nofile.swift in Sources */,
