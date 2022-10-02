@@ -35,6 +35,14 @@ class BaseViewController: UIViewController {
     let dataManager = DataManager.shared
     
     //******************************************************
+    //MARK: - POPUP ID DEFINE
+    //******************************************************
+    /// 스터디 참여 팝업
+    let POPUP_STUDY_JOIN_ID = 1
+    /// (테스트) 스터디 탈퇴 팝업
+    let POPUP_STUDY_LEAVE_ID = 2
+    
+    //******************************************************
     //MARK: - LifeCycle
     //******************************************************
     override func viewDidLoad() {
@@ -158,21 +166,43 @@ extension BaseViewController {
     @objc func keyboardWillHide(_ notification: Notification) {
         self.view.frame.origin.y = 0
     }
-    
+}
+
+//MARK: - 팝업
+extension BaseViewController: PopupButtonDelegate {
     /**
      팝업 생성
      > 팝업을 생성하여 띄웁니다.
      - coder: **sanghyeon**
      */
-    func showPopup(_ target: UIViewController, title: String, message: String, oneButtonTitle: String, twoButtonTitle: String = "") {
+    func showPopup(_ target: UIViewController, id: Int?, title: String, message: String, oneButtonTitle: String, twoButtonTitle: String = "") {
         let popupVC = CommonPopupViewController(nibName: "CommonPopupViewController", bundle: nil)
+        popupVC.popupID = id
+        popupVC.target = target
         popupVC.modalTransitionStyle = .coverVertical
         popupVC.modalPresentationStyle = .overCurrentContext
         target.present(popupVC, animated: false)
-        popupVC.setupPopup(title, message: message, oneButtonTitle: oneButtonTitle, twoButtonTitle: twoButtonTitle)
-        popupVC.delegate = target as! any PopupProtocol
+        popupVC.setupPopup(target, title: title, message: message, oneButtonTitle: oneButtonTitle, twoButtonTitle: twoButtonTitle)
+        popupVC.delegate = self
     }
-
+    /**
+     팝업 클릭 이벤트 처리
+     > 클릭한 팝업ID별로 처리 분기
+     - coder: **sanghyeon**
+     */
+    func buttonPressed(_ target: UIViewController?, popupId: Int?, isOk: Bool) {
+        guard let popupId = popupId else { return }
+        print("팝업 클릭 이벤트! popupId: \(popupId), target: \(target)")
+        switch popupId {
+        case POPUP_STUDY_JOIN_ID:
+            guard let vc = target as? TestViewController else { return }
+            vc.popupEvent(isOk)
+        case POPUP_STUDY_LEAVE_ID:
+            guard let vc = target as? TestViewController else { return }
+            vc.popupEventSecond(isOk)
+        default: break
+        }
+    }
 }
 
 //MARK: - 권한 요청 처리

@@ -7,10 +7,6 @@
 
 import UIKit
 
-protocol PopupProtocol {
-    func didTapOneButton()
-}
-
 class CommonPopupViewController: UIViewController {
     @IBOutlet weak var popupView: UIView!
     @IBOutlet weak var popupImageView: UIImageView!
@@ -20,7 +16,11 @@ class CommonPopupViewController: UIViewController {
     @IBOutlet weak var twoButton: UIButton!
 
     /// 델리게이트 설정
-    var delegate: PopupProtocol?
+    var delegate: PopupButtonDelegate?
+    /// 팝업 아이디
+    var popupID: Int?
+    /// 타겟 뷰컨트롤러
+    var target: UIViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +28,12 @@ class CommonPopupViewController: UIViewController {
     }
 
     @IBAction func didTapOneButton(_ sender: Any) {
-        delegate?.didTapOneButton()
+        delegate?.buttonPressed(target, popupId: popupID, isOk: true)
+        self.dismiss(animated: false)
     }
     
     @IBAction func didTapTwoButton(_ sender: Any) {
+        delegate?.buttonPressed(target, popupId: popupID, isOk: false)
         self.dismiss(animated: false)
     }
     
@@ -69,7 +71,7 @@ extension CommonPopupViewController {
      - oneButtonTitle : 기본 FilledButton, 빈 값일 경우 확인으로 표시됩니다.
      - twoButtonTitle : 보조버튼, 빈 값일경우 보이지 않습니다.
      */
-    func setupPopup(_ title: String, message: String, oneButtonTitle: String, twoButtonTitle: String = "") {
+    func setupPopup(_ target: UIViewController, title: String, message: String, oneButtonTitle: String, twoButtonTitle: String = "") {
         self.popupTitle.text = title
         self.popupDesc.text = message
         self.oneButton.setTitle(oneButtonTitle, for: .normal)

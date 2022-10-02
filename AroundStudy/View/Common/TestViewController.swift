@@ -10,7 +10,6 @@ import UIKit
 class TestViewController: BaseViewController {
 
     @IBOutlet weak var testThumbnailView: ThumbnailImageView!
-    @IBOutlet weak var boxLabel: BoxLabel!
     
     
     override func viewDidLoad() {
@@ -19,7 +18,6 @@ class TestViewController: BaseViewController {
         
         testThumbnailView.categoryTitle = "카테고리"
         testThumbnailView.image = "https://i.imgur.com/sduLRvf.jpeg"
-        boxLabel.text = "텍스트"
         
         
         /// 위치 권한 요청
@@ -58,15 +56,27 @@ class TestViewController: BaseViewController {
     }
 
     @IBAction func didTapButton(_ sender: Any) {
-        showPopup(self, title: "스터디 가입 신청", message: "스터디 참여 신청을 위해\n스터디 그룹장과 채팅을 시작합니다.", oneButtonTitle: "좋아요", twoButtonTitle: "다음에 할게요")
+        showPopup(self, id: POPUP_STUDY_JOIN_ID, title: "스터디 가입 신청", message: "스터디 참여 신청을 위해\n스터디 그룹장과 채팅을 시작합니다.", oneButtonTitle: "좋아요", twoButtonTitle: "다음에 할게요")
     }
     
-}
-
-//MARK: - 팝업 델리게이트
-extension TestViewController: PopupProtocol {
-    func didTapOneButton() {
-        print("원버튼 탭!")
+    @IBAction func didTapButtonSecond(_ sender: Any) {
+        showPopup(self, id: POPUP_STUDY_LEAVE_ID, title: "탈퇴에요!!!", message: "몰라 맘에 안들어\n그냥 탈퇴할거야!.", oneButtonTitle: "떠날게요", twoButtonTitle: "좀더 있어 볼게요")
+    }
+    
+    
+    /**
+     테스트용 함수
+     > 팝업아이디 "POPUP_STUDY_JOIN_ID" 처리 함수
+     */
+    func popupEvent(_ isOk: Bool) {
+        print("popupID: \(POPUP_STUDY_JOIN_ID), isOk: \(isOk)")
+    }
+    /**
+     테스트용 함수
+     > 팝업아이디 "POPUP_STUDY_LEAVE_ID" 처리 함수
+     */
+    func popupEventSecond(_ isOk: Bool) {
+        print("떠날거에요!!! 팝업은!!! popupID: \(POPUP_STUDY_JOIN_ID), isOk: \(isOk)")
     }
 }
 
