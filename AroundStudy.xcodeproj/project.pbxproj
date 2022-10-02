@@ -26,6 +26,22 @@
 		08DC525528E8654D00B058ED /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC525328E8654D00B058ED /* MoreViewController.swift */; };
 		08DC525628E8654D00B058ED /* MoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DC525428E8654D00B058ED /* MoreViewController.xib */; };
 		08DC525828E9806C00B058ED /* TextField+General.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC525728E9806C00B058ED /* TextField+General.swift */; };
+		08DC525D28E9A9C300B058ED /* SearchHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC525B28E9A9C300B058ED /* SearchHistoryTableViewCell.swift */; };
+		08DC525E28E9A9C300B058ED /* SearchHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DC525C28E9A9C300B058ED /* SearchHistoryTableViewCell.xib */; };
+		08DC526128E9AAED00B058ED /* StudyInfoGridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC525F28E9AAED00B058ED /* StudyInfoGridCollectionViewCell.swift */; };
+		08DC526228E9AAED00B058ED /* StudyInfoGridCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DC526028E9AAED00B058ED /* StudyInfoGridCollectionViewCell.xib */; };
+		08DC526528E9AAFE00B058ED /* StudyInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC526328E9AAFE00B058ED /* StudyInfoCollectionViewCell.swift */; };
+		08DC526628E9AAFE00B058ED /* StudyInfoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DC526428E9AAFE00B058ED /* StudyInfoCollectionViewCell.xib */; };
+		08DC526928E9AB2B00B058ED /* MemberProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC526728E9AB2B00B058ED /* MemberProfileCollectionViewCell.swift */; };
+		08DC526A28E9AB2B00B058ED /* MemberProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DC526828E9AB2B00B058ED /* MemberProfileCollectionViewCell.xib */; };
+		08DC526D28E9AB6E00B058ED /* ScheduleDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC526B28E9AB6E00B058ED /* ScheduleDetailTableViewCell.swift */; };
+		08DC526E28E9AB6E00B058ED /* ScheduleDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DC526C28E9AB6E00B058ED /* ScheduleDetailTableViewCell.xib */; };
+		08DC527128E9AB7700B058ED /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC526F28E9AB7700B058ED /* ScheduleTableViewCell.swift */; };
+		08DC527228E9AB7700B058ED /* ScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DC527028E9AB7700B058ED /* ScheduleTableViewCell.xib */; };
+		08DC527528E9AB9F00B058ED /* ColorSetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC527328E9AB9F00B058ED /* ColorSetCollectionViewCell.swift */; };
+		08DC527628E9AB9F00B058ED /* ColorSetCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DC527428E9AB9F00B058ED /* ColorSetCollectionViewCell.xib */; };
+		08DC527928E9ABD800B058ED /* VoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC527728E9ABD800B058ED /* VoteTableViewCell.swift */; };
+		08DC527A28E9ABD800B058ED /* VoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DC527828E9ABD800B058ED /* VoteTableViewCell.xib */; };
 		192C3DAF28E55FCF003563D3 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C3DAE28E55FCF003563D3 /* CustomNavigationBar.swift */; };
 		192C3DB328E56BAF003563D3 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C3DB228E56BAF003563D3 /* Notification+Extension.swift */; };
 		192C3DB528E56DAA003563D3 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C3DB428E56DAA003563D3 /* CALayer+Extension.swift */; };
@@ -69,6 +85,22 @@
 		08DC525328E8654D00B058ED /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		08DC525428E8654D00B058ED /* MoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreViewController.xib; sourceTree = "<group>"; };
 		08DC525728E9806C00B058ED /* TextField+General.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+General.swift"; sourceTree = "<group>"; };
+		08DC525B28E9A9C300B058ED /* SearchHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		08DC525C28E9A9C300B058ED /* SearchHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHistoryTableViewCell.xib; sourceTree = "<group>"; };
+		08DC525F28E9AAED00B058ED /* StudyInfoGridCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyInfoGridCollectionViewCell.swift; sourceTree = "<group>"; };
+		08DC526028E9AAED00B058ED /* StudyInfoGridCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudyInfoGridCollectionViewCell.xib; sourceTree = "<group>"; };
+		08DC526328E9AAFE00B058ED /* StudyInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyInfoCollectionViewCell.swift; sourceTree = "<group>"; };
+		08DC526428E9AAFE00B058ED /* StudyInfoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudyInfoCollectionViewCell.xib; sourceTree = "<group>"; };
+		08DC526728E9AB2B00B058ED /* MemberProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberProfileCollectionViewCell.swift; sourceTree = "<group>"; };
+		08DC526828E9AB2B00B058ED /* MemberProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberProfileCollectionViewCell.xib; sourceTree = "<group>"; };
+		08DC526B28E9AB6E00B058ED /* ScheduleDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleDetailTableViewCell.swift; sourceTree = "<group>"; };
+		08DC526C28E9AB6E00B058ED /* ScheduleDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleDetailTableViewCell.xib; sourceTree = "<group>"; };
+		08DC526F28E9AB7700B058ED /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
+		08DC527028E9AB7700B058ED /* ScheduleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleTableViewCell.xib; sourceTree = "<group>"; };
+		08DC527328E9AB9F00B058ED /* ColorSetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSetCollectionViewCell.swift; sourceTree = "<group>"; };
+		08DC527428E9AB9F00B058ED /* ColorSetCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorSetCollectionViewCell.xib; sourceTree = "<group>"; };
+		08DC527728E9ABD800B058ED /* VoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteTableViewCell.swift; sourceTree = "<group>"; };
+		08DC527828E9ABD800B058ED /* VoteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VoteTableViewCell.xib; sourceTree = "<group>"; };
 		132B1B51ED5CA8B98EE79822 /* Pods_AroundStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AroundStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		192C3DAE28E55FCF003563D3 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		192C3DB228E56BAF003563D3 /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
@@ -155,6 +187,7 @@
 		088A62C628E319DA00442E6C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				08DC525A28E9A87D00B058ED /* 공통-셀 */,
 				DFCBDD7828E91273008A7E02 /* 공통-팝업 */,
 				DF5EC61E28E6D50E003411D3 /* 테스트 */,
 				088A62CC28E32B4A00442E6C /* BaseViewController.swift */,
@@ -249,6 +282,29 @@
 				08DC524828E8652C00B058ED /* HomeViewController.xib */,
 			);
 			name = "홈-메인";
+			sourceTree = "<group>";
+		};
+		08DC525A28E9A87D00B058ED /* 공통-셀 */ = {
+			isa = PBXGroup;
+			children = (
+				08DC525B28E9A9C300B058ED /* SearchHistoryTableViewCell.swift */,
+				08DC525C28E9A9C300B058ED /* SearchHistoryTableViewCell.xib */,
+				08DC525F28E9AAED00B058ED /* StudyInfoGridCollectionViewCell.swift */,
+				08DC526028E9AAED00B058ED /* StudyInfoGridCollectionViewCell.xib */,
+				08DC526328E9AAFE00B058ED /* StudyInfoCollectionViewCell.swift */,
+				08DC526428E9AAFE00B058ED /* StudyInfoCollectionViewCell.xib */,
+				08DC526728E9AB2B00B058ED /* MemberProfileCollectionViewCell.swift */,
+				08DC526828E9AB2B00B058ED /* MemberProfileCollectionViewCell.xib */,
+				08DC526B28E9AB6E00B058ED /* ScheduleDetailTableViewCell.swift */,
+				08DC526C28E9AB6E00B058ED /* ScheduleDetailTableViewCell.xib */,
+				08DC526F28E9AB7700B058ED /* ScheduleTableViewCell.swift */,
+				08DC527028E9AB7700B058ED /* ScheduleTableViewCell.xib */,
+				08DC527328E9AB9F00B058ED /* ColorSetCollectionViewCell.swift */,
+				08DC527428E9AB9F00B058ED /* ColorSetCollectionViewCell.xib */,
+				08DC527728E9ABD800B058ED /* VoteTableViewCell.swift */,
+				08DC527828E9ABD800B058ED /* VoteTableViewCell.xib */,
+			);
+			name = "공통-셀";
 			sourceTree = "<group>";
 		};
 		A6E5688C91D72101AD1D6F16 /* Pods */ = {
@@ -404,17 +460,25 @@
 				08DC523A28E478D700B058ED /* RootTabViewController.xib in Resources */,
 				DF5EC62228E6D522003411D3 /* TestViewController.xib in Resources */,
 				DFCBDD8128E93714008A7E02 /* CommonPopupViewController.xib in Resources */,
+				08DC525E28E9A9C300B058ED /* SearchHistoryTableViewCell.xib in Resources */,
+				08DC527628E9AB9F00B058ED /* ColorSetCollectionViewCell.xib in Resources */,
+				08DC527A28E9ABD800B058ED /* VoteTableViewCell.xib in Resources */,
 				DF15CBDF28E85AB0009F24CB /* Pretendard-Bold.otf in Resources */,
 				DFE0374228E27B5D00BE9E35 /* LaunchScreen.storyboard in Resources */,
+				08DC526228E9AAED00B058ED /* StudyInfoGridCollectionViewCell.xib in Resources */,
 				DFE0373F28E27B5D00BE9E35 /* Assets.xcassets in Resources */,
 				DF15CBE028E85AB0009F24CB /* Pretendard-Regular.otf in Resources */,
 				08DC525628E8654D00B058ED /* MoreViewController.xib in Resources */,
 				DF15CBE128E85AB0009F24CB /* Pretendard-SemiBold.otf in Resources */,
 				08DC524A28E8652C00B058ED /* HomeViewController.xib in Resources */,
+				08DC526A28E9AB2B00B058ED /* MemberProfileCollectionViewCell.xib in Resources */,
 				08DC525228E8654400B058ED /* ChattingViewController.xib in Resources */,
+				08DC527228E9AB7700B058ED /* ScheduleTableViewCell.xib in Resources */,
+				08DC526E28E9AB6E00B058ED /* ScheduleDetailTableViewCell.xib in Resources */,
 				DFE0373D28E27B5B00BE9E35 /* Main.storyboard in Resources */,
 				DF15CBDE28E85AB0009F24CB /* Pretendard-Medium.otf in Resources */,
 				08DC524E28E8653800B058ED /* StudyViewController.xib in Resources */,
+				08DC526628E9AAFE00B058ED /* StudyInfoCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,23 +535,31 @@
 				DFCBDD8228E94240008A7E02 /* TestViewController.swift in Sources */,
 				08DC525528E8654D00B058ED /* MoreViewController.swift in Sources */,
 				192C3DAF28E55FCF003563D3 /* CustomNavigationBar.swift in Sources */,
+				08DC526928E9AB2B00B058ED /* MemberProfileCollectionViewCell.swift in Sources */,
 				088A62D328E32B8D00442E6C /* Nofile.swift in Sources */,
+				08DC527528E9AB9F00B058ED /* ColorSetCollectionViewCell.swift in Sources */,
 				DF15CBE328E861E1009F24CB /* BoxLabel.swift in Sources */,
 				08DC523528E467CE00B058ED /* LoginDto.swift in Sources */,
 				088A62CF28E32B5500442E6C /* APIManager.swift in Sources */,
 				08DC524928E8652C00B058ED /* HomeViewController.swift in Sources */,
+				08DC525D28E9A9C300B058ED /* SearchHistoryTableViewCell.swift in Sources */,
+				08DC526128E9AAED00B058ED /* StudyInfoGridCollectionViewCell.swift in Sources */,
 				DF7B4C5628E47C350031B56B /* Authorization.swift in Sources */,
 				DFE0373A28E27B5B00BE9E35 /* ViewController.swift in Sources */,
 				DFE0373628E27B5B00BE9E35 /* AppDelegate.swift in Sources */,
 				08DC522F28E4662B00B058ED /* Delegate.swift in Sources */,
 				DF89A80D28E6F0D10039E364 /* ThumbnailImageView.swift in Sources */,
 				08DC524D28E8653800B058ED /* StudyViewController.swift in Sources */,
+				08DC527928E9ABD800B058ED /* VoteTableViewCell.swift in Sources */,
 				088A62D128E32B6800442E6C /* String+Extension.swift in Sources */,
 				088A62CD28E32B4A00442E6C /* BaseViewController.swift in Sources */,
+				08DC526D28E9AB6E00B058ED /* ScheduleDetailTableViewCell.swift in Sources */,
 				192C3DB528E56DAA003563D3 /* CALayer+Extension.swift in Sources */,
 				192C3DB328E56BAF003563D3 /* Notification+Extension.swift in Sources */,
 				08DC525128E8654400B058ED /* ChattingViewController.swift in Sources */,
 				08DC525828E9806C00B058ED /* TextField+General.swift in Sources */,
+				08DC526528E9AAFE00B058ED /* StudyInfoCollectionViewCell.swift in Sources */,
+				08DC527128E9AB7700B058ED /* ScheduleTableViewCell.swift in Sources */,
 				08DC523928E478D700B058ED /* RootTabViewController.swift in Sources */,
 				08DC523128E4663B00B058ED /* DataManager.swift in Sources */,
 				08DC522D28E4647400B058ED /* Button+General.swift in Sources */,
@@ -692,7 +764,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.studyaround.AroundStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = AroundStudyDistribution;
+				PROVISIONING_PROFILE_SPECIFIER = AroundStudyDistribution_Appstore;
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = AroundStudyDistribution;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
