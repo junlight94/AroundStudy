@@ -9,22 +9,19 @@ import UIKit
 
 class TestViewController: BaseViewController {
 
-    @IBOutlet weak var testThumbnailView: ThumbnailImageView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
-    
+        
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("테스트뷰컨")
         
-        testThumbnailView.categoryTitle = "카테고리"
-        testThumbnailView.image = "https://i.imgur.com/sduLRvf.jpeg"
         
         tableView.delegate = self
         tableView.dataSource = self
-        let cellNib = UINib(nibName: "ScheduleDetailTableViewCell", bundle: nil)
-        tableView.register(cellNib, forCellReuseIdentifier: "ScheduleDetailTableViewCell")
+        let cellNib = UINib(nibName: "VoteTableViewCell", bundle: nil)
+        tableView.register(cellNib, forCellReuseIdentifier: "VoteTableViewCell")
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -123,7 +120,7 @@ extension TestViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleDetailTableViewCell", for: indexPath) as? ScheduleDetailTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "VoteTableViewCell", for: indexPath) as? VoteTableViewCell else { return UITableViewCell() }
         return cell
     }
 }

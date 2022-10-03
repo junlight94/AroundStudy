@@ -51,6 +51,7 @@
 		DF15CBE028E85AB0009F24CB /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DF15CBDC28E85AB0009F24CB /* Pretendard-Regular.otf */; };
 		DF15CBE128E85AB0009F24CB /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DF15CBDD28E85AB0009F24CB /* Pretendard-SemiBold.otf */; };
 		DF15CBE328E861E1009F24CB /* BoxLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF15CBE228E861E1009F24CB /* BoxLabel.swift */; };
+		DF1D5B7C28EAEFAD00B875D5 /* VoteDetailItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1D5B7B28EAEFAD00B875D5 /* VoteDetailItemView.swift */; };
 		DF5EC62228E6D522003411D3 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5EC62028E6D522003411D3 /* TestViewController.xib */; };
 		DF7B4C5628E47C350031B56B /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7B4C5528E47C350031B56B /* Authorization.swift */; };
 		DF89A80D28E6F0D10039E364 /* ThumbnailImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF89A80C28E6F0D10039E364 /* ThumbnailImageView.swift */; };
@@ -111,6 +112,7 @@
 		DF15CBDC28E85AB0009F24CB /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		DF15CBDD28E85AB0009F24CB /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		DF15CBE228E861E1009F24CB /* BoxLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxLabel.swift; sourceTree = "<group>"; };
+		DF1D5B7B28EAEFAD00B875D5 /* VoteDetailItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteDetailItemView.swift; sourceTree = "<group>"; };
 		DF56234E28E3322000A00258 /* AroundStudy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AroundStudy.entitlements; sourceTree = "<group>"; };
 		DF5EC61F28E6D522003411D3 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		DF5EC62028E6D522003411D3 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 				08DC527428E9AB9F00B058ED /* ColorSetCollectionViewCell.xib */,
 				08DC527728E9ABD800B058ED /* VoteTableViewCell.swift */,
 				08DC527828E9ABD800B058ED /* VoteTableViewCell.xib */,
+				DF1D5B7B28EAEFAD00B875D5 /* VoteDetailItemView.swift */,
 			);
 			name = "공통-셀";
 			sourceTree = "<group>";
@@ -546,6 +549,7 @@
 				08DC526128E9AAED00B058ED /* StudyInfoGridCollectionViewCell.swift in Sources */,
 				DF7B4C5628E47C350031B56B /* Authorization.swift in Sources */,
 				DFE0373A28E27B5B00BE9E35 /* ViewController.swift in Sources */,
+				DF1D5B7C28EAEFAD00B875D5 /* VoteDetailItemView.swift in Sources */,
 				DFE0373628E27B5B00BE9E35 /* AppDelegate.swift in Sources */,
 				08DC522F28E4662B00B058ED /* Delegate.swift in Sources */,
 				DF89A80D28E6F0D10039E364 /* ThumbnailImageView.swift in Sources */,
