@@ -10,6 +10,7 @@ import UIKit
 class TestViewController: BaseViewController {
 
     @IBOutlet weak var testThumbnailView: ThumbnailImageView!
+    @IBOutlet weak var tableView: UITableView!
     
     
     override func viewDidLoad() {
@@ -18,6 +19,11 @@ class TestViewController: BaseViewController {
         
         testThumbnailView.categoryTitle = "카테고리"
         testThumbnailView.image = "https://i.imgur.com/sduLRvf.jpeg"
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        let cellNib = UINib(nibName: "ScheduleTableViewCell", bundle: nil)
+        tableView.register(cellNib, forCellReuseIdentifier: "ScheduleTableViewCell")
         
         
         /// 위치 권한 요청
@@ -100,4 +106,17 @@ extension TestViewController {
             }
         }
     }
+}
+
+extension TestViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 20
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleTableViewCell", for: indexPath) as? ScheduleTableViewCell else { return UITableViewCell() }
+        return cell
+    }
+    
+    
 }
