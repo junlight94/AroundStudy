@@ -52,6 +52,7 @@
 		DF15CBE128E85AB0009F24CB /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DF15CBDD28E85AB0009F24CB /* Pretendard-SemiBold.otf */; };
 		DF15CBE328E861E1009F24CB /* BoxLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF15CBE228E861E1009F24CB /* BoxLabel.swift */; };
 		DF1D5B7C28EAEFAD00B875D5 /* VoteDetailItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1D5B7B28EAEFAD00B875D5 /* VoteDetailItemView.swift */; };
+		DF1D5B7F28EAFD2600B875D5 /* RegisterIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1D5B7E28EAFD2600B875D5 /* RegisterIndicatorView.swift */; };
 		DF5EC62228E6D522003411D3 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5EC62028E6D522003411D3 /* TestViewController.xib */; };
 		DF7B4C5628E47C350031B56B /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7B4C5528E47C350031B56B /* Authorization.swift */; };
 		DF89A80D28E6F0D10039E364 /* ThumbnailImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF89A80C28E6F0D10039E364 /* ThumbnailImageView.swift */; };
@@ -113,6 +114,7 @@
 		DF15CBDD28E85AB0009F24CB /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		DF15CBE228E861E1009F24CB /* BoxLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxLabel.swift; sourceTree = "<group>"; };
 		DF1D5B7B28EAEFAD00B875D5 /* VoteDetailItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteDetailItemView.swift; sourceTree = "<group>"; };
+		DF1D5B7E28EAFD2600B875D5 /* RegisterIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterIndicatorView.swift; sourceTree = "<group>"; };
 		DF56234E28E3322000A00258 /* AroundStudy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AroundStudy.entitlements; sourceTree = "<group>"; };
 		DF5EC61F28E6D522003411D3 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		DF5EC62028E6D522003411D3 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				088A62C628E319DA00442E6C /* Common */,
 				088A62C728E319FE00442E6C /* 시작-온보딩 */,
 				088A62C828E31A1200442E6C /* 시작-접근권한 */,
+				DF1D5B7D28EAFD0600B875D5 /* 시작-정보입력 */,
 				08DC523628E478A600B058ED /* 홈 */,
 				08DC524628E8651100B058ED /* 홈-메인 */,
 				08DC524328E864BB00B058ED /* 스터디 */,
@@ -325,6 +328,14 @@
 				132B1B51ED5CA8B98EE79822 /* Pods_AroundStudy.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF1D5B7D28EAFD0600B875D5 /* 시작-정보입력 */ = {
+			isa = PBXGroup;
+			children = (
+				DF1D5B7E28EAFD2600B875D5 /* RegisterIndicatorView.swift */,
+			);
+			name = "시작-정보입력";
 			sourceTree = "<group>";
 		};
 		DF5EC61E28E6D50E003411D3 /* 테스트 */ = {
@@ -553,6 +564,7 @@
 				DFE0373628E27B5B00BE9E35 /* AppDelegate.swift in Sources */,
 				08DC522F28E4662B00B058ED /* Delegate.swift in Sources */,
 				DF89A80D28E6F0D10039E364 /* ThumbnailImageView.swift in Sources */,
+				DF1D5B7F28EAFD2600B875D5 /* RegisterIndicatorView.swift in Sources */,
 				08DC524D28E8653800B058ED /* StudyViewController.swift in Sources */,
 				08DC527928E9ABD800B058ED /* VoteTableViewCell.swift in Sources */,
 				088A62D128E32B6800442E6C /* String+Extension.swift in Sources */,
