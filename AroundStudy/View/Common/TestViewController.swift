@@ -10,12 +10,15 @@ import UIKit
 class TestViewController: BaseViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var indicatorView: RegisterIndicatorView!
     @IBOutlet weak var collectionView: UICollectionView!
         
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("테스트뷰컨")
+        
+        indicatorView.currentStep = 2
         
         
         tableView.delegate = self
