@@ -11,6 +11,7 @@ class TestViewController: BaseViewController {
 
     @IBOutlet weak var testThumbnailView: ThumbnailImageView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     
     override func viewDidLoad() {
@@ -24,6 +25,14 @@ class TestViewController: BaseViewController {
         tableView.dataSource = self
         let cellNib = UINib(nibName: "ScheduleTableViewCell", bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: "ScheduleTableViewCell")
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
+        let collectionViewNib = UINib(nibName: "ColorSetCollectionViewCell", bundle: nil)
+        collectionView.register(collectionViewNib, forCellWithReuseIdentifier: "ColorSetCollectionViewCell")
+        
+        
         
         
         /// 위치 권한 요청
@@ -117,6 +126,25 @@ extension TestViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleTableViewCell", for: indexPath) as? ScheduleTableViewCell else { return UITableViewCell() }
         return cell
     }
+}
+
+extension TestViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        6
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ColorSetCollectionViewCell", for: indexPath) as? ColorSetCollectionViewCell else { return UICollectionViewCell() }
+        if indexPath.row == 2 {
+            cell.selectCell()
+        }
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 36, height: 36)
+    }
+    
     
     
 }
