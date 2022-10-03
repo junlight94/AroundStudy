@@ -50,14 +50,14 @@
                         <action selector="didTapButtonSecond:" destination="-1" eventType="touchUpInside" id="07m-cB-JQd"/>
                     </connections>
                 </button>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="K4m-kh-4Eu">
-                    <rect key="frame" x="0.0" y="242" width="390" height="200"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="170" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="K4m-kh-4Eu">
+                    <rect key="frame" x="0.0" y="242" width="390" height="350"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="200" id="zLA-GM-VIF"/>
+                        <constraint firstAttribute="height" constant="350" id="zLA-GM-VIF"/>
                     </constraints>
                 </tableView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="be7-mT-NRP">
-                    <rect key="frame" x="0.0" y="442" width="390" height="258"/>
+                    <rect key="frame" x="0.0" y="592" width="390" height="108"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="R2m-yQ-ynA">
                         <size key="itemSize" width="128" height="128"/>
