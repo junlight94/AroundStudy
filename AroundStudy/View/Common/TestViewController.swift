@@ -23,8 +23,8 @@ class TestViewController: BaseViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        let cellNib = UINib(nibName: "ScheduleTableViewCell", bundle: nil)
-        tableView.register(cellNib, forCellReuseIdentifier: "ScheduleTableViewCell")
+        let cellNib = UINib(nibName: "ScheduleDetailTableViewCell", bundle: nil)
+        tableView.register(cellNib, forCellReuseIdentifier: "ScheduleDetailTableViewCell")
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -123,7 +123,7 @@ extension TestViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleTableViewCell", for: indexPath) as? ScheduleTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleDetailTableViewCell", for: indexPath) as? ScheduleDetailTableViewCell else { return UITableViewCell() }
         return cell
     }
 }
