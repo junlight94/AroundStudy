@@ -45,6 +45,8 @@
 		192C3DAF28E55FCF003563D3 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C3DAE28E55FCF003563D3 /* CustomNavigationBar.swift */; };
 		192C3DB328E56BAF003563D3 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C3DB228E56BAF003563D3 /* Notification+Extension.swift */; };
 		192C3DB528E56DAA003563D3 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C3DB428E56DAA003563D3 /* CALayer+Extension.swift */; };
+		19868C4C28EC5C550093DF76 /* StudyBannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19868C4A28EC5C550093DF76 /* StudyBannerCollectionViewCell.swift */; };
+		19868C4D28EC5C550093DF76 /* StudyBannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19868C4B28EC5C550093DF76 /* StudyBannerCollectionViewCell.xib */; };
 		CC7CC9DA10D494D83221F8DF /* Pods_AroundStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 132B1B51ED5CA8B98EE79822 /* Pods_AroundStudy.framework */; };
 		DF068CB128EC496700083917 /* PermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF068CAF28EC496700083917 /* PermissionViewController.swift */; };
 		DF068CB228EC496700083917 /* PermissionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF068CB028EC496700083917 /* PermissionViewController.xib */; };
@@ -111,6 +113,8 @@
 		192C3DAE28E55FCF003563D3 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		192C3DB228E56BAF003563D3 /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
 		192C3DB428E56DAA003563D3 /* CALayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
+		19868C4A28EC5C550093DF76 /* StudyBannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyBannerCollectionViewCell.swift; sourceTree = "<group>"; };
+		19868C4B28EC5C550093DF76 /* StudyBannerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudyBannerCollectionViewCell.xib; sourceTree = "<group>"; };
 		82395ECBC730C264D56A62EC /* Pods-AroundStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundStudy.release.xcconfig"; path = "Target Support Files/Pods-AroundStudy/Pods-AroundStudy.release.xcconfig"; sourceTree = "<group>"; };
 		DF068CAF28EC496700083917 /* PermissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionViewController.swift; sourceTree = "<group>"; };
 		DF068CB028EC496700083917 /* PermissionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PermissionViewController.xib; sourceTree = "<group>"; };
@@ -310,6 +314,8 @@
 				08DC526028E9AAED00B058ED /* StudyInfoGridCollectionViewCell.xib */,
 				08DC526328E9AAFE00B058ED /* StudyInfoCollectionViewCell.swift */,
 				08DC526428E9AAFE00B058ED /* StudyInfoCollectionViewCell.xib */,
+				19868C4A28EC5C550093DF76 /* StudyBannerCollectionViewCell.swift */,
+				19868C4B28EC5C550093DF76 /* StudyBannerCollectionViewCell.xib */,
 				08DC526728E9AB2B00B058ED /* MemberProfileCollectionViewCell.swift */,
 				08DC526828E9AB2B00B058ED /* MemberProfileCollectionViewCell.xib */,
 				08DC526B28E9AB6E00B058ED /* ScheduleDetailTableViewCell.swift */,
@@ -505,6 +511,7 @@
 				DF068CB228EC496700083917 /* PermissionViewController.xib in Resources */,
 				DFE0373D28E27B5B00BE9E35 /* Main.storyboard in Resources */,
 				DF15CBDE28E85AB0009F24CB /* Pretendard-Medium.otf in Resources */,
+				19868C4D28EC5C550093DF76 /* StudyBannerCollectionViewCell.xib in Resources */,
 				08DC524E28E8653800B058ED /* StudyViewController.xib in Resources */,
 				08DC526628E9AAFE00B058ED /* StudyInfoCollectionViewCell.xib in Resources */,
 			);
@@ -582,6 +589,7 @@
 				DF89A80D28E6F0D10039E364 /* ThumbnailImageView.swift in Sources */,
 				DF1D5B7F28EAFD2600B875D5 /* RegisterIndicatorView.swift in Sources */,
 				08DC524D28E8653800B058ED /* StudyViewController.swift in Sources */,
+				19868C4C28EC5C550093DF76 /* StudyBannerCollectionViewCell.swift in Sources */,
 				08DC527928E9ABD800B058ED /* VoteTableViewCell.swift in Sources */,
 				088A62D128E32B6800442E6C /* String+Extension.swift in Sources */,
 				088A62CD28E32B4A00442E6C /* BaseViewController.swift in Sources */,
