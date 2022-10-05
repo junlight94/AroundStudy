@@ -8,25 +8,6 @@ import UIKit
 
 extension CALayer {
     /**
-     * @쉐도우 설정
-     * @creator : coder3306
-     * @param offset : 그림자의 위치
-     * @param color : 그림자 색상
-     * @param radius : 그림자 블러
-     * @param opacity : 그림자 투명도
-     * @param path : 그림자 모양 커스텀
-     */
-    public func setShadow(offset: CGSize = CGSize(width: 0, height: 4), color: CGColor = UIColor.black.cgColor, radius: CGFloat = 8, opacity: Float = 0.12, rect: CGRect = CGRect.zero) {
-        masksToBounds = false
-        shadowOffset = offset
-        shadowColor = color
-        shadowRadius = radius
-        shadowOpacity = opacity
-        //FIXME: - 쉐도우 처리 오류
-//        shadowPath = UIBezierPath(roundedRect: rect, cornerRadius: radius).cgPath
-    }
-    
-    /**
      * @제플린 쉐도우 그대로 사용
      * @creator : 이준영
      * @param color : 그림자 색상
