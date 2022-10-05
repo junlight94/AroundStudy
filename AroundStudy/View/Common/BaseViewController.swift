@@ -21,6 +21,8 @@ typealias boolClosure = (Bool?) -> ()
 typealias dataClosure = (Any) -> ()
 /// 반환값으로 번호를 넘기는 클로저
 typealias numberClosure = (Int) -> ()
+/// 반환값으로 응답값을 넘기는 클로저
+typealias responseClosure = ([String: Any]?) -> ()
 
 //MARK: - BaseViewController
 class BaseViewController: UIViewController {
@@ -71,7 +73,7 @@ class BaseViewController: UIViewController {
      * @param leftBarButton : 네비게이션 바 왼쪽 버튼 리스트
      * @param rightbarButton : 네비게이션 바 오른쪽 버튼 리스트
      */
-    public func setNavigationBar(_ title: String? = nil, leftBarButton: [UIView]? = nil, rightBarButton: [UIView]? = nil) {
+    public func setNavigationBar(_ title: String? = nil, leftBarButton: [UIView]? = nil, rightBarButton: [UIView]? = nil, isLeftSetting: Bool = false) {
         /// 기본 네비게이션바 숨기기
         self.navigationController?.navigationBar.isHidden = true
         self.customNavigationBar.backgroundColor = .white
@@ -81,6 +83,15 @@ class BaseViewController: UIViewController {
         customNavigationBar.snp.makeConstraints {
             $0.top.leading.trailing.equalToSuperview()
             $0.bottom.equalTo(customNavigationBar.containerView)
+        }
+        
+        if isLeftSetting {
+            customNavigationBar.navigationTitleLabel.snp.remakeConstraints { make in
+                make.centerY.equalTo(customNavigationBar.containerView)
+                if let leftItems = customNavigationBar.containerView.subviews.filter({$0.accessibilityIdentifier == "NAVIGATIONLEFTITEMS"}).first {
+                    make.leading.equalTo(leftItems.snp.trailing).offset(25)
+                }
+            }
         }
     }
     

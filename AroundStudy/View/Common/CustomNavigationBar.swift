@@ -10,6 +10,8 @@ class CustomNavigationBar: UIView {
     //******************************************************
     //MARK: - Properties
     //******************************************************
+    /// 네비게이션 바 커스텀 스텍 뷰
+    var stackView = UIStackView()
     /// 네비게이션 바 컨테이너 뷰
     let containerView = UIView()
     /// 네비게이션 바 타이틀
@@ -64,18 +66,22 @@ class CustomNavigationBar: UIView {
      * @param isLeft : 버튼의 위치 설정
      */
     private func setNavigationBarButton(_ button: [UIView], isLeft: Bool) {
-        let stackView = UIStackView(arrangedSubviews: button)
+        stackView = UIStackView(arrangedSubviews: button)
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
         stackView.distribution = .equalSpacing
         stackView.axis = .horizontal
         stackView.alignment = .center
         stackView.spacing = 5
+        if isLeft {
+            stackView.accessibilityIdentifier = "NAVIGATIONLEFTITEMS"
+        }
         
         containerView.addSubview(stackView)
         stackView.snp.makeConstraints {
             if isLeft {
                 $0.leading.equalTo(self.containerView).offset(15)
+                $0.trailing.lessThanOrEqualTo(self.navigationTitleLabel.snp.leading).offset(15)
             } else {
                 $0.trailing.equalTo(self.containerView).offset(-15)
             }
