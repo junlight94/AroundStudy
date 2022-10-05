@@ -9,7 +9,6 @@ import UIKit
 
 class StudyInfoGridCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imgMain: UIImageView!
-    @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var lbInfo: UILabel!
     @IBOutlet weak var lbLocation: UILabel!
     @IBOutlet weak var lbMember: UILabel!
@@ -19,8 +18,16 @@ class StudyInfoGridCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        imgMain.layer.cornerRadius = 8
         viewLocation.layer.cornerRadius = 4
         viewMember.layer.cornerRadius = 4
     }
-
+    
+    func setupCell(_ title: String, location: String, memberCount: Int, image: String? = nil) {
+        lbInfo.text = title
+        lbLocation.text = location
+        lbMember.text = "\(memberCount)"
+        
+    }
+    
 }

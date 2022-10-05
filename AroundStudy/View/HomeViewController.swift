@@ -8,22 +8,151 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    //******************************************************
+    //MARK: - 더미데이터
+    //******************************************************
+    let studyCellData: [[String]] = [
+        ["스터디 제목", "강남구", "28"],
+        ["스터디 제목인데 이건 두줄을 위한", "서초구", "52"],
+        ["스터디 제목", "해운대구", "8"],
+        ["스터디 제목", "몰라몰라", "1"],
+        ["스터디 제목인데 이건 두줄을 위한", "지역", "108"],
+        ["스터디 제목인데 이건 두줄을 위한", "지역", "999"],
+        ["스터디 제목", "지역", "8"],
+        ["스터디 제목", "지역", "22"],
+        ["스터디 제목인데 이건 두줄을 위한", "지역", "7"],
+    ]
 
+    @IBOutlet weak var customNavagationBar: CustomNavigationBar!
+    @IBOutlet weak var categoryCollectionView: UICollectionView!
+    @IBOutlet weak var studyCollectionView: UICollectionView!
+    @IBOutlet weak var categoryOneView: UIView!
+    @IBOutlet weak var categoryTwoView: UIView!
+    
+    let categoryButton = UIButton(type: .custom)
+    let searchButton = UIButton(type: .custom)
+    
+    /// 테스트용 뷰들
+    @IBOutlet weak var tempTopView: UIView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupTemp()
+        setupNavagationBar()
+        setupView()
         // Do any additional setup after loading the view.
     }
+}
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension HomeViewController {
+    /**
+     테스트용 코드
+     - 실 개발시는 꼭 삭제하고 작업해야합니다!
+     > coder : sanghyeon
+     */
+    func setupTemp() {
+        tempTopView.layer.cornerRadius = 12
     }
-    */
+    /**
+     네비게이션바 설정
+     - 뷰가 로드된 후 네비게이션바를 설정합니다.
+     > coder : sanghyeon
+     */
+    func setupNavagationBar() {
+        categoryButton.setImage(UIImage(named: "category"), for: .normal)
+        searchButton.setImage(UIImage(named: "search"), for: .normal)
+        customNavagationBar.setNavigationBar(rightBarButton: [categoryButton, searchButton])
+    }
+    /**
+     초기 레이아웃 설정
+     - 뷰가 로드된 후 처음 레이아웃을 설정합니다.
+     > coder : sanghyeon
+     */
+    func setupView() {
+        /// 카테고리 컬렉션뷰 설정
+        categoryCollectionView.delegate = self
+        categoryCollectionView.dataSource = self
+        let categoryCellNib = UINib(nibName: "HomeCategoryCollectionViewCell", bundle: nil)
+        categoryCollectionView.register(categoryCellNib, forCellWithReuseIdentifier: "HomeCategoryCollectionViewCell")
+        
+        /// 스터디 컬렉션뷰 설정
+        studyCollectionView.delegate = self
+        studyCollectionView.dataSource = self
+        let studyCellNib = UINib(nibName: "StudyInfoGridCollectionViewCell", bundle: nil)
+        studyCollectionView.register(studyCellNib, forCellWithReuseIdentifier: "StudyInfoGridCollectionViewCell")
+        
+        /// 카테고리 필터 보더 및 코너라운딩
+        categoryOneView.layer.borderWidth = 1
+        categoryOneView.layer.borderColor = UIColor(named: "236")?.cgColor
+        categoryOneView.layer.cornerRadius = 8
+        categoryTwoView.layer.borderWidth = categoryOneView.layer.borderWidth
+        categoryTwoView.layer.borderColor = categoryOneView.layer.borderColor
+        categoryTwoView.layer.cornerRadius = categoryOneView.layer.cornerRadius
+    }
+}
 
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        switch collectionView {
+        case categoryCollectionView:
+            return 20
+        case studyCollectionView:
+            return studyCellData.count
+        default: return 0
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
+        return setupCollectionViewCell(collectionView, indexPath: indexPath)
+    }
+    
+    /**
+     컬렉션뷰 셀 사이즈 변경
+     - 인터페이스빌더에서 설정하려 하였으나, 화면 사이즈에 맞게 변경해야할 필요가 있어서 코드로 처리함
+     > coder : sanghyeon
+     */
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        switch collectionView {
+        case categoryCollectionView:
+            return CGSize(width: 64, height: 60)
+        case studyCollectionView:
+            guard let cell = studyCollectionView.dequeueReusableCell(withReuseIdentifier: "StudyInfoGridCollectionViewCell", for: indexPath) as? StudyInfoGridCollectionViewCell else { return .zero }
+            let cellData = studyCellData[indexPath.row]
+            cell.setupCell(cellData[0], location: cellData[1], memberCount: Int(cellData[2]) ?? 0)
+            
+            let screenWidth = view.frame.width
+            let cellWidth = (screenWidth - 55) / 2
+            let cellHeight = cell.contentView.frame.height
+            print("cellHeight: \(cellHeight)")
+            return CGSize(width: cellWidth, height: 178)
+        default: return .zero
+        }
+    }
+    
+    
+    
+    /**
+     컬렉션뷰 셀 설정 대체 함수
+     - 기본으로 제공하는 함수를 대체하여 사용합니다.
+     > coder : sanghyeon
+     */
+    func setupCollectionViewCell(_ collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
+        switch collectionView {
+        case categoryCollectionView:
+            guard let cell = categoryCollectionView.dequeueReusableCell(withReuseIdentifier: "HomeCategoryCollectionViewCell", for: indexPath) as? HomeCategoryCollectionViewCell else { return UICollectionViewCell() }
+            return cell
+        case studyCollectionView:
+            guard let cell = studyCollectionView.dequeueReusableCell(withReuseIdentifier: "StudyInfoGridCollectionViewCell", for: indexPath) as? StudyInfoGridCollectionViewCell else { return UICollectionViewCell() }
+            let cellData = studyCellData[indexPath.row]
+            cell.setupCell(cellData[0], location: cellData[1], memberCount: Int(cellData[2]) ?? 0)
+            return cell
+        default: return UICollectionViewCell()
+        }
+    }
+    
+    
+    
 }

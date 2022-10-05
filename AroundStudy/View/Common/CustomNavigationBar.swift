@@ -35,7 +35,7 @@ class CustomNavigationBar: UIView {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
     }
     
     //******************************************************
@@ -72,7 +72,7 @@ class CustomNavigationBar: UIView {
         stackView.distribution = .equalSpacing
         stackView.axis = .horizontal
         stackView.alignment = .center
-        stackView.spacing = 5
+        stackView.spacing = 16
         if isLeft {
             stackView.accessibilityIdentifier = "NAVIGATIONLEFTITEMS"
         }
