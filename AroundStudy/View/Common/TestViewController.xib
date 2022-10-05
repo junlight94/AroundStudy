@@ -88,6 +88,7 @@
                 <constraint firstItem="urR-ij-kHA" firstAttribute="top" secondItem="L15-Bb-sW8" secondAttribute="bottom" constant="10" id="yJz-mw-gMc"/>
                 <constraint firstItem="7nv-Bi-43Z" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="yxI-tV-1Rt"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-498.46153846153845" y="-161.37440758293837"/>
         </view>
     </objects>
