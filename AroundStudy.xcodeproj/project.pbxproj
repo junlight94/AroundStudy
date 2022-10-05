@@ -42,6 +42,8 @@
 		08DC527628E9AB9F00B058ED /* ColorSetCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DC527428E9AB9F00B058ED /* ColorSetCollectionViewCell.xib */; };
 		08DC527928E9ABD800B058ED /* VoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC527728E9ABD800B058ED /* VoteTableViewCell.swift */; };
 		08DC527A28E9ABD800B058ED /* VoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DC527828E9ABD800B058ED /* VoteTableViewCell.xib */; };
+		191E2E3A28ED12DB00BB92DF /* StudyCalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E2E3828ED12DB00BB92DF /* StudyCalenderViewController.swift */; };
+		191E2E3B28ED12DB00BB92DF /* StudyCalenderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 191E2E3928ED12DB00BB92DF /* StudyCalenderViewController.xib */; };
 		192C3DAF28E55FCF003563D3 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C3DAE28E55FCF003563D3 /* CustomNavigationBar.swift */; };
 		192C3DB328E56BAF003563D3 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C3DB228E56BAF003563D3 /* Notification+Extension.swift */; };
 		192C3DB528E56DAA003563D3 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C3DB428E56DAA003563D3 /* CALayer+Extension.swift */; };
@@ -106,6 +108,8 @@
 		08DC527728E9ABD800B058ED /* VoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteTableViewCell.swift; sourceTree = "<group>"; };
 		08DC527828E9ABD800B058ED /* VoteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VoteTableViewCell.xib; sourceTree = "<group>"; };
 		132B1B51ED5CA8B98EE79822 /* Pods_AroundStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AroundStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		191E2E3828ED12DB00BB92DF /* StudyCalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyCalenderViewController.swift; sourceTree = "<group>"; };
+		191E2E3928ED12DB00BB92DF /* StudyCalenderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudyCalenderViewController.xib; sourceTree = "<group>"; };
 		192C3DAE28E55FCF003563D3 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		192C3DB228E56BAF003563D3 /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
 		192C3DB428E56DAA003563D3 /* CALayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
@@ -262,6 +266,8 @@
 			children = (
 				08DC524B28E8653800B058ED /* StudyViewController.swift */,
 				08DC524C28E8653800B058ED /* StudyViewController.xib */,
+				191E2E3828ED12DB00BB92DF /* StudyCalenderViewController.swift */,
+				191E2E3928ED12DB00BB92DF /* StudyCalenderViewController.xib */,
 			);
 			name = "스터디";
 			sourceTree = "<group>";
@@ -499,6 +505,7 @@
 				DF15CBDE28E85AB0009F24CB /* Pretendard-Medium.otf in Resources */,
 				19868C4D28EC5C550093DF76 /* StudyBannerCollectionViewCell.xib in Resources */,
 				08DC524E28E8653800B058ED /* StudyViewController.xib in Resources */,
+				191E2E3B28ED12DB00BB92DF /* StudyCalenderViewController.xib in Resources */,
 				08DC526628E9AAFE00B058ED /* StudyInfoCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -554,6 +561,7 @@
 			files = (
 				DFCBDD8328E94244008A7E02 /* CommonPopupViewController.swift in Sources */,
 				DFCBDD8228E94240008A7E02 /* TestViewController.swift in Sources */,
+				191E2E3A28ED12DB00BB92DF /* StudyCalenderViewController.swift in Sources */,
 				08DC525528E8654D00B058ED /* MoreViewController.swift in Sources */,
 				192C3DAF28E55FCF003563D3 /* CustomNavigationBar.swift in Sources */,
 				08DC526928E9AB2B00B058ED /* MemberProfileCollectionViewCell.swift in Sources */,
