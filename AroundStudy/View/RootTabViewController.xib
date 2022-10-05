@@ -16,6 +16,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RootTabViewController" customModule="AroundStudy" customModuleProvider="target">
             <connections>
+                <outlet property="imgChatTab" destination="oL2-pq-9nm" id="sR2-Ng-pBV"/>
+                <outlet property="imgHomeTab" destination="5Vn-xv-4QU" id="Dag-6z-1hp"/>
+                <outlet property="imgMoreTab" destination="tB2-Ru-1UW" id="GJY-By-6Fi"/>
+                <outlet property="imgStudyTab" destination="xU6-t5-FO0" id="vJ7-Yc-ncx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewContainer" destination="ZgB-73-cWX" id="4ph-Fh-INb"/>
             </connections>
@@ -34,7 +38,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="izm-48-Z7H" userLabel="viewHome">
                                     <rect key="frame" x="0.0" y="0.0" width="103.5" height="56"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Vn-xv-4QU">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_inactive" translatesAutoresizingMaskIntoConstraints="NO" id="5Vn-xv-4QU">
                                             <rect key="frame" x="40" y="8" width="24" height="24"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="24" id="QPd-dv-YYw"/>
@@ -76,7 +80,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xU6-t5-FO0">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="study_inactive" translatesAutoresizingMaskIntoConstraints="NO" id="xU6-t5-FO0">
                                             <rect key="frame" x="40" y="8" width="24" height="24"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="24" id="2iS-Xd-rnn"/>
@@ -112,7 +116,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oL2-pq-9nm">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat_inactive" translatesAutoresizingMaskIntoConstraints="NO" id="oL2-pq-9nm">
                                             <rect key="frame" x="40" y="8" width="24" height="24"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="24" id="AGp-3b-nIZ"/>
@@ -148,7 +152,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tB2-Ru-1UW">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="more_inactive" translatesAutoresizingMaskIntoConstraints="NO" id="tB2-Ru-1UW">
                                             <rect key="frame" x="40" y="8" width="24" height="24"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="24" id="b3v-9E-snL"/>
@@ -207,6 +211,10 @@
         </view>
     </objects>
     <resources>
+        <image name="chat_inactive" width="24" height="24"/>
+        <image name="home_inactive" width="24" height="24"/>
+        <image name="more_inactive" width="24" height="24"/>
+        <image name="study_inactive" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
