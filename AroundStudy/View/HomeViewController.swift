@@ -116,7 +116,6 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-
         return setupCollectionViewCell(collectionView, indexPath: indexPath)
     }
     
@@ -130,15 +129,18 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case categoryCollectionView:
             return CGSize(width: 64, height: 60)
         case studyCollectionView:
-            /// 컨텐츠뷰 사이즈 조정
+            /// screenWidth : 현재 화면의 해상도 너비 사이즈
             let screenWidth = view.frame.width
+            /// 셀 한개의 너비 지정
             let cellWidth = (screenWidth - 55) / 2
             
+            /// 컨텐츠뷰 사이즈 조정
+            /// studyCollectionViewY : 컬렉션뷰 직전까지의 높이 길이
             let studyCollectionViewY = studyCollectionView.frame.minY
+            /// studyCollectionViewHeight : 컬렉션뷰 셀 줄의 따라 컬렉션뷰 사이즈
             let studyCollectionViewHeight = ceil(Double(studyCellData.count) / 2) * 210
+            /// studyCollectionViewY + studyCollectionViewHeight = 컨텐츠뷰 사이즈
             contentViewHeightConstraint.constant = studyCollectionViewY + CGFloat(studyCollectionViewHeight)
-            print("컬렉션뷰 위치 Y: \(studyCollectionViewY) / \(CGFloat(studyCollectionViewHeight)) / \(studyCollectionViewY + CGFloat(studyCollectionViewHeight))")
-            
             return CGSize(width: cellWidth, height: 178)
         default: return .zero
         }
@@ -157,7 +159,6 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             guard let cell = categoryCollectionView.dequeueReusableCell(withReuseIdentifier: "HomeCategoryCollectionViewCell", for: indexPath) as? HomeCategoryCollectionViewCell else { return UICollectionViewCell() }
             return cell
         case studyCollectionView:
-            print("setupCollectionViewCell 인덱스패스 : \(indexPath)")
             guard let cell = studyCollectionView.dequeueReusableCell(withReuseIdentifier: "StudyInfoGridCollectionViewCell", for: indexPath) as? StudyInfoGridCollectionViewCell else { return UICollectionViewCell() }
             let cellData = studyCellData[indexPath.row]
             cell.setupCell("\(indexPath.row + 1) \(cellData[0])", location: cellData[1], memberCount: Int(cellData[2]) ?? 0)
