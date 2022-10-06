@@ -29,6 +29,8 @@ class BaseViewController: UIViewController {
     //******************************************************
     //MARK: - Properties
     //******************************************************
+    /// 바텀 마진
+    var bottomMargin: CGFloat = 0
     /// 커스텀 네비게이션 바 초기화
     let customNavigationBar = CustomNavigationBar()
     /// 권한 요청
@@ -61,6 +63,16 @@ class BaseViewController: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+    }
+    
+    override func viewSafeAreaInsetsDidChange() {
+        /// 홈 인디케이터 겨부에 따라 바텀 마진 설정
+        super.viewSafeAreaInsetsDidChange()
+        if view.safeAreaInsets.bottom == 0 {
+            bottomMargin = 20
+        } else {
+            bottomMargin = 0
+        }
     }
     
     //******************************************************

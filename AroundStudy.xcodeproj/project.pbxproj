@@ -72,6 +72,8 @@
 		DFE0373D28E27B5B00BE9E35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE0373B28E27B5B00BE9E35 /* Main.storyboard */; };
 		DFE0373F28E27B5D00BE9E35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFE0373E28E27B5D00BE9E35 /* Assets.xcassets */; };
 		DFE0374228E27B5D00BE9E35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE0374028E27B5D00BE9E35 /* LaunchScreen.storyboard */; };
+		DFFD345E28EEFADB00CFCB74 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD345C28EEFADB00CFCB74 /* OnboardingViewController.swift */; };
+		DFFD345F28EEFADB00CFCB74 /* OnboardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFFD345D28EEFADB00CFCB74 /* OnboardingViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -145,6 +147,8 @@
 		DFE0373E28E27B5D00BE9E35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFE0374128E27B5D00BE9E35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFE0374328E27B5D00BE9E35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFFD345C28EEFADB00CFCB74 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		DFFD345D28EEFADB00CFCB74 /* OnboardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +228,8 @@
 		088A62C728E319FE00442E6C /* 시작-온보딩 */ = {
 			isa = PBXGroup;
 			children = (
+				DFFD345C28EEFADB00CFCB74 /* OnboardingViewController.swift */,
+				DFFD345D28EEFADB00CFCB74 /* OnboardingViewController.xib */,
 			);
 			name = "시작-온보딩";
 			sourceTree = "<group>";
@@ -508,6 +514,7 @@
 				DFCBDD8128E93714008A7E02 /* CommonPopupViewController.xib in Resources */,
 				08DC525E28E9A9C300B058ED /* SearchHistoryTableViewCell.xib in Resources */,
 				08DC527628E9AB9F00B058ED /* ColorSetCollectionViewCell.xib in Resources */,
+				DFFD345F28EEFADB00CFCB74 /* OnboardingViewController.xib in Resources */,
 				08DC527A28E9ABD800B058ED /* VoteTableViewCell.xib in Resources */,
 				DF15CBDF28E85AB0009F24CB /* Pretendard-Bold.otf in Resources */,
 				DF03FC2D28ED795300C564FA /* HomeCategoryCollectionViewCell.xib in Resources */,
@@ -594,6 +601,7 @@
 				088A62CF28E32B5500442E6C /* APIManager.swift in Sources */,
 				08DC524928E8652C00B058ED /* HomeViewController.swift in Sources */,
 				DF068CB728EC603800083917 /* PermissionTableViewCell.swift in Sources */,
+				DFFD345E28EEFADB00CFCB74 /* OnboardingViewController.swift in Sources */,
 				08DC525D28E9A9C300B058ED /* SearchHistoryTableViewCell.swift in Sources */,
 				08DC526128E9AAED00B058ED /* StudyInfoGridCollectionViewCell.swift in Sources */,
 				DF7B4C5628E47C350031B56B /* Authorization.swift in Sources */,
