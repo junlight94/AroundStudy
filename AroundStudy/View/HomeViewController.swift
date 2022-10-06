@@ -13,21 +13,21 @@ class HomeViewController: UIViewController {
     //MARK: - 더미데이터
     //******************************************************
     let studyCellData: [[String]] = [
-        ["스터디 제목", "강남구", "28"],
-        ["스터디 제목인데 이건 두줄을 위한", "서초구", "52"],
-        ["스터디 제목", "해운대구", "8"],
-        ["스터디 제목", "몰라몰라", "1"],
-        ["스터디 제목인데 이건 두줄을 위한", "지역", "108"],
-        ["스터디 제목인데 이건 두줄을 위한", "지역", "999"],
-        ["스터디 제목", "지역", "8"],
-        ["스터디 제목", "지역", "22"],
-        ["스터디 제목인데 이건 두줄을 위한", "지역", "7"],
-        ["스터디 제목", "지역", "22"],
-        ["스터디 제목인데 이건 두줄을 위한", "지역", "7"],
-        ["스터디 제목인데 이건 두줄을 위한", "지역", "999"],
-        ["스터디 제목", "지역", "8"],
-        ["스터디 제목", "지역", "22"],
-        ["스터디 제목인데 이건 두줄을 위한", "지역", "7"]
+        ["스터디 제목", "디자인", "강남구", "28"],
+        ["스터디 제목인데 이건 두줄을 위한", "디자인", "서초구", "52"],
+        ["스터디 제목", "디자인", "해운대구", "8"],
+        ["스터디 제목", "디자인", "몰라몰라", "1"],
+        ["스터디 제목인데 이건 두줄을 위한", "디자인", "지역", "108"],
+        ["스터디 제목인데 이건 두줄을 위한", "디자인", "지역", "999"],
+        ["스터디 제목", "디자인", "지역", "8"],
+        ["스터디 제목", "디자인", "지역", "22"],
+        ["스터디 제목인데 이건 두줄을 위한", "디자인", "지역", "7"],
+        ["스터디 제목", "디자인", "지역", "22"],
+        ["스터디 제목인데 이건 두줄을 위한", "디자인", "지역", "7"],
+        ["스터디 제목인데 이건 두줄을 위한", "디자인", "지역", "999"],
+        ["스터디 제목", "디자인", "지역", "8"],
+        ["스터디 제목", "디자인", "지역", "22"],
+        ["스터디 제목인데 이건 두줄을 위한", "디자인", "지역", "7"]
     ]
 
     @IBOutlet weak var customNavagationBar: CustomNavigationBar!
@@ -161,7 +161,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case studyCollectionView:
             guard let cell = studyCollectionView.dequeueReusableCell(withReuseIdentifier: "StudyInfoGridCollectionViewCell", for: indexPath) as? StudyInfoGridCollectionViewCell else { return UICollectionViewCell() }
             let cellData = studyCellData[indexPath.row]
-            cell.setupCell("\(indexPath.row + 1) \(cellData[0])", location: cellData[1], memberCount: Int(cellData[2]) ?? 0)
+            cell.setupCell("\(indexPath.row + 1) \(cellData[0])", category: cellData[1], location: cellData[2], memberCount: Int(cellData[3]) ?? 0)
             return cell
         default: return UICollectionViewCell()
         }

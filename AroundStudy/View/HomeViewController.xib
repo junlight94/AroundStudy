@@ -32,7 +32,7 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="921"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="49U-1C-Z2w" customClass="CustomNavigationBar" customModule="AroundStudy" customModuleProvider="target">
@@ -54,7 +54,7 @@
                     </constraints>
                 </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pQ1-zi-9U5">
-                    <rect key="frame" x="0.0" y="104" width="414" height="783"/>
+                    <rect key="frame" x="0.0" y="104" width="414" height="758"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0OC-wr-j7X" userLabel="ContentView">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="776"/>
@@ -232,7 +232,6 @@
                 <constraint firstItem="pQ1-zi-9U5" firstAttribute="top" secondItem="49U-1C-Z2w" secondAttribute="bottom" id="rz2-CQ-Rs1"/>
                 <constraint firstItem="pQ1-zi-9U5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="vYB-Uh-bwY"/>
             </constraints>
-            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="147.82608695652175" y="301.00446428571428"/>
         </view>
     </objects>
