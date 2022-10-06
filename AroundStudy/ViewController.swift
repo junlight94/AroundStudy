@@ -14,8 +14,4 @@ class ViewController: BaseViewController {
         super.viewDidLoad()
         print("스플래쉬 화면")
     }
-    @IBAction func moveCalenderView(_ sender: Any) {
-        let viewController = UIViewController(nibName: "StudyCalenderViewController", bundle: nil)
-        self.navigationController?.pushViewController(viewController, animated: true)
-    }
 }
