@@ -22,6 +22,12 @@ class HomeViewController: UIViewController {
         ["스터디 제목", "지역", "8"],
         ["스터디 제목", "지역", "22"],
         ["스터디 제목인데 이건 두줄을 위한", "지역", "7"],
+        ["스터디 제목", "지역", "22"],
+        ["스터디 제목인데 이건 두줄을 위한", "지역", "7"],
+        ["스터디 제목인데 이건 두줄을 위한", "지역", "999"],
+        ["스터디 제목", "지역", "8"],
+        ["스터디 제목", "지역", "22"],
+        ["스터디 제목인데 이건 두줄을 위한", "지역", "7"]
     ]
 
     @IBOutlet weak var customNavagationBar: CustomNavigationBar!
@@ -29,6 +35,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var studyCollectionView: UICollectionView!
     @IBOutlet weak var categoryOneView: UIView!
     @IBOutlet weak var categoryTwoView: UIView!
+    
+    
+    @IBOutlet weak var contentViewHeightConstraint: NSLayoutConstraint!
     
     let categoryButton = UIButton(type: .custom)
     let searchButton = UIButton(type: .custom)
@@ -61,6 +70,8 @@ extension HomeViewController {
      > coder : sanghyeon
      */
     func setupNavagationBar() {
+        /// 기존 네비게이션바 삭제
+        navigationController?.navigationBar.isHidden = true
         categoryButton.setImage(UIImage(named: "category"), for: .normal)
         searchButton.setImage(UIImage(named: "search"), for: .normal)
         customNavagationBar.setNavigationBar(rightBarButton: [categoryButton, searchButton])
@@ -119,14 +130,15 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case categoryCollectionView:
             return CGSize(width: 64, height: 60)
         case studyCollectionView:
-            guard let cell = studyCollectionView.dequeueReusableCell(withReuseIdentifier: "StudyInfoGridCollectionViewCell", for: indexPath) as? StudyInfoGridCollectionViewCell else { return .zero }
-            let cellData = studyCellData[indexPath.row]
-            cell.setupCell(cellData[0], location: cellData[1], memberCount: Int(cellData[2]) ?? 0)
-            
+            /// 컨텐츠뷰 사이즈 조정
             let screenWidth = view.frame.width
             let cellWidth = (screenWidth - 55) / 2
-            let cellHeight = cell.contentView.frame.height
-            print("cellHeight: \(cellHeight)")
+            
+            let studyCollectionViewY = studyCollectionView.frame.minY
+            let studyCollectionViewHeight = ceil(Double(studyCellData.count) / 2) * 210
+            contentViewHeightConstraint.constant = studyCollectionViewY + CGFloat(studyCollectionViewHeight)
+            print("컬렉션뷰 위치 Y: \(studyCollectionViewY) / \(CGFloat(studyCollectionViewHeight)) / \(studyCollectionViewY + CGFloat(studyCollectionViewHeight))")
+            
             return CGSize(width: cellWidth, height: 178)
         default: return .zero
         }
@@ -145,9 +157,10 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             guard let cell = categoryCollectionView.dequeueReusableCell(withReuseIdentifier: "HomeCategoryCollectionViewCell", for: indexPath) as? HomeCategoryCollectionViewCell else { return UICollectionViewCell() }
             return cell
         case studyCollectionView:
+            print("setupCollectionViewCell 인덱스패스 : \(indexPath)")
             guard let cell = studyCollectionView.dequeueReusableCell(withReuseIdentifier: "StudyInfoGridCollectionViewCell", for: indexPath) as? StudyInfoGridCollectionViewCell else { return UICollectionViewCell() }
             let cellData = studyCellData[indexPath.row]
-            cell.setupCell(cellData[0], location: cellData[1], memberCount: Int(cellData[2]) ?? 0)
+            cell.setupCell("\(indexPath.row + 1) \(cellData[0])", location: cellData[1], memberCount: Int(cellData[2]) ?? 0)
             return cell
         default: return UICollectionViewCell()
         }
