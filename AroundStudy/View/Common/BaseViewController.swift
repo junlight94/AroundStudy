@@ -85,11 +85,23 @@ class BaseViewController: UIViewController {
             $0.bottom.equalTo(customNavigationBar.containerView)
         }
         
-        if isLeftSetting {
+        if isLeftSetting && leftBarButton != nil {
             customNavigationBar.navigationTitleLabel.snp.remakeConstraints { make in
                 make.centerY.equalTo(customNavigationBar.containerView)
                 if let leftItems = customNavigationBar.containerView.subviews.filter({$0.accessibilityIdentifier == "NAVIGATIONLEFTITEMS"}).first {
-                    make.leading.equalTo(leftItems.snp.trailing).offset(25)
+                    make.leading.equalTo(leftItems.snp.trailing).offset(12)
+                }
+                //FIXME: 제대로안됨 수리필요
+                if let rightItems = customNavigationBar.containerView.subviews.filter({$0.accessibilityIdentifier == "NAVIGATIONRIGHTITEMS"}).first {
+                    make.trailing.greaterThanOrEqualTo(rightItems.snp.leading).offset(18)
+                }
+            }
+        } else if isLeftSetting && leftBarButton == nil {
+            customNavigationBar.navigationTitleLabel.snp.remakeConstraints { make in
+                make.centerY.equalTo(customNavigationBar.containerView)
+                make.leading.equalTo(self.view).offset(20)
+                if let rightItems = customNavigationBar.containerView.subviews.filter({$0.accessibilityIdentifier == "NAVIGATIONRIGHTITEMS"}).first {
+                    make.trailing.greaterThanOrEqualTo(rightItems.snp.leading).offset(18)
                 }
             }
         }
