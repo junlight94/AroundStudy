@@ -9,10 +9,9 @@ import UIKit
 import SnapKit
 
 class ViewController: BaseViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("스플래쉬 화면")
-        
     }
 }
