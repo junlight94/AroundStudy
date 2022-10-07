@@ -63,6 +63,8 @@
 		DF1D5B7F28EAFD2600B875D5 /* RegisterIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1D5B7E28EAFD2600B875D5 /* RegisterIndicatorView.swift */; };
 		DF5EC62228E6D522003411D3 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5EC62028E6D522003411D3 /* TestViewController.xib */; };
 		DF7B4C5628E47C350031B56B /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7B4C5528E47C350031B56B /* Authorization.swift */; };
+		DF88222E28EFB13F00993F2E /* SocialLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF88222C28EFB13F00993F2E /* SocialLoginViewController.swift */; };
+		DF88222F28EFB13F00993F2E /* SocialLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF88222D28EFB13F00993F2E /* SocialLoginViewController.xib */; };
 		DF89A80D28E6F0D10039E364 /* ThumbnailImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF89A80C28E6F0D10039E364 /* ThumbnailImageView.swift */; };
 		DFCBDD8128E93714008A7E02 /* CommonPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFCBDD7F28E93714008A7E02 /* CommonPopupViewController.xib */; };
 		DFCBDD8228E94240008A7E02 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5EC61F28E6D522003411D3 /* TestViewController.swift */; };
@@ -137,6 +139,8 @@
 		DF5EC61F28E6D522003411D3 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		DF5EC62028E6D522003411D3 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		DF7B4C5528E47C350031B56B /* Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
+		DF88222C28EFB13F00993F2E /* SocialLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginViewController.swift; sourceTree = "<group>"; };
+		DF88222D28EFB13F00993F2E /* SocialLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SocialLoginViewController.xib; sourceTree = "<group>"; };
 		DF89A80C28E6F0D10039E364 /* ThumbnailImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailImageView.swift; sourceTree = "<group>"; };
 		DFCBDD7E28E93714008A7E02 /* CommonPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonPopupViewController.swift; sourceTree = "<group>"; };
 		DFCBDD7F28E93714008A7E02 /* CommonPopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonPopupViewController.xib; sourceTree = "<group>"; };
@@ -199,6 +203,7 @@
 				088A62C628E319DA00442E6C /* Common */,
 				088A62C728E319FE00442E6C /* 시작-온보딩 */,
 				088A62C828E31A1200442E6C /* 시작-접근권한 */,
+				DF88222B28EFB11F00993F2E /* 시작-로그인 */,
 				DF1D5B7D28EAFD0600B875D5 /* 시작-정보입력 */,
 				08DC523628E478A600B058ED /* 홈 */,
 				08DC524628E8651100B058ED /* 홈-메인 */,
@@ -385,6 +390,15 @@
 			name = "테스트";
 			sourceTree = "<group>";
 		};
+		DF88222B28EFB11F00993F2E /* 시작-로그인 */ = {
+			isa = PBXGroup;
+			children = (
+				DF88222C28EFB13F00993F2E /* SocialLoginViewController.swift */,
+				DF88222D28EFB13F00993F2E /* SocialLoginViewController.xib */,
+			);
+			name = "시작-로그인";
+			sourceTree = "<group>";
+		};
 		DFCBDD7828E91273008A7E02 /* 공통-팝업 */ = {
 			isa = PBXGroup;
 			children = (
@@ -534,6 +548,7 @@
 				DFE0373D28E27B5B00BE9E35 /* Main.storyboard in Resources */,
 				DF15CBDE28E85AB0009F24CB /* Pretendard-Medium.otf in Resources */,
 				19868C4D28EC5C550093DF76 /* StudyBannerCollectionViewCell.xib in Resources */,
+				DF88222F28EFB13F00993F2E /* SocialLoginViewController.xib in Resources */,
 				08DC524E28E8653800B058ED /* StudyViewController.xib in Resources */,
 				08DC526628E9AAFE00B058ED /* StudyInfoCollectionViewCell.xib in Resources */,
 			);
@@ -625,6 +640,7 @@
 				08DC526528E9AAFE00B058ED /* StudyInfoCollectionViewCell.swift in Sources */,
 				08DC527128E9AB7700B058ED /* ScheduleTableViewCell.swift in Sources */,
 				08DC523928E478D700B058ED /* RootTabViewController.swift in Sources */,
+				DF88222E28EFB13F00993F2E /* SocialLoginViewController.swift in Sources */,
 				08DC523128E4663B00B058ED /* DataManager.swift in Sources */,
 				08DC522D28E4647400B058ED /* Button+General.swift in Sources */,
 			);

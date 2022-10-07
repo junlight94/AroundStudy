@@ -75,7 +75,8 @@ extension PermissionViewController {
         permissionTableView.dataSource = self
     }
     @IBAction func didTapOKButton(_ sender: Any) {
-        print("확인버튼 눌림")
+        let vc = SocialLoginViewController(nibName: "SocialLoginViewController", bundle: nil)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
