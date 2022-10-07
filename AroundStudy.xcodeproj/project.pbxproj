@@ -65,6 +65,8 @@
 		DF7B4C5628E47C350031B56B /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7B4C5528E47C350031B56B /* Authorization.swift */; };
 		DF88222E28EFB13F00993F2E /* SocialLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF88222C28EFB13F00993F2E /* SocialLoginViewController.swift */; };
 		DF88222F28EFB13F00993F2E /* SocialLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF88222D28EFB13F00993F2E /* SocialLoginViewController.xib */; };
+		DF88223328EFBB5600993F2E /* RegisterCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF88223128EFBB5600993F2E /* RegisterCompleteViewController.swift */; };
+		DF88223428EFBB5600993F2E /* RegisterCompleteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF88223228EFBB5600993F2E /* RegisterCompleteViewController.xib */; };
 		DF89A80D28E6F0D10039E364 /* ThumbnailImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF89A80C28E6F0D10039E364 /* ThumbnailImageView.swift */; };
 		DFCBDD8128E93714008A7E02 /* CommonPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFCBDD7F28E93714008A7E02 /* CommonPopupViewController.xib */; };
 		DFCBDD8228E94240008A7E02 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5EC61F28E6D522003411D3 /* TestViewController.swift */; };
@@ -141,6 +143,8 @@
 		DF7B4C5528E47C350031B56B /* Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
 		DF88222C28EFB13F00993F2E /* SocialLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginViewController.swift; sourceTree = "<group>"; };
 		DF88222D28EFB13F00993F2E /* SocialLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SocialLoginViewController.xib; sourceTree = "<group>"; };
+		DF88223128EFBB5600993F2E /* RegisterCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCompleteViewController.swift; sourceTree = "<group>"; };
+		DF88223228EFBB5600993F2E /* RegisterCompleteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterCompleteViewController.xib; sourceTree = "<group>"; };
 		DF89A80C28E6F0D10039E364 /* ThumbnailImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailImageView.swift; sourceTree = "<group>"; };
 		DFCBDD7E28E93714008A7E02 /* CommonPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonPopupViewController.swift; sourceTree = "<group>"; };
 		DFCBDD7F28E93714008A7E02 /* CommonPopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonPopupViewController.xib; sourceTree = "<group>"; };
@@ -204,6 +208,7 @@
 				088A62C728E319FE00442E6C /* 시작-온보딩 */,
 				088A62C828E31A1200442E6C /* 시작-접근권한 */,
 				DF88222B28EFB11F00993F2E /* 시작-로그인 */,
+				DF88223028EFBB3000993F2E /* 시작-가입완료 */,
 				DF1D5B7D28EAFD0600B875D5 /* 시작-정보입력 */,
 				08DC523628E478A600B058ED /* 홈 */,
 				08DC524628E8651100B058ED /* 홈-메인 */,
@@ -399,6 +404,15 @@
 			name = "시작-로그인";
 			sourceTree = "<group>";
 		};
+		DF88223028EFBB3000993F2E /* 시작-가입완료 */ = {
+			isa = PBXGroup;
+			children = (
+				DF88223128EFBB5600993F2E /* RegisterCompleteViewController.swift */,
+				DF88223228EFBB5600993F2E /* RegisterCompleteViewController.xib */,
+			);
+			name = "시작-가입완료";
+			sourceTree = "<group>";
+		};
 		DFCBDD7828E91273008A7E02 /* 공통-팝업 */ = {
 			isa = PBXGroup;
 			children = (
@@ -542,6 +556,7 @@
 				08DC526A28E9AB2B00B058ED /* MemberProfileCollectionViewCell.xib in Resources */,
 				08DC525228E8654400B058ED /* ChattingViewController.xib in Resources */,
 				DF068CB828EC603800083917 /* PermissionTableViewCell.xib in Resources */,
+				DF88223428EFBB5600993F2E /* RegisterCompleteViewController.xib in Resources */,
 				08DC527228E9AB7700B058ED /* ScheduleTableViewCell.xib in Resources */,
 				08DC526E28E9AB6E00B058ED /* ScheduleDetailTableViewCell.xib in Resources */,
 				DF068CB228EC496700083917 /* PermissionViewController.xib in Resources */,
@@ -603,6 +618,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF88223328EFBB5600993F2E /* RegisterCompleteViewController.swift in Sources */,
 				DFCBDD8328E94244008A7E02 /* CommonPopupViewController.swift in Sources */,
 				DFCBDD8228E94240008A7E02 /* TestViewController.swift in Sources */,
 				08DC525528E8654D00B058ED /* MoreViewController.swift in Sources */,

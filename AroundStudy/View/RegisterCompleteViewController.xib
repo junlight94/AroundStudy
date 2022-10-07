@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Pretendard-Regular.otf">
+            <string>Pretendard-Regular</string>
+        </array>
+        <array key="Pretendard-SemiBold.otf">
+            <string>Pretendard-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterCompleteViewController" customModule="AroundStudy" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomButtonBottomConstraint" destination="9Qw-Zl-yKw" id="dug-aA-5oR"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ppg-pq-IL1">
+                    <rect key="frame" x="20" y="91.5" width="280" height="281.5"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gL4-O4-xwM">
+                            <rect key="frame" x="52.5" y="0.0" width="175" height="175"/>
+                            <color key="backgroundColor" name="248"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="175" id="V2b-JL-pd3"/>
+                                <constraint firstAttribute="width" constant="175" id="xJU-oq-s4j"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="회원가입이 완료되었습니다" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7L-4q-F3U">
+                            <rect key="frame" x="0.0" y="203" width="280" height="28"/>
+                            <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="23"/>
+                            <color key="textColor" name="40"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZM-Cc-DLG">
+                            <rect key="frame" x="0.0" y="243" width="280" height="38.5"/>
+                            <string key="text">어라운드 스터디에서
+다양한 주제의 스터디 그룹을 찾아보세요!</string>
+                            <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="16"/>
+                            <color key="textColor" name="94"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="tZM-Cc-DLG" firstAttribute="leading" secondItem="ppg-pq-IL1" secondAttribute="leading" id="7A8-U4-VLS"/>
+                        <constraint firstItem="gL4-O4-xwM" firstAttribute="top" secondItem="ppg-pq-IL1" secondAttribute="top" id="8WC-Vg-m2n"/>
+                        <constraint firstItem="z7L-4q-F3U" firstAttribute="leading" secondItem="ppg-pq-IL1" secondAttribute="leading" id="GfU-EM-sGC"/>
+                        <constraint firstItem="tZM-Cc-DLG" firstAttribute="top" secondItem="z7L-4q-F3U" secondAttribute="bottom" constant="12" id="IwK-tq-zmN"/>
+                        <constraint firstItem="z7L-4q-F3U" firstAttribute="top" secondItem="gL4-O4-xwM" secondAttribute="bottom" constant="28" id="OIe-8I-qeZ"/>
+                        <constraint firstAttribute="bottom" secondItem="tZM-Cc-DLG" secondAttribute="bottom" id="QQr-FX-pz8"/>
+                        <constraint firstItem="gL4-O4-xwM" firstAttribute="centerX" secondItem="ppg-pq-IL1" secondAttribute="centerX" id="TBy-EF-oux"/>
+                        <constraint firstAttribute="trailing" secondItem="z7L-4q-F3U" secondAttribute="trailing" id="X5Q-oL-oHw"/>
+                        <constraint firstAttribute="trailing" secondItem="tZM-Cc-DLG" secondAttribute="trailing" id="YQz-Ye-bwf"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFA-OC-JYg" customClass="Button_General" customModule="AroundStudy" customModuleProvider="target">
+                    <rect key="frame" x="20" y="516" width="280" height="52"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="GBy-Uo-H4Y"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="확인"/>
+                    <connections>
+                        <action selector="didTapOKButton:" destination="-1" eventType="touchUpInside" id="eHq-Zd-w7k"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ppg-pq-IL1" secondAttribute="trailing" constant="20" id="7wv-po-q9B"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="cFA-OC-JYg" secondAttribute="bottom" id="9Qw-Zl-yKw"/>
+                <constraint firstItem="ppg-pq-IL1" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" constant="-52" id="N7m-Yg-rZj"/>
+                <constraint firstItem="cFA-OC-JYg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="PR9-aK-osm"/>
+                <constraint firstItem="ppg-pq-IL1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Tq3-xx-XIH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cFA-OC-JYg" secondAttribute="trailing" constant="20" id="U2f-cu-bfu"/>
+            </constraints>
+            <point key="canvasLocation" x="50.625" y="20.070422535211268"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="248">
+            <color red="0.97299998998641968" green="0.97299998998641968" blue="0.97299998998641968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="40">
+            <color red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="94">
+            <color red="0.36899998784065247" green="0.36899998784065247" blue="0.36899998784065247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

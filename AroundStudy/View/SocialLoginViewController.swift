@@ -38,6 +38,9 @@ extension SocialLoginViewController {
         switch sender {
         case buttonKakao:
             print("카카오 눌림")
+            /// 테스트용으로 가입 완료 페이지 이동
+            let vc = RegisterCompleteViewController(nibName: "RegisterCompleteViewController", bundle: nil)
+            navigationController?.pushViewController(vc, animated: true)
         case buttonNaver:
             print("네이버 눌림")
         case buttonApple:
