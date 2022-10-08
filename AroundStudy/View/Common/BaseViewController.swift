@@ -12,7 +12,7 @@ import CoreLocation
 /// 테이블 뷰 프로토콜
 typealias tableViewExtension = UITableViewDataSource & UITableViewDelegate
 /// 컬렉션 뷰 프로토콜
-typealias collectionViewExtension = UICollectionViewDataSource & UICollectionViewDelegate
+typealias collectionViewExtension = UICollectionViewDataSource & UICollectionViewDelegate & UICollectionViewDelegateFlowLayout
 /// 반환값으로 빈 데이터를 넘기는 클로저
 typealias voidClosure = () -> ()
 /// 반환값으로 True/False를 넘기는 클로저
@@ -91,9 +91,8 @@ class BaseViewController: UIViewController {
                 if let leftItems = customNavigationBar.containerView.subviews.filter({$0.accessibilityIdentifier == "NAVIGATIONLEFTITEMS"}).first {
                     make.leading.equalTo(leftItems.snp.trailing).offset(12)
                 }
-                //FIXME: 제대로안됨 수리필요
                 if let rightItems = customNavigationBar.containerView.subviews.filter({$0.accessibilityIdentifier == "NAVIGATIONRIGHTITEMS"}).first {
-                    make.trailing.greaterThanOrEqualTo(rightItems.snp.leading).offset(18)
+                    make.trailing.greaterThanOrEqualTo(rightItems.snp.leading).offset(-12)
                 }
             }
         } else if isLeftSetting && leftBarButton == nil {
@@ -101,7 +100,7 @@ class BaseViewController: UIViewController {
                 make.centerY.equalTo(customNavigationBar.containerView)
                 make.leading.equalTo(self.view).offset(20)
                 if let rightItems = customNavigationBar.containerView.subviews.filter({$0.accessibilityIdentifier == "NAVIGATIONRIGHTITEMS"}).first {
-                    make.trailing.greaterThanOrEqualTo(rightItems.snp.leading).offset(18)
+                    make.trailing.greaterThanOrEqualTo(rightItems.snp.leading).offset(-12)
                 }
             }
         }
