@@ -17,7 +17,7 @@ class CustomNavigationBar: UIView {
     /// 네비게이션 바 타이틀
     let navigationTitleLabel = UILabel()
     /// 네비게이션 바 높이 설정
-    var navigationBarHeight: Int = 60 {
+    var navigationBarHeight: Int = 56 {
         didSet {
             self.containerView.snp.updateConstraints { make in
                 if oldValue != navigationBarHeight {
@@ -49,7 +49,7 @@ class CustomNavigationBar: UIView {
     private func setNavigationBarTitle(_ title: String) {
         navigationTitleLabel.text = title
         navigationTitleLabel.textColor = .black
-        navigationTitleLabel.textAlignment = .center
+        navigationTitleLabel.textAlignment = .left
         navigationTitleLabel.sizeToFit()
         let newSize = navigationTitleLabel.sizeThatFits(navigationTitleLabel.frame.size)
         containerView.addSubview(navigationTitleLabel)
@@ -75,6 +75,8 @@ class CustomNavigationBar: UIView {
         stackView.spacing = 16
         if isLeft {
             stackView.accessibilityIdentifier = "NAVIGATIONLEFTITEMS"
+        } else {
+            stackView.accessibilityIdentifier = "NAVIGATIONRIGHTITEMS"
         }
         
         containerView.addSubview(stackView)
