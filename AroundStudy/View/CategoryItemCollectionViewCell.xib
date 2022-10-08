@@ -53,6 +53,7 @@
             </constraints>
             <size key="customSize" width="128" height="116"/>
             <connections>
+                <outlet property="imgCategory" destination="n3g-00-dEK" id="rdK-Gx-Jqg"/>
                 <outlet property="lblTitle" destination="nMo-MF-1o2" id="NnO-u6-OQV"/>
             </connections>
             <point key="canvasLocation" x="116.92307692307692" y="31.990521327014218"/>

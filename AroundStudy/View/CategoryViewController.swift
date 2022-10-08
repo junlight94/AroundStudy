@@ -33,11 +33,11 @@ class CategoryViewController: BaseViewController {
     private func setNavi() {
         let button = UIButton(type: .custom)
         button.addTarget(self, action: #selector(popToView(_:)), for: .touchUpInside)
-        button.setImage(UIImage(named: "arrow_prev"), for: .normal)
+        button.setImage(UIImage(named: "back"), for: .normal)
         
         let search = UIButton(type: .custom)
         search.addTarget(self, action: #selector(actionSearch(_:)), for: .touchUpInside)
-        search.setImage(UIImage(named: "arrow_next"), for: .normal)
+        search.setImage(UIImage(named: "search"), for: .normal)
         setNavigationBar("카테고리", leftBarButton: [button], rightBarButton: [search], isLeftSetting: true)
     }
 }
@@ -74,14 +74,29 @@ extension CategoryViewController: collectionViewExtension {
         return UICollectionViewCell()
     }
     
+    /**
+     * @카테고리 셀 사이즈 설정(가로세로 동일 3개의 아이템으로 진행
+     * @creator : coder3306
+     */
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let size = collectionView.frame.width / 3
         return CGSize(width: size, height: size)
+    }
+    
+    /**
+     * @카테고리 아이템 셀 선택 후처리
+     * @creator : coder3306
+     */
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //TODO: API 연동 시 아이템에 따른 후처리 설정
+        print(indexPath.row)
     }
 }
 
 //MARK: - Action
 extension CategoryViewController {
     @objc private func actionSearch(_ sender: UIButton) {
+        //TODO: 검색 설정하기.
+        print("search")
     }
 }
