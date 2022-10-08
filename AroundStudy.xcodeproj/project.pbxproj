@@ -47,6 +47,12 @@
 		192C3DAF28E55FCF003563D3 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C3DAE28E55FCF003563D3 /* CustomNavigationBar.swift */; };
 		192C3DB328E56BAF003563D3 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C3DB228E56BAF003563D3 /* Notification+Extension.swift */; };
 		192C3DB528E56DAA003563D3 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C3DB428E56DAA003563D3 /* CALayer+Extension.swift */; };
+		19690EA828F0F9F0006EEE8D /* CategoryItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19690EA428F0F9F0006EEE8D /* CategoryItemCollectionViewCell.swift */; };
+		19690EA928F0F9F0006EEE8D /* CategoryItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19690EA528F0F9F0006EEE8D /* CategoryItemCollectionViewCell.xib */; };
+		19690EAA28F0F9F0006EEE8D /* CategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19690EA628F0F9F0006EEE8D /* CategoryViewController.xib */; };
+		19690EAB28F0F9F0006EEE8D /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19690EA728F0F9F0006EEE8D /* CategoryViewController.swift */; };
+		19690EAE28F0FA05006EEE8D /* AgreementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19690EAC28F0FA05006EEE8D /* AgreementsViewController.swift */; };
+		19690EAF28F0FA05006EEE8D /* AgreementsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19690EAD28F0FA05006EEE8D /* AgreementsViewController.xib */; };
 		19868C4C28EC5C550093DF76 /* StudyBannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19868C4A28EC5C550093DF76 /* StudyBannerCollectionViewCell.swift */; };
 		19868C4D28EC5C550093DF76 /* StudyBannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19868C4B28EC5C550093DF76 /* StudyBannerCollectionViewCell.xib */; };
 		CC7CC9DA10D494D83221F8DF /* Pods_AroundStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 132B1B51ED5CA8B98EE79822 /* Pods_AroundStudy.framework */; };
@@ -125,6 +131,12 @@
 		192C3DAE28E55FCF003563D3 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		192C3DB228E56BAF003563D3 /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
 		192C3DB428E56DAA003563D3 /* CALayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
+		19690EA428F0F9F0006EEE8D /* CategoryItemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		19690EA528F0F9F0006EEE8D /* CategoryItemCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		19690EA628F0F9F0006EEE8D /* CategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryViewController.xib; sourceTree = "<group>"; };
+		19690EA728F0F9F0006EEE8D /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		19690EAC28F0FA05006EEE8D /* AgreementsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgreementsViewController.swift; sourceTree = "<group>"; };
+		19690EAD28F0FA05006EEE8D /* AgreementsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AgreementsViewController.xib; sourceTree = "<group>"; };
 		19868C4A28EC5C550093DF76 /* StudyBannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyBannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		19868C4B28EC5C550093DF76 /* StudyBannerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudyBannerCollectionViewCell.xib; sourceTree = "<group>"; };
 		82395ECBC730C264D56A62EC /* Pods-AroundStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundStudy.release.xcconfig"; path = "Target Support Files/Pods-AroundStudy/Pods-AroundStudy.release.xcconfig"; sourceTree = "<group>"; };
@@ -289,6 +301,10 @@
 			children = (
 				08DC523728E478D700B058ED /* RootTabViewController.swift */,
 				08DC523828E478D700B058ED /* RootTabViewController.xib */,
+				19690EA428F0F9F0006EEE8D /* CategoryItemCollectionViewCell.swift */,
+				19690EA528F0F9F0006EEE8D /* CategoryItemCollectionViewCell.xib */,
+				19690EA728F0F9F0006EEE8D /* CategoryViewController.swift */,
+				19690EA628F0F9F0006EEE8D /* CategoryViewController.xib */,
 			);
 			name = "홈";
 			sourceTree = "<group>";
@@ -406,6 +422,8 @@
 			children = (
 				DF88222C28EFB13F00993F2E /* SocialLoginViewController.swift */,
 				DF88222D28EFB13F00993F2E /* SocialLoginViewController.xib */,
+				19690EAC28F0FA05006EEE8D /* AgreementsViewController.swift */,
+				19690EAD28F0FA05006EEE8D /* AgreementsViewController.xib */,
 			);
 			name = "시작-로그인";
 			sourceTree = "<group>";
@@ -543,13 +561,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19690EAF28F0FA05006EEE8D /* AgreementsViewController.xib in Resources */,
 				08DC523A28E478D700B058ED /* RootTabViewController.xib in Resources */,
 				DF5EC62228E6D522003411D3 /* TestViewController.xib in Resources */,
 				DFCBDD8128E93714008A7E02 /* CommonPopupViewController.xib in Resources */,
 				08DC525E28E9A9C300B058ED /* SearchHistoryTableViewCell.xib in Resources */,
 				08DC527628E9AB9F00B058ED /* ColorSetCollectionViewCell.xib in Resources */,
+				19690EA928F0F9F0006EEE8D /* CategoryItemCollectionViewCell.xib in Resources */,
 				DFFD345F28EEFADB00CFCB74 /* OnboardingViewController.xib in Resources */,
 				08DC527A28E9ABD800B058ED /* VoteTableViewCell.xib in Resources */,
+				19690EAA28F0F9F0006EEE8D /* CategoryViewController.xib in Resources */,
 				DF15CBDF28E85AB0009F24CB /* Pretendard-Bold.otf in Resources */,
 				DF03FC2D28ED795300C564FA /* HomeCategoryCollectionViewCell.xib in Resources */,
 				DFE0374228E27B5D00BE9E35 /* LaunchScreen.storyboard in Resources */,
@@ -629,6 +650,7 @@
 				DFCBDD8328E94244008A7E02 /* CommonPopupViewController.swift in Sources */,
 				DFCBDD8228E94240008A7E02 /* TestViewController.swift in Sources */,
 				191E2E3A28ED12DB00BB92DF /* CalendarPopupViewController.swift in Sources */,
+				19690EA828F0F9F0006EEE8D /* CategoryItemCollectionViewCell.swift in Sources */,
 				08DC525528E8654D00B058ED /* MoreViewController.swift in Sources */,
 				192C3DAF28E55FCF003563D3 /* CustomNavigationBar.swift in Sources */,
 				DF068CB128EC496700083917 /* PermissionViewController.swift in Sources */,
@@ -644,6 +666,7 @@
 				08DC525D28E9A9C300B058ED /* SearchHistoryTableViewCell.swift in Sources */,
 				08DC526128E9AAED00B058ED /* StudyInfoGridCollectionViewCell.swift in Sources */,
 				DF7B4C5628E47C350031B56B /* Authorization.swift in Sources */,
+				19690EAB28F0F9F0006EEE8D /* CategoryViewController.swift in Sources */,
 				DFE0373A28E27B5B00BE9E35 /* ViewController.swift in Sources */,
 				DF03FC2C28ED795300C564FA /* HomeCategoryCollectionViewCell.swift in Sources */,
 				DF1D5B7C28EAEFAD00B875D5 /* VoteDetailItemView.swift in Sources */,
@@ -659,6 +682,7 @@
 				08DC526D28E9AB6E00B058ED /* ScheduleDetailTableViewCell.swift in Sources */,
 				192C3DB528E56DAA003563D3 /* CALayer+Extension.swift in Sources */,
 				192C3DB328E56BAF003563D3 /* Notification+Extension.swift in Sources */,
+				19690EAE28F0FA05006EEE8D /* AgreementsViewController.swift in Sources */,
 				08DC525128E8654400B058ED /* ChattingViewController.swift in Sources */,
 				08DC525828E9806C00B058ED /* TextField+General.swift in Sources */,
 				08DC526528E9AAFE00B058ED /* StudyInfoCollectionViewCell.swift in Sources */,
