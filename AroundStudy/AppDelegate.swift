@@ -22,10 +22,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: - general function
     func switchMain() {
+        
+        // 메인
         let vc = RootTabViewController(nibName: "RootTabViewController", bundle: nil)
         rootNavigationController = UINavigationController(rootViewController: vc)
         self.window?.rootViewController = rootNavigationController
         window?.makeKeyAndVisible()
+        
+        // 테스트용
+//        let vc = InputNickNameViewController(nibName: "InputNickNameViewController", bundle: nil)
+//        rootNavigationController = UINavigationController(rootViewController: vc)
+//        self.window?.rootViewController = rootNavigationController
+//        window?.makeKeyAndVisible()
     }
 
 
