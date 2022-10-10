@@ -30,7 +30,6 @@ class InputNickNameViewController: BaseViewController {
         
         textField.addTarget(self, action: #selector(editingText), for: .editingChanged)
         
-        textField.text = DataManager.shared.userInfo.nickName
     }
     
     //MARK: - Selector Function
@@ -51,8 +50,6 @@ class InputNickNameViewController: BaseViewController {
     
     //MARK: - IBAction Function
     @IBAction func btnNextPressed(_ sender: Any) {
-        if let text = textField.text {
-        }
         let vc = InputGenderViewController(nibName: "InputGenderViewController", bundle: nil)
         self.navigationController?.pushViewController(vc, animated: true)
     }
