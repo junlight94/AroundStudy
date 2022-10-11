@@ -10,5 +10,5 @@ struct StudyDto: Codable {
     let category: String
     let process: String
     let people: Int
-    let favorite: Bool
+    var favorite: Bool
 }

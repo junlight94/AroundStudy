@@ -63,7 +63,10 @@ class SearchViewController: BaseViewController {
     }
         
     //MARK: - Selector Function
-        
+    @objc func btnFavoriteOnClick(_ sender: UIButton) {
+        hotStudyData[sender.tag].favorite.toggle()
+    }
+    
     //MARK: - IBAction Function
     @IBAction func btnBackPressed(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
@@ -106,6 +109,14 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
             cell.lbSubCategory.text = item.category
             cell.lbSubPeople.text = String(item.people)+"명"
             
+            cell.btnFavorite.tag = indexPath.item
+            cell.btnFavorite.addTarget(self, action: #selector(btnFavoriteOnClick), for: .touchUpInside)
+            if item.favorite == true {
+                cell.btnFavorite.setImage(UIImage(named: "favorite_fill"), for: .normal)
+            } else {
+                cell.btnFavorite.setImage(UIImage(named: "favorite"), for: .normal)
+            }
+            
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchHistoryCollectionViewCell", for: indexPath) as! SearchHistoryCollectionViewCell
@@ -131,7 +142,7 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
             }
             offset = CGPoint(x: CGFloat(currentIndex) * cellWidth - scrollView.contentInset.left, y: 0)
             
-            targetContentOffset.pointee = CGPoint(x: CGFloat(currentIndex) * cellWidth, y: 0)
+            targetContentOffset.pointee = offset
             
             pcHotStudy.currentPage = currentIndex
         }
