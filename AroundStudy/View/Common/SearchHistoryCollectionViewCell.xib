@@ -41,12 +41,20 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="close_gray"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7TF-kK-fdq">
+                                <rect key="frame" x="12" y="0.0" width="200" height="46"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="248"/>
                         <constraints>
+                            <constraint firstItem="NmV-pM-TWk" firstAttribute="leading" secondItem="7TF-kK-fdq" secondAttribute="trailing" constant="4" id="1hb-T3-IJd"/>
+                            <constraint firstAttribute="bottom" secondItem="7TF-kK-fdq" secondAttribute="bottom" id="9MK-uH-BBx"/>
+                            <constraint firstItem="7TF-kK-fdq" firstAttribute="leading" secondItem="MZo-IV-Ksg" secondAttribute="leading" constant="12" id="DgX-Sn-B19"/>
                             <constraint firstItem="jzb-vT-fiu" firstAttribute="leading" secondItem="MZo-IV-Ksg" secondAttribute="leading" constant="12" id="GKP-FO-ke6"/>
                             <constraint firstAttribute="trailing" secondItem="NmV-pM-TWk" secondAttribute="trailing" constant="12" id="Hz6-UQ-uUm"/>
                             <constraint firstItem="NmV-pM-TWk" firstAttribute="centerY" secondItem="MZo-IV-Ksg" secondAttribute="centerY" id="YJO-jj-fUq"/>
+                            <constraint firstItem="7TF-kK-fdq" firstAttribute="top" secondItem="MZo-IV-Ksg" secondAttribute="top" id="ZPs-fP-dhi"/>
                             <constraint firstItem="NmV-pM-TWk" firstAttribute="leading" secondItem="jzb-vT-fiu" secondAttribute="trailing" constant="4" id="xYX-Fs-76g"/>
                             <constraint firstItem="jzb-vT-fiu" firstAttribute="centerY" secondItem="MZo-IV-Ksg" secondAttribute="centerY" id="zov-8Q-n3Y"/>
                         </constraints>
@@ -63,6 +71,7 @@
             <size key="customSize" width="252" height="58"/>
             <connections>
                 <outlet property="btnDelete" destination="NmV-pM-TWk" id="P0a-SO-Rnw"/>
+                <outlet property="btnOnClick" destination="7TF-kK-fdq" id="5ga-Fq-tgc"/>
                 <outlet property="lbTitle" destination="jzb-vT-fiu" id="ca0-Gz-iZA"/>
                 <outlet property="viewContent" destination="MZo-IV-Ksg" id="1D8-pA-76W"/>
             </connections>
