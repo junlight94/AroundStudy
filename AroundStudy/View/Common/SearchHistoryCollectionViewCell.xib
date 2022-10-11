@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Pretendard-Regular.otf">
+            <string>Pretendard-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SearchHistoryCollectionViewCell" customModule="AroundStudy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="252" height="58"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="252" height="58"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MZo-IV-Ksg">
+                        <rect key="frame" x="0.0" y="0.0" width="252" height="46"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzb-vT-fiu">
+                                <rect key="frame" x="12" y="14" width="200" height="18"/>
+                                <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="15"/>
+                                <color key="textColor" name="68"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmV-pM-TWk">
+                                <rect key="frame" x="216" y="11" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="kVC-Py-caK"/>
+                                    <constraint firstAttribute="width" constant="24" id="ruH-dm-iOR"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="close_gray"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="248"/>
+                        <constraints>
+                            <constraint firstItem="jzb-vT-fiu" firstAttribute="leading" secondItem="MZo-IV-Ksg" secondAttribute="leading" constant="12" id="GKP-FO-ke6"/>
+                            <constraint firstAttribute="trailing" secondItem="NmV-pM-TWk" secondAttribute="trailing" constant="12" id="Hz6-UQ-uUm"/>
+                            <constraint firstItem="NmV-pM-TWk" firstAttribute="centerY" secondItem="MZo-IV-Ksg" secondAttribute="centerY" id="YJO-jj-fUq"/>
+                            <constraint firstItem="NmV-pM-TWk" firstAttribute="leading" secondItem="jzb-vT-fiu" secondAttribute="trailing" constant="4" id="xYX-Fs-76g"/>
+                            <constraint firstItem="jzb-vT-fiu" firstAttribute="centerY" secondItem="MZo-IV-Ksg" secondAttribute="centerY" id="zov-8Q-n3Y"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="MZo-IV-Ksg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="5gz-eQ-sKV"/>
+                <constraint firstAttribute="bottom" secondItem="MZo-IV-Ksg" secondAttribute="bottom" constant="12" id="ZDa-7I-ltz"/>
+                <constraint firstAttribute="trailing" secondItem="MZo-IV-Ksg" secondAttribute="trailing" id="lim-Cf-fm3"/>
+                <constraint firstItem="MZo-IV-Ksg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="oLk-R1-cs8"/>
+            </constraints>
+            <size key="customSize" width="252" height="58"/>
+            <connections>
+                <outlet property="btnDelete" destination="NmV-pM-TWk" id="P0a-SO-Rnw"/>
+                <outlet property="lbTitle" destination="jzb-vT-fiu" id="ca0-Gz-iZA"/>
+                <outlet property="viewContent" destination="MZo-IV-Ksg" id="1D8-pA-76W"/>
+            </connections>
+            <point key="canvasLocation" x="282.60869565217394" y="92.410714285714278"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="close_gray" width="17" height="17"/>
+        <namedColor name="248">
+            <color red="0.97299998998641968" green="0.97299998998641968" blue="0.97299998998641968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="68">
+            <color red="0.2669999897480011" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -16,6 +16,12 @@
 		0876384C28F4161D00BE6B13 /* Button+Select.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0876384B28F4161D00BE6B13 /* Button+Select.swift */; };
 		0876385728F42DC500BE6B13 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0876385528F42DC500BE6B13 /* SearchViewController.swift */; };
 		0876385828F42DC500BE6B13 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0876385628F42DC500BE6B13 /* SearchViewController.xib */; };
+		0876385A28F5606200BE6B13 /* TextField+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0876385928F5606200BE6B13 /* TextField+Search.swift */; };
+		0876385D28F5691700BE6B13 /* HotStudyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0876385B28F5691700BE6B13 /* HotStudyCollectionViewCell.swift */; };
+		0876385E28F5691700BE6B13 /* HotStudyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0876385C28F5691700BE6B13 /* HotStudyCollectionViewCell.xib */; };
+		0876386028F580AE00BE6B13 /* StudyDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0876385F28F580AE00BE6B13 /* StudyDto.swift */; };
+		0876386328F5834400BE6B13 /* SearchHistoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0876386128F5834400BE6B13 /* SearchHistoryCollectionViewCell.swift */; };
+		0876386428F5834400BE6B13 /* SearchHistoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0876386228F5834400BE6B13 /* SearchHistoryCollectionViewCell.xib */; };
 		088A62CD28E32B4A00442E6C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088A62CC28E32B4A00442E6C /* BaseViewController.swift */; };
 		088A62CF28E32B5500442E6C /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088A62CE28E32B5500442E6C /* APIManager.swift */; };
 		088A62D128E32B6800442E6C /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088A62D028E32B6800442E6C /* String+Extension.swift */; };
@@ -108,6 +114,12 @@
 		0876384B28F4161D00BE6B13 /* Button+Select.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Select.swift"; sourceTree = "<group>"; };
 		0876385528F42DC500BE6B13 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		0876385628F42DC500BE6B13 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		0876385928F5606200BE6B13 /* TextField+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Search.swift"; sourceTree = "<group>"; };
+		0876385B28F5691700BE6B13 /* HotStudyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotStudyCollectionViewCell.swift; sourceTree = "<group>"; };
+		0876385C28F5691700BE6B13 /* HotStudyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotStudyCollectionViewCell.xib; sourceTree = "<group>"; };
+		0876385F28F580AE00BE6B13 /* StudyDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyDto.swift; sourceTree = "<group>"; };
+		0876386128F5834400BE6B13 /* SearchHistoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		0876386228F5834400BE6B13 /* SearchHistoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHistoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		088A62CC28E32B4A00442E6C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		088A62CE28E32B5500442E6C /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		088A62D028E32B6800442E6C /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
@@ -272,6 +284,7 @@
 				08DC522C28E4647400B058ED /* Button+General.swift */,
 				0876384B28F4161D00BE6B13 /* Button+Select.swift */,
 				08DC525728E9806C00B058ED /* TextField+General.swift */,
+				0876385928F5606200BE6B13 /* TextField+Search.swift */,
 				192C3DAE28E55FCF003563D3 /* CustomNavigationBar.swift */,
 				DF89A80C28E6F0D10039E364 /* ThumbnailImageView.swift */,
 				DF15CBE228E861E1009F24CB /* BoxLabel.swift */,
@@ -313,6 +326,7 @@
 			isa = PBXGroup;
 			children = (
 				08DC523428E467CE00B058ED /* LoginDto.swift */,
+				0876385F28F580AE00BE6B13 /* StudyDto.swift */,
 			);
 			path = Struct;
 			sourceTree = "<group>";
@@ -382,6 +396,8 @@
 			children = (
 				08DC525B28E9A9C300B058ED /* SearchHistoryTableViewCell.swift */,
 				08DC525C28E9A9C300B058ED /* SearchHistoryTableViewCell.xib */,
+				0876386128F5834400BE6B13 /* SearchHistoryCollectionViewCell.swift */,
+				0876386228F5834400BE6B13 /* SearchHistoryCollectionViewCell.xib */,
 				08DC525F28E9AAED00B058ED /* StudyInfoGridCollectionViewCell.swift */,
 				08DC526028E9AAED00B058ED /* StudyInfoGridCollectionViewCell.xib */,
 				08DC526328E9AAFE00B058ED /* StudyInfoCollectionViewCell.swift */,
@@ -399,6 +415,8 @@
 				08DC527728E9ABD800B058ED /* VoteTableViewCell.swift */,
 				08DC527828E9ABD800B058ED /* VoteTableViewCell.xib */,
 				DF1D5B7B28EAEFAD00B875D5 /* VoteDetailItemView.swift */,
+				0876385B28F5691700BE6B13 /* HotStudyCollectionViewCell.swift */,
+				0876385C28F5691700BE6B13 /* HotStudyCollectionViewCell.xib */,
 			);
 			name = "공통-셀";
 			sourceTree = "<group>";
@@ -606,6 +624,7 @@
 				19690EA928F0F9F0006EEE8D /* CategoryItemCollectionViewCell.xib in Resources */,
 				0876383F28F40CFF00BE6B13 /* InputNickNameViewController.xib in Resources */,
 				DFFD345F28EEFADB00CFCB74 /* OnboardingViewController.xib in Resources */,
+				0876385E28F5691700BE6B13 /* HotStudyCollectionViewCell.xib in Resources */,
 				08DC527A28E9ABD800B058ED /* VoteTableViewCell.xib in Resources */,
 				19690EAA28F0F9F0006EEE8D /* CategoryViewController.xib in Resources */,
 				DF15CBDF28E85AB0009F24CB /* Pretendard-Bold.otf in Resources */,
@@ -623,6 +642,7 @@
 				DF068CB828EC603800083917 /* PermissionTableViewCell.xib in Resources */,
 				0876384928F40D5300BE6B13 /* InputLocationViewController.xib in Resources */,
 				DF88223428EFBB5600993F2E /* RegisterCompleteViewController.xib in Resources */,
+				0876386428F5834400BE6B13 /* SearchHistoryCollectionViewCell.xib in Resources */,
 				08DC527228E9AB7700B058ED /* ScheduleTableViewCell.xib in Resources */,
 				08DC526E28E9AB6E00B058ED /* ScheduleDetailTableViewCell.xib in Resources */,
 				DF068CB228EC496700083917 /* PermissionViewController.xib in Resources */,
@@ -685,6 +705,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0876385D28F5691700BE6B13 /* HotStudyCollectionViewCell.swift in Sources */,
 				DF88223328EFBB5600993F2E /* RegisterCompleteViewController.swift in Sources */,
 				DFCBDD8328E94244008A7E02 /* CommonPopupViewController.swift in Sources */,
 				DFCBDD8228E94240008A7E02 /* TestViewController.swift in Sources */,
@@ -696,9 +717,12 @@
 				08DC526928E9AB2B00B058ED /* MemberProfileCollectionViewCell.swift in Sources */,
 				088A62D328E32B8D00442E6C /* Nofile.swift in Sources */,
 				0876384C28F4161D00BE6B13 /* Button+Select.swift in Sources */,
+				0876385A28F5606200BE6B13 /* TextField+Search.swift in Sources */,
+				0876386028F580AE00BE6B13 /* StudyDto.swift in Sources */,
 				08DC527528E9AB9F00B058ED /* ColorSetCollectionViewCell.swift in Sources */,
 				DF15CBE328E861E1009F24CB /* BoxLabel.swift in Sources */,
 				0876384428F40D4500BE6B13 /* InputGenderViewController.swift in Sources */,
+				0876386328F5834400BE6B13 /* SearchHistoryCollectionViewCell.swift in Sources */,
 				08DC523528E467CE00B058ED /* LoginDto.swift in Sources */,
 				088A62CF28E32B5500442E6C /* APIManager.swift in Sources */,
 				08DC524928E8652C00B058ED /* HomeViewController.swift in Sources */,

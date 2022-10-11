@@ -101,6 +101,13 @@ extension HomeViewController {
         categoryTwoView.layer.borderWidth = categoryOneView.layer.borderWidth
         categoryTwoView.layer.borderColor = categoryOneView.layer.borderColor
         categoryTwoView.layer.cornerRadius = categoryOneView.layer.cornerRadius
+        
+        searchButton.addTarget(self, action: #selector(btnSearchPressed), for: .touchUpInside)
+    }
+    
+    @objc func btnSearchPressed() {
+        let vc = SearchViewController(nibName: "SearchViewController", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
