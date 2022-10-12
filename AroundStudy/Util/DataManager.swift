@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class DataManager {
     
@@ -63,6 +64,43 @@ class DataManager {
         }
         set {
             UserDefaults.standard.set(newValue, forKey: KEY_AUTHORIZATION_PHOTO_LIBRARY)
+        }
+    }
+    
+    /**
+     Realm 연결
+     */
+    internal func realmConfiguration() -> Realm.Configuration {
+        var realmConfig = Realm.Configuration.defaultConfiguration
+        let path = NSSearchPathForDirectoriesInDomains(.applicationSupportDirectory, .userDomainMask, true)
+        
+        if let applicationSupportDirectoryPath = path.first {
+            let realmPath = applicationSupportDirectoryPath.appending("/default.realm")
+            realmConfig.fileURL = URL(fileURLWithPath: realmPath)
+            return realmConfig
+        }
+        return realmConfig
+    }
+    
+    /**
+     특정한 경우 applicationSupport를 생성 하지 않는 문제가 있어 없는 경우 폴더를 수동으로 생성하는 함수
+     */
+    internal func createApplicationSupport() {
+        print(#function)
+        let fileManager = FileManager.default
+        
+        guard let applicationSupportURL = fileManager.urls(for: .applicationSupportDirectory, in: .userDomainMask).first else {
+            return
+        }
+        
+        if !fileManager.fileExists(atPath: applicationSupportURL.path) {
+            do {
+                try fileManager.createDirectory(atPath: applicationSupportURL.path,
+                                                withIntermediateDirectories: false,
+                                                attributes: nil)
+            } catch {
+                print("Error creating log folder in documents dir: \(error)")
+            }
         }
     }
     
