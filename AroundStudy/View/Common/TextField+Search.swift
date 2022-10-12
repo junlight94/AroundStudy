@@ -41,6 +41,7 @@ class TextField_Search: UITextField {
         delegate = self
         clearButtonMode = .whileEditing
         borderStyle = .none
+        returnKeyType = .go
         layer.borderColor = UIColor(named: "236")?.cgColor
         layer.cornerRadius = 8
         layer.borderWidth = 1

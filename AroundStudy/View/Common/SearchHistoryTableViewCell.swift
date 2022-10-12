@@ -9,6 +9,9 @@ import UIKit
 
 class SearchHistoryTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var lbTitle: UILabel!
+    @IBOutlet weak var btnOnClick: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
