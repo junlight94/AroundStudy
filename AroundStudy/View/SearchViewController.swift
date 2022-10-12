@@ -36,7 +36,6 @@ class SearchViewController: BaseViewController {
     var searchHistoryData: [SearchHistoryDB] = [] {
         didSet {
             DispatchQueue.main.async {
-                print("historyDataChange")
                 self.historyCollectionView.reloadData()
             }
         }
@@ -45,8 +44,6 @@ class SearchViewController: BaseViewController {
     var filterHistoryData: [SearchHistoryDB] = [] {
         didSet {
             DispatchQueue.main.async {
-                print("filterHistoryDataChange")
-                self.searchHistoryData = self.realm.objects(SearchHistoryDB.self).sorted(byKeyPath: "date", ascending: false).map{$0}
                 self.searchHistoryTableView.reloadData()
             }
         }
@@ -86,6 +83,7 @@ class SearchViewController: BaseViewController {
         
         textField.addTarget(self, action: #selector(editing), for: .editingChanged)
         textField.addTarget(self, action: #selector(endEditing), for: .editingDidEnd)
+        textField.addTarget(self, action: #selector(editingEvents), for: .allEditingEvents)
         
         pcHotStudy.numberOfPages = hotStudyData.count
         
@@ -100,36 +98,69 @@ class SearchViewController: BaseViewController {
     }
         
     //MARK: - Selector Function
+    // 즐겨찾기 클릭
     @objc func btnFavoriteOnClick(_ sender: UIButton) {
         hotStudyData[sender.tag].favorite.toggle()
     }
     
+    // TextField 이벤트
+    @objc func editingEvents(_ textField: UITextField) {
+        searchHistoryData = realm.objects(SearchHistoryDB.self).sorted(byKeyPath: "date", ascending: false).map{$0}
+    }
+    
+    // TextField 검색
     @objc func endEditing(_ textField: UITextField) {
         print("junyoung > \(#function)")
         let now = Date()
         if let text = textField.text {
             print("junyoung > text done : ", text)
             if text.count > 0 {
-                try? realm.write {
-                    let realmData = SearchHistoryDB()
-                    realmData.title = text
-                    realmData.date = now
-                    realm.add(realmData)
+                
+                if let equal = realm.objects(SearchHistoryDB.self).filter("title = %@", text).first {
+                    try? realm.write {
+                        equal.date = now
+                    }
+                } else {
+                    try? realm.write {
+                        let realmData = SearchHistoryDB()
+                        realmData.title = text
+                        realmData.date = now
+                        realm.add(realmData)
+                    }
                 }
             }
         }
     }
     
+    // TextField 글자 감지
     @objc func editing(_ textField: UITextField) {
         if let text = textField.text {
             if text.count > 0 {
                 viewSearch.isHidden = false
                 filterHistoryData = searchHistoryData.filter{$0.title.contains(text)}
-//                filterHistoryData = realm.objects(SearchHistoryDB.self).sorted(byKeyPath: "date", ascending: false).map{$0}
             } else {
                 viewSearch.isHidden = true
             }
         }
+    }
+    
+    //최근검색 기록 클릭
+    @objc func btnOnClickHistory(_ sender: UIButton) {
+        viewSearch.isHidden = false
+        textField.text = realm.objects(SearchHistoryDB.self).sorted(byKeyPath: "date", ascending: false)[sender.tag].title
+        filterHistoryData = searchHistoryData.filter{$0.title.contains(textField.text ?? "")}
+    }
+    
+    //최근검색 기록 삭제
+    @objc func btnDeletePressed(_ sender: UIButton) {
+        print(#function,"button number: \(sender.tag)")
+        print("delete Item Title:", realm.objects(SearchHistoryDB.self).sorted(byKeyPath: "date", ascending: false)[sender.tag].title)
+        let delete = realm.objects(SearchHistoryDB.self).sorted(byKeyPath: "date", ascending: false)[sender.tag]
+        
+        try? realm.write {
+            realm.delete(delete)
+        }
+        searchHistoryData = realm.objects(SearchHistoryDB.self).sorted(byKeyPath: "date", ascending: false).map{$0}
     }
     
     //MARK: - IBAction Function
@@ -138,7 +169,11 @@ class SearchViewController: BaseViewController {
     }
     
     @IBAction func btnEditPressed(_ sender: Any) {
-        
+        let delete = realm.objects(SearchHistoryDB.self)
+        try? realm.write{
+            realm.delete(delete)
+        }
+        searchHistoryData = []
     }
     
     
@@ -157,8 +192,6 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         cell.lbTitle.text = row.title
         return cell
     }
-    
-    
 }
 
 //MARK: UICollectionView
@@ -203,6 +236,11 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchHistoryCollectionViewCell", for: indexPath) as! SearchHistoryCollectionViewCell
             let item = searchHistoryData[indexPath.item]
             cell.lbTitle.text = item.title
+            
+            cell.btnDelete.tag = indexPath.item
+            cell.btnDelete.addTarget(self, action: #selector(btnDeletePressed), for: .touchUpInside)
+            cell.btnOnClick.tag = indexPath.item
+            cell.btnOnClick.addTarget(self, action: #selector(btnOnClickHistory), for: .touchUpInside)
             return cell
         }
     }
