@@ -11,9 +11,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TestViewController" customModule="AroundStudy" customModuleProvider="target">
             <connections>
-                <outlet property="collectionView" destination="be7-mT-NRP" id="BSK-0X-eJA"/>
-                <outlet property="indicatorView" destination="7nv-Bi-43Z" id="UlZ-QH-KUr"/>
-                <outlet property="tableView" destination="K4m-kh-4Eu" id="Lwi-lZ-9Cg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,71 +19,23 @@
             <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urR-ij-kHA" customClass="Button_General" customModule="AroundStudy" customModuleProvider="target">
-                    <rect key="frame" x="20" y="760" width="350" height="50"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="JDO-c2-QAb"/>
-                    </constraints>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="테스트 팝업 첫번째"/>
-                    <connections>
-                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="owG-JE-Lgg"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L15-Bb-sW8" customClass="Button_General" customModule="AroundStudy" customModuleProvider="target">
-                    <rect key="frame" x="20" y="700" width="350" height="50"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="n5p-mb-VAl"/>
-                    </constraints>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="테스트 팝업 두번째"/>
-                    <connections>
-                        <action selector="didTapButtonSecond:" destination="-1" eventType="touchUpInside" id="07m-cB-JQd"/>
-                    </connections>
-                </button>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" bouncesZoom="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="K4m-kh-4Eu">
-                    <rect key="frame" x="0.0" y="51" width="390" height="569"/>
-                </tableView>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="be7-mT-NRP">
-                    <rect key="frame" x="0.0" y="620" width="390" height="80"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o9z-w9-utw" customClass="IBCustomNavigationBar" customModule="AroundStudy" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="47" width="390" height="56"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="80" id="5hM-F4-LPk"/>
+                        <constraint firstAttribute="height" constant="56" id="KDd-Jz-ZJG"/>
                     </constraints>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="R2m-yQ-ynA">
-                        <size key="itemSize" width="128" height="128"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7nv-Bi-43Z" customClass="RegisterIndicatorView" customModule="AroundStudy" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="47" width="390" height="4"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="4" id="pgo-aV-qsX"/>
-                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="타이틀"/>
+                    </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="7nv-Bi-43Z" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="1ke-PN-qKa"/>
-                <constraint firstItem="K4m-kh-4Eu" firstAttribute="top" secondItem="7nv-Bi-43Z" secondAttribute="bottom" id="AAC-13-ASi"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="urR-ij-kHA" secondAttribute="trailing" constant="20" id="Aet-4z-9Fa"/>
-                <constraint firstItem="L15-Bb-sW8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="BX6-IJ-xXK"/>
-                <constraint firstItem="urR-ij-kHA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Hzb-1L-M9c"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7nv-Bi-43Z" secondAttribute="trailing" id="L6c-Cr-USz"/>
-                <constraint firstItem="K4m-kh-4Eu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ThR-9f-Aeo"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="L15-Bb-sW8" secondAttribute="trailing" constant="20" id="Via-MC-gNQ"/>
-                <constraint firstItem="be7-mT-NRP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Ydn-D1-RAU"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="urR-ij-kHA" secondAttribute="bottom" id="bQr-u2-efK"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="be7-mT-NRP" secondAttribute="trailing" id="erh-Yu-tYz"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="K4m-kh-4Eu" secondAttribute="trailing" id="fTS-vr-7ai"/>
-                <constraint firstItem="L15-Bb-sW8" firstAttribute="top" secondItem="be7-mT-NRP" secondAttribute="bottom" id="r2n-dT-reD"/>
-                <constraint firstItem="be7-mT-NRP" firstAttribute="top" secondItem="K4m-kh-4Eu" secondAttribute="bottom" id="t2w-ya-b6g"/>
-                <constraint firstItem="urR-ij-kHA" firstAttribute="top" secondItem="L15-Bb-sW8" secondAttribute="bottom" constant="10" id="yJz-mw-gMc"/>
-                <constraint firstItem="7nv-Bi-43Z" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="yxI-tV-1Rt"/>
+                <constraint firstItem="o9z-w9-utw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="QSF-zn-7rK"/>
+                <constraint firstItem="o9z-w9-utw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="QfE-0j-iNN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="o9z-w9-utw" secondAttribute="trailing" id="tJ8-iZ-olD"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-498.46153846153845" y="-161.37440758293837"/>

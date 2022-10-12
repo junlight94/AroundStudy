@@ -107,9 +107,14 @@
 		DFCBDD8128E93714008A7E02 /* CommonPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFCBDD7F28E93714008A7E02 /* CommonPopupViewController.xib */; };
 		DFCBDD8228E94240008A7E02 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5EC61F28E6D522003411D3 /* TestViewController.swift */; };
 		DFCBDD8328E94244008A7E02 /* CommonPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCBDD7E28E93714008A7E02 /* CommonPopupViewController.swift */; };
+		DFD26DE028F27E5C0091923A /* AddVoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD26DDE28F27E5C0091923A /* AddVoteViewController.swift */; };
+		DFD26DE128F27E5C0091923A /* AddVoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFD26DDF28F27E5C0091923A /* AddVoteViewController.xib */; };
 		DFE0373628E27B5B00BE9E35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE0373528E27B5B00BE9E35 /* AppDelegate.swift */; };
 		DFE0373F28E27B5D00BE9E35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFE0373E28E27B5D00BE9E35 /* Assets.xcassets */; };
 		DFE0374228E27B5D00BE9E35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE0374028E27B5D00BE9E35 /* LaunchScreen.storyboard */; };
+		DFEA71C728F42B77005DFD78 /* AddVoteBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEA71C628F42B77005DFD78 /* AddVoteBorderView.swift */; };
+		DFEA71C928F42B7F005DFD78 /* AddVoteBorderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFEA71C828F42B7F005DFD78 /* AddVoteBorderView.xib */; };
+		DFEC1FBA28F675F8009B866E /* AddVoteTextfieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEC1FB928F675F8009B866E /* AddVoteTextfieldView.swift */; };
 		DFFD345E28EEFADB00CFCB74 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD345C28EEFADB00CFCB74 /* OnboardingViewController.swift */; };
 		DFFD345F28EEFADB00CFCB74 /* OnboardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFFD345D28EEFADB00CFCB74 /* OnboardingViewController.xib */; };
 /* End PBXBuildFile section */
@@ -218,11 +223,16 @@
 		DF89A80C28E6F0D10039E364 /* ThumbnailImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailImageView.swift; sourceTree = "<group>"; };
 		DFCBDD7E28E93714008A7E02 /* CommonPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonPopupViewController.swift; sourceTree = "<group>"; };
 		DFCBDD7F28E93714008A7E02 /* CommonPopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonPopupViewController.xib; sourceTree = "<group>"; };
+		DFD26DDE28F27E5C0091923A /* AddVoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVoteViewController.swift; sourceTree = "<group>"; };
+		DFD26DDF28F27E5C0091923A /* AddVoteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddVoteViewController.xib; sourceTree = "<group>"; };
 		DFE0373228E27B5B00BE9E35 /* AroundStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AroundStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE0373528E27B5B00BE9E35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFE0373E28E27B5D00BE9E35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFE0374128E27B5D00BE9E35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFE0374328E27B5D00BE9E35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFEA71C628F42B77005DFD78 /* AddVoteBorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVoteBorderView.swift; sourceTree = "<group>"; };
+		DFEA71C828F42B7F005DFD78 /* AddVoteBorderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddVoteBorderView.xib; sourceTree = "<group>"; };
+		DFEC1FB928F675F8009B866E /* AddVoteTextfieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVoteTextfieldView.swift; sourceTree = "<group>"; };
 		DFFD345C28EEFADB00CFCB74 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		DFFD345D28EEFADB00CFCB74 /* OnboardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -378,6 +388,7 @@
 		08DC524328E864BB00B058ED /* 스터디 */ = {
 			isa = PBXGroup;
 			children = (
+				DFD26DDD28F27E410091923A /* 투표 */,
 				08DC524B28E8653800B058ED /* StudyViewController.swift */,
 				08DC524C28E8653800B058ED /* StudyViewController.xib */,
 				191E2E3828ED12DB00BB92DF /* PlanPopupViewController.swift */,
@@ -532,6 +543,18 @@
 			name = "공통-팝업";
 			sourceTree = "<group>";
 		};
+		DFD26DDD28F27E410091923A /* 투표 */ = {
+			isa = PBXGroup;
+			children = (
+				DFD26DDE28F27E5C0091923A /* AddVoteViewController.swift */,
+				DFD26DDF28F27E5C0091923A /* AddVoteViewController.xib */,
+				DFEA71C628F42B77005DFD78 /* AddVoteBorderView.swift */,
+				DFEA71C828F42B7F005DFD78 /* AddVoteBorderView.xib */,
+				DFEC1FB928F675F8009B866E /* AddVoteTextfieldView.swift */,
+			);
+			name = "투표";
+			sourceTree = "<group>";
+		};
 		DFE0372928E27B5B00BE9E35 = {
 			isa = PBXGroup;
 			children = (
@@ -663,6 +686,7 @@
 				19690EAA28F0F9F0006EEE8D /* CategoryViewController.xib in Resources */,
 				DF15CBDF28E85AB0009F24CB /* Pretendard-Bold.otf in Resources */,
 				DF03FC2D28ED795300C564FA /* HomeCategoryCollectionViewCell.xib in Resources */,
+				DFEA71C928F42B7F005DFD78 /* AddVoteBorderView.xib in Resources */,
 				DFE0374228E27B5D00BE9E35 /* LaunchScreen.storyboard in Resources */,
 				08DC526228E9AAED00B058ED /* StudyInfoGridCollectionViewCell.xib in Resources */,
 				DFE0373F28E27B5D00BE9E35 /* Assets.xcassets in Resources */,
@@ -686,6 +710,7 @@
 				DF068CB228EC496700083917 /* PermissionViewController.xib in Resources */,
 				197CE78B28F550950042A6EA /* CustomCalendarTableViewCell.xib in Resources */,
 				DF15CBDE28E85AB0009F24CB /* Pretendard-Medium.otf in Resources */,
+				DFD26DE128F27E5C0091923A /* AddVoteViewController.xib in Resources */,
 				19868C4D28EC5C550093DF76 /* StudyBannerCollectionViewCell.xib in Resources */,
 				DF88222F28EFB13F00993F2E /* SocialLoginViewController.xib in Resources */,
 				08DC524E28E8653800B058ED /* StudyViewController.xib in Resources */,
@@ -751,6 +776,7 @@
 				DFCBDD8228E94240008A7E02 /* TestViewController.swift in Sources */,
 				191E2E3A28ED12DB00BB92DF /* PlanPopupViewController.swift in Sources */,
 				19690EA828F0F9F0006EEE8D /* CategoryItemCollectionViewCell.swift in Sources */,
+				DFEA71C728F42B77005DFD78 /* AddVoteBorderView.swift in Sources */,
 				08DC525528E8654D00B058ED /* MoreViewController.swift in Sources */,
 				192C3DAF28E55FCF003563D3 /* CustomNavigationBar.swift in Sources */,
 				DF068CB128EC496700083917 /* PermissionViewController.swift in Sources */,
@@ -786,7 +812,9 @@
 				08DC524D28E8653800B058ED /* StudyViewController.swift in Sources */,
 				19868C4C28EC5C550093DF76 /* StudyBannerCollectionViewCell.swift in Sources */,
 				08DC527928E9ABD800B058ED /* VoteTableViewCell.swift in Sources */,
+				DFEC1FBA28F675F8009B866E /* AddVoteTextfieldView.swift in Sources */,
 				088A62D128E32B6800442E6C /* String+Extension.swift in Sources */,
+				DFD26DE028F27E5C0091923A /* AddVoteViewController.swift in Sources */,
 				088A62CD28E32B4A00442E6C /* BaseViewController.swift in Sources */,
 				0876383E28F40CFF00BE6B13 /* InputNickNameViewController.swift in Sources */,
 				08DC526D28E9AB6E00B058ED /* ScheduleDetailTableViewCell.swift in Sources */,
