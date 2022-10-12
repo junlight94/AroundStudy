@@ -7,7 +7,7 @@
 
 import UIKit
 
-class VoteTableViewCell: UITableViewCell {
+class VoteTableViewCell: UITableViewCell, reusablebleTableView {
 
     /// 테스트용 변수, 실 개발시 사용 안하는 변수입니다.
     var isExpended: Bool = true
@@ -25,6 +25,8 @@ class VoteTableViewCell: UITableViewCell {
     let testVote2 = VoteDetailItemView()
     let testVote3 = VoteDetailItemView()
     let testVote4 = VoteDetailItemView()
+    
+    var completeAnimation: boolClosure?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -58,19 +60,23 @@ class VoteTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    public func didTapExpandView(_ complete: @escaping boolClosure) {
+        self.completeAnimation = complete
+    }
+    
     @IBAction func didTapVoteButton(_ sender: Any) {
         print("셀에서 투표하기 버튼 눌림")
+        //FIXME: - 애니메이션 공통처리 및 레이아웃 업데이트 수정
         isExpended.toggle()
-        if isExpended {
-            voteDetailStackView.subviews[0].snp.updateConstraints { make in
-                make.height.equalTo(80)
+        voteDetailStackView.subviews[0].snp.updateConstraints { make in
+            let remakeConstraints = isExpended ? 80 : 0
+            UIView.animate(withDuration: 0.3) {
+                self.voteDetailStackView.subviews[0].snp.updateConstraints { make in
+                    make.height.equalTo(remakeConstraints)
+                }
+            } completion: { _ in
+                self.completeAnimation?(self.isExpended)
             }
-            voteDetailLineView.isHidden = false
-        } else {
-            voteDetailStackView.subviews[0].snp.updateConstraints { make in
-                make.height.equalTo(0)
-            }
-            voteDetailLineView.isHidden = true
         }
     }
 }
