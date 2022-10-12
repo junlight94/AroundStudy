@@ -52,25 +52,15 @@
                                     <constraint firstAttribute="height" constant="88" id="aeb-UJ-1pn"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHr-QV-7KP">
-                                <rect key="frame" x="20" y="421" width="75" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <action selector="moveVoteView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ge8-ZG-ijD"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="yKe-4C-UMc" firstAttribute="top" secondItem="rgV-7A-Iu6" secondAttribute="bottom" constant="18" id="HT4-nw-0eN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rgV-7A-Iu6" secondAttribute="trailing" constant="20" id="I12-ag-JPu"/>
-                            <constraint firstItem="SHr-QV-7KP" firstAttribute="leading" secondItem="yKe-4C-UMc" secondAttribute="leading" id="Rco-Du-0bA"/>
                             <constraint firstItem="yKe-4C-UMc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="VQP-TU-FGS"/>
                             <constraint firstItem="rgV-7A-Iu6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="92" id="WFf-5f-Ocd"/>
                             <constraint firstItem="rgV-7A-Iu6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kqi-QD-DjI"/>
-                            <constraint firstItem="SHr-QV-7KP" firstAttribute="top" secondItem="yKe-4C-UMc" secondAttribute="bottom" constant="109" id="lPH-bz-32e"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bA3-1G-2Uo"/>
