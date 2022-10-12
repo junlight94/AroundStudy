@@ -9,28 +9,10 @@ import UIKit
 
 class TestViewController: BaseViewController {
 
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var indicatorView: RegisterIndicatorView!
-    @IBOutlet weak var collectionView: UICollectionView!
-        
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("테스트뷰컨")
-        
-        indicatorView.currentStep = 2
-        
-        
-        tableView.delegate = self
-        tableView.dataSource = self
-        let cellNib = UINib(nibName: "VoteTableViewCell", bundle: nil)
-        tableView.register(cellNib, forCellReuseIdentifier: "VoteTableViewCell")
-        
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        
-        let collectionViewNib = UINib(nibName: "ColorSetCollectionViewCell", bundle: nil)
-        collectionView.register(collectionViewNib, forCellWithReuseIdentifier: "ColorSetCollectionViewCell")
         
         
         
@@ -70,15 +52,6 @@ class TestViewController: BaseViewController {
         }
     }
 
-    @IBAction func didTapButton(_ sender: Any) {
-        showPopup(self, id: POPUP_STUDY_JOIN_ID, title: "스터디 가입 신청", message: "스터디 참여 신청을 위해\n스터디 그룹장과 채팅을 시작합니다.", oneButtonTitle: "좋아요", twoButtonTitle: "다음에 할게요")
-    }
-    
-    @IBAction func didTapButtonSecond(_ sender: Any) {
-        showPopup(self, id: POPUP_STUDY_LEAVE_ID, title: "탈퇴에요!!!", message: "몰라 맘에 안들어\n그냥 탈퇴할거야!.", oneButtonTitle: "떠날게요", twoButtonTitle: "좀더 있어 볼게요")
-    }
-    
-    
     /**
      테스트용 함수
      > 팝업아이디 "POPUP_STUDY_JOIN_ID" 처리 함수
@@ -115,36 +88,4 @@ extension TestViewController {
             }
         }
     }
-}
-
-extension TestViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "VoteTableViewCell", for: indexPath) as? VoteTableViewCell else { return UITableViewCell() }
-        return cell
-    }
-}
-
-extension TestViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        6
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ColorSetCollectionViewCell", for: indexPath) as? ColorSetCollectionViewCell else { return UICollectionViewCell() }
-        if indexPath.row == 2 {
-            cell.selectCell()
-        }
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 36, height: 36)
-    }
-    
-    
-    
 }
