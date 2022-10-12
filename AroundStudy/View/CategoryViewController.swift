@@ -75,7 +75,7 @@ extension CategoryViewController: collectionViewExtension {
     }
     
     /**
-     * @카테고리 셀 사이즈 설정(가로세로 동일 3개의 아이템으로 진행
+     * @카테고리 셀 사이즈 설정(가로세로 동일 3개의 아이템으로 진행)
      * @creator : coder3306
      */
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -95,6 +95,11 @@ extension CategoryViewController: collectionViewExtension {
 
 //MARK: - Action
 extension CategoryViewController {
+    /**
+     * @카테고리 내 검색하기 설정
+     * @creator : coder3306
+     * @param sender : UIButton
+     */
     @objc private func actionSearch(_ sender: UIButton) {
         //TODO: 검색 설정하기.
         print("search")

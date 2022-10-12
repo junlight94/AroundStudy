@@ -37,6 +37,8 @@ class BaseViewController: UIViewController {
     let authorization = Authorization.shared
     /// 데이터 매니저
     let dataManager = DataManager.shared
+    /// 키보드 노티피케이션 설정 스크롤 뷰
+    var keyboardTargetView: UIScrollView?
     
     //******************************************************
     //MARK: - POPUP ID DEFINE
@@ -122,8 +124,8 @@ class BaseViewController: UIViewController {
      * @키보드 제스처 설정
      * @creator : coder3306
      */
-    public func setTabGesture() {
-        let tab = UITapGestureRecognizer(target: self, action: #selector(endEditingKeyboard(_:)))
+    private func setTabGesture() {
+        let tab = UITapGestureRecognizer(target: self, action: #selector(endEditingKeyboard))
         self.view.addGestureRecognizer(tab)
     }
     
@@ -131,9 +133,11 @@ class BaseViewController: UIViewController {
      * @키보드 노티피케이션 추가
      * @creator : coder3306
      */
-    public func setKeyboardNotification() {
+    public func setKeyboardNotification(targetView: UIScrollView) {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: .keyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: .keyboardWillHide, object: nil)
+        self.keyboardTargetView = targetView
+        setTabGesture()
     }
     
     /**
@@ -175,7 +179,7 @@ extension BaseViewController {
      * @키보드 종료
      * @creator : coder3306
      */
-    @objc private func endEditingKeyboard(_ edit: UIView) {
+    @objc private func endEditingKeyboard() {
         self.view.endEditing(true)
     }
 
@@ -186,9 +190,11 @@ extension BaseViewController {
      * @param notification : Notification
      */
     @objc private func keyboardWillShow(_ notification: Notification) {
+        guard let keyboardTargetView = keyboardTargetView else {
+            return
+        }
         if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
-            //FIXME: - 로직변경필요
-            self.view.frame.origin.y -= keyboardFrame.cgRectValue.height
+            keyboardTargetView.frame.origin.y -= keyboardFrame.cgRectValue.height
         }
     }
     
@@ -198,7 +204,10 @@ extension BaseViewController {
      * @param notification : Notification
      */
     @objc func keyboardWillHide(_ notification: Notification) {
-        self.view.frame.origin.y = 0
+        guard let keyboardTargetView = keyboardTargetView else {
+            return
+        }
+        keyboardTargetView.frame.origin.y = 0
     }
 }
 
