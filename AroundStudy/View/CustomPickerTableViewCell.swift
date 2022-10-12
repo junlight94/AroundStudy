@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomPickerTableViewCell: UITableViewCell, reusablebleTableView {
+class CustomPickerTableViewCell: UITableViewCell, reusableTableView {
     @IBOutlet weak var timePickerView: UIPickerView?
     
     var hour = [String]()

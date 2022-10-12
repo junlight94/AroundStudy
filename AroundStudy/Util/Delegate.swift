@@ -25,7 +25,7 @@ protocol PopupButtonDelegate: AnyObject {
  * @테이블뷰 재사용 설정을 위한 프로토콜
  * @creator : coder3306
  */
-protocol reusablebleTableView {
+protocol reusableTableView {
     /// 재사용 셀 식별자
     static var reuseIdentifier: String { get }
     /// 재사용 셀 파일 이름
@@ -44,7 +44,7 @@ protocol reusablebleTableView {
     static func dequeueReusableCell(targetView: UITableView) -> Self?
 }
 
-extension reusablebleTableView where Self: UITableViewCell {
+extension reusableTableView where Self: UITableViewCell {
     static var reuseIdentifier: String {
         return String(describing: Self.self)
     }

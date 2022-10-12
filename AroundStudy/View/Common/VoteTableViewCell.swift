@@ -7,7 +7,7 @@
 
 import UIKit
 
-class VoteTableViewCell: UITableViewCell, reusablebleTableView {
+class VoteTableViewCell: UITableViewCell, reusableTableView {
 
     /// 테스트용 변수, 실 개발시 사용 안하는 변수입니다.
     var isExpended: Bool = true

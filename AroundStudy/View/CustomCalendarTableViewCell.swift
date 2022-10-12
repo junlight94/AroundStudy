@@ -1,4 +1,3 @@
-//
 //  CustomCalendarTableViewCell.swift
 //  AroundStudy
 //
@@ -8,7 +7,7 @@
 import UIKit
 import FSCalendar
 
-class CustomCalendarTableViewCell: UITableViewCell, reusablebleTableView {
+class CustomCalendarTableViewCell: UITableViewCell, reusableTableView {
     /// 캘린더 뷰
     @IBOutlet weak var viewcalendar: FSCalendar?
     /// YYYY년 M월 라벨
@@ -25,7 +24,10 @@ class CustomCalendarTableViewCell: UITableViewCell, reusablebleTableView {
         return dateFormatter
     }()
     
-
+    /**
+     * @커스텀 캘린더 셀 초기화
+     * @creator : coder3306
+     */
     override func awakeFromNib() {
         super.awakeFromNib()
         viewcalendar?.delegate = self
