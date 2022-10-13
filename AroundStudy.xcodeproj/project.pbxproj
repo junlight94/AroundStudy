@@ -120,6 +120,7 @@
 		DFEA71C728F42B77005DFD78 /* AddVoteBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEA71C628F42B77005DFD78 /* AddVoteBorderView.swift */; };
 		DFEA71C928F42B7F005DFD78 /* AddVoteBorderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFEA71C828F42B7F005DFD78 /* AddVoteBorderView.xib */; };
 		DFEC1FBA28F675F8009B866E /* AddVoteTextfieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEC1FB928F675F8009B866E /* AddVoteTextfieldView.swift */; };
+		DFEC1FBD28F6B39E009B866E /* PlanMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEC1FBC28F6B39E009B866E /* PlanMainView.swift */; };
 		DFFD345E28EEFADB00CFCB74 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD345C28EEFADB00CFCB74 /* OnboardingViewController.swift */; };
 		DFFD345F28EEFADB00CFCB74 /* OnboardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFFD345D28EEFADB00CFCB74 /* OnboardingViewController.xib */; };
 /* End PBXBuildFile section */
@@ -243,6 +244,7 @@
 		DFEA71C628F42B77005DFD78 /* AddVoteBorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVoteBorderView.swift; sourceTree = "<group>"; };
 		DFEA71C828F42B7F005DFD78 /* AddVoteBorderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddVoteBorderView.xib; sourceTree = "<group>"; };
 		DFEC1FB928F675F8009B866E /* AddVoteTextfieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVoteTextfieldView.swift; sourceTree = "<group>"; };
+		DFEC1FBC28F6B39E009B866E /* PlanMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanMainView.swift; sourceTree = "<group>"; };
 		DFFD345C28EEFADB00CFCB74 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		DFFD345D28EEFADB00CFCB74 /* OnboardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -399,6 +401,7 @@
 		08DC524328E864BB00B058ED /* 스터디 */ = {
 			isa = PBXGroup;
 			children = (
+				DFEC1FBB28F6B37B009B866E /* 일정 */,
 				DFD26DDD28F27E410091923A /* 투표 */,
 				08DC524B28E8653800B058ED /* StudyViewController.swift */,
 				08DC524C28E8653800B058ED /* StudyViewController.xib */,
@@ -606,6 +609,14 @@
 			path = AroundStudy;
 			sourceTree = "<group>";
 		};
+		DFEC1FBB28F6B37B009B866E /* 일정 */ = {
+			isa = PBXGroup;
+			children = (
+				DFEC1FBC28F6B39E009B866E /* PlanMainView.swift */,
+			);
+			name = "일정";
+			sourceTree = "<group>";
+		};
 		DFFDFAAB28E6B7D700E3E446 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -810,6 +821,7 @@
 				DF15CBE328E861E1009F24CB /* BoxLabel.swift in Sources */,
 				0876384428F40D4500BE6B13 /* InputGenderViewController.swift in Sources */,
 				0876386328F5834400BE6B13 /* SearchHistoryCollectionViewCell.swift in Sources */,
+				DFEC1FBD28F6B39E009B866E /* PlanMainView.swift in Sources */,
 				08DC523528E467CE00B058ED /* LoginDto.swift in Sources */,
 				088A62CF28E32B5500442E6C /* APIManager.swift in Sources */,
 				08DC524928E8652C00B058ED /* HomeViewController.swift in Sources */,
