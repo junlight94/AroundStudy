@@ -406,10 +406,6 @@
 				191E2E3928ED12DB00BB92DF /* StudyPlanPopupViewController.xib */,
 				197CE78028F526530042A6EA /* StudyPlanTitleTableViewCell.swift */,
 				197CE78128F526530042A6EA /* StudyPlanTitleTableViewCell.xib */,
-				1961AD8128F4EB6F0032FE7A /* VoteViewController.swift */,
-				1961AD8228F4EB6F0032FE7A /* VoteViewController.xib */,
-				1961AD8528F4EC920032FE7A /* VoteTitleTableViewCell.swift */,
-				1961AD8628F4EC920032FE7A /* VoteTitleTableViewCell.xib */,
 				1972784D28F645390029F27D /* SelectDatePopupViewController.swift */,
 				1972784E28F645390029F27D /* SelectDatePopupViewController.xib */,
 				191A968E28F66382007E2F04 /* SelectStartEndSegmentTableViewCell.swift */,
@@ -561,6 +557,10 @@
 		DFD26DDD28F27E410091923A /* 투표 */ = {
 			isa = PBXGroup;
 			children = (
+				1961AD8128F4EB6F0032FE7A /* VoteViewController.swift */,
+				1961AD8228F4EB6F0032FE7A /* VoteViewController.xib */,
+				1961AD8528F4EC920032FE7A /* VoteTitleTableViewCell.swift */,
+				1961AD8628F4EC920032FE7A /* VoteTitleTableViewCell.xib */,
 				DFD26DDE28F27E5C0091923A /* AddVoteViewController.swift */,
 				DFD26DDF28F27E5C0091923A /* AddVoteViewController.xib */,
 				DFEA71C628F42B77005DFD78 /* AddVoteBorderView.swift */,
