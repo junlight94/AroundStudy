@@ -257,8 +257,15 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
             let width = UIScreen.main.bounds.size.width - 40
             return CGSize(width: width, height: 85)
         } else {
+            let width = cellSize(title: searchHistoryData[indexPath.item].title)
+            let collectionViewWidth = collectionView.bounds.width
             
-            return CGSize(width: cellSize(title: searchHistoryData[indexPath.item].title) , height: 49)
+            if width > collectionViewWidth {
+                return CGSize(width: collectionViewWidth , height: 49)
+            } else {
+                return CGSize(width: width , height: 49)
+            }
+            
         }
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
