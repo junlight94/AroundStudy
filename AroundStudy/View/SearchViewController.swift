@@ -199,6 +199,10 @@ class SearchViewController: BaseViewController {
         searchHistoryTableView.reloadData()
     }
     
+    @objc func tableViewBtnOnClick(_ sender: UIButton) {
+        print(searchHistoryData[sender.tag].title)
+    }
+    
     //최근검색 기록 삭제
     @objc func btnDeletePressed(_ sender: UIButton) {
         print(#function,"button number: \(sender.tag)")
@@ -238,6 +242,8 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchHistoryTableViewCell", for: indexPath) as! SearchHistoryTableViewCell
         let row = filterHistoryData[indexPath.row]
         cell.lbTitle.text = row.title
+        cell.btnOnClick.tag = indexPath.row
+        cell.btnOnClick.addTarget(self, action: #selector(tableViewBtnOnClick), for: .touchUpInside)
         return cell
     }
 }
