@@ -58,8 +58,11 @@
 		08DC527628E9AB9F00B058ED /* ColorSetCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DC527428E9AB9F00B058ED /* ColorSetCollectionViewCell.xib */; };
 		08DC527928E9ABD800B058ED /* VoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC527728E9ABD800B058ED /* VoteTableViewCell.swift */; };
 		08DC527A28E9ABD800B058ED /* VoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DC527828E9ABD800B058ED /* VoteTableViewCell.xib */; };
-		191E2E3A28ED12DB00BB92DF /* PlanPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E2E3828ED12DB00BB92DF /* PlanPopupViewController.swift */; };
-		191E2E3B28ED12DB00BB92DF /* PlanPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 191E2E3928ED12DB00BB92DF /* PlanPopupViewController.xib */; };
+		191A969028F66382007E2F04 /* SelectStartEndSegmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191A968E28F66382007E2F04 /* SelectStartEndSegmentTableViewCell.swift */; };
+		191A969128F66382007E2F04 /* SelectStartEndSegmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 191A968F28F66382007E2F04 /* SelectStartEndSegmentTableViewCell.xib */; };
+		191A969728F6922F007E2F04 /* CustomSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191A969628F6922F007E2F04 /* CustomSegmentControl.swift */; };
+		191E2E3A28ED12DB00BB92DF /* StudyPlanPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E2E3828ED12DB00BB92DF /* StudyPlanPopupViewController.swift */; };
+		191E2E3B28ED12DB00BB92DF /* StudyPlanPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 191E2E3928ED12DB00BB92DF /* StudyPlanPopupViewController.xib */; };
 		192C3DAF28E55FCF003563D3 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C3DAE28E55FCF003563D3 /* CustomNavigationBar.swift */; };
 		192C3DB328E56BAF003563D3 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C3DB228E56BAF003563D3 /* Notification+Extension.swift */; };
 		192C3DB528E56DAA003563D3 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C3DB428E56DAA003563D3 /* CALayer+Extension.swift */; };
@@ -73,8 +76,10 @@
 		19690EAB28F0F9F0006EEE8D /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19690EA728F0F9F0006EEE8D /* CategoryViewController.swift */; };
 		19690EAE28F0FA05006EEE8D /* AgreementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19690EAC28F0FA05006EEE8D /* AgreementsViewController.swift */; };
 		19690EAF28F0FA05006EEE8D /* AgreementsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19690EAD28F0FA05006EEE8D /* AgreementsViewController.xib */; };
-		197CE78228F526530042A6EA /* StudyTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197CE78028F526530042A6EA /* StudyTitleTableViewCell.swift */; };
-		197CE78328F526530042A6EA /* StudyTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 197CE78128F526530042A6EA /* StudyTitleTableViewCell.xib */; };
+		1972784F28F645390029F27D /* SelectDatePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972784D28F645390029F27D /* SelectDatePopupViewController.swift */; };
+		1972785028F645390029F27D /* SelectDatePopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1972784E28F645390029F27D /* SelectDatePopupViewController.xib */; };
+		197CE78228F526530042A6EA /* StudyPlanTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197CE78028F526530042A6EA /* StudyPlanTitleTableViewCell.swift */; };
+		197CE78328F526530042A6EA /* StudyPlanTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 197CE78128F526530042A6EA /* StudyPlanTitleTableViewCell.xib */; };
 		197CE78628F528490042A6EA /* CustomPickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197CE78428F528490042A6EA /* CustomPickerTableViewCell.swift */; };
 		197CE78728F528490042A6EA /* CustomPickerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 197CE78528F528490042A6EA /* CustomPickerTableViewCell.xib */; };
 		197CE78A28F550950042A6EA /* CustomCalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197CE78828F550950042A6EA /* CustomCalendarTableViewCell.swift */; };
@@ -168,8 +173,11 @@
 		08DC527728E9ABD800B058ED /* VoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteTableViewCell.swift; sourceTree = "<group>"; };
 		08DC527828E9ABD800B058ED /* VoteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VoteTableViewCell.xib; sourceTree = "<group>"; };
 		132B1B51ED5CA8B98EE79822 /* Pods_AroundStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AroundStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		191E2E3828ED12DB00BB92DF /* PlanPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanPopupViewController.swift; sourceTree = "<group>"; };
-		191E2E3928ED12DB00BB92DF /* PlanPopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanPopupViewController.xib; sourceTree = "<group>"; };
+		191A968E28F66382007E2F04 /* SelectStartEndSegmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectStartEndSegmentTableViewCell.swift; sourceTree = "<group>"; };
+		191A968F28F66382007E2F04 /* SelectStartEndSegmentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectStartEndSegmentTableViewCell.xib; sourceTree = "<group>"; };
+		191A969628F6922F007E2F04 /* CustomSegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentControl.swift; sourceTree = "<group>"; };
+		191E2E3828ED12DB00BB92DF /* StudyPlanPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyPlanPopupViewController.swift; sourceTree = "<group>"; };
+		191E2E3928ED12DB00BB92DF /* StudyPlanPopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudyPlanPopupViewController.xib; sourceTree = "<group>"; };
 		192C3DAE28E55FCF003563D3 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		192C3DB228E56BAF003563D3 /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
 		192C3DB428E56DAA003563D3 /* CALayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
@@ -183,12 +191,14 @@
 		19690EA728F0F9F0006EEE8D /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		19690EAC28F0FA05006EEE8D /* AgreementsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgreementsViewController.swift; sourceTree = "<group>"; };
 		19690EAD28F0FA05006EEE8D /* AgreementsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AgreementsViewController.xib; sourceTree = "<group>"; };
-		197CE78028F526530042A6EA /* StudyTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyTitleTableViewCell.swift; sourceTree = "<group>"; };
-		197CE78128F526530042A6EA /* StudyTitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudyTitleTableViewCell.xib; sourceTree = "<group>"; };
-		197CE78428F528490042A6EA /* CustomPickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPickerTableViewCell.swift; sourceTree = "<group>"; };
-		197CE78528F528490042A6EA /* CustomPickerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomPickerTableViewCell.xib; sourceTree = "<group>"; };
-		197CE78828F550950042A6EA /* CustomCalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCalendarTableViewCell.swift; sourceTree = "<group>"; };
-		197CE78928F550950042A6EA /* CustomCalendarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCalendarTableViewCell.xib; sourceTree = "<group>"; };
+		1972784D28F645390029F27D /* SelectDatePopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDatePopupViewController.swift; sourceTree = "<group>"; };
+		1972784E28F645390029F27D /* SelectDatePopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectDatePopupViewController.xib; sourceTree = "<group>"; };
+		197CE78028F526530042A6EA /* StudyPlanTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyPlanTitleTableViewCell.swift; sourceTree = "<group>"; };
+		197CE78128F526530042A6EA /* StudyPlanTitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudyPlanTitleTableViewCell.xib; sourceTree = "<group>"; };
+		197CE78428F528490042A6EA /* CustomPickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomPickerTableViewCell.swift; path = ../CustomPickerTableViewCell.swift; sourceTree = "<group>"; };
+		197CE78528F528490042A6EA /* CustomPickerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CustomPickerTableViewCell.xib; path = ../CustomPickerTableViewCell.xib; sourceTree = "<group>"; };
+		197CE78828F550950042A6EA /* CustomCalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomCalendarTableViewCell.swift; path = ../CustomCalendarTableViewCell.swift; sourceTree = "<group>"; };
+		197CE78928F550950042A6EA /* CustomCalendarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CustomCalendarTableViewCell.xib; path = ../CustomCalendarTableViewCell.xib; sourceTree = "<group>"; };
 		197CE78C28F556B70042A6EA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		197CE78E28F557AE0042A6EA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		19868C4A28EC5C550093DF76 /* StudyBannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyBannerCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -308,6 +318,7 @@
 				08DC525728E9806C00B058ED /* TextField+General.swift */,
 				0876385928F5606200BE6B13 /* TextField+Search.swift */,
 				192C3DAE28E55FCF003563D3 /* CustomNavigationBar.swift */,
+				191A969628F6922F007E2F04 /* CustomSegmentControl.swift */,
 				DF89A80C28E6F0D10039E364 /* ThumbnailImageView.swift */,
 				DF15CBE228E861E1009F24CB /* BoxLabel.swift */,
 			);
@@ -380,18 +391,18 @@
 			children = (
 				08DC524B28E8653800B058ED /* StudyViewController.swift */,
 				08DC524C28E8653800B058ED /* StudyViewController.xib */,
-				191E2E3828ED12DB00BB92DF /* PlanPopupViewController.swift */,
-				191E2E3928ED12DB00BB92DF /* PlanPopupViewController.xib */,
+				191E2E3828ED12DB00BB92DF /* StudyPlanPopupViewController.swift */,
+				191E2E3928ED12DB00BB92DF /* StudyPlanPopupViewController.xib */,
+				197CE78028F526530042A6EA /* StudyPlanTitleTableViewCell.swift */,
+				197CE78128F526530042A6EA /* StudyPlanTitleTableViewCell.xib */,
 				1961AD8128F4EB6F0032FE7A /* VoteViewController.swift */,
 				1961AD8228F4EB6F0032FE7A /* VoteViewController.xib */,
 				1961AD8528F4EC920032FE7A /* VoteTitleTableViewCell.swift */,
 				1961AD8628F4EC920032FE7A /* VoteTitleTableViewCell.xib */,
-				197CE78028F526530042A6EA /* StudyTitleTableViewCell.swift */,
-				197CE78128F526530042A6EA /* StudyTitleTableViewCell.xib */,
-				197CE78828F550950042A6EA /* CustomCalendarTableViewCell.swift */,
-				197CE78928F550950042A6EA /* CustomCalendarTableViewCell.xib */,
-				197CE78428F528490042A6EA /* CustomPickerTableViewCell.swift */,
-				197CE78528F528490042A6EA /* CustomPickerTableViewCell.xib */,
+				1972784D28F645390029F27D /* SelectDatePopupViewController.swift */,
+				1972784E28F645390029F27D /* SelectDatePopupViewController.xib */,
+				191A968E28F66382007E2F04 /* SelectStartEndSegmentTableViewCell.swift */,
+				191A968F28F66382007E2F04 /* SelectStartEndSegmentTableViewCell.xib */,
 			);
 			name = "스터디";
 			sourceTree = "<group>";
@@ -450,6 +461,10 @@
 				DF1D5B7B28EAEFAD00B875D5 /* VoteDetailItemView.swift */,
 				0876385B28F5691700BE6B13 /* HotStudyCollectionViewCell.swift */,
 				0876385C28F5691700BE6B13 /* HotStudyCollectionViewCell.xib */,
+				197CE78828F550950042A6EA /* CustomCalendarTableViewCell.swift */,
+				197CE78928F550950042A6EA /* CustomCalendarTableViewCell.xib */,
+				197CE78428F528490042A6EA /* CustomPickerTableViewCell.swift */,
+				197CE78528F528490042A6EA /* CustomPickerTableViewCell.xib */,
 			);
 			name = "공통-셀";
 			sourceTree = "<group>";
@@ -653,6 +668,7 @@
 				DFCBDD8128E93714008A7E02 /* CommonPopupViewController.xib in Resources */,
 				0876384528F40D4500BE6B13 /* InputGenderViewController.xib in Resources */,
 				08DC525E28E9A9C300B058ED /* SearchHistoryTableViewCell.xib in Resources */,
+				191A969128F66382007E2F04 /* SelectStartEndSegmentTableViewCell.xib in Resources */,
 				08DC527628E9AB9F00B058ED /* ColorSetCollectionViewCell.xib in Resources */,
 				1961AD8828F4EC920032FE7A /* VoteTitleTableViewCell.xib in Resources */,
 				19690EA928F0F9F0006EEE8D /* CategoryItemCollectionViewCell.xib in Resources */,
@@ -668,6 +684,7 @@
 				DFE0373F28E27B5D00BE9E35 /* Assets.xcassets in Resources */,
 				DF15CBE028E85AB0009F24CB /* Pretendard-Regular.otf in Resources */,
 				0876385828F42DC500BE6B13 /* SearchViewController.xib in Resources */,
+				1972785028F645390029F27D /* SelectDatePopupViewController.xib in Resources */,
 				08DC525628E8654D00B058ED /* MoreViewController.xib in Resources */,
 				197CE78D28F556B70042A6EA /* Main.storyboard in Resources */,
 				DF15CBE128E85AB0009F24CB /* Pretendard-SemiBold.otf in Resources */,
@@ -675,7 +692,7 @@
 				08DC526A28E9AB2B00B058ED /* MemberProfileCollectionViewCell.xib in Resources */,
 				08DC525228E8654400B058ED /* ChattingViewController.xib in Resources */,
 				DF068CB828EC603800083917 /* PermissionTableViewCell.xib in Resources */,
-				197CE78328F526530042A6EA /* StudyTitleTableViewCell.xib in Resources */,
+				197CE78328F526530042A6EA /* StudyPlanTitleTableViewCell.xib in Resources */,
 				0876384928F40D5300BE6B13 /* InputLocationViewController.xib in Resources */,
 				197CE78728F528490042A6EA /* CustomPickerTableViewCell.xib in Resources */,
 				1961AD8428F4EB6F0032FE7A /* VoteViewController.xib in Resources */,
@@ -689,7 +706,7 @@
 				19868C4D28EC5C550093DF76 /* StudyBannerCollectionViewCell.xib in Resources */,
 				DF88222F28EFB13F00993F2E /* SocialLoginViewController.xib in Resources */,
 				08DC524E28E8653800B058ED /* StudyViewController.xib in Resources */,
-				191E2E3B28ED12DB00BB92DF /* PlanPopupViewController.xib in Resources */,
+				191E2E3B28ED12DB00BB92DF /* StudyPlanPopupViewController.xib in Resources */,
 				08DC526628E9AAFE00B058ED /* StudyInfoCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -747,9 +764,10 @@
 				1961AD8328F4EB6F0032FE7A /* VoteViewController.swift in Sources */,
 				DF88223328EFBB5600993F2E /* RegisterCompleteViewController.swift in Sources */,
 				1961AD8728F4EC920032FE7A /* VoteTitleTableViewCell.swift in Sources */,
+				191A969728F6922F007E2F04 /* CustomSegmentControl.swift in Sources */,
 				DFCBDD8328E94244008A7E02 /* CommonPopupViewController.swift in Sources */,
 				DFCBDD8228E94240008A7E02 /* TestViewController.swift in Sources */,
-				191E2E3A28ED12DB00BB92DF /* PlanPopupViewController.swift in Sources */,
+				191E2E3A28ED12DB00BB92DF /* StudyPlanPopupViewController.swift in Sources */,
 				19690EA828F0F9F0006EEE8D /* CategoryItemCollectionViewCell.swift in Sources */,
 				08DC525528E8654D00B058ED /* MoreViewController.swift in Sources */,
 				192C3DAF28E55FCF003563D3 /* CustomNavigationBar.swift in Sources */,
@@ -762,7 +780,7 @@
 				0876386028F580AE00BE6B13 /* StudyDto.swift in Sources */,
 				08DC527528E9AB9F00B058ED /* ColorSetCollectionViewCell.swift in Sources */,
 				197CE78F28F557AE0042A6EA /* ViewController.swift in Sources */,
-				197CE78228F526530042A6EA /* StudyTitleTableViewCell.swift in Sources */,
+				197CE78228F526530042A6EA /* StudyPlanTitleTableViewCell.swift in Sources */,
 				DF15CBE328E861E1009F24CB /* BoxLabel.swift in Sources */,
 				0876384428F40D4500BE6B13 /* InputGenderViewController.swift in Sources */,
 				0876386328F5834400BE6B13 /* SearchHistoryCollectionViewCell.swift in Sources */,
@@ -793,6 +811,7 @@
 				192C3DB528E56DAA003563D3 /* CALayer+Extension.swift in Sources */,
 				192C3DB328E56BAF003563D3 /* Notification+Extension.swift in Sources */,
 				0876385728F42DC500BE6B13 /* SearchViewController.swift in Sources */,
+				191A969028F66382007E2F04 /* SelectStartEndSegmentTableViewCell.swift in Sources */,
 				19690EAE28F0FA05006EEE8D /* AgreementsViewController.swift in Sources */,
 				08DC525128E8654400B058ED /* ChattingViewController.swift in Sources */,
 				0876386628F5856D00BE6B13 /* SearchHistoryDB.swift in Sources */,
@@ -802,6 +821,7 @@
 				08DC523928E478D700B058ED /* RootTabViewController.swift in Sources */,
 				DF88222E28EFB13F00993F2E /* SocialLoginViewController.swift in Sources */,
 				08DC523128E4663B00B058ED /* DataManager.swift in Sources */,
+				1972784F28F645390029F27D /* SelectDatePopupViewController.swift in Sources */,
 				08DC522D28E4647400B058ED /* Button+General.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

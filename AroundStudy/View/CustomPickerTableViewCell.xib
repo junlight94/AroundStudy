@@ -18,14 +18,17 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ntS-qN-j1D">
-                        <rect key="frame" x="0.0" y="0.0" width="351" height="173"/>
+                        <rect key="frame" x="77" y="0.0" width="197" height="173"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="197" id="ixK-wL-RLZ"/>
+                        </constraints>
                     </pickerView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="ntS-qN-j1D" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="0ur-i1-O2a"/>
-                    <constraint firstAttribute="trailing" secondItem="ntS-qN-j1D" secondAttribute="trailing" id="EyZ-ql-8vW"/>
+                    <constraint firstItem="ntS-qN-j1D" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="7R1-P0-7dX"/>
                     <constraint firstItem="ntS-qN-j1D" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="NGf-pu-rQV"/>
+                    <constraint firstItem="ntS-qN-j1D" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="PEc-sk-92J"/>
                     <constraint firstAttribute="bottom" secondItem="ntS-qN-j1D" secondAttribute="bottom" id="Plo-Yl-SHQ"/>
                 </constraints>
             </tableViewCellContentView>

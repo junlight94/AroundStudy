@@ -1,13 +1,13 @@
-//
 //  CustomPickerTableViewCell.swift
 //  AroundStudy
 //
 //  Created by coder3306 on 2022/10/11.
-//
+//  커스텀 피커 뷰
 
 import UIKit
 
 class CustomPickerTableViewCell: UITableViewCell, reusableTableView {
+    /// 커스텀 피커 뷰
     @IBOutlet weak var timePickerView: UIPickerView?
     
     var hour = [String]()
@@ -44,7 +44,7 @@ class CustomPickerTableViewCell: UITableViewCell, reusableTableView {
                 self.hour.append("\(hour)")
             }
         }
-        for minute in 0 ..< 60 {
+        for minute in 0 ... 60 {
             if minute < 10 {
                 self.minute.append("0\(minute)")
             } else {
@@ -53,18 +53,29 @@ class CustomPickerTableViewCell: UITableViewCell, reusableTableView {
         }
     }
     
+    /**
+     * @레이아웃 설정
+     * @creator : coder3306
+     */
     private func initLayout() {
-        timePickerView?.backgroundColor = .clear
-        let upLine = UIView(frame: CGRect(x: 15, y: 0, width: 56, height: 2))
-        let underLine = UIView(frame: CGRect(x: 15, y: 60, width: 56, height: 2))
+        timePickerView?.subviews.forEach({
+            $0.backgroundColor = .clear
+        })
+        
+        let upLine = UIView(frame: CGRect(x: 0, y: 0, width: (self.timePickerView?.bounds.width ?? 197) - 15, height: 2))
+        let upDeadLine = UIView(frame: CGRect(x: 56, y: 0, width: 68, height: 2))
+        let underLine = UIView(frame: CGRect(x: 0, y: 50, width: (self.timePickerView?.bounds.width ?? 197) - 15, height: 2))
+        let underDeadLine = UIView(frame: CGRect(x: 56, y: 50, width: 68, height: 2))
+        
         upLine.backgroundColor = UIColor(named: "naver")
         underLine.backgroundColor = UIColor(named: "naver")
+        upDeadLine.backgroundColor = .white
+        underDeadLine.backgroundColor = .white
         
-        timePickerView?.subviews[0].addSubview(upLine)
-        timePickerView?.subviews[0].addSubview(underLine)
         timePickerView?.subviews[1].addSubview(upLine)
+        timePickerView?.subviews[1].addSubview(upDeadLine)
         timePickerView?.subviews[1].addSubview(underLine)
-
+        timePickerView?.subviews[1].addSubview(underDeadLine)
     }
 }
 
@@ -75,7 +86,7 @@ extension CustomPickerTableViewCell: UIPickerViewDataSource, UIPickerViewDelegat
      * @creator : coder3306
      */
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 2
+        return 3
     }
     
     /**
@@ -85,6 +96,8 @@ extension CustomPickerTableViewCell: UIPickerViewDataSource, UIPickerViewDelegat
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if component == 0 {
             return hour.count
+        } else if component == 1 {
+            return 1
         }
         return minute.count
     }
@@ -92,23 +105,67 @@ extension CustomPickerTableViewCell: UIPickerViewDataSource, UIPickerViewDelegat
     /**
      * @커스텀 피커 뷰 제목 설정
      * @creator : coder3306
-     * @param <# param #> : <# desc #>
-     * @param <# param #> : <# desc #>
-     * @param <# param #> : <# desc #>
-     * @Return : <# desc #>
      */
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if component == 0 {
             return hour[row]
+        } else if component == 1 {
+            return ":"
         }
         return minute[row]
     }
     
     /**
-     * @시간이 선택되었을 때 해야 할 행동 전달
+     * @커스텀 피커 뷰 데이터 설정
+     * @creator : coder3306
+     */
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        if component == 0 {
+            let view = UIView(frame: CGRect(x: 0, y: 0, width: 56, height: 50))
+            let hourLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 56, height: 50))
+            hourLabel.text = hour[row]
+            hourLabel.textAlignment = .center
+            hourLabel.font = UIFont(name: "Pretendard-Bold", size: 25)
+            view.addSubview(hourLabel)
+            return view
+        } else if component == 1 {
+            let view = UIView(frame: CGRect(x: 0, y: 0, width: 8, height: 50))
+            let dot = UILabel(frame: CGRect(x: 0, y: 0, width: 8, height: 50))
+            dot.text = ":"
+            dot.textAlignment = .center
+            dot.font = UIFont(name: "Pretendard-Bold", size: 25)
+            view.addSubview(dot)
+            return view
+        } else if component == 2 {
+            let view = UIView(frame: CGRect(x: 0, y: 0, width: 56, height: 50))
+            let minuteLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 56, height: 50))
+            minuteLabel.text = minute[row]
+            minuteLabel.textAlignment = .center
+            minuteLabel.font = UIFont(name: "Pretendard-Bold", size: 25)
+            view.addSubview(minuteLabel)
+            return view
+        }
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 56, height: 50))
+        return view
+    }
+    
+    /**
+     * @시간이 선택되었을 때, 선택된 시간의 정보 전달
      * @creator : coder3306
      */
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print(row)
+        if component == 0 {
+            print("hour --------->>>> \(hour[row])")
+        } else if component == 2 {
+            print("minute --------->>>> \(minute[row])")
+        }
+    }
+    
+    /**
+     * @커스텀 피커 뷰 높이설정
+     * @creator : coder3306
+     */
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return 50
     }
 }

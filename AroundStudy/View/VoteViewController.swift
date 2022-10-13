@@ -70,6 +70,9 @@ extension VoteViewController: tableViewExtension {
         switch indexPath.section {
             case 0:
                 if let cell = VoteTitleTableViewCell.dequeueReusableCell(targetView: tableVote) {
+                    cell.didTapAddVote {
+                        self.moveSelectVoteView()
+                    }
                     return cell
                 }
             case 1:
@@ -83,5 +86,18 @@ extension VoteViewController: tableViewExtension {
                 return UITableViewCell()
         }
         return UITableViewCell()
+    }
+}
+
+//MARK: - Action
+extension VoteViewController {
+    /**
+     * @투표 선택하기 화면 이동
+     * @creator : coder3306
+     */
+    private func moveSelectVoteView() {
+        let selectVoteDeadline = SelectDatePopupViewController(nibName: "SelectDatePopupViewController", bundle: nil)
+        selectVoteDeadline.isDeadLine = false
+        self.present(selectVoteDeadline, animated: true)
     }
 }

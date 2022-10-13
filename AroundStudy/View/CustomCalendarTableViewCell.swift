@@ -24,6 +24,8 @@ class CustomCalendarTableViewCell: UITableViewCell, reusableTableView {
         return dateFormatter
     }()
     
+    var datehandler: dataClosure?
+    
     /**
      * @커스텀 캘린더 셀 초기화
      * @creator : coder3306
@@ -41,7 +43,8 @@ class CustomCalendarTableViewCell: UITableViewCell, reusableTableView {
      */
     private func setCustomCalendarStyle() {
         viewcalendar?.locale = Locale(identifier: "ko_KR")
-        viewcalendar?.appearance.titleFont = UIFont(name: "Pretendard-Regular", size: 15.0)
+        viewcalendar?.appearance.titleFont = UIFont(name: "Pretendard-Medium", size: 15.0)
+        viewcalendar?.appearance.weekdayFont = UIFont(name: "Pretendard-Medium", size: 15.0)
         viewcalendar?.headerHeight = 0
         viewcalendar?.allowsMultipleSelection = true
         if let calendarPage = viewcalendar?.currentPage {
@@ -60,6 +63,10 @@ class CustomCalendarTableViewCell: UITableViewCell, reusableTableView {
         dateComponents.month = isPrev ? -1 : 1
         self.currentDate = current.date(byAdding: dateComponents, to: currentDate ?? Date())
         self.viewcalendar?.setCurrentPage(currentDate ?? Date(), animated: true)
+    }
+    
+    public func didSelectDay(_ complete: @escaping dataClosure) {
+        self.datehandler = complete
     }
     
     //******************************************************
@@ -97,6 +104,7 @@ extension CustomCalendarTableViewCell: FSCalendarDelegate, FSCalendarDataSource 
         formatter.dateFormat = "yyyy-MM-dd"
         print(formatter.string(from: date) + " 선택됨")
         print(calendar.selectedDates.sorted(by: <))
+        datehandler?(calendar.selectedDates)
     }
     
     /**

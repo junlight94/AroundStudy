@@ -83,7 +83,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="btnAddVote" destination="1nU-4a-Sje" id="jQw-IL-Xfz"/>
-                <outlet property="btnSorting" destination="1nU-4a-Sje" id="7hM-VR-Rcj"/>
+                <outlet property="btnSorting" destination="pk4-Q8-WrB" id="Dt0-QT-aKW"/>
                 <outlet property="viewSorting" destination="maG-3w-Gmm" id="kWJ-Gp-7Y9"/>
             </connections>
             <point key="canvasLocation" x="46.153846153846153" y="13.86255924170616"/>

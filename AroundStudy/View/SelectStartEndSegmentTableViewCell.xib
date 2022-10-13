@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SelectStartEndSegmentTableViewCell" rowHeight="92" id="KGk-i7-Jjw" customClass="SelectStartEndSegmentTableViewCell" customModule="AroundStudy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="354" height="92"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="354" height="92"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="r5Z-NN-NlG" customClass="CustomSegmentControl" customModule="AroundStudy" customModuleProvider="target">
+                        <rect key="frame" x="44" y="24" width="266" height="44"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="43" id="CNk-Ig-JJk"/>
+                        </constraints>
+                        <segments>
+                            <segment title="시작일"/>
+                            <segment title="종료일"/>
+                        </segments>
+                        <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </segmentedControl>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="r5Z-NN-NlG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="24" id="0ea-4C-Pr9"/>
+                    <constraint firstItem="r5Z-NN-NlG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="44" id="46n-rv-VNS"/>
+                    <constraint firstAttribute="trailing" secondItem="r5Z-NN-NlG" secondAttribute="trailing" constant="44" id="D22-nS-UwZ"/>
+                    <constraint firstAttribute="bottom" secondItem="r5Z-NN-NlG" secondAttribute="bottom" constant="30" id="Nc8-la-FGC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="startEndSegments" destination="r5Z-NN-NlG" id="kAo-Uf-Md7"/>
+            </connections>
+            <point key="canvasLocation" x="87.692307692307693" y="5.6872037914691944"/>
+        </tableViewCell>
+    </objects>
+</document>

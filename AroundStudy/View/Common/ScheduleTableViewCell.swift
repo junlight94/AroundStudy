@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ScheduleTableViewCell: UITableViewCell {
+class ScheduleTableViewCell: UITableViewCell, reusableTableView {
     
     @IBOutlet weak var cellView: UIView!
     @IBOutlet weak var dotView: UIView!

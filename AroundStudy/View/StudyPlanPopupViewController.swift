@@ -7,7 +7,7 @@
 import UIKit
 import FSCalendar
 
-class PlanPopupViewController: BaseViewController {
+class StudyPlanPopupViewController: BaseViewController {
     @IBOutlet weak var tablePlan: UITableView?
     
     //******************************************************
@@ -24,7 +24,7 @@ class PlanPopupViewController: BaseViewController {
 }
 
 //MARK: - tableViewExtension
-extension PlanPopupViewController: tableViewExtension {
+extension StudyPlanPopupViewController: tableViewExtension {
     /**
      * @테이블뷰 셀 초기화
      * @creator : coder3306
@@ -32,12 +32,13 @@ extension PlanPopupViewController: tableViewExtension {
     public func initTableViewCell() {
         if let tablePlan = tablePlan {
             CustomCalendarTableViewCell.registerXib(targetView: tablePlan)
-            CustomPickerTableViewCell.registerXib(targetView: tablePlan)
+            StudyPlanTitleTableViewCell.registerXib(targetView: tablePlan)
+            ScheduleTableViewCell.registerXib(targetView: tablePlan)
         }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
 
     /**
@@ -45,10 +46,10 @@ extension PlanPopupViewController: tableViewExtension {
      * @creator : coder3306
      */
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
+        if section != 2 {
             return 1
         }
-        return 1
+        return 5
     }
 
     /**
@@ -66,7 +67,11 @@ extension PlanPopupViewController: tableViewExtension {
                     return cell
                 }
             case 1:
-                if let cell = CustomPickerTableViewCell.dequeueReusableCell(targetView: tablePlan) {
+                if let cell = StudyPlanTitleTableViewCell.dequeueReusableCell(targetView: tablePlan) {
+                    return cell
+                }
+            case 2:
+                if let cell = ScheduleTableViewCell.dequeueReusableCell(targetView: tablePlan) {
                     return cell
                 }
             default:
