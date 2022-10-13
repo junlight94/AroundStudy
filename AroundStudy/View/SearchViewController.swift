@@ -193,8 +193,10 @@ class SearchViewController: BaseViewController {
     //최근검색 기록 클릭
     @objc func btnOnClickHistory(_ sender: UIButton) {
         viewSearch.isHidden = false
+        viewContent.isHidden = true
         textField.text = realm.objects(SearchHistoryDB.self).sorted(byKeyPath: "date", ascending: false)[sender.tag].title
         filterHistoryData = searchHistoryData.filter{$0.title.contains(textField.text ?? "")}
+        searchHistoryTableView.reloadData()
     }
     
     //최근검색 기록 삭제
