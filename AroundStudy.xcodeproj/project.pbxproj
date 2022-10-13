@@ -178,6 +178,7 @@
 		08DC527428E9AB9F00B058ED /* ColorSetCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorSetCollectionViewCell.xib; sourceTree = "<group>"; };
 		08DC527728E9ABD800B058ED /* VoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteTableViewCell.swift; sourceTree = "<group>"; };
 		08DC527828E9ABD800B058ED /* VoteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VoteTableViewCell.xib; sourceTree = "<group>"; };
+		08E10F3428F7F2160021931D /* LeftAlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftAlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		132B1B51ED5CA8B98EE79822 /* Pods_AroundStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AroundStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		191A968E28F66382007E2F04 /* SelectStartEndSegmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectStartEndSegmentTableViewCell.swift; sourceTree = "<group>"; };
 		191A968F28F66382007E2F04 /* SelectStartEndSegmentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectStartEndSegmentTableViewCell.xib; sourceTree = "<group>"; };
@@ -333,6 +334,7 @@
 				191A969628F6922F007E2F04 /* CustomSegmentControl.swift */,
 				DF89A80C28E6F0D10039E364 /* ThumbnailImageView.swift */,
 				DF15CBE228E861E1009F24CB /* BoxLabel.swift */,
+				08E10F3428F7F2160021931D /* LeftAlignedCollectionViewFlowLayout.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -796,6 +798,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08E10F3528F7F2160021931D /* LeftAlignedCollectionViewFlowLayout.swift in Sources */,
 				0876385D28F5691700BE6B13 /* HotStudyCollectionViewCell.swift in Sources */,
 				1961AD8328F4EB6F0032FE7A /* VoteViewController.swift in Sources */,
 				DF88223328EFBB5600993F2E /* RegisterCompleteViewController.swift in Sources */,

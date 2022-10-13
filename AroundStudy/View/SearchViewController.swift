@@ -15,15 +15,20 @@ class SearchViewController: BaseViewController {
     @IBOutlet weak var historyCollectionView: UICollectionView!
     @IBOutlet weak var historyCollectionViewHeight: NSLayoutConstraint!
     @IBOutlet weak var searchHistoryTableView: UITableView!
+    @IBOutlet weak var searchHistoryTableViewHeight: NSLayoutConstraint!
+    
+    @IBOutlet weak var viewContent: UIView!
+    @IBOutlet weak var viewSearch: UIView!
     
     @IBOutlet weak var pcHotStudy: UIPageControl!
-    @IBOutlet weak var viewSearch: UIView!
     @IBOutlet weak var textField: TextField_Search!
     
     let realm = try! Realm(configuration: DataManager.shared.realmConfiguration())
     
     var hotStudy = 3
     var currentIndex = 0
+    
+    var cellWidth:CGFloat = 0
     
     var hotStudyData: [StudyDto] = [] {
         didSet {
@@ -33,27 +38,51 @@ class SearchViewController: BaseViewController {
         }
     }
     
-    var searchHistoryData: [SearchHistoryDB] = [] {
-        didSet {
-            DispatchQueue.main.async {
-                self.historyCollectionView.reloadData()
-            }
-        }
-    }
+    var searchHistoryData = [SearchHistoryDB]()
+    var filterHistoryData = [SearchHistoryDB]()
     
-    var filterHistoryData: [SearchHistoryDB] = [] {
-        didSet {
-            DispatchQueue.main.async {
-                self.searchHistoryTableView.reloadData()
-            }
-        }
-    }
+    private var collectionViewContentSizeContext = 0
+    private var tableViewContentSizeContext = 1
+    private var prevCollectionViewSize: CGSize?
+    private var prevTableViewSize: CGSize?
     
     //MARK: - Override Function
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        historyCollectionView.addObserver(self, forKeyPath: #keyPath(UICollectionView.contentSize), options: [NSKeyValueObservingOptions.new], context: &collectionViewContentSizeContext)
+        searchHistoryTableView.addObserver(self, forKeyPath: #keyPath(UICollectionView.contentSize), options: [NSKeyValueObservingOptions.new], context: &tableViewContentSizeContext)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        historyCollectionView.removeObserver(self, forKeyPath: #keyPath(UICollectionView.contentSize))
+        searchHistoryTableView.removeObserver(self, forKeyPath: #keyPath(UITableView.contentSize))
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if context == &collectionViewContentSizeContext,
+            keyPath == #keyPath(UICollectionView.contentSize),
+            let contentSize = change?[NSKeyValueChangeKey.newKey] as? CGSize {
+            if let prev = prevCollectionViewSize, prev.equalTo(contentSize) {
+                return
+            }
+            historyCollectionViewHeight.constant = contentSize.height
+            prevCollectionViewSize = contentSize
+        } else if context == &tableViewContentSizeContext,
+            keyPath == #keyPath(UITableView.contentSize),
+            let contentSize = change?[NSKeyValueChangeKey.newKey] as? CGSize {
+          if let prev = prevTableViewSize, prev.equalTo(contentSize) {
+              return
+          }
+          searchHistoryTableViewHeight.constant = contentSize.height
+          prevTableViewSize = contentSize
+      }
     }
 
     //MARK: - General Function
@@ -65,7 +94,6 @@ class SearchViewController: BaseViewController {
         historyCollectionView.dataSource = self
         searchHistoryTableView.delegate = self
         searchHistoryTableView.dataSource = self
-        
         
         hotStudyCollectionView.register(UINib(nibName: "HotStudyCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HotStudyCollectionViewCell")
         historyCollectionView.register(UINib(nibName: "SearchHistoryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "SearchHistoryCollectionViewCell")
@@ -87,14 +115,29 @@ class SearchViewController: BaseViewController {
         
         pcHotStudy.numberOfPages = hotStudyData.count
         
+        filterHistoryData = realm.objects(SearchHistoryDB.self).sorted(byKeyPath: "date", ascending: false).map{$0}
         searchHistoryData = realm.objects(SearchHistoryDB.self).sorted(byKeyPath: "date", ascending: false).map{$0}
+        
+        historyCollectionView.reloadData()
+        
+        viewSearch.isHidden = true
+        viewContent.isHidden = false
         
         print("junyoung > SearchHistoryDB : ", realm.objects(SearchHistoryDB.self))
         print("junyoung > searchHistoryData : ", searchHistoryData)
     }
     
     func updateView() {
+        searchHistoryData = realm.objects(SearchHistoryDB.self).sorted(byKeyPath: "date", ascending: false).map{$0}
+        historyCollectionView.reloadData()
+    }
+    
+    func cellSize(title: String) -> CGFloat{
+        let label = UILabel()
+        label.font = UIFont(name: "Pretendard-Regular", size: 15)
+        label.text = title
         
+        return label.intrinsicContentSize.width + 52
     }
         
     //MARK: - Selector Function
@@ -105,7 +148,7 @@ class SearchViewController: BaseViewController {
     
     // TextField 이벤트
     @objc func editingEvents(_ textField: UITextField) {
-        searchHistoryData = realm.objects(SearchHistoryDB.self).sorted(byKeyPath: "date", ascending: false).map{$0}
+        updateView()
     }
     
     // TextField 검색
@@ -115,7 +158,6 @@ class SearchViewController: BaseViewController {
         if let text = textField.text {
             print("junyoung > text done : ", text)
             if text.count > 0 {
-                
                 if let equal = realm.objects(SearchHistoryDB.self).filter("title = %@", text).first {
                     try? realm.write {
                         equal.date = now
@@ -137,9 +179,13 @@ class SearchViewController: BaseViewController {
         if let text = textField.text {
             if text.count > 0 {
                 viewSearch.isHidden = false
+                viewContent.isHidden = true
+                searchHistoryData = realm.objects(SearchHistoryDB.self).sorted(byKeyPath: "date", ascending: false).map{$0}
                 filterHistoryData = searchHistoryData.filter{$0.title.contains(text)}
+                searchHistoryTableView.reloadData()
             } else {
                 viewSearch.isHidden = true
+                viewContent.isHidden = false
             }
         }
     }
@@ -196,20 +242,29 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
 
 //MARK: UICollectionView
 extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == hotStudyCollectionView {
-            return hotStudyData.count
-        } else {
-            return searchHistoryData.count
-        }
-    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == hotStudyCollectionView {
             let width = UIScreen.main.bounds.size.width - 40
             return CGSize(width: width, height: 85)
         } else {
-            return CGSize(width: 100, height: 37)
+            
+            return CGSize(width: cellSize(title: searchHistoryData[indexPath.item].title) , height: 37)
+        }
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if collectionView == hotStudyCollectionView {
+            return hotStudyData.count
+        } else {
+            return searchHistoryData.count
         }
     }
     
@@ -244,6 +299,7 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
             return cell
         }
     }
+    
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         if let scroll = scrollView as? UICollectionView {
