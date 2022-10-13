@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class SearchViewController: BaseViewController {
 
@@ -13,8 +14,13 @@ class SearchViewController: BaseViewController {
     @IBOutlet weak var hotStudyCollectionView: UICollectionView!
     @IBOutlet weak var historyCollectionView: UICollectionView!
     @IBOutlet weak var historyCollectionViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var searchHistoryTableView: UITableView!
     
     @IBOutlet weak var pcHotStudy: UIPageControl!
+    @IBOutlet weak var viewSearch: UIView!
+    @IBOutlet weak var textField: TextField_Search!
+    
+    let realm = try! Realm(configuration: DataManager.shared.realmConfiguration())
     
     var hotStudy = 3
     var currentIndex = 0
@@ -23,6 +29,22 @@ class SearchViewController: BaseViewController {
         didSet {
             DispatchQueue.main.async {
                 self.hotStudyCollectionView.reloadData()
+            }
+        }
+    }
+    
+    var searchHistoryData: [SearchHistoryDB] = [] {
+        didSet {
+            DispatchQueue.main.async {
+                self.historyCollectionView.reloadData()
+            }
+        }
+    }
+    
+    var filterHistoryData: [SearchHistoryDB] = [] {
+        didSet {
+            DispatchQueue.main.async {
+                self.searchHistoryTableView.reloadData()
             }
         }
     }
@@ -41,9 +63,13 @@ class SearchViewController: BaseViewController {
         hotStudyCollectionView.dataSource = self
         historyCollectionView.delegate = self
         historyCollectionView.dataSource = self
+        searchHistoryTableView.delegate = self
+        searchHistoryTableView.dataSource = self
+        
         
         hotStudyCollectionView.register(UINib(nibName: "HotStudyCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HotStudyCollectionViewCell")
         historyCollectionView.register(UINib(nibName: "SearchHistoryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "SearchHistoryCollectionViewCell")
+        searchHistoryTableView.register(UINib(nibName: "SearchHistoryTableViewCell", bundle: nil), forCellReuseIdentifier: "SearchHistoryTableViewCell")
         
         hotStudyCollectionView.isPagingEnabled = false
         hotStudyCollectionView.decelerationRate = .fast
@@ -55,7 +81,16 @@ class SearchViewController: BaseViewController {
         hotStudyData.append(StudyDto(title: "네카라쿠배토당 알고리즘 스터디", category: "취업", process: "대면", people: 122, favorite: false))
         hotStudyData.append(StudyDto(title: "토익 스터디", category: "영어", process: "대면", people: 33, favorite: true))
         
+        textField.addTarget(self, action: #selector(editing), for: .editingChanged)
+        textField.addTarget(self, action: #selector(endEditing), for: .editingDidEnd)
+        textField.addTarget(self, action: #selector(editingEvents), for: .allEditingEvents)
+        
         pcHotStudy.numberOfPages = hotStudyData.count
+        
+        searchHistoryData = realm.objects(SearchHistoryDB.self).sorted(byKeyPath: "date", ascending: false).map{$0}
+        
+        print("junyoung > SearchHistoryDB : ", realm.objects(SearchHistoryDB.self))
+        print("junyoung > searchHistoryData : ", searchHistoryData)
     }
     
     func updateView() {
@@ -63,8 +98,69 @@ class SearchViewController: BaseViewController {
     }
         
     //MARK: - Selector Function
+    // 즐겨찾기 클릭
     @objc func btnFavoriteOnClick(_ sender: UIButton) {
         hotStudyData[sender.tag].favorite.toggle()
+    }
+    
+    // TextField 이벤트
+    @objc func editingEvents(_ textField: UITextField) {
+        searchHistoryData = realm.objects(SearchHistoryDB.self).sorted(byKeyPath: "date", ascending: false).map{$0}
+    }
+    
+    // TextField 검색
+    @objc func endEditing(_ textField: UITextField) {
+        print("junyoung > \(#function)")
+        let now = Date()
+        if let text = textField.text {
+            print("junyoung > text done : ", text)
+            if text.count > 0 {
+                
+                if let equal = realm.objects(SearchHistoryDB.self).filter("title = %@", text).first {
+                    try? realm.write {
+                        equal.date = now
+                    }
+                } else {
+                    try? realm.write {
+                        let realmData = SearchHistoryDB()
+                        realmData.title = text
+                        realmData.date = now
+                        realm.add(realmData)
+                    }
+                }
+            }
+        }
+    }
+    
+    // TextField 글자 감지
+    @objc func editing(_ textField: UITextField) {
+        if let text = textField.text {
+            if text.count > 0 {
+                viewSearch.isHidden = false
+                filterHistoryData = searchHistoryData.filter{$0.title.contains(text)}
+            } else {
+                viewSearch.isHidden = true
+            }
+        }
+    }
+    
+    //최근검색 기록 클릭
+    @objc func btnOnClickHistory(_ sender: UIButton) {
+        viewSearch.isHidden = false
+        textField.text = realm.objects(SearchHistoryDB.self).sorted(byKeyPath: "date", ascending: false)[sender.tag].title
+        filterHistoryData = searchHistoryData.filter{$0.title.contains(textField.text ?? "")}
+    }
+    
+    //최근검색 기록 삭제
+    @objc func btnDeletePressed(_ sender: UIButton) {
+        print(#function,"button number: \(sender.tag)")
+        print("delete Item Title:", realm.objects(SearchHistoryDB.self).sorted(byKeyPath: "date", ascending: false)[sender.tag].title)
+        let delete = realm.objects(SearchHistoryDB.self).sorted(byKeyPath: "date", ascending: false)[sender.tag]
+        
+        try? realm.write {
+            realm.delete(delete)
+        }
+        searchHistoryData = realm.objects(SearchHistoryDB.self).sorted(byKeyPath: "date", ascending: false).map{$0}
     }
     
     //MARK: - IBAction Function
@@ -73,12 +169,30 @@ class SearchViewController: BaseViewController {
     }
     
     @IBAction func btnEditPressed(_ sender: Any) {
-        
+        let delete = realm.objects(SearchHistoryDB.self)
+        try? realm.write{
+            realm.delete(delete)
+        }
+        searchHistoryData = []
     }
     
     
 }
 //MARK: - Extension
+
+//MARK: UITableView
+extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return filterHistoryData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SearchHistoryTableViewCell", for: indexPath) as! SearchHistoryTableViewCell
+        let row = filterHistoryData[indexPath.row]
+        cell.lbTitle.text = row.title
+        return cell
+    }
+}
 
 //MARK: UICollectionView
 extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -86,7 +200,7 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
         if collectionView == hotStudyCollectionView {
             return hotStudyData.count
         } else {
-            return 10
+            return searchHistoryData.count
         }
     }
     
@@ -120,7 +234,13 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchHistoryCollectionViewCell", for: indexPath) as! SearchHistoryCollectionViewCell
+            let item = searchHistoryData[indexPath.item]
+            cell.lbTitle.text = item.title
             
+            cell.btnDelete.tag = indexPath.item
+            cell.btnDelete.addTarget(self, action: #selector(btnDeletePressed), for: .touchUpInside)
+            cell.btnOnClick.tag = indexPath.item
+            cell.btnOnClick.addTarget(self, action: #selector(btnOnClickHistory), for: .touchUpInside)
             return cell
         }
     }

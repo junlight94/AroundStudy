@@ -22,6 +22,14 @@ protocol PopupButtonDelegate: AnyObject {
 }
 
 /**
+ 투표 등록 중 투표항목 제거를 위한 Delegate
+ > coder : **sanghyeon**
+ */
+protocol VoteRemoveProtocol {
+    func removeVoteTextfield(view: UIView)
+}
+
+/**
  * @테이블뷰 재사용 설정을 위한 프로토콜
  * @creator : coder3306
  */
