@@ -7,23 +7,30 @@
 
 import UIKit
 
-class StudyViewController: UIViewController {
-
+class StudyViewController: BaseViewController {
+    //MARK: - Override Function
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupView()
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    //MARK: - General Function
+    func setupView() {
+        let btnSearch = UIButton()
+        btnSearch.setImage(UIImage(named: "search"), for: .normal)
+        btnSearch.addTarget(self, action: #selector(btnSearchPressed), for: .touchUpInside)
+        setNavigationBar("스터디", leftBarButton: nil, rightBarButton: [btnSearch], isLeftSetting: true)
     }
-    */
+        
+    //MARK: - Selector Function
+    
+    // 검색 페이지로 이동
+    @objc func btnSearchPressed(_ sender: UIButton) {
+        let vc = SearchViewController(nibName: "SearchViewController", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    //MARK: - IBAction Function
 
 }
+//MARK: - Extension
