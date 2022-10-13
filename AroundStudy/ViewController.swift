@@ -12,7 +12,5 @@ class ViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        appDelegate.switchMain()
-        print("스플래쉬 화면")
     }
 }

@@ -29,12 +29,20 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="타이틀"/>
                     </userDefinedRuntimeAttributes>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QQa-3J-b43" customClass="PlanMainView" customModule="AroundStudy" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="103" width="390" height="707"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QQa-3J-b43" secondAttribute="trailing" id="KNk-di-gpC"/>
                 <constraint firstItem="o9z-w9-utw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="QSF-zn-7rK"/>
                 <constraint firstItem="o9z-w9-utw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="QfE-0j-iNN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="QQa-3J-b43" secondAttribute="bottom" id="aOa-iY-4yE"/>
+                <constraint firstItem="QQa-3J-b43" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="k8Q-9F-Hse"/>
+                <constraint firstItem="QQa-3J-b43" firstAttribute="top" secondItem="o9z-w9-utw" secondAttribute="bottom" id="p4e-AF-e7k"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="o9z-w9-utw" secondAttribute="trailing" id="tJ8-iZ-olD"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
