@@ -249,7 +249,7 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
             return CGSize(width: width, height: 85)
         } else {
             
-            return CGSize(width: cellSize(title: searchHistoryData[indexPath.item].title) , height: 37)
+            return CGSize(width: cellSize(title: searchHistoryData[indexPath.item].title) , height: 49)
         }
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {

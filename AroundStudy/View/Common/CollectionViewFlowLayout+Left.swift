@@ -1,5 +1,5 @@
 //
-//  LeftAlignedCollectionViewFlowLayout.swift
+//  CollectionViewFlowLayout+Left.swift
 //  AroundStudy
 //
 //  Created by Junyoung on 2022/10/13.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class LeftAlignedCollectionViewFlowLayout: UICollectionViewFlowLayout {
+class CollectionViewFlowLayout_Left: UICollectionViewFlowLayout {
 
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         let attributes = super.layoutAttributesForElements(in: rect)

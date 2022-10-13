@@ -58,6 +58,7 @@
 		08DC527628E9AB9F00B058ED /* ColorSetCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DC527428E9AB9F00B058ED /* ColorSetCollectionViewCell.xib */; };
 		08DC527928E9ABD800B058ED /* VoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC527728E9ABD800B058ED /* VoteTableViewCell.swift */; };
 		08DC527A28E9ABD800B058ED /* VoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DC527828E9ABD800B058ED /* VoteTableViewCell.xib */; };
+		08E10F3728F7F4950021931D /* CollectionViewFlowLayout+Left.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E10F3628F7F4950021931D /* CollectionViewFlowLayout+Left.swift */; };
 		191A969028F66382007E2F04 /* SelectStartEndSegmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191A968E28F66382007E2F04 /* SelectStartEndSegmentTableViewCell.swift */; };
 		191A969128F66382007E2F04 /* SelectStartEndSegmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 191A968F28F66382007E2F04 /* SelectStartEndSegmentTableViewCell.xib */; };
 		191A969728F6922F007E2F04 /* CustomSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191A969628F6922F007E2F04 /* CustomSegmentControl.swift */; };
@@ -178,7 +179,7 @@
 		08DC527428E9AB9F00B058ED /* ColorSetCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorSetCollectionViewCell.xib; sourceTree = "<group>"; };
 		08DC527728E9ABD800B058ED /* VoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteTableViewCell.swift; sourceTree = "<group>"; };
 		08DC527828E9ABD800B058ED /* VoteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VoteTableViewCell.xib; sourceTree = "<group>"; };
-		08E10F3428F7F2160021931D /* LeftAlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftAlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		08E10F3628F7F4950021931D /* CollectionViewFlowLayout+Left.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionViewFlowLayout+Left.swift"; sourceTree = "<group>"; };
 		132B1B51ED5CA8B98EE79822 /* Pods_AroundStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AroundStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		191A968E28F66382007E2F04 /* SelectStartEndSegmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectStartEndSegmentTableViewCell.swift; sourceTree = "<group>"; };
 		191A968F28F66382007E2F04 /* SelectStartEndSegmentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectStartEndSegmentTableViewCell.xib; sourceTree = "<group>"; };
@@ -331,10 +332,10 @@
 				08DC525728E9806C00B058ED /* TextField+General.swift */,
 				0876385928F5606200BE6B13 /* TextField+Search.swift */,
 				192C3DAE28E55FCF003563D3 /* CustomNavigationBar.swift */,
+				08E10F3628F7F4950021931D /* CollectionViewFlowLayout+Left.swift */,
 				191A969628F6922F007E2F04 /* CustomSegmentControl.swift */,
 				DF89A80C28E6F0D10039E364 /* ThumbnailImageView.swift */,
 				DF15CBE228E861E1009F24CB /* BoxLabel.swift */,
-				08E10F3428F7F2160021931D /* LeftAlignedCollectionViewFlowLayout.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -798,7 +799,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08E10F3528F7F2160021931D /* LeftAlignedCollectionViewFlowLayout.swift in Sources */,
 				0876385D28F5691700BE6B13 /* HotStudyCollectionViewCell.swift in Sources */,
 				1961AD8328F4EB6F0032FE7A /* VoteViewController.swift in Sources */,
 				DF88223328EFBB5600993F2E /* RegisterCompleteViewController.swift in Sources */,
@@ -856,6 +856,7 @@
 				0876385728F42DC500BE6B13 /* SearchViewController.swift in Sources */,
 				191A969028F66382007E2F04 /* SelectStartEndSegmentTableViewCell.swift in Sources */,
 				19690EAE28F0FA05006EEE8D /* AgreementsViewController.swift in Sources */,
+				08E10F3728F7F4950021931D /* CollectionViewFlowLayout+Left.swift in Sources */,
 				08DC525128E8654400B058ED /* ChattingViewController.swift in Sources */,
 				0876386628F5856D00BE6B13 /* SearchHistoryDB.swift in Sources */,
 				08DC525828E9806C00B058ED /* TextField+General.swift in Sources */,
