@@ -212,7 +212,7 @@ class SearchViewController: BaseViewController {
         try? realm.write {
             realm.delete(delete)
         }
-        searchHistoryData = realm.objects(SearchHistoryDB.self).sorted(byKeyPath: "date", ascending: false).map{$0}
+        updateView()
     }
     
     //MARK: - IBAction Function
@@ -226,6 +226,7 @@ class SearchViewController: BaseViewController {
             realm.delete(delete)
         }
         searchHistoryData = []
+        updateView()
     }
     
     
