@@ -10,8 +10,14 @@ class CustomPickerTableViewCell: UITableViewCell, reusableTableView {
     /// 커스텀 피커 뷰
     @IBOutlet weak var timePickerView: UIPickerView?
     
-    var hour = [String]()
-    var minute = [String]()
+    /// 생성된 시간 리스트
+    private var hour = [String]()
+    /// 생성돤 분 리스트
+    private var minute = [String]()
+    /// 선택한 시간 전달 핸들러
+    private var hourHandler: dataClosure?
+    /// 선택한 분 전달 핸들러
+    private var minuteHandler: dataClosure?
     
     /**
      * @커스텀 피커 뷰 셀 초기화
@@ -44,7 +50,7 @@ class CustomPickerTableViewCell: UITableViewCell, reusableTableView {
                 self.hour.append("\(hour)")
             }
         }
-        for minute in 0 ... 60 {
+        for minute in 0 ..< 60 {
             if minute < 10 {
                 self.minute.append("0\(minute)")
             } else {
@@ -76,6 +82,24 @@ class CustomPickerTableViewCell: UITableViewCell, reusableTableView {
         timePickerView?.subviews[1].addSubview(upDeadLine)
         timePickerView?.subviews[1].addSubview(underLine)
         timePickerView?.subviews[1].addSubview(underDeadLine)
+    }
+    
+    /**
+     * @선택된 시간 데이터 콜백 메서드
+     * @creator : coder3306
+     * @Return : 선택된 시간을 전달함.
+     */
+    public func didSelectHour(_ complete: @escaping dataClosure) {
+        self.hourHandler = complete
+    }
+    
+    /**
+     * @선택된 분 데이터 콜백 메서드
+     * @creator : coder3306
+     * @Return : 선택된 시간을 전달함.
+     */
+    public func didSelectMinute(_ complete: @escaping dataClosure) {
+        self.minuteHandler = complete
     }
 }
 
@@ -125,7 +149,7 @@ extension CustomPickerTableViewCell: UIPickerViewDataSource, UIPickerViewDelegat
             let hourLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 56, height: 50))
             hourLabel.text = hour[row]
             hourLabel.textAlignment = .center
-            hourLabel.font = UIFont(name: "Pretendard-Bold", size: 25)
+            hourLabel.font = UIFont.setCustomFont(.bold, size: 25)
             view.addSubview(hourLabel)
             return view
         } else if component == 1 {
@@ -133,7 +157,7 @@ extension CustomPickerTableViewCell: UIPickerViewDataSource, UIPickerViewDelegat
             let dot = UILabel(frame: CGRect(x: 0, y: 0, width: 8, height: 50))
             dot.text = ":"
             dot.textAlignment = .center
-            dot.font = UIFont(name: "Pretendard-Bold", size: 25)
+            dot.font = UIFont.setCustomFont(.bold, size: 25)
             view.addSubview(dot)
             return view
         } else if component == 2 {
@@ -141,7 +165,7 @@ extension CustomPickerTableViewCell: UIPickerViewDataSource, UIPickerViewDelegat
             let minuteLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 56, height: 50))
             minuteLabel.text = minute[row]
             minuteLabel.textAlignment = .center
-            minuteLabel.font = UIFont(name: "Pretendard-Bold", size: 25)
+            minuteLabel.font = UIFont.setCustomFont(.bold, size: 25)
             view.addSubview(minuteLabel)
             return view
         }
@@ -156,8 +180,10 @@ extension CustomPickerTableViewCell: UIPickerViewDataSource, UIPickerViewDelegat
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if component == 0 {
             print("hour --------->>>> \(hour[row])")
+            hourHandler?(hour[row])
         } else if component == 2 {
             print("minute --------->>>> \(minute[row])")
+            minuteHandler?(minute[row])
         }
     }
     

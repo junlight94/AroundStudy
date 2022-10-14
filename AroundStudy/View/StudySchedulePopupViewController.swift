@@ -7,7 +7,7 @@
 import UIKit
 import FSCalendar
 
-class StudyPlanPopupViewController: BaseViewController {
+class StudySchedulePopupViewController: BaseViewController {
     @IBOutlet weak var tablePlan: UITableView?
     
     //******************************************************
@@ -24,7 +24,7 @@ class StudyPlanPopupViewController: BaseViewController {
 }
 
 //MARK: - tableViewExtension
-extension StudyPlanPopupViewController: tableViewExtension {
+extension StudySchedulePopupViewController: tableViewExtension {
     /**
      * @테이블뷰 셀 초기화
      * @creator : coder3306
@@ -32,7 +32,7 @@ extension StudyPlanPopupViewController: tableViewExtension {
     public func initTableViewCell() {
         if let tablePlan = tablePlan {
             CustomCalendarTableViewCell.registerXib(targetView: tablePlan)
-            StudyPlanTitleTableViewCell.registerXib(targetView: tablePlan)
+            StudyScheduleTitleTableViewCell.registerXib(targetView: tablePlan)
             ScheduleTableViewCell.registerXib(targetView: tablePlan)
         }
     }
@@ -67,7 +67,7 @@ extension StudyPlanPopupViewController: tableViewExtension {
                     return cell
                 }
             case 1:
-                if let cell = StudyPlanTitleTableViewCell.dequeueReusableCell(targetView: tablePlan) {
+                if let cell = StudyScheduleTitleTableViewCell.dequeueReusableCell(targetView: tablePlan) {
                     return cell
                 }
             case 2:

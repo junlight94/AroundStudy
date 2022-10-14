@@ -128,8 +128,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="calendar" destination="LSI-Mi-Ita" id="WJo-Dj-CrB"/>
                 <outlet property="lblDate" destination="zw5-hh-XZf" id="NNd-FD-bw5"/>
-                <outlet property="viewcalendar" destination="LSI-Mi-Ita" id="ueh-Ga-qQk"/>
             </connections>
             <point key="canvasLocation" x="163.84615384615384" y="127.25118483412322"/>
         </tableViewCell>

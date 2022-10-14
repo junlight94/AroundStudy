@@ -5,6 +5,7 @@
 //
 
 import UIKit
+import FloatingPanel
 
 class VoteViewController: BaseViewController {
     /// 현재 진행중인 투표 테이블 뷰 리스트
@@ -18,13 +19,11 @@ class VoteViewController: BaseViewController {
         super.viewDidLoad()
         initTableViewCell()
     }
-}
-
-//MARK: Action
-extension VoteViewController {
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
 }
-
 
 //MARK: - tableViewExtension
 extension VoteViewController: tableViewExtension {
@@ -92,12 +91,12 @@ extension VoteViewController: tableViewExtension {
 //MARK: - Action
 extension VoteViewController {
     /**
-     * @투표 선택하기 화면 이동
+     * @날짜 선택 화면 이동
      * @creator : coder3306
      */
     private func moveSelectVoteView() {
-        let selectVoteDeadline = SelectDatePopupViewController(nibName: "SelectDatePopupViewController", bundle: nil)
-        selectVoteDeadline.isDeadLine = false
-        self.present(selectVoteDeadline, animated: true)
+        let vc = SelectDatePopupViewController(nibName: "SelectDatePopupViewController", bundle: nil)
+        floatingPanelController = FloatingPanelController(delegate: self)
+        setupFloatingView(vc, targetScrollView: UIScrollView(), position: .full)
     }
 }

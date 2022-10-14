@@ -5,6 +5,7 @@
 
 import UIKit
 import CoreLocation
+import FloatingPanel
 
 //******************************************************
 //MARK: - Typealias
@@ -18,7 +19,7 @@ typealias voidClosure = () -> ()
 /// 반환값으로 True/False를 넘기는 클로저
 typealias boolClosure = (Bool?) -> ()
 /// 반환값으로 정보를 넘기는 클로저
-typealias dataClosure = (Any) -> ()
+typealias dataClosure = (Any?) -> ()
 /// 반환값으로 번호를 넘기는 클로저
 typealias numberClosure = (Int) -> ()
 /// 반환값으로 응답값을 넘기는 클로저
@@ -39,6 +40,12 @@ class BaseViewController: UIViewController {
     let dataManager = DataManager.shared
     /// 키보드 노티피케이션 설정 스크롤 뷰
     var keyboardTargetView: UIScrollView?
+    /// 플로팅 패널 뷰 컨트롤러
+    var floatingPanelController: FloatingPanelController?
+    /// 플로팅 패널을 적용할 뷰 컨트롤러
+    var floatingTargetViewController: UIViewController?
+    /// 사용자가 선택한 플로팅 패널의 포지션 저장
+    var floatingState: FloatingPanelState?
     
     //******************************************************
     //MARK: - POPUP ID DEFINE
@@ -120,6 +127,9 @@ class BaseViewController: UIViewController {
         }
     }
     
+    //******************************************************
+    //MARK: - Keyboard
+    //******************************************************
     /**
      * @키보드 제스처 설정
      * @creator : coder3306
@@ -149,6 +159,9 @@ class BaseViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: .keyboardWillHide, object: nil)
     }
     
+    //******************************************************
+    //MARK: - ProgressBar
+    //******************************************************
     /**
      * @프로그래스바 노출처리
      * @creator : coder3306
@@ -162,7 +175,49 @@ class BaseViewController: UIViewController {
      */
     public func hideProgressBar() {
     }
+    
+    //******************************************************
+    //MARK: - Floating
+    //******************************************************
+    /**
+     * @플로팅 패널 뷰 설정
+     * @creator : coder3306
+     * @param targetViewController : 플로팅 패널로 올릴 뷰 컨트롤러 설정
+     * @param targetScrollView : 플로팅 패널 내 스크롤 뷰 설정
+     */
+    public func setupFloatingView(_ targetViewController: UIViewController, targetScrollView: UIScrollView, position: FloatingPanelState) {
+        floatingTargetViewController = targetViewController
+        floatingPanelController?.customPanelLayout()
+        floatingPanelController?.set(contentViewController: targetViewController)
+        //FIXME: 스크롤뷰 설정하기?
+        floatingPanelController?.track(scrollView: targetScrollView)
+        floatingPanelController?.addPanel(toParent: self)
+        floatingPanelController?.backdropView.dismissalTapGestureRecognizer.isEnabled = true
+        let layout = CustomFloatingPanelLayout()
+        floatingPanelController?.layout = layout
+        floatingPanelController?.invalidateLayout()
+        floatingState = position
+        UIView.animate(withDuration: 0.25) {
+            self.floatingPanelController?.move(to: position, animated: true)
+        }
+    }
 }
+
+//MARK: - FloatingPanelControllerDelegate
+extension BaseViewController: FloatingPanelControllerDelegate {
+    /**
+     * @플로팅 패널 상태에 따른 설정
+     * @creator : coder3306
+     */
+    func floatingPanelDidChangeState(_ fpc: FloatingPanelController) {
+        if floatingPanelController?.state == .tip {
+            floatingPanelController?.dismiss(animated: true)
+        } else if floatingState == .full && floatingPanelController?.state == .half {
+            floatingPanelController?.dismiss(animated: true)
+        }
+    }
+}
+
 
 //MARK: - Action
 extension BaseViewController {
@@ -254,5 +309,29 @@ extension BaseViewController: CLLocationManagerDelegate {
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         print("*** BaseViewController.swift, locationManagerDidChangeAuthorization - status: \(manager.authorizationStatus.rawValue)")
         dataManager.isAuthorizationLocation = manager.authorizationStatus.rawValue
+    }
+}
+
+//MARK: - FloatingPanelController(Custom)
+extension FloatingPanelController {
+    /**
+     * @커스텀 플로팅 패널 레이아웃 설정
+     * @creator : coder3306
+     */
+    func customPanelLayout() {
+        let appearance = SurfaceAppearance()
+        let shadow = SurfaceAppearance.Shadow()
+        shadow.color = UIColor.black
+        shadow.offset = CGSize(width: 0, height: -4.0)
+        shadow.opacity = 0.15
+        shadow.radius = 2
+        appearance.shadows = [shadow]
+        appearance.cornerRadius = 40
+        appearance.backgroundColor = .clear
+        appearance.borderColor = .clear
+        appearance.borderWidth = 0
+
+        surfaceView.grabberHandle.isHidden = true
+        surfaceView.appearance = appearance
     }
 }
