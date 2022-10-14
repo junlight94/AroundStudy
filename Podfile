@@ -9,6 +9,7 @@ target 'AroundStudy' do
   pod 'Kingfisher'
   pod 'Mantis'
   pod 'Alamofire'
+  pod 'FloatingPanel'
 end
 
 post_install do |installer|
