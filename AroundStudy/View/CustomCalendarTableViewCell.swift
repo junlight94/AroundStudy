@@ -39,8 +39,11 @@ class CustomCalendarTableViewCell: UITableViewCell, reusableTableView {
     /// 선택된 날짜 리스트
     private var selectedDates: [Date]?
     /// 선택된 날짜를 전달해주는 핸들러
-    var datehandler: dataClosure?
+    private var datehandler: dataClosure?
     
+    //******************************************************
+    //MARK: - ViewController
+    //******************************************************
     /**
      * @커스텀 캘린더 셀 초기화
      * @creator : coder3306

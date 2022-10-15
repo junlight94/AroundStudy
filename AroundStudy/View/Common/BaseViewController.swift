@@ -212,8 +212,6 @@ extension BaseViewController: FloatingPanelControllerDelegate {
     func floatingPanelDidChangeState(_ fpc: FloatingPanelController) {
         if floatingPanelController?.state == .tip {
             floatingPanelController?.dismiss(animated: true)
-        } else if floatingState == .full && floatingPanelController?.state == .half {
-            floatingPanelController?.dismiss(animated: true)
         }
     }
 }
@@ -249,7 +247,7 @@ extension BaseViewController {
             return
         }
         if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
-            keyboardTargetView.frame.origin.y -= keyboardFrame.cgRectValue.height
+            keyboardTargetView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardFrame.cgRectValue.height, right: 0)
         }
     }
     
@@ -262,7 +260,7 @@ extension BaseViewController {
         guard let keyboardTargetView = keyboardTargetView else {
             return
         }
-        keyboardTargetView.frame.origin.y = 0
+        keyboardTargetView.contentInset = .zero
     }
 }
 

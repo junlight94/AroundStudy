@@ -9,7 +9,7 @@ import Foundation
 import FloatingPanel
 
 class CustomFloatingPanelLayout: FloatingPanelLayout {
-    /// 절반으로 올라올 시, 하단 여백 커스텀 설정(디폴트: 스크린의 절반)
+    /// 절반으로 올라올 시, 하단 여백 커스텀 설정(디폴트: 150)
     var layoutBottomInset: CGFloat?
     /// 패널 포지션 설정
     var position: FloatingPanelPosition = .bottom
@@ -20,8 +20,7 @@ class CustomFloatingPanelLayout: FloatingPanelLayout {
     var anchors: [FloatingPanelState: FloatingPanelLayoutAnchoring] {
         return [
             .full: FloatingPanelLayoutAnchor(absoluteInset: 16.0, edge: .top, referenceGuide: .safeArea),
-            .half: FloatingPanelLayoutAnchor(absoluteInset: layoutBottomInset ?? UIScreen.main.bounds.height / 2, edge: .bottom, referenceGuide: .safeArea),
-            .tip: FloatingPanelLayoutAnchor(absoluteInset: 45, edge: .bottom, referenceGuide: .safeArea)
+            .tip: FloatingPanelLayoutAnchor(absoluteInset: layoutBottomInset ?? 150.0, edge: .bottom, referenceGuide: .safeArea)
         ]
     }
     
