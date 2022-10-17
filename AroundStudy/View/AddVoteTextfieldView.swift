@@ -69,6 +69,15 @@ class AddVoteTextfieldView: UIView {
         }
     }
     
+    @IBInspectable var placeholder: String {
+        get {
+            return textfield.placeholder ?? ""
+        }
+        set {
+            textfield.placeholder = newValue
+        }
+    }
+    
     //MARK: View Component
     let minusButton = UIButton(type: .custom)
     let textfield = UITextField()
@@ -84,12 +93,12 @@ class AddVoteTextfieldView: UIView {
     }
     
     func setupView() {
-        textfield.placeholder = "투표 항목을 입력해주세요."
+        textfield.font = UIFont(name: "Pretendard-Regular", size: 15)
+        textfield.textColor = UIColor(named: "40")
         minusButton.addTarget(self, action: #selector(didTapMinusButton), for: .touchUpInside)
     }
     
     @objc func didTapMinusButton() {
         delegate?.removeVoteTextfield(view: self)
     }
-
 }

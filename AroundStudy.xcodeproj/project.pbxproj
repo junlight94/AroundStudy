@@ -97,6 +97,8 @@
 		DF15CBE328E861E1009F24CB /* BoxLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF15CBE228E861E1009F24CB /* BoxLabel.swift */; };
 		DF1D5B7C28EAEFAD00B875D5 /* VoteDetailItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1D5B7B28EAEFAD00B875D5 /* VoteDetailItemView.swift */; };
 		DF1D5B7F28EAFD2600B875D5 /* RegisterIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1D5B7E28EAFD2600B875D5 /* RegisterIndicatorView.swift */; };
+		DF47F20828F7B3D900DDBFDB /* AddPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF47F20628F7B3D900DDBFDB /* AddPlanViewController.swift */; };
+		DF47F20928F7B3D900DDBFDB /* AddPlanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF47F20728F7B3D900DDBFDB /* AddPlanViewController.xib */; };
 		DF5EC62228E6D522003411D3 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5EC62028E6D522003411D3 /* TestViewController.xib */; };
 		DF7B4C5628E47C350031B56B /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7B4C5528E47C350031B56B /* Authorization.swift */; };
 		DF88222E28EFB13F00993F2E /* SocialLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF88222C28EFB13F00993F2E /* SocialLoginViewController.swift */; };
@@ -213,6 +215,8 @@
 		DF15CBE228E861E1009F24CB /* BoxLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxLabel.swift; sourceTree = "<group>"; };
 		DF1D5B7B28EAEFAD00B875D5 /* VoteDetailItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteDetailItemView.swift; sourceTree = "<group>"; };
 		DF1D5B7E28EAFD2600B875D5 /* RegisterIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterIndicatorView.swift; sourceTree = "<group>"; };
+		DF47F20628F7B3D900DDBFDB /* AddPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlanViewController.swift; sourceTree = "<group>"; };
+		DF47F20728F7B3D900DDBFDB /* AddPlanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPlanViewController.xib; sourceTree = "<group>"; };
 		DF56234E28E3322000A00258 /* AroundStudy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AroundStudy.entitlements; sourceTree = "<group>"; };
 		DF5EC61F28E6D522003411D3 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		DF5EC62028E6D522003411D3 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
@@ -598,6 +602,8 @@
 			isa = PBXGroup;
 			children = (
 				DFEC1FBC28F6B39E009B866E /* PlanMainView.swift */,
+				DF47F20628F7B3D900DDBFDB /* AddPlanViewController.swift */,
+				DF47F20728F7B3D900DDBFDB /* AddPlanViewController.xib */,
 			);
 			name = "일정";
 			sourceTree = "<group>";
@@ -698,6 +704,7 @@
 				DF15CBDF28E85AB0009F24CB /* Pretendard-Bold.otf in Resources */,
 				DF03FC2D28ED795300C564FA /* HomeCategoryCollectionViewCell.xib in Resources */,
 				DFEA71C928F42B7F005DFD78 /* AddVoteBorderView.xib in Resources */,
+				DF47F20928F7B3D900DDBFDB /* AddPlanViewController.xib in Resources */,
 				DFE0374228E27B5D00BE9E35 /* LaunchScreen.storyboard in Resources */,
 				08DC526228E9AAED00B058ED /* StudyInfoGridCollectionViewCell.xib in Resources */,
 				DFE0373F28E27B5D00BE9E35 /* Assets.xcassets in Resources */,
@@ -802,6 +809,7 @@
 				197CE78228F526530042A6EA /* StudyTitleTableViewCell.swift in Sources */,
 				DF15CBE328E861E1009F24CB /* BoxLabel.swift in Sources */,
 				0876384428F40D4500BE6B13 /* InputGenderViewController.swift in Sources */,
+				DF47F20828F7B3D900DDBFDB /* AddPlanViewController.swift in Sources */,
 				0876386328F5834400BE6B13 /* SearchHistoryCollectionViewCell.swift in Sources */,
 				DFEC1FBD28F6B39E009B866E /* PlanMainView.swift in Sources */,
 				08DC523528E467CE00B058ED /* LoginDto.swift in Sources */,

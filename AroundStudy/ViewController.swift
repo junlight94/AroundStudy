@@ -12,5 +12,6 @@ class ViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        appDelegate.switchMain()
     }
 }

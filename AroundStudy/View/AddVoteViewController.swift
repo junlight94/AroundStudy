@@ -70,6 +70,7 @@ extension AddVoteViewController {
             make.height.equalTo(52)
         }
         voteTextFieldView.delegate = self
+        voteTextFieldView.placeholder = "투표 항목을 입력해주세요."
         voteStackView.addArrangedSubview(voteTextFieldView)
     }
     
