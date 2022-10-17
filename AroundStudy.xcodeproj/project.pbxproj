@@ -114,8 +114,6 @@
 		DF15CBE328E861E1009F24CB /* BoxLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF15CBE228E861E1009F24CB /* BoxLabel.swift */; };
 		DF1D5B7C28EAEFAD00B875D5 /* VoteDetailItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1D5B7B28EAEFAD00B875D5 /* VoteDetailItemView.swift */; };
 		DF1D5B7F28EAFD2600B875D5 /* RegisterIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1D5B7E28EAFD2600B875D5 /* RegisterIndicatorView.swift */; };
-		DF47F20828F7B3D900DDBFDB /* AddPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF47F20628F7B3D900DDBFDB /* AddPlanViewController.swift */; };
-		DF47F20928F7B3D900DDBFDB /* AddPlanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF47F20728F7B3D900DDBFDB /* AddPlanViewController.xib */; };
 		DF5EC62228E6D522003411D3 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5EC62028E6D522003411D3 /* TestViewController.xib */; };
 		DF7B4C5628E47C350031B56B /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7B4C5528E47C350031B56B /* Authorization.swift */; };
 		DF88222E28EFB13F00993F2E /* SocialLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF88222C28EFB13F00993F2E /* SocialLoginViewController.swift */; };
@@ -123,6 +121,8 @@
 		DF88223328EFBB5600993F2E /* RegisterCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF88223128EFBB5600993F2E /* RegisterCompleteViewController.swift */; };
 		DF88223428EFBB5600993F2E /* RegisterCompleteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF88223228EFBB5600993F2E /* RegisterCompleteViewController.xib */; };
 		DF89A80D28E6F0D10039E364 /* ThumbnailImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF89A80C28E6F0D10039E364 /* ThumbnailImageView.swift */; };
+		DFCBC5B028FD73FF0092BEDC /* AddPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCBC5AE28FD73FF0092BEDC /* AddPlanViewController.swift */; };
+		DFCBC5B128FD73FF0092BEDC /* AddPlanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFCBC5AF28FD73FF0092BEDC /* AddPlanViewController.xib */; };
 		DFCBDD8128E93714008A7E02 /* CommonPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFCBDD7F28E93714008A7E02 /* CommonPopupViewController.xib */; };
 		DFCBDD8228E94240008A7E02 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5EC61F28E6D522003411D3 /* TestViewController.swift */; };
 		DFCBDD8328E94244008A7E02 /* CommonPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCBDD7E28E93714008A7E02 /* CommonPopupViewController.swift */; };
@@ -260,6 +260,8 @@
 		DF88223128EFBB5600993F2E /* RegisterCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCompleteViewController.swift; sourceTree = "<group>"; };
 		DF88223228EFBB5600993F2E /* RegisterCompleteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterCompleteViewController.xib; sourceTree = "<group>"; };
 		DF89A80C28E6F0D10039E364 /* ThumbnailImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailImageView.swift; sourceTree = "<group>"; };
+		DFCBC5AE28FD73FF0092BEDC /* AddPlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPlanViewController.swift; sourceTree = "<group>"; };
+		DFCBC5AF28FD73FF0092BEDC /* AddPlanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddPlanViewController.xib; sourceTree = "<group>"; };
 		DFCBDD7E28E93714008A7E02 /* CommonPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonPopupViewController.swift; sourceTree = "<group>"; };
 		DFCBDD7F28E93714008A7E02 /* CommonPopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonPopupViewController.xib; sourceTree = "<group>"; };
 		DFD26DDE28F27E5C0091923A /* AddVoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVoteViewController.swift; sourceTree = "<group>"; };
@@ -580,6 +582,15 @@
 			name = "시작-가입완료";
 			sourceTree = "<group>";
 		};
+		DFCBC5AD28FD73850092BEDC /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				DF47F20628F7B3D900DDBFDB /* AddPlanViewController.swift */,
+				DF47F20728F7B3D900DDBFDB /* AddPlanViewController.xib */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		DFCBDD7828E91273008A7E02 /* 공통-팝업 */ = {
 			isa = PBXGroup;
 			children = (
@@ -612,6 +623,7 @@
 				DFE0373328E27B5B00BE9E35 /* Products */,
 				A6E5688C91D72101AD1D6F16 /* Pods */,
 				C50D9093D7AC0A8A63E9A621 /* Frameworks */,
+				DFCBC5AD28FD73850092BEDC /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -644,6 +656,8 @@
 		DFEC1FBB28F6B37B009B866E /* 일정 */ = {
 			isa = PBXGroup;
 			children = (
+				DFCBC5AE28FD73FF0092BEDC /* AddPlanViewController.swift */,
+				DFCBC5AF28FD73FF0092BEDC /* AddPlanViewController.xib */,
 				DFEC1FBC28F6B39E009B866E /* PlanMainView.swift */,
 				191E2E3828ED12DB00BB92DF /* StudySchedulePopupViewController.swift */,
 				191E2E3928ED12DB00BB92DF /* StudySchedulePopupViewController.xib */,
@@ -741,6 +755,7 @@
 				DF5EC62228E6D522003411D3 /* TestViewController.xib in Resources */,
 				DFCBDD8128E93714008A7E02 /* CommonPopupViewController.xib in Resources */,
 				0876384528F40D4500BE6B13 /* InputGenderViewController.xib in Resources */,
+				DFCBC5B128FD73FF0092BEDC /* AddPlanViewController.xib in Resources */,
 				08DC525E28E9A9C300B058ED /* SearchHistoryTableViewCell.xib in Resources */,
 				191A969128F66382007E2F04 /* SelectStartEndSegmentTableViewCell.xib in Resources */,
 				08DC527628E9AB9F00B058ED /* ColorSetCollectionViewCell.xib in Resources */,
@@ -754,7 +769,6 @@
 				DF15CBDF28E85AB0009F24CB /* Pretendard-Bold.otf in Resources */,
 				DF03FC2D28ED795300C564FA /* HomeCategoryCollectionViewCell.xib in Resources */,
 				DFEA71C928F42B7F005DFD78 /* AddVoteBorderView.xib in Resources */,
-				DF47F20928F7B3D900DDBFDB /* AddPlanViewController.xib in Resources */,
 				DFE0374228E27B5D00BE9E35 /* LaunchScreen.storyboard in Resources */,
 				08DC526228E9AAED00B058ED /* StudyInfoGridCollectionViewCell.xib in Resources */,
 				DFE0373F28E27B5D00BE9E35 /* Assets.xcassets in Resources */,
@@ -869,7 +883,6 @@
 				197CE78228F526530042A6EA /* StudyScheduleTitleTableViewCell.swift in Sources */,
 				DF15CBE328E861E1009F24CB /* BoxLabel.swift in Sources */,
 				0876384428F40D4500BE6B13 /* InputGenderViewController.swift in Sources */,
-				DF47F20828F7B3D900DDBFDB /* AddPlanViewController.swift in Sources */,
 				0876386328F5834400BE6B13 /* SearchHistoryCollectionViewCell.swift in Sources */,
 				DFEC1FBD28F6B39E009B866E /* PlanMainView.swift in Sources */,
 				08DC523528E467CE00B058ED /* LoginDto.swift in Sources */,
@@ -877,6 +890,7 @@
 				08DC524928E8652C00B058ED /* HomeViewController.swift in Sources */,
 				197CE78628F528490042A6EA /* CustomPickerTableViewCell.swift in Sources */,
 				DF068CB728EC603800083917 /* PermissionTableViewCell.swift in Sources */,
+				DFCBC5B028FD73FF0092BEDC /* AddPlanViewController.swift in Sources */,
 				DFFD345E28EEFADB00CFCB74 /* OnboardingViewController.swift in Sources */,
 				08DC525D28E9A9C300B058ED /* SearchHistoryTableViewCell.swift in Sources */,
 				191DD3EB28F8E76900889488 /* CustomCalendarCell.swift in Sources */,
