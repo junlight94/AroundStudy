@@ -66,17 +66,18 @@ class VoteTableViewCell: UITableViewCell, reusableTableView {
     
     @IBAction func didTapVoteButton(_ sender: Any) {
         print("셀에서 투표하기 버튼 눌림")
-        //FIXME: - 애니메이션 공통처리 및 레이아웃 업데이트 수정
         isExpended.toggle()
-        voteDetailStackView.subviews[0].snp.updateConstraints { make in
-            let remakeConstraints = isExpended ? 80 : 0
-            UIView.animate(withDuration: 0.3) {
-                self.voteDetailStackView.subviews[0].snp.updateConstraints { make in
-                    make.height.equalTo(remakeConstraints)
-                }
-            } completion: { _ in
-                self.completeAnimation?(self.isExpended)
+        if isExpended {
+            voteDetailStackView.subviews[0].snp.updateConstraints { make in
+                make.height.equalTo(80)
             }
+            voteDetailLineView.isHidden = false
+        } else {
+            voteDetailStackView.subviews[0].snp.updateConstraints { make in
+                make.height.equalTo(0)
+            }
+            voteDetailLineView.isHidden = true
         }
+        completeAnimation?(isExpended)
     }
 }

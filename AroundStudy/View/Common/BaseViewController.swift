@@ -198,7 +198,7 @@ class BaseViewController: UIViewController {
         floatingPanelController?.invalidateLayout()
         floatingState = position
         UIView.animate(withDuration: 0.25) {
-            self.floatingPanelController?.move(to: position, animated: true)
+            self.floatingPanelController?.move(to: position, animated: false)
         }
     }
 }
@@ -328,8 +328,11 @@ extension FloatingPanelController {
         appearance.backgroundColor = .clear
         appearance.borderColor = .clear
         appearance.borderWidth = 0
+        surfaceView.grabberHandlePadding = -15.0
+        surfaceView.grabberHandle.backgroundColor = .white
+        surfaceView.grabberHandleSize = .init(width: 52, height: 6)
 
-        surfaceView.grabberHandle.isHidden = true
+        surfaceView.grabberHandle.isHidden = false
         surfaceView.appearance = appearance
     }
 }

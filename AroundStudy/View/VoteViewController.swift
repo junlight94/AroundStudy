@@ -76,9 +76,6 @@ extension VoteViewController: tableViewExtension {
                 }
             case 1:
                 if let cell = VoteTableViewCell.dequeueReusableCell(targetView: tableVote) {
-                    cell.didTapExpandView { result in
-                        self.tableVote?.reloadRows(at: [indexPath], with: .none)
-                    }
                     return cell
                 }
             default:

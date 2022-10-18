@@ -22,7 +22,6 @@
             <connections>
                 <outlet property="btnComplete" destination="ooK-gy-oEk" id="TDs-OC-sNy"/>
                 <outlet property="floatingView" destination="TPs-m5-Mxi" id="vzz-fG-3Nc"/>
-                <outlet property="indicatorView" destination="HsY-OK-7jr" id="dWj-gV-zLQ"/>
                 <outlet property="lblSelectDateInfo" destination="gaY-kK-p1Z" id="pmZ-h3-qnJ"/>
                 <outlet property="selectInfoHeight" destination="S12-Dm-qbi" id="n0E-Ij-gmO"/>
                 <outlet property="selectInfoView" destination="QC4-Kg-IMj" id="P9c-fT-lek"/>
@@ -39,7 +38,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                     <subviews>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TPs-m5-Mxi">
-                            <rect key="frame" x="0.0" y="30" width="390" height="652"/>
+                            <rect key="frame" x="0.0" y="0.0" width="390" height="682"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <connections>
                                 <outlet property="dataSource" destination="-1" id="Yh9-zl-Cx2"/>
@@ -57,7 +56,7 @@
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="날짜를 선택해 주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="gaY-kK-p1Z">
-                                    <rect key="frame" x="122.33333333333333" y="25" width="145.33333333333337" height="21"/>
+                                    <rect key="frame" x="121.66666666666667" y="25" width="146.66666666666663" height="21"/>
                                     <fontDescription key="fontDescription" name="Pretendard-Medium" family="Pretendard" pointSize="17"/>
                                     <color key="textColor" name="40"/>
                                     <nil key="highlightedColor"/>
@@ -91,14 +90,6 @@
                                 <action selector="selectionComplete:" destination="-1" eventType="touchUpInside" id="4u2-ic-NZD"/>
                             </connections>
                         </button>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HsY-OK-7jr">
-                            <rect key="frame" x="166" y="16" width="58" height="6"/>
-                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="58" id="ZLD-hY-xxb"/>
-                                <constraint firstAttribute="height" constant="6" id="l7N-g4-8fq"/>
-                            </constraints>
-                        </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -107,11 +98,9 @@
                         <constraint firstAttribute="bottom" secondItem="ooK-gy-oEk" secondAttribute="bottom" constant="34" id="OO7-SP-UxS"/>
                         <constraint firstItem="QC4-Kg-IMj" firstAttribute="leading" secondItem="swz-Ls-2PG" secondAttribute="leading" id="V44-vz-DIh"/>
                         <constraint firstItem="ooK-gy-oEk" firstAttribute="leading" secondItem="swz-Ls-2PG" secondAttribute="leading" constant="20" id="WMN-dL-YfT"/>
-                        <constraint firstItem="TPs-m5-Mxi" firstAttribute="top" secondItem="swz-Ls-2PG" secondAttribute="top" constant="30" id="bST-aC-6Nz"/>
+                        <constraint firstItem="TPs-m5-Mxi" firstAttribute="top" secondItem="swz-Ls-2PG" secondAttribute="top" id="bST-aC-6Nz"/>
                         <constraint firstAttribute="trailing" secondItem="TPs-m5-Mxi" secondAttribute="trailing" id="fZC-j1-lzX"/>
-                        <constraint firstItem="TPs-m5-Mxi" firstAttribute="top" secondItem="HsY-OK-7jr" secondAttribute="bottom" constant="8" id="gFM-l6-y1Z"/>
                         <constraint firstItem="ooK-gy-oEk" firstAttribute="top" secondItem="QC4-Kg-IMj" secondAttribute="bottom" id="hrg-sj-J7d"/>
-                        <constraint firstItem="HsY-OK-7jr" firstAttribute="centerX" secondItem="TPs-m5-Mxi" secondAttribute="centerX" id="rXj-9B-yEu"/>
                         <constraint firstAttribute="trailing" secondItem="QC4-Kg-IMj" secondAttribute="trailing" id="wQB-tO-ZtK"/>
                         <constraint firstItem="TPs-m5-Mxi" firstAttribute="leading" secondItem="swz-Ls-2PG" secondAttribute="leading" id="yXQ-NI-ZJK"/>
                     </constraints>

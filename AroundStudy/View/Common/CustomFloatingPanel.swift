@@ -20,6 +20,7 @@ class CustomFloatingPanelLayout: FloatingPanelLayout {
     var anchors: [FloatingPanelState: FloatingPanelLayoutAnchoring] {
         return [
             .full: FloatingPanelLayoutAnchor(absoluteInset: 16.0, edge: .top, referenceGuide: .safeArea),
+            .half: FloatingPanelLayoutAnchor(absoluteInset: UIScreen.main.bounds.height / 2, edge: .top, referenceGuide: .safeArea),
             .tip: FloatingPanelLayoutAnchor(absoluteInset: layoutBottomInset ?? 150.0, edge: .bottom, referenceGuide: .safeArea)
         ]
     }

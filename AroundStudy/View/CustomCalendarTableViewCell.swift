@@ -19,8 +19,8 @@ class CustomCalendarTableViewCell: UITableViewCell, reusableTableView {
     //******************************************************
     //MARK: - Properties
     //******************************************************
-    /// 현재 날짜 저장
-    private var currentDate: Date?
+//    /// 현재 날짜 저장
+//    private var currentDate: Date?
     /// 날짜 포매터 초기화
     /// 지역 > 한국, 형식 > YYYY년 M월
     private lazy var dateFormatter: DateFormatter = {
@@ -30,6 +30,7 @@ class CustomCalendarTableViewCell: UITableViewCell, reusableTableView {
         dateFormatter.dateFormat = "yyyy년 M월"
         return dateFormatter
     }()
+    private lazy var currentPage = calendar?.currentPage
     /// 그래고리안 달력
     private let gregorian = Calendar(identifier: .gregorian)
     /// 시작일
@@ -40,6 +41,8 @@ class CustomCalendarTableViewCell: UITableViewCell, reusableTableView {
     private var selectedDates: [Date]?
     /// 선택된 날짜를 전달해주는 핸들러
     private var datehandler: dataClosure?
+    /// 이벤트가 있는 날짜 리스트
+    public var eventDates: [Date]?
     
     //******************************************************
     //MARK: - ViewController
@@ -53,6 +56,17 @@ class CustomCalendarTableViewCell: UITableViewCell, reusableTableView {
         calendar?.delegate = self
         calendar?.dataSource = self
         setCustomCalendarStyle()
+        
+        //******************************************************
+        //MARK: - 이벤트가 있는 날짜 테스트 용 더미데이터
+        //******************************************************
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ko_KR")
+        formatter.dateFormat = "yyyy-MM-dd"
+        let test1 = formatter.date(from: "2022-10-15")
+        let test2 = formatter.date(from: "2022-10-15")
+        let test3 = formatter.date(from: "2022-10-16")
+        eventDates = [test1!,test2!,test3!]
     }
     
     /**
@@ -66,9 +80,9 @@ class CustomCalendarTableViewCell: UITableViewCell, reusableTableView {
         calendar?.headerHeight = 0
         calendar?.allowsMultipleSelection = true
         calendar?.register(CalendarCell.self, forCellReuseIdentifier: "cell")
-        if let calendarPage = calendar?.currentPage {
-            lblDate?.text = self.dateFormatter.string(from: calendarPage)
-        }
+        calendar?.today = nil
+        let currentMonth = dateFormatter.string(from: Date())
+        lblDate?.text = currentMonth
     }
     
     /**
@@ -78,11 +92,11 @@ class CustomCalendarTableViewCell: UITableViewCell, reusableTableView {
      */
     private func moveCalederMonth(isPrev: Bool) {
         let current = Calendar.current
-        
         var dateComponents = DateComponents()
         dateComponents.month = isPrev ? -1 : 1
-        self.currentDate = current.date(byAdding: dateComponents, to: currentDate ?? Date())
-        self.calendar?.setCurrentPage(currentDate ?? Date(), animated: true)
+        self.currentPage = current.date(byAdding: dateComponents, to: currentPage ?? Date())
+        self.calendar?.setCurrentPage(currentPage ?? Date(), animated: true)
+        lblDate?.text = dateFormatter.string(from: currentPage ?? Date())
     }
     
     /**
@@ -189,6 +203,16 @@ extension CustomCalendarTableViewCell: FSCalendarDelegate, FSCalendarDataSource,
     }
 
     /**
+     * @캘린더 페이지 전환 후처리
+     * @creator : coder3306
+     */
+    func calendarCurrentPageDidChange(_ calendar: FSCalendar) {
+        self.currentPage = calendar.currentPage
+        print(self.currentPage)
+        self.lblDate?.text = self.dateFormatter.string(from: currentPage ?? Date())
+    }
+    
+    /**
      * @날짜 선택 해제 후처리
      * @creator : coder3306
      * @param date : 선택해제된 날짜
@@ -271,5 +295,19 @@ extension CustomCalendarTableViewCell: FSCalendarDelegate, FSCalendarDataSource,
         } else {
             customCell.selectionType = .none
         }
+    }
+    
+    /**
+     * @캘린더 이벤트 처리
+     * @creator : coder3306
+     */
+    func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
+        if self.eventDates?.contains(date) == true {
+            if let items = self.eventDates?.filter({ $0 == date }) {
+                //TODO: 색상별로 아이템 찍는 상태 변경해주기.
+                return items.count
+            }
+        }
+        return 0
     }
 }
