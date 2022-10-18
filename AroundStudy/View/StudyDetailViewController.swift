@@ -45,7 +45,7 @@ class StudyDetailViewController: BaseViewController {
         seleteTap(index: 0)
         scrollView.delegate = self
         
-        viewCreate.layer.cornerRadius = 20
+        viewCreate.layer.cornerRadius = 13
         lbCreateDate.text = "개설일 22.10.14"
         if let studyId = studyId {
             lbTitle.text = "id : \(studyId) 스터디"

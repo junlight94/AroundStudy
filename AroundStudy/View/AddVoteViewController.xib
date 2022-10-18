@@ -38,10 +38,10 @@
                     <rect key="frame" x="0.0" y="103" width="390" height="707"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nvl-0v-c6I" userLabel="ContentView">
-                            <rect key="frame" x="0.0" y="0.0" width="390" height="612"/>
+                            <rect key="frame" x="0.0" y="0.0" width="390" height="584"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Xf1-Gj-4HS">
-                                    <rect key="frame" x="20" y="20" width="350" height="592"/>
+                                    <rect key="frame" x="20" y="20" width="350" height="564"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="투표 제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZiO-6J-euD">
                                             <rect key="frame" x="0.0" y="0.0" width="350" height="19.333333333333332"/>
@@ -110,6 +110,7 @@
                                                             <real key="value" value="8"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="isRequired" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="투표 항목을 입력해주세요."/>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NO2-X1-uC3" customClass="AddVoteTextfieldView" customModule="AroundStudy" customModuleProvider="target">
@@ -129,6 +130,7 @@
                                                             <real key="value" value="8"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="isRequired" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="투표 항목을 입력해주세요."/>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
@@ -266,7 +268,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="na4-uc-Aqv" customClass="AddVoteBorderView" customModule="AroundStudy" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="512" width="350" height="80"/>
+                                            <rect key="frame" x="0.0" y="512" width="350" height="52"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timer" translatesAutoresizingMaskIntoConstraints="NO" id="10U-ag-XVZ">
                                                     <rect key="frame" x="16" y="14" width="24" height="24"/>
@@ -288,10 +290,10 @@
                                                     </connections>
                                                 </button>
                                                 <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="6v2-Qx-N9N">
-                                                    <rect key="frame" x="48" y="16" width="122" height="48"/>
+                                                    <rect key="frame" x="48" y="16" width="122" height="20"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="마감 시간 설정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNr-8B-Tlo">
-                                                            <rect key="frame" x="0.0" y="0.0" width="122" height="48"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="122" height="20"/>
                                                             <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="15"/>
                                                             <color key="textColor" name="94"/>
                                                             <nil key="highlightedColor"/>

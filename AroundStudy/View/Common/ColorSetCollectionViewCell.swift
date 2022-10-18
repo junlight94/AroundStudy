@@ -15,14 +15,26 @@ class ColorSetCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        /// 컬러 뷰 코너 라운딩
-        colorView.layer.cornerRadius = 18
-        /// 동그란 뷰 코너 라운딩
-        circleView.layer.cornerRadius = 9
-        /// 체크마크 이미지 기본적으로 숨김
-        checkmarkImageView.isHidden = true
     }
     
+    /**
+     컬렉션뷰 셀 설정
+     > coder : **sanghyeon**
+     */
+    func setInitCell(color: UIColor) {
+        /// 셀 초기화
+        circleView.backgroundColor = .white
+        checkmarkImageView.isHidden = true
+        colorView.layer.cornerRadius = 16
+        circleView.layer.cornerRadius = 7
+        checkmarkImageView.isHidden = true
+        colorView.backgroundColor = color
+    }
+    
+    /**
+     컬렉션뷰 셀렉트 함수
+     > coder : **sanghyeon**
+     */
     func selectCell() {
         circleView.backgroundColor = .clear
         checkmarkImageView.isHidden = false
