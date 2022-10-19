@@ -19,8 +19,6 @@ class CustomCalendarTableViewCell: UITableViewCell, reusableTableView {
     //******************************************************
     //MARK: - Properties
     //******************************************************
-//    /// 현재 날짜 저장
-//    private var currentDate: Date?
     /// 날짜 포매터 초기화
     /// 지역 > 한국, 형식 > YYYY년 M월
     private lazy var dateFormatter: DateFormatter = {
@@ -208,6 +206,7 @@ extension CustomCalendarTableViewCell: FSCalendarDelegate, FSCalendarDataSource,
      */
     func calendarCurrentPageDidChange(_ calendar: FSCalendar) {
         self.currentPage = calendar.currentPage
+        //FIXME: - 날짜가 9월30일로 고정되는 이슈, 시뮬레이터에서만 그런건지 확인 필요함.
         print(self.currentPage)
         self.lblDate?.text = self.dateFormatter.string(from: currentPage ?? Date())
     }
@@ -249,7 +248,7 @@ extension CustomCalendarTableViewCell: FSCalendarDelegate, FSCalendarDataSource,
     }
     
     /**
-     * @보여주는 셀 설정
+     * @캘린더 셀 데이터 설정
      * @creator : coder3306
      */
     private func configureVisibleCells() {

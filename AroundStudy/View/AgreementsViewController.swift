@@ -42,11 +42,9 @@ class AgreementsViewController: BaseViewController {
             for index in agreements {
                 if index.1 == false {
                     agreementsAll?.isSelected = false
-                    print("fail")
                     return
                 }
             }
-            print("success")
             agreementsAll?.isSelected = true
         }
     }

@@ -14,7 +14,11 @@ class VoteTitleTableViewCell: UITableViewCell, reusableTableView {
     /// 투표 리스트 정렬하기
     @IBOutlet weak var btnSorting: UIButton?
     
-    var addHandler: voidClosure?
+    /**
+     * @투표 추가 요청 버튼 핸들러
+     * @creator : coder3306
+     */
+    private var requestAdd: voidClosure?
     
     /**
      * @투표 현황 타이틀 셀 초기화
@@ -31,7 +35,7 @@ class VoteTitleTableViewCell: UITableViewCell, reusableTableView {
      * @Return : 버튼이 선택되었음을 알리는 핸들러 설정
      */
     public func didTapAddVote(_ complete: @escaping voidClosure) {
-        self.addHandler = complete
+        self.requestAdd = complete
     }
     
     /**
@@ -40,7 +44,7 @@ class VoteTitleTableViewCell: UITableViewCell, reusableTableView {
      * @param sender : UIButton
      */
     @IBAction func actionAddVote(_ sender: UIButton) {
-        addHandler?()
+        requestAdd?()
     }
     
     /**

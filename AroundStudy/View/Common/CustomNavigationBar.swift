@@ -11,7 +11,7 @@ class CustomNavigationBar: UIView {
     //MARK: - Properties
     //******************************************************
     /// 네비게이션 바 커스텀 스텍 뷰
-    var stackView = UIStackView()
+    private lazy var stackView = UIStackView()
     /// 네비게이션 바 컨테이너 뷰
     let containerView = UIView()
     /// 네비게이션 바 타이틀

@@ -8,76 +8,83 @@
 import UIKit
 
 class VoteTableViewCell: UITableViewCell, reusableTableView {
-
-    /// 테스트용 변수, 실 개발시 사용 안하는 변수입니다.
-    var isExpended: Bool = true
+    //******************************************************
+    //MARK: - IBOutlet
+    //******************************************************
+    /// 전체 컨텐츠를 감싸고 있는 뷰
+    @IBOutlet weak var voteWrapperView: UIView?
+    /// 투표 상세내용 뷰
+    @IBOutlet weak var voteDetailStackView: UIStackView?
+    /// 프로필 이미지 뷰
+    @IBOutlet weak var profileImageView: UIImageView?
+    /// 참여 인원 뷰
+    @IBOutlet weak var statusBoxView: UIView?
+    /// 프로필, 투표선택 사이 라인
+    @IBOutlet weak var profileLineView: UIView?
+    /// 투표하기 내용 뷰
+    @IBOutlet weak var voteContentsStackView: UIStackView?
     
-    
-    @IBOutlet weak var voteWrapperView: UIView!
-    @IBOutlet weak var voteInnerView: UIView!
-    @IBOutlet weak var profileImageView: UIImageView!
-    @IBOutlet weak var voteDetailWrapperView: UIView!
-    @IBOutlet weak var voteDetailStackView: UIStackView!
-    @IBOutlet weak var voteDetailLineView: UIView!
-    @IBOutlet weak var statusBoxView: UIView!
-    
+    /// 투표하기 버튼을 선택한 후,
+    private var selectHandler: boolClosure?
+    //******************************************************
+    //MARK: - DUMMY
+    //******************************************************
     let testVote1 = VoteDetailItemView()
     let testVote2 = VoteDetailItemView()
     let testVote3 = VoteDetailItemView()
     let testVote4 = VoteDetailItemView()
     
-    var completeAnimation: boolClosure?
-    
+    /**
+     * @투표 셀 초기화
+     * @creator : coder3306
+     */
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.selectionStyle = .none
-        /// 전체를 감싸는 뷰 그림자
-        voteWrapperView.layer.zeplinShadow(color: .black, alpha: 0.12, x: 0, y: 1, blur: 6, spread: 0)
-        /// 전체를 감싸는 뷰 코너 라운딩
-        voteWrapperView.layer.cornerRadius = 12
-        /// 항목들을 감싸는 뷰 코너 라운딩
-        voteInnerView.layer.cornerRadius = 12
-        /// 프로필 이미지 뷰 코너 라운딩
-        profileImageView.layer.cornerRadius = 20
-        /// 상태 감싸는 뷰 코너 라운딩
-        statusBoxView.layer.cornerRadius = 8
-        
-        
-        testVote1.snp.makeConstraints { make in
-            make.height.equalTo(80)
-        }
-        
         /// 테스트용
-        voteDetailStackView.addArrangedSubview(testVote1)
-        voteDetailStackView.addArrangedSubview(testVote2)
-        voteDetailStackView.addArrangedSubview(testVote3)
-        voteDetailStackView.addArrangedSubview(testVote4)
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
-    public func didTapExpandView(_ complete: @escaping boolClosure) {
-        self.completeAnimation = complete
-    }
-    
-    @IBAction func didTapVoteButton(_ sender: Any) {
-        print("셀에서 투표하기 버튼 눌림")
-        isExpended.toggle()
-        if isExpended {
-            voteDetailStackView.subviews[0].snp.updateConstraints { make in
-                make.height.equalTo(80)
-            }
-            voteDetailLineView.isHidden = false
-        } else {
-            voteDetailStackView.subviews[0].snp.updateConstraints { make in
-                make.height.equalTo(0)
-            }
-            voteDetailLineView.isHidden = true
+        voteDetailStackView?.addArrangedSubview(testVote1)
+        testVote1.snp.makeConstraints { make in
+            /// 스텍뷰의 높이가 고정이므로, 하나의 뷰만 높이 설정해서 추가
+            make.height.equalTo(70)
         }
-        completeAnimation?(isExpended)
+        voteDetailStackView?.addArrangedSubview(testVote2)
+        voteDetailStackView?.addArrangedSubview(testVote3)
+        voteDetailStackView?.addArrangedSubview(testVote4)
+        
+        initLayout()
+    }
+    
+    /**
+     * @투표 셀 레이아웃 초기화
+     * @creator : coder3306
+     */
+    private func initLayout() {
+        self.selectionStyle = .none
+        voteWrapperView?.layer.zeplinShadow(color: .black, alpha: 0.12, x: 0, y: 1, blur: 6, spread: 0)
+        profileImageView?.layer.setBorderLayout(radius: 20)
+        statusBoxView?.layer.setBorderLayout(radius: 8)
+        voteContentsStackView?.layer.setBorderLayout(radius: 12)
+    }
+    
+    /**
+     * @뷰 확장 버튼 선택
+     * @creator : coder3306
+     * @Return : 현재 뷰가 확장되었는지를 확인하고, 리턴으로 확장상태를 넘김
+     */
+    public func didTapExpandView(_ complete: @escaping boolClosure) {
+        self.selectHandler = complete
+    }
+    
+    //******************************************************
+    //MARK: - Action
+    //******************************************************
+    /**
+     * @투표 내용 상세보기
+     * @creator : coder3306
+     * @param sender : UIButton
+     */
+    @IBAction func showVoteDetail(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        profileLineView?.isHidden = sender.isSelected
+        selectHandler?(sender.isSelected)
     }
 }

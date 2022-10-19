@@ -51,7 +51,7 @@ extension CALayer {
      * @param width : 뷰의 테두리 부분의 두께 설정
      * @param color : 뷰의 테두리 부분의 색상 설정
      */
-    public func setBorderLayout(radius: CGFloat, bounds: Bool = true, width: CGFloat, color: UIColor?) {
+    public func setBorderLayout(radius: CGFloat, bounds: Bool = true, width: CGFloat = 0, color: UIColor? = nil) {
         cornerRadius = radius
         masksToBounds = bounds
         borderWidth = width

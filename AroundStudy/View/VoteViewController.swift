@@ -2,7 +2,7 @@
 //  AroundStudy
 //
 //  Created by coder3306 on 2022/10/11.
-//
+//  스터디 상세 - 투표 메인 뷰 컨트롤러
 
 import UIKit
 import FloatingPanel
@@ -18,10 +18,6 @@ class VoteViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initTableViewCell()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
     }
 }
 
@@ -76,6 +72,19 @@ extension VoteViewController: tableViewExtension {
                 }
             case 1:
                 if let cell = VoteTableViewCell.dequeueReusableCell(targetView: tableVote) {
+                    cell.didTapExpandView { result in
+                        tableVote.performBatchUpdates {
+                            //TODO: 셀 재사용 시, 현재 상태를 저장하는 로직 필요함
+                            UIView.animate(withDuration: 0.25) {
+                                cell.voteDetailStackView?.alpha = (result ?? false) ? 0.0 : 1.0
+                                cell.voteDetailStackView?.isHidden = (result ?? false)
+                            } completion: { _ in
+                                UIView.animate(withDuration: 0.25) {
+                                    self.tableVote?.scrollToRow(at: indexPath, at: .middle, animated: false)
+                                }
+                            }
+                        }
+                    }
                     return cell
                 }
             default:
@@ -84,7 +93,6 @@ extension VoteViewController: tableViewExtension {
         return UITableViewCell()
     }
 }
-
 //MARK: - Action
 extension VoteViewController {
     /**

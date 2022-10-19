@@ -132,7 +132,7 @@ extension SelectDatePopupViewController: tableViewExtension {
                 itemCell.didSelectDay { [weak self] result in
                     if let result = result as? [Date] {
                         self?.selectedDates = result
-                        self!.setDayInfo(self!.selectedDates)
+                        self?.setDayInfo(self!.selectedDates)
                     } else {
                         self?.lblSelectDateInfo?.text = "날짜를 선택해 주세요."
                         self?.selectedDates = []
