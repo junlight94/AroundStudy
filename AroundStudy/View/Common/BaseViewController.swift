@@ -75,7 +75,7 @@ class BaseViewController: UIViewController {
     }
     
     override func viewSafeAreaInsetsDidChange() {
-        /// 홈 인디케이터 겨부에 따라 바텀 마진 설정
+        /// 홈 인디케이터 여부에 따라 바텀 마진 설정
         super.viewSafeAreaInsetsDidChange()
         if view.safeAreaInsets.bottom == 0 {
             bottomMargin = 20
