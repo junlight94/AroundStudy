@@ -38,6 +38,8 @@ class StudyDetailViewController: BaseViewController {
     let MaxTopHeight: CGFloat = 200
     let MinTopHeight: CGFloat = 0
     
+    var currentIndex: Int = 0
+    
     var pageController: UIPageViewController?
     lazy var pageContent = [StudyInfoViewController(nibName: "StudyInfoViewController", bundle: nil),
     PlanMainViewController(nibName: "PlanMainViewController", bundle: nil),
@@ -92,6 +94,7 @@ class StudyDetailViewController: BaseViewController {
     }
     
     func seleteTap(index: Int) {
+        currentIndex = index
         switch index {
         case 0:
             lbInfo.textColor = UIColor(named: "40")
@@ -158,15 +161,17 @@ print("vcHeight: \(vcHeight), viewHeight: \(viewHeight)")
     }
     
     @IBAction func btnInfoPressed(_ sender: Any) {
+
         seleteTap(index: 0)
         guard let pageController = pageController else { return }
-        pageController.setViewControllers([pageContent[0]], direction: .forward, animated: true, completion: nil)
+        pageController.setViewControllers([pageContent[0]], direction: .reverse, animated: true, completion: nil)
     }
     
     @IBAction func btnSchedulePressed(_ sender: Any) {
+        let direction: UIPageViewController.NavigationDirection = currentIndex > 1 ? .reverse : .forward
         seleteTap(index: 1)
         guard let pageController = pageController else { return }
-        pageController.setViewControllers([pageContent[1]], direction: .forward, animated: true, completion: nil)
+        pageController.setViewControllers([pageContent[1]], direction: direction, animated: true, completion: nil)
     }
     
     @IBAction func btnVotePressed(_ sender: Any) {
