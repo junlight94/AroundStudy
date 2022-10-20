@@ -35,10 +35,12 @@ class StudyDetailViewController: BaseViewController {
     
     @IBOutlet weak var viewFloating: UIView!
     
+    let MaxTopHeight: CGFloat = 200
+    let MinTopHeight: CGFloat = 0
     
     var pageController: UIPageViewController?
     lazy var pageContent = [StudyInfoViewController(nibName: "StudyInfoViewController", bundle: nil),
-    AddPlanViewController(nibName: "AddPlanViewController", bundle: nil),
+    PlanMainViewController(nibName: "PlanMainViewController", bundle: nil),
     VoteViewController(nibName: "VoteViewController", bundle: nil)]
     
     var studyId: Int?
@@ -135,7 +137,9 @@ class StudyDetailViewController: BaseViewController {
     //MARK: - Selector Function
     @objc func viewHeight(_ notification: Notification) {
         if let viewHeight = notification.object as? CGFloat {
-            viewContentHeight.constant = viewHeight
+            let vcHeight = view.frame.height
+print("vcHeight: \(vcHeight), viewHeight: \(viewHeight)")
+            viewContentHeight.constant = viewHeight < vcHeight ? vcHeight + 200 : viewHeight
             print(viewContentHeight.constant)
         }
     }
@@ -176,16 +180,22 @@ class StudyDetailViewController: BaseViewController {
 //MARK: UIScrollView
 extension StudyDetailViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView.contentOffset.y > 200 {
-            viewMainImageHeight.constant = 0
-        } else {
-            viewMainImageHeight.constant = 200 - scrollView.contentOffset.y
-        }
+        //현재 스크롤의 위치 (최상단 = 0)
+        let y: CGFloat = scrollView.contentOffset.y
         
-        if scrollView.contentOffset.y > 200 {
+        //변경될 최상단 뷰의 높이
+        let ModifiedTopHeight: CGFloat = viewMainImageHeight.constant - y
+        
+        if(ModifiedTopHeight > MaxTopHeight) {
+            mainImageTop.constant = 0
+            viewMainImageHeight.constant = MaxTopHeight
+        } else if(ModifiedTopHeight < MinTopHeight) {
             mainImageTop.constant = -200
+            viewMainImageHeight.constant = MinTopHeight
         } else {
-            mainImageTop.constant = -scrollView.contentOffset.y
+            mainImageTop.constant = ModifiedTopHeight - 200
+            viewMainImageHeight.constant = ModifiedTopHeight
+            scrollView.contentOffset.y = 0
         }
     }
 }

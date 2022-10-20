@@ -21,6 +21,11 @@ class PlanMainViewController: UIViewController {
         setupView()
         print(getViewHeight())
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        NotificationCenter.default.post(name: NSNotification.Name("viewHeight"), object: getViewHeight(), userInfo: nil)
+    }
 }
 
 //MARK: - Layout
@@ -31,6 +36,7 @@ extension PlanMainViewController {
      */
     func setupView() {
         /// 테이블뷰 설정
+        planTableView.isScrollEnabled = false
         planTableView.rowHeight = tableViewRowHeight
         planTableView.separatorStyle = .none
         planTableView.delegate = self
