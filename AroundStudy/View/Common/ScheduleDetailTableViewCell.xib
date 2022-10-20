@@ -129,7 +129,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F06-eZ-SRw">
-                        <rect key="frame" x="26" y="21" width="1" height="148"/>
+                        <rect key="frame" x="26" y="21" width="1" height="144"/>
                         <color key="backgroundColor" name="212"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="1" id="Tzs-2w-JK6"/>
@@ -138,7 +138,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="A0H-6x-18X" secondAttribute="trailing" constant="10" id="08e-VO-amI"/>
-                    <constraint firstAttribute="bottom" secondItem="F06-eZ-SRw" secondAttribute="bottom" id="8UW-r7-Vvc"/>
+                    <constraint firstAttribute="bottom" secondItem="F06-eZ-SRw" secondAttribute="bottom" constant="4" id="8UW-r7-Vvc"/>
                     <constraint firstItem="c7S-j7-VXB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="22" id="AyK-D4-gga"/>
                     <constraint firstAttribute="bottom" secondItem="RXn-EF-k0r" secondAttribute="bottom" constant="15" id="DR5-gs-Lpa"/>
                     <constraint firstItem="c7S-j7-VXB" firstAttribute="centerY" secondItem="A0H-6x-18X" secondAttribute="centerY" id="IIh-Fc-QV2"/>

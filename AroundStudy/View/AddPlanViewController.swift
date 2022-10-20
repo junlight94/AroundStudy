@@ -90,7 +90,7 @@ extension AddPlanViewController: UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            return setupCell(collectionView, indexPath: indexPath)
+        return setupCell(collectionView, indexPath: indexPath)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

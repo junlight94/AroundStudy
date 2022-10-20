@@ -115,6 +115,8 @@
 		DF1D5B7C28EAEFAD00B875D5 /* VoteDetailItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1D5B7B28EAEFAD00B875D5 /* VoteDetailItemView.swift */; };
 		DF1D5B7F28EAFD2600B875D5 /* RegisterIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1D5B7E28EAFD2600B875D5 /* RegisterIndicatorView.swift */; };
 		DF5EC62228E6D522003411D3 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5EC62028E6D522003411D3 /* TestViewController.xib */; };
+		DF67C5A328FE70E0004F2D6A /* PlanMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF67C5A128FE70E0004F2D6A /* PlanMainViewController.swift */; };
+		DF67C5A428FE70E0004F2D6A /* PlanMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF67C5A228FE70E0004F2D6A /* PlanMainViewController.xib */; };
 		DF7B4C5628E47C350031B56B /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7B4C5528E47C350031B56B /* Authorization.swift */; };
 		DF88222E28EFB13F00993F2E /* SocialLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF88222C28EFB13F00993F2E /* SocialLoginViewController.swift */; };
 		DF88222F28EFB13F00993F2E /* SocialLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF88222D28EFB13F00993F2E /* SocialLoginViewController.xib */; };
@@ -254,6 +256,8 @@
 		DF56234E28E3322000A00258 /* AroundStudy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AroundStudy.entitlements; sourceTree = "<group>"; };
 		DF5EC61F28E6D522003411D3 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		DF5EC62028E6D522003411D3 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
+		DF67C5A128FE70E0004F2D6A /* PlanMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanMainViewController.swift; sourceTree = "<group>"; };
+		DF67C5A228FE70E0004F2D6A /* PlanMainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanMainViewController.xib; sourceTree = "<group>"; };
 		DF7B4C5528E47C350031B56B /* Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
 		DF88222C28EFB13F00993F2E /* SocialLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginViewController.swift; sourceTree = "<group>"; };
 		DF88222D28EFB13F00993F2E /* SocialLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SocialLoginViewController.xib; sourceTree = "<group>"; };
@@ -659,6 +663,8 @@
 				DFCBC5AE28FD73FF0092BEDC /* AddPlanViewController.swift */,
 				DFCBC5AF28FD73FF0092BEDC /* AddPlanViewController.xib */,
 				DFEC1FBC28F6B39E009B866E /* PlanMainView.swift */,
+				DF67C5A128FE70E0004F2D6A /* PlanMainViewController.swift */,
+				DF67C5A228FE70E0004F2D6A /* PlanMainViewController.xib */,
 				191E2E3828ED12DB00BB92DF /* StudySchedulePopupViewController.swift */,
 				191E2E3928ED12DB00BB92DF /* StudySchedulePopupViewController.xib */,
 				197CE78028F526530042A6EA /* StudyScheduleTitleTableViewCell.swift */,
@@ -802,6 +808,7 @@
 				DF88222F28EFB13F00993F2E /* SocialLoginViewController.xib in Resources */,
 				08DC524E28E8653800B058ED /* StudyViewController.xib in Resources */,
 				191E2E3B28ED12DB00BB92DF /* StudySchedulePopupViewController.xib in Resources */,
+				DF67C5A428FE70E0004F2D6A /* PlanMainViewController.xib in Resources */,
 				08DC526628E9AAFE00B058ED /* StudyInfoCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -859,6 +866,7 @@
 				1961AD8328F4EB6F0032FE7A /* VoteViewController.swift in Sources */,
 				DF88223328EFBB5600993F2E /* RegisterCompleteViewController.swift in Sources */,
 				1961AD8728F4EC920032FE7A /* VoteTitleTableViewCell.swift in Sources */,
+				DF67C5A328FE70E0004F2D6A /* PlanMainViewController.swift in Sources */,
 				191A969728F6922F007E2F04 /* CustomSegmentControl.swift in Sources */,
 				191DD3EF28F930E900889488 /* CustomFloatingPanel.swift in Sources */,
 				08E10F3E28F814FF0021931D /* JoinedStudyViewController.swift in Sources */,
