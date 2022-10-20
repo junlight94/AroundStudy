@@ -7,12 +7,7 @@
 import Foundation
 import Alamofire
 
-class APIManager {
-    /// API 에러 열거
-    private enum ApiError: Error {
-        case statusCodeError
-    }
-    
+public actor APIManager {
     /// API 호출 싱글턴 인스턴스
     public static let shared = APIManager()
     
@@ -31,12 +26,16 @@ class APIManager {
      * @param header : 서버에 요청할 부가적인 정보
      * @Return : (비동기) 모델에 매핑된 데이터 반환
      */
-    public func requestJSON<T:Codable>(url: String, type: T.Type, method: HTTPMethod, uri: String = "", param: [String: String]? = nil, header: [HTTPHeader]? = nil) async throws -> T? {
+    public func requestJSON<T:Codable>(url: String, type: T.Type, method: HTTPMethod, uri: String = "", param: [String: String]? = nil, header: [HTTPHeader]? = nil) async throws -> T {
         ///TODO: API ID, HEADER 설정해서 url 작업 들어가야하고, 헤더도 부가적으로 필요하다.
-        return try await AF.request(url
-                                    , method: method
-                                    , parameters: param
-                                    , encoding: JSONEncoding.default).validate().serializingDecodable(type).value
+        let request = AF.request(url
+                                , method: method
+                                , parameters: param
+                                , encoding: JSONEncoding.default).serializingDecodable(type)
+        //FIXME: - 모델 매핑 미스에 대한 오류처리 추가 필요함
+        guard await (request.response.response?.statusCode == 200) else { throw ApiError.statusCodeError }
+        guard await (request.response.value != nil) else { throw ApiError.emptyData }
+        return try await request.value
     }
     
     /**
@@ -45,14 +44,41 @@ class APIManager {
      * @param url : 다운로드할 이미지 주소
      * @Return : (비동기) 다운로드가 완료된 이미지
      */
-    public func downloadImages(_ url: String) async throws -> UIImage? {
+    public func downloadImage(_ url: String) async throws -> UIImage {
         if let parsing = URL(string: url) {
             print(">>>>>>>>> DOWNLOAD IMAGE URL: \(parsing)")
             let (data, response) = try await URLSession.shared.data(from: parsing)
             guard (response as? HTTPURLResponse)?.statusCode == 200 else { throw ApiError.statusCodeError }
-            let downloadImage = UIImage(data: data)
-            return downloadImage
+            if let downloadImage = UIImage(data: data) {
+                return downloadImage
+            } else {
+                throw ApiError.imageConvertingError
+            }
+        } else {
+            throw ApiError.invalidURL
         }
-        return nil
+    }
+}
+
+/// API 에러 열거
+public enum ApiError: Error {
+    case invalidURL
+    case statusCodeError
+    case imageConvertingError
+    case emptyData
+}
+
+extension ApiError {
+    var localizedDescription: String {
+        switch self {
+            case .invalidURL:
+                return "Invalid URL"
+            case .statusCodeError:
+                return "Response Error"
+            case .imageConvertingError:
+                return "image Error"
+            case .emptyData:
+                return "No Data"
+        }
     }
 }
