@@ -30,6 +30,16 @@ class StudyDetailViewController: BaseViewController {
     @IBOutlet weak var voteUnderLineHeight: NSLayoutConstraint!
     
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var viewContent: UIView!
+    @IBOutlet weak var viewContentHeight: NSLayoutConstraint!
+    
+    @IBOutlet weak var viewFloating: UIView!
+    
+    
+    var pageController: UIPageViewController?
+    lazy var pageContent = [StudyInfoViewController(nibName: "StudyInfoViewController", bundle: nil),
+    AddPlanViewController(nibName: "AddPlanViewController", bundle: nil),
+    VoteViewController(nibName: "VoteViewController", bundle: nil)]
     
     var studyId: Int?
     
@@ -38,6 +48,16 @@ class StudyDetailViewController: BaseViewController {
         super.viewDidLoad()
         setupView()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        NotificationCenter.default.addObserver(self, selector: #selector(viewHeight), name: NSNotification.Name("viewHeight"), object: nil)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name("viewHeight"), object: nil)
     }
     
     //MARK: - General Function
@@ -50,6 +70,23 @@ class StudyDetailViewController: BaseViewController {
         if let studyId = studyId {
             lbTitle.text = "id : \(studyId) 스터디"
         }
+        
+        viewFloating.layer.cornerRadius = viewFloating.frame.width / 2
+        
+        // PageViewController
+        pageController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
+        guard let pageController = pageController else { return }
+        pageController.delegate = self
+        pageController.dataSource = self
+        pageController.setViewControllers([pageContent.first!], direction: .forward, animated: true, completion: nil)
+        
+        viewContent.addSubview(pageController.view)
+        let pageViewRect = viewContent.bounds
+        
+        pageController.view.frame = pageViewRect
+        pageController.didMove(toParent: self)
+        
+        seleteTap(index: 0)
     }
     
     func seleteTap(index: Int) {
@@ -96,6 +133,12 @@ class StudyDetailViewController: BaseViewController {
     }
     
     //MARK: - Selector Function
+    @objc func viewHeight(_ notification: Notification) {
+        if let viewHeight = notification.object as? CGFloat {
+            viewContentHeight.constant = viewHeight
+            print(viewContentHeight.constant)
+        }
+    }
     
     //MARK: - IBAction Function
     @IBAction func btnBackPressed(_ sender: Any) {
@@ -112,17 +155,25 @@ class StudyDetailViewController: BaseViewController {
     
     @IBAction func btnInfoPressed(_ sender: Any) {
         seleteTap(index: 0)
+        guard let pageController = pageController else { return }
+        pageController.setViewControllers([pageContent[0]], direction: .forward, animated: true, completion: nil)
     }
     
     @IBAction func btnSchedulePressed(_ sender: Any) {
         seleteTap(index: 1)
+        guard let pageController = pageController else { return }
+        pageController.setViewControllers([pageContent[1]], direction: .forward, animated: true, completion: nil)
     }
     
     @IBAction func btnVotePressed(_ sender: Any) {
         seleteTap(index: 2)
+        guard let pageController = pageController else { return }
+        pageController.setViewControllers([pageContent[2]], direction: .forward, animated: true, completion: nil)
     }
 }
 //MARK: - Extension
+
+//MARK: UIScrollView
 extension StudyDetailViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.y > 200 {
@@ -135,6 +186,46 @@ extension StudyDetailViewController: UIScrollViewDelegate {
             mainImageTop.constant = -200
         } else {
             mainImageTop.constant = -scrollView.contentOffset.y
+        }
+    }
+}
+
+//MARK: UIPageViewController
+extension StudyDetailViewController: UIPageViewControllerDelegate, UIPageViewControllerDataSource {
+    func indexOfViewController(_ viewController: UIViewController) -> Int {
+        let size = pageContent.count
+        for i in 0..<size {
+            if viewController == pageContent[i] {
+                return i
+            }
+        }
+        return -1
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        let currentIdx = indexOfViewController(viewController)
+        let prevPageIndex = currentIdx - 1
+        if prevPageIndex < 0 {
+            return nil
+        } else {
+            return pageContent[prevPageIndex]
+        }
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        let currentIdx = indexOfViewController(viewController)
+        let prevPageIndex = currentIdx + 1
+        if prevPageIndex >= pageContent.count {
+            return nil
+        } else {
+            return pageContent[prevPageIndex]
+        }
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        if finished {
+            let index: Int = self.indexOfViewController(pageViewController.viewControllers![0])
+            seleteTap(index: index)
         }
     }
 }
