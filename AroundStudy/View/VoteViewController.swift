@@ -18,6 +18,11 @@ class VoteViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initTableViewCell()
+        
+    }
+    
+    override func viewDidLayoutSubviews() {
+        print(self.view.bounds.size.height)
     }
 }
 
