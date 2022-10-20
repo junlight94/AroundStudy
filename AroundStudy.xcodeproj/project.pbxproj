@@ -27,6 +27,8 @@
 		088A62CF28E32B5500442E6C /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088A62CE28E32B5500442E6C /* APIManager.swift */; };
 		088A62D128E32B6800442E6C /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088A62D028E32B6800442E6C /* String+Extension.swift */; };
 		088A62D328E32B8D00442E6C /* Nofile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088A62D228E32B8D00442E6C /* Nofile.swift */; };
+		088DC36A2900CF7700E3EDFB /* StudyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088DC3682900CF7700E3EDFB /* StudyInfoViewController.swift */; };
+		088DC36B2900CF7700E3EDFB /* StudyInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 088DC3692900CF7700E3EDFB /* StudyInfoViewController.xib */; };
 		08DC522D28E4647400B058ED /* Button+General.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC522C28E4647400B058ED /* Button+General.swift */; };
 		08DC522F28E4662B00B058ED /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC522E28E4662B00B058ED /* Delegate.swift */; };
 		08DC523128E4663B00B058ED /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC523028E4663B00B058ED /* DataManager.swift */; };
@@ -161,6 +163,8 @@
 		088A62CE28E32B5500442E6C /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		088A62D028E32B6800442E6C /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		088A62D228E32B8D00442E6C /* Nofile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nofile.swift; sourceTree = "<group>"; };
+		088DC3682900CF7700E3EDFB /* StudyInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyInfoViewController.swift; sourceTree = "<group>"; };
+		088DC3692900CF7700E3EDFB /* StudyInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudyInfoViewController.xib; sourceTree = "<group>"; };
 		08DC522C28E4647400B058ED /* Button+General.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+General.swift"; sourceTree = "<group>"; };
 		08DC522E28E4662B00B058ED /* Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
 		08DC523028E4663B00B058ED /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -400,6 +404,15 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		088DC3672900CF6000E3EDFB /* 정보 */ = {
+			isa = PBXGroup;
+			children = (
+				088DC3682900CF7700E3EDFB /* StudyInfoViewController.swift */,
+				088DC3692900CF7700E3EDFB /* StudyInfoViewController.xib */,
+			);
+			name = "정보";
+			sourceTree = "<group>";
+		};
 		08DC523228E4675A00B058ED /* Struct */ = {
 			isa = PBXGroup;
 			children = (
@@ -434,6 +447,7 @@
 		08DC524328E864BB00B058ED /* 스터디 */ = {
 			isa = PBXGroup;
 			children = (
+				088DC3672900CF6000E3EDFB /* 정보 */,
 				DFEC1FBB28F6B37B009B866E /* 일정 */,
 				DFD26DDD28F27E410091923A /* 투표 */,
 				08DC524B28E8653800B058ED /* StudyViewController.swift */,
@@ -766,6 +780,7 @@
 				0876385E28F5691700BE6B13 /* HotStudyCollectionViewCell.xib in Resources */,
 				08DC527A28E9ABD800B058ED /* VoteTableViewCell.xib in Resources */,
 				19690EAA28F0F9F0006EEE8D /* CategoryViewController.xib in Resources */,
+				088DC36B2900CF7700E3EDFB /* StudyInfoViewController.xib in Resources */,
 				DF15CBDF28E85AB0009F24CB /* Pretendard-Bold.otf in Resources */,
 				DF03FC2D28ED795300C564FA /* HomeCategoryCollectionViewCell.xib in Resources */,
 				DFEA71C928F42B7F005DFD78 /* AddVoteBorderView.xib in Resources */,
@@ -871,6 +886,7 @@
 				191DD3ED28F8F20200889488 /* UIFont+Extension.swift in Sources */,
 				08DC525528E8654D00B058ED /* MoreViewController.swift in Sources */,
 				192C3DAF28E55FCF003563D3 /* CustomNavigationBar.swift in Sources */,
+				088DC36A2900CF7700E3EDFB /* StudyInfoViewController.swift in Sources */,
 				DF068CB128EC496700083917 /* PermissionViewController.swift in Sources */,
 				08DC526928E9AB2B00B058ED /* MemberProfileCollectionViewCell.swift in Sources */,
 				197CE78A28F550950042A6EA /* CustomCalendarTableViewCell.swift in Sources */,
