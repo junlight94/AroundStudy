@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Pretendard-Bold.otf">
+            <string>Pretendard-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlanMainViewController" customModule="AroundStudy" customModuleProvider="target">
+            <connections>
+                <outlet property="planTableView" destination="mmA-4X-YM7" id="zLL-AC-KlL"/>
+                <outlet property="tableViewHeightConstraint" destination="UtR-kb-Uep" id="cR7-Bo-LTY"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nFP-NH-Ln3">
+                    <rect key="frame" x="0.0" y="47" width="390" height="61"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="스터디 일정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kWr-KH-jQV">
+                            <rect key="frame" x="20" y="19.666666666666671" width="266" height="21.666666666666671"/>
+                            <fontDescription key="fontDescription" name="Pretendard-Bold" family="Pretendard" pointSize="18"/>
+                            <color key="textColor" name="40"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccU-Yb-Z83">
+                            <rect key="frame" x="306" y="18.666666666666671" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="H8P-ji-kcU"/>
+                                <constraint firstAttribute="width" constant="24" id="WSF-Qj-oIa"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Button" image="schedule"/>
+                            <connections>
+                                <action selector="didTapCalendarButton:" destination="-1" eventType="touchUpInside" id="ozI-Tt-Bke"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOW-LF-2Bf">
+                            <rect key="frame" x="346" y="18.666666666666671" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="4Nn-wL-A7I"/>
+                                <constraint firstAttribute="width" constant="24" id="DJg-bY-P1o"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Button" image="add"/>
+                            <connections>
+                                <action selector="didTapAddButton:" destination="-1" eventType="touchUpInside" id="72O-2j-jJQ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="61" id="6EZ-Vq-Acv"/>
+                        <constraint firstItem="kWr-KH-jQV" firstAttribute="centerY" secondItem="nFP-NH-Ln3" secondAttribute="centerY" id="7ug-gE-8l4"/>
+                        <constraint firstAttribute="trailing" secondItem="SOW-LF-2Bf" secondAttribute="trailing" constant="20" id="TQH-rU-mv4"/>
+                        <constraint firstItem="SOW-LF-2Bf" firstAttribute="centerY" secondItem="nFP-NH-Ln3" secondAttribute="centerY" id="WyF-TH-P1j"/>
+                        <constraint firstItem="kWr-KH-jQV" firstAttribute="leading" secondItem="nFP-NH-Ln3" secondAttribute="leading" constant="20" id="YMb-Mz-oyW"/>
+                        <constraint firstItem="ccU-Yb-Z83" firstAttribute="leading" secondItem="kWr-KH-jQV" secondAttribute="trailing" constant="20" id="u1c-Bm-ilU"/>
+                        <constraint firstItem="ccU-Yb-Z83" firstAttribute="centerY" secondItem="nFP-NH-Ln3" secondAttribute="centerY" id="utD-NL-rEH"/>
+                        <constraint firstItem="SOW-LF-2Bf" firstAttribute="leading" secondItem="ccU-Yb-Z83" secondAttribute="trailing" constant="16" id="z2B-al-nr8"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="160" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mmA-4X-YM7">
+                    <rect key="frame" x="0.0" y="108" width="390" height="300"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="UtR-kb-Uep"/>
+                    </constraints>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mmA-4X-YM7" secondAttribute="trailing" id="DIB-dG-zxT"/>
+                <constraint firstItem="nFP-NH-Ln3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="DNu-wO-vzg"/>
+                <constraint firstItem="mmA-4X-YM7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="EOG-h3-YbR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nFP-NH-Ln3" secondAttribute="trailing" id="LTL-Ye-uWd"/>
+                <constraint firstItem="mmA-4X-YM7" firstAttribute="top" secondItem="nFP-NH-Ln3" secondAttribute="bottom" id="R07-I9-pgd"/>
+                <constraint firstItem="nFP-NH-Ln3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="teS-5P-7PO"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-11" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="add" width="24" height="24"/>
+        <image name="schedule" width="24" height="24"/>
+        <namedColor name="40">
+            <color red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
