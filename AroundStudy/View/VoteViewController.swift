@@ -84,8 +84,10 @@ extension VoteViewController: tableViewExtension {
                                 cell.voteDetailStackView?.alpha = (result ?? false) ? 0.0 : 1.0
                                 cell.voteDetailStackView?.isHidden = (result ?? false)
                             } completion: { _ in
-                                UIView.animate(withDuration: 0.25) {
-                                    self.tableVote?.scrollToRow(at: indexPath, at: .middle, animated: false)
+                                UIView.animate(withDuration: 0.35) {
+                                    if !(result ?? false) {
+                                        self.tableVote?.scrollToRow(at: indexPath, at: .top, animated: false)
+                                    }
                                 }
                             }
                         }
