@@ -57,11 +57,13 @@ class StudyDetailViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         NotificationCenter.default.addObserver(self, selector: #selector(viewHeight), name: NSNotification.Name("viewHeight"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(moveVC), name: NSNotification.Name("viewController"), object: nil)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name("viewHeight"), object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name("viewController"), object: nil)
     }
     
     //MARK: - General Function
@@ -144,6 +146,17 @@ class StudyDetailViewController: BaseViewController {
 print("vcHeight: \(vcHeight), viewHeight: \(viewHeight)")
             viewContentHeight.constant = viewHeight < vcHeight ? vcHeight + 200 : viewHeight
             print(viewContentHeight.constant)
+        }
+    }
+    
+    @objc func moveVC(_ notification: Notification) {
+        if let vc = notification.object as? String {
+            switch vc {
+            case "addPlan":
+                let vc = AddPlanViewController(nibName: "AddPlanViewController", bundle: nil)
+                self.navigationController?.pushViewController(vc, animated: true)
+            default: break
+            }
         }
     }
     
