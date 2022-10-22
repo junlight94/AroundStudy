@@ -24,6 +24,11 @@ class VoteViewController: BaseViewController {
     override func viewDidLayoutSubviews() {
         print(self.view.bounds.size.height)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        NotificationCenter.default.post(name: NSNotification.Name("viewHeight"), object: self.view.bounds.size.height, userInfo: nil)
+    }
 }
 
 //MARK: - tableViewExtension
@@ -33,6 +38,7 @@ extension VoteViewController: tableViewExtension {
      * @creator : coder3306
      */
     private func initTableViewCell() {
+        tableVote?.isScrollEnabled = false
         if let tableVote = tableVote {
             VoteTitleTableViewCell.registerXib(targetView: tableVote)
             VoteTableViewCell.registerXib(targetView: tableVote)

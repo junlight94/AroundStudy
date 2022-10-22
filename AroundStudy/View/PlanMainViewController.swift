@@ -51,7 +51,7 @@ extension PlanMainViewController {
     }
     /// 일정 추가 버튼 클릭
     @IBAction func didTapAddButton(_ sender: UIButton) {
-        print("일정 추가 버튼 클릭")
+        NotificationCenter.default.post(name: NSNotification.Name("viewController"), object: "addPlan", userInfo: nil)
     }
 }
 
