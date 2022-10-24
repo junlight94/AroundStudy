@@ -71,3 +71,11 @@ extension reusableCollectionView where Self: UICollectionViewCell {
         return cell as? Self
     }
 }
+
+/**
+ * @프로필 수정완료 델리게이트
+ * @creator : coder3306
+ */
+protocol ProfileEditCompleteDelegate: AnyObject {
+    func didCompleteEdit()
+}

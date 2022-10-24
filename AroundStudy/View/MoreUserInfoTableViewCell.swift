@@ -8,6 +8,7 @@
 import UIKit
 
 class MoreUserInfoTableViewCell: UITableViewCell {
+    private var selectedModify: voidClosure?
     //******************************************************
     //MARK: - Cell Layout
     //******************************************************
@@ -279,6 +280,15 @@ class MoreUserInfoTableViewCell: UITableViewCell {
             make.centerY.equalTo(versionView)
         }
     }
+    
+    /**
+     * @프로필 수정 콜백 메서드
+     * @creator : coder3306
+     * @Return : 프로필 수정하기 버튼이 선택되었을 경우, 선택되었음을 콜백메서드로 전달함.
+     */
+    public func didSelectModify(_ complete: @escaping voidClosure) {
+        self.selectedModify = complete
+    }
 }
 
 //MARK: - Action
@@ -289,7 +299,7 @@ extension MoreUserInfoTableViewCell {
      * @param sender : UIButton
      */
     @objc private func actionModify(_ sender: UIButton) {
-        print("MODIFY MODE")
+        selectedModify?()
     }
     
     /**

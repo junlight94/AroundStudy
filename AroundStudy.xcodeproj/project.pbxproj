@@ -106,6 +106,8 @@
 		19868C4C28EC5C550093DF76 /* StudyBannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19868C4A28EC5C550093DF76 /* StudyBannerCollectionViewCell.swift */; };
 		19868C4D28EC5C550093DF76 /* StudyBannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19868C4B28EC5C550093DF76 /* StudyBannerCollectionViewCell.xib */; };
 		19877F5529026377004AD3EE /* MoreUserInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19877F5429026377004AD3EE /* MoreUserInfoTableViewCell.swift */; };
+		199B5E7C29066F940096E8C6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B5E7A29066F940096E8C6 /* ProfileViewController.swift */; };
+		199B5E7D29066F940096E8C6 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 199B5E7B29066F940096E8C6 /* ProfileViewController.xib */; };
 		CC7CC9DA10D494D83221F8DF /* Pods_AroundStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 132B1B51ED5CA8B98EE79822 /* Pods_AroundStudy.framework */; };
 		DF03FC2C28ED795300C564FA /* HomeCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF03FC2A28ED795300C564FA /* HomeCategoryCollectionViewCell.swift */; };
 		DF03FC2D28ED795300C564FA /* HomeCategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF03FC2B28ED795300C564FA /* HomeCategoryCollectionViewCell.xib */; };
@@ -255,6 +257,8 @@
 		19868C4A28EC5C550093DF76 /* StudyBannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyBannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		19868C4B28EC5C550093DF76 /* StudyBannerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudyBannerCollectionViewCell.xib; sourceTree = "<group>"; };
 		19877F5429026377004AD3EE /* MoreUserInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreUserInfoTableViewCell.swift; sourceTree = "<group>"; };
+		199B5E7A29066F940096E8C6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		199B5E7B29066F940096E8C6 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		82395ECBC730C264D56A62EC /* Pods-AroundStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundStudy.release.xcconfig"; path = "Target Support Files/Pods-AroundStudy/Pods-AroundStudy.release.xcconfig"; sourceTree = "<group>"; };
 		DF03FC2A28ED795300C564FA /* HomeCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		DF03FC2B28ED795300C564FA /* HomeCategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCategoryCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -372,7 +376,6 @@
 				08DC524328E864BB00B058ED /* 스터디 */,
 				08DC524428E864D400B058ED /* 채팅 */,
 				08DC524528E864EB00B058ED /* 더보기 */,
-				DFD3505829025E52004E725A /* 사진 */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -507,6 +510,9 @@
 				19877F5429026377004AD3EE /* MoreUserInfoTableViewCell.swift */,
 				1984E1382906328F00B8CD4D /* MoreStudyTitle.swift */,
 				1984E13C2906362200B8CD4D /* MoreStudyItem.swift */,
+				199B5E7A29066F940096E8C6 /* ProfileViewController.swift */,
+				199B5E7B29066F940096E8C6 /* ProfileViewController.xib */,
+				DFD3505829025E52004E725A /* 사진 */,
 			);
 			name = "더보기";
 			sourceTree = "<group>";
@@ -836,6 +842,7 @@
 				08E10F3B28F812240021931D /* StudyDetailViewController.xib in Resources */,
 				08E10F4328F8150E0021931D /* FavoriteStudyViewController.xib in Resources */,
 				1972785028F645390029F27D /* SelectDatePopupViewController.xib in Resources */,
+				199B5E7D29066F940096E8C6 /* ProfileViewController.xib in Resources */,
 				08E10F4928F838CB0021931D /* KeywordCollectionViewCell.xib in Resources */,
 				08DC525628E8654D00B058ED /* MoreViewController.xib in Resources */,
 				197CE78D28F556B70042A6EA /* Main.storyboard in Resources */,
@@ -959,6 +966,7 @@
 				DF068CB728EC603800083917 /* PermissionTableViewCell.swift in Sources */,
 				DFCBC5B028FD73FF0092BEDC /* AddPlanViewController.swift in Sources */,
 				DFD3506129026444004E725A /* PhotoPickerCollectionViewCell.swift in Sources */,
+				199B5E7C29066F940096E8C6 /* ProfileViewController.swift in Sources */,
 				DFFD345E28EEFADB00CFCB74 /* OnboardingViewController.swift in Sources */,
 				08DC525D28E9A9C300B058ED /* SearchHistoryTableViewCell.swift in Sources */,
 				191DD3EB28F8E76900889488 /* CustomCalendarCell.swift in Sources */,

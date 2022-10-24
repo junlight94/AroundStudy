@@ -4,13 +4,20 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Pretendard-Medium.otf">
+            <string>Pretendard-Medium</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MoreViewController" customModule="AroundStudy" customModuleProvider="target">
             <connections>
+                <outlet property="modifyCompleteView" destination="zy3-Uf-f70" id="U3V-wz-8SD"/>
                 <outlet property="tableMoreMain" destination="bhh-ho-xBM" id="C0S-t5-29s"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -28,6 +35,32 @@
                         <outlet property="delegate" destination="-1" id="u4P-a0-nmr"/>
                     </connections>
                 </tableView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zy3-Uf-f70">
+                    <rect key="frame" x="20" y="896" width="374" height="44"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkFill" translatesAutoresizingMaskIntoConstraints="NO" id="igG-Bw-diV">
+                            <rect key="frame" x="16" y="12" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="QZa-5D-9Pb"/>
+                                <constraint firstAttribute="width" constant="20" id="oRz-Rf-bTp"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="프로필 정보가 수정되었습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Maf-fH-Tcy">
+                            <rect key="frame" x="44" y="14" width="156" height="16"/>
+                            <fontDescription key="fontDescription" name="Pretendard-Medium" family="Pretendard" pointSize="13"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="40"/>
+                    <constraints>
+                        <constraint firstItem="Maf-fH-Tcy" firstAttribute="leading" secondItem="igG-Bw-diV" secondAttribute="trailing" constant="8" id="0Nh-wp-Hsx"/>
+                        <constraint firstAttribute="height" constant="44" id="2Df-WJ-Jn3"/>
+                        <constraint firstItem="Maf-fH-Tcy" firstAttribute="centerY" secondItem="igG-Bw-diV" secondAttribute="centerY" id="LeA-ua-5Pj"/>
+                        <constraint firstItem="igG-Bw-diV" firstAttribute="leading" secondItem="zy3-Uf-f70" secondAttribute="leading" constant="16" id="t0E-zM-hSH"/>
+                        <constraint firstItem="igG-Bw-diV" firstAttribute="centerY" secondItem="zy3-Uf-f70" secondAttribute="centerY" id="yhq-fJ-I8Y"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -35,12 +68,19 @@
                 <constraint firstItem="bhh-ho-xBM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="56" id="5zE-hR-xmW"/>
                 <constraint firstItem="bhh-ho-xBM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6GP-fN-wda"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bhh-ho-xBM" secondAttribute="trailing" id="Vmq-7E-vBg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zy3-Uf-f70" secondAttribute="trailing" constant="20" id="WmJ-l0-Na8"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="bhh-ho-xBM" secondAttribute="bottom" id="XgV-q4-IVl"/>
+                <constraint firstAttribute="bottom" secondItem="zy3-Uf-f70" secondAttribute="bottom" constant="-44" id="lxe-jP-h7G"/>
+                <constraint firstItem="zy3-Uf-f70" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="uMl-kA-hf8"/>
             </constraints>
             <point key="canvasLocation" x="139" y="118"/>
         </view>
     </objects>
     <resources>
+        <image name="checkFill" width="28" height="28"/>
+        <namedColor name="40">
+            <color red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

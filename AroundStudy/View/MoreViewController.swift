@@ -9,6 +9,8 @@ import UIKit
 class MoreViewController: BaseViewController {
     /// 더보기 메인 테이블 뷰
     @IBOutlet weak var tableMoreMain: UITableView?
+    /// 프로필 정보 수정 알림 뷰
+    @IBOutlet weak var modifyCompleteView: UIView?
     
     /// 더보기 메인화면 셀 리스트
     private var cells = [
@@ -27,6 +29,11 @@ class MoreViewController: BaseViewController {
         super.viewDidLoad()
         initNavigationBar()
         initTableViewCell()
+        initLayout()
+    }
+    
+    private func initLayout() {
+        modifyCompleteView?.layer.setBorderLayout(radius: 8)
     }
     
     /**
@@ -71,6 +78,11 @@ extension MoreViewController: tableViewExtension {
         switch indexPath.row {
             case 0:
                 if let cell = cell as? MoreUserInfoTableViewCell {
+                    cell.didSelectModify {
+                        let profile = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
+                        profile.delegate = self
+                        self.navigationController?.pushViewController(profile, animated: true)
+                    }
                     return cell
                 }
             case 1:
@@ -110,7 +122,7 @@ extension MoreViewController: tableViewExtension {
 }
 
 //MARK: Action
-extension MoreViewController {
+extension MoreViewController: ProfileEditCompleteDelegate {
     /**
      * @더보기 - 세팅화면 이동
      * @creator : coder3306
@@ -118,5 +130,23 @@ extension MoreViewController {
      */
     @objc private func moveSetting(_ sender: UIButton) {
         print("Move Setting")
+    }
+    
+    /**
+     * @프로필 수정 완료 후 애니메이션 설정
+     * @creator : coder3306
+     */
+    func didCompleteEdit() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.modifyCompleteView?.isHidden = false
+            UIView.animate(withDuration: 0.35) {
+                self.modifyCompleteView?.transform = CGAffineTransform(translationX: 0, y: -60)
+            } completion: { _ in
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                    self.modifyCompleteView?.isHidden = true
+                    self.modifyCompleteView?.transform = CGAffineTransform(translationX: 0, y: 0)
+                }
+            }
+        }
     }
 }

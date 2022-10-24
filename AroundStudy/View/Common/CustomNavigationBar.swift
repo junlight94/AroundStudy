@@ -46,7 +46,7 @@ class CustomNavigationBar: UIView {
      */
     private func setNavigationBarTitle(_ title: String) {
         navigationTitleLabel.text = title
-        navigationTitleLabel.textColor = .black
+        navigationTitleLabel.textColor = UIColor(named: "40")
         navigationTitleLabel.textAlignment = .left
         navigationTitleLabel.sizeToFit()
         let newSize = navigationTitleLabel.sizeThatFits(navigationTitleLabel.frame.size)
