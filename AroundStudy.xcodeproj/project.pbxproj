@@ -109,6 +109,8 @@
 		DF068CB228EC496700083917 /* PermissionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF068CB028EC496700083917 /* PermissionViewController.xib */; };
 		DF068CB728EC603800083917 /* PermissionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF068CB528EC603800083917 /* PermissionTableViewCell.swift */; };
 		DF068CB828EC603800083917 /* PermissionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF068CB628EC603800083917 /* PermissionTableViewCell.xib */; };
+		DF13A2762903E23600C7F096 /* PhotoCropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF13A2742903E23600C7F096 /* PhotoCropViewController.swift */; };
+		DF13A2772903E23600C7F096 /* PhotoCropViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF13A2752903E23600C7F096 /* PhotoCropViewController.xib */; };
 		DF15CBDE28E85AB0009F24CB /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = DF15CBDA28E85AB0009F24CB /* Pretendard-Medium.otf */; };
 		DF15CBDF28E85AB0009F24CB /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DF15CBDB28E85AB0009F24CB /* Pretendard-Bold.otf */; };
 		DF15CBE028E85AB0009F24CB /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DF15CBDC28E85AB0009F24CB /* Pretendard-Regular.otf */; };
@@ -116,6 +118,8 @@
 		DF15CBE328E861E1009F24CB /* BoxLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF15CBE228E861E1009F24CB /* BoxLabel.swift */; };
 		DF1D5B7C28EAEFAD00B875D5 /* VoteDetailItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1D5B7B28EAEFAD00B875D5 /* VoteDetailItemView.swift */; };
 		DF1D5B7F28EAFD2600B875D5 /* RegisterIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1D5B7E28EAFD2600B875D5 /* RegisterIndicatorView.swift */; };
+		DF5B530929064C3100E8DE96 /* PhotoPreviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5B530729064C3100E8DE96 /* PhotoPreviewCollectionViewCell.swift */; };
+		DF5B530A29064C3100E8DE96 /* PhotoPreviewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5B530829064C3100E8DE96 /* PhotoPreviewCollectionViewCell.xib */; };
 		DF5EC62228E6D522003411D3 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5EC62028E6D522003411D3 /* TestViewController.xib */; };
 		DF67C5A328FE70E0004F2D6A /* PlanMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF67C5A128FE70E0004F2D6A /* PlanMainViewController.swift */; };
 		DF67C5A428FE70E0004F2D6A /* PlanMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF67C5A228FE70E0004F2D6A /* PlanMainViewController.xib */; };
@@ -254,6 +258,8 @@
 		DF068CB028EC496700083917 /* PermissionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PermissionViewController.xib; sourceTree = "<group>"; };
 		DF068CB528EC603800083917 /* PermissionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionTableViewCell.swift; sourceTree = "<group>"; };
 		DF068CB628EC603800083917 /* PermissionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PermissionTableViewCell.xib; sourceTree = "<group>"; };
+		DF13A2742903E23600C7F096 /* PhotoCropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCropViewController.swift; sourceTree = "<group>"; };
+		DF13A2752903E23600C7F096 /* PhotoCropViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCropViewController.xib; sourceTree = "<group>"; };
 		DF15CBDA28E85AB0009F24CB /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		DF15CBDB28E85AB0009F24CB /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		DF15CBDC28E85AB0009F24CB /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
@@ -264,6 +270,8 @@
 		DF47F20628F7B3D900DDBFDB /* AddPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlanViewController.swift; sourceTree = "<group>"; };
 		DF47F20728F7B3D900DDBFDB /* AddPlanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPlanViewController.xib; sourceTree = "<group>"; };
 		DF56234E28E3322000A00258 /* AroundStudy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AroundStudy.entitlements; sourceTree = "<group>"; };
+		DF5B530729064C3100E8DE96 /* PhotoPreviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPreviewCollectionViewCell.swift; sourceTree = "<group>"; };
+		DF5B530829064C3100E8DE96 /* PhotoPreviewCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoPreviewCollectionViewCell.xib; sourceTree = "<group>"; };
 		DF5EC61F28E6D522003411D3 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		DF5EC62028E6D522003411D3 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		DF67C5A128FE70E0004F2D6A /* PlanMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanMainViewController.swift; sourceTree = "<group>"; };
@@ -656,6 +664,10 @@
 				DFD3505A29025E6F004E725A /* PhotoPickerViewController.xib */,
 				DFD3505F29026444004E725A /* PhotoPickerCollectionViewCell.swift */,
 				DFD3506029026444004E725A /* PhotoPickerCollectionViewCell.xib */,
+				DF13A2742903E23600C7F096 /* PhotoCropViewController.swift */,
+				DF13A2752903E23600C7F096 /* PhotoCropViewController.xib */,
+				DF5B530729064C3100E8DE96 /* PhotoPreviewCollectionViewCell.swift */,
+				DF5B530829064C3100E8DE96 /* PhotoPreviewCollectionViewCell.xib */,
 			);
 			name = "사진";
 			sourceTree = "<group>";
@@ -818,9 +830,11 @@
 				DFEA71C928F42B7F005DFD78 /* AddVoteBorderView.xib in Resources */,
 				DFE0374228E27B5D00BE9E35 /* LaunchScreen.storyboard in Resources */,
 				08DC526228E9AAED00B058ED /* StudyInfoGridCollectionViewCell.xib in Resources */,
+				DF5B530A29064C3100E8DE96 /* PhotoPreviewCollectionViewCell.xib in Resources */,
 				DFE0373F28E27B5D00BE9E35 /* Assets.xcassets in Resources */,
 				DF15CBE028E85AB0009F24CB /* Pretendard-Regular.otf in Resources */,
 				0876385828F42DC500BE6B13 /* SearchViewController.xib in Resources */,
+				DF13A2772903E23600C7F096 /* PhotoCropViewController.xib in Resources */,
 				08E10F3B28F812240021931D /* StudyDetailViewController.xib in Resources */,
 				08E10F4328F8150E0021931D /* FavoriteStudyViewController.xib in Resources */,
 				1972785028F645390029F27D /* SelectDatePopupViewController.xib in Resources */,
@@ -923,6 +937,7 @@
 				08DC525528E8654D00B058ED /* MoreViewController.swift in Sources */,
 				192C3DAF28E55FCF003563D3 /* CustomNavigationBar.swift in Sources */,
 				088DC36A2900CF7700E3EDFB /* StudyInfoViewController.swift in Sources */,
+				DF5B530929064C3100E8DE96 /* PhotoPreviewCollectionViewCell.swift in Sources */,
 				DF068CB128EC496700083917 /* PermissionViewController.swift in Sources */,
 				08DC526928E9AB2B00B058ED /* MemberProfileCollectionViewCell.swift in Sources */,
 				197CE78A28F550950042A6EA /* CustomCalendarTableViewCell.swift in Sources */,
@@ -969,6 +984,7 @@
 				0876383E28F40CFF00BE6B13 /* InputNickNameViewController.swift in Sources */,
 				08DC526D28E9AB6E00B058ED /* ScheduleDetailTableViewCell.swift in Sources */,
 				192C3DB528E56DAA003563D3 /* CALayer+Extension.swift in Sources */,
+				DF13A2762903E23600C7F096 /* PhotoCropViewController.swift in Sources */,
 				192C3DB328E56BAF003563D3 /* Notification+Extension.swift in Sources */,
 				0876385728F42DC500BE6B13 /* SearchViewController.swift in Sources */,
 				191A969028F66382007E2F04 /* SelectStartEndSegmentTableViewCell.swift in Sources */,

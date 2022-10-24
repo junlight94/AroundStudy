@@ -12,6 +12,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoPickerViewController" customModule="AroundStudy" customModuleProvider="target">
             <connections>
                 <outlet property="photoPickerCollectionView" destination="Ggl-1H-tuK" id="kws-Rc-otw"/>
+                <outlet property="previewCollectionView" destination="Vln-N3-4wq" id="zrh-OL-zs7"/>
+                <outlet property="previewCollectionViewHeightConstraint" destination="ZpF-9N-3E4" id="wtw-RZ-q6M"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Ggl-1H-tuK">
-                    <rect key="frame" x="0.0" y="103" width="390" height="741"/>
+                    <rect key="frame" x="0.0" y="173" width="390" height="671"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="3" minimumInteritemSpacing="0.0" id="9CO-gJ-KDA">
                         <size key="itemSize" width="128" height="128"/>
@@ -30,16 +32,32 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Vln-N3-4wq" userLabel="Preview Collection View">
+                    <rect key="frame" x="0.0" y="103" width="390" height="70"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="ZpF-9N-3E4"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="8" id="3g4-wU-mXp">
+                        <size key="itemSize" width="128" height="70"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Vln-N3-4wq" secondAttribute="trailing" id="1Tn-jv-Uj5"/>
+                <constraint firstItem="Vln-N3-4wq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="56" id="Ela-mj-i1J"/>
                 <constraint firstAttribute="bottom" secondItem="Ggl-1H-tuK" secondAttribute="bottom" id="Hch-jn-UDy"/>
                 <constraint firstItem="Ggl-1H-tuK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="MRX-hp-tVe"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ggl-1H-tuK" secondAttribute="trailing" id="MYs-q2-wbI"/>
-                <constraint firstItem="Ggl-1H-tuK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="56" id="WPh-kU-wqE"/>
+                <constraint firstItem="Vln-N3-4wq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="QcQ-Nf-mxw"/>
+                <constraint firstItem="Ggl-1H-tuK" firstAttribute="top" secondItem="Vln-N3-4wq" secondAttribute="bottom" id="WPh-kU-wqE"/>
             </constraints>
-            <point key="canvasLocation" x="-154" y="-12"/>
+            <point key="canvasLocation" x="-155.38461538461539" y="-12.085308056872037"/>
         </view>
     </objects>
     <resources>
