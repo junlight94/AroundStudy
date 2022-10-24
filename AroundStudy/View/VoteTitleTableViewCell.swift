@@ -30,21 +30,12 @@ class VoteTitleTableViewCell: UITableViewCell, reusableTableView {
     }
     
     /**
-     * @투표 추가하기 버튼 선택 콜백 메서드
-     * @creator : coder3306
-     * @Return : 버튼이 선택되었음을 알리는 핸들러 설정
-     */
-    public func didTapAddVote(_ complete: @escaping voidClosure) {
-        self.requestAdd = complete
-    }
-    
-    /**
      * @투표 추가하기
      * @creator : coder3306
      * @param sender : UIButton
      */
     @IBAction func actionAddVote(_ sender: UIButton) {
-        requestAdd?()
+        NotificationCenter.default.post(name: .showAddVoteView, object: nil)
     }
     
     /**

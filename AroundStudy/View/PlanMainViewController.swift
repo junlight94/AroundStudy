@@ -47,7 +47,7 @@ extension PlanMainViewController {
     
     /// 캘린더 버튼 클릭
     @IBAction func didTapCalendarButton(_ sender: UIButton) {
-        print("캘린더 버튼 클릭")
+        NotificationCenter.default.post(name: .showSchedulePopup, object: nil)
     }
     /// 일정 추가 버튼 클릭
     @IBAction func didTapAddButton(_ sender: UIButton) {

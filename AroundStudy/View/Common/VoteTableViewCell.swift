@@ -41,16 +41,28 @@ class VoteTableViewCell: UITableViewCell, reusableTableView {
     override func awakeFromNib() {
         super.awakeFromNib()
         /// 테스트용
-        voteDetailStackView?.addArrangedSubview(testVote1)
-        testVote1.snp.makeConstraints { make in
-            /// 스텍뷰의 높이가 고정이므로, 하나의 뷰만 높이 설정해서 추가
-            make.height.equalTo(70)
-        }
-        voteDetailStackView?.addArrangedSubview(testVote2)
-        voteDetailStackView?.addArrangedSubview(testVote3)
-        voteDetailStackView?.addArrangedSubview(testVote4)
+        //FIXME: EXPENSIVE COST LOGIC
+
+//        DispatchQueue.main.async {
+            self.testVote1.snp.makeConstraints { make in
+                /// 스텍뷰의 높이가 고정이므로, 하나의 뷰만 높이 설정해서 추가
+                make.height.equalTo(70)
+            }
+            self.addArrangedSubviews([self.testVote1, self.testVote2, self.testVote3, self.testVote4])
+//        }
         
+//        self.voteDetailStackView?.addArrangedSubview(self.testVote1)
+
+//        self.voteDetailStackView?.addArrangedSubview(self.testVote2)
+//        self.voteDetailStackView?.addArrangedSubview(self.testVote3)
+//        self.voteDetailStackView?.addArrangedSubview(self.testVote4)
         initLayout()
+    }
+    
+    func addArrangedSubviews(_ views: [UIView]) {
+        for view in views {
+            voteDetailStackView?.addArrangedSubview(view)
+        }
     }
     
     /**

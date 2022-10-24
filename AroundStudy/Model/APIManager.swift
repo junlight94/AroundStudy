@@ -44,18 +44,19 @@ public actor APIManager {
      * @param url : 다운로드할 이미지 주소
      * @Return : (비동기) 다운로드가 완료된 이미지
      */
-    public func downloadImage(_ url: String) async throws -> UIImage {
-        if let parsing = URL(string: url) {
-            print(">>>>>>>>> DOWNLOAD IMAGE URL: \(parsing)")
-            let (data, response) = try await URLSession.shared.data(from: parsing)
-            guard (response as? HTTPURLResponse)?.statusCode == 200 else { throw ApiError.statusCodeError }
-            if let downloadImage = UIImage(data: data) {
-                return downloadImage
-            } else {
-                throw ApiError.imageConvertingError
-            }
-        } else {
-            throw ApiError.invalidURL
+    public func downloadImage(_ url: String, complete: @escaping (UIImage?) -> ()) {
+        if let encodingURL = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) {
+            AF.request(encodingURL).responseData(completionHandler: { response in
+                switch response.result {
+                    case .success(let data):
+                        if let image = UIImage(data: data) {
+                            complete(image)
+                        }
+                    case .failure(let error):
+                        //TODO: 에러처리
+                        print(error)
+                }
+            })
         }
     }
 }
@@ -63,6 +64,7 @@ public actor APIManager {
 /// API 에러 열거
 public enum ApiError: Error {
     case invalidURL
+    case encodingError
     case statusCodeError
     case imageConvertingError
     case emptyData
@@ -79,6 +81,8 @@ extension ApiError {
                 return "image Error"
             case .emptyData:
                 return "No Data"
+            case .encodingError:
+                return "Encoding Error"
         }
     }
 }

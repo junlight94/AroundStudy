@@ -11,18 +11,44 @@ class VoteViewController: BaseViewController {
     /// 현재 진행중인 투표 테이블 뷰 리스트
     @IBOutlet weak var tableVote: UITableView?
     
-    /**
-     * @투표 뷰 컨트롤러 초기하
-     * @creator : coder3306
-     */
+    //******************************************************
+    //MARK: - Properties
+    //******************************************************
+    /// 셀 높이 저장
+    var cellHeights = [IndexPath: CGFloat]()
+    /// DUMMY
+    let testcount = 20
+    // willDisplay의 노티피케이션 전송 여부
+    var isPost: Bool = false
+    
+    //******************************************************
+    //MARK: - ViewController LifeCycle
+    //******************************************************
     override func viewDidLoad() {
         super.viewDidLoad()
         initTableViewCell()
-        
+        NotificationCenter.default.post(name: NSNotification.Name("viewHeight"), object: 500000)
     }
     
-    override func viewDidLayoutSubviews() {
-        print(self.view.bounds.size.height)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        calcCellHeights()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.isPost = false
+    }
+    
+    /**
+     * @셀의 높이값 계산
+     * @creator : coder3306
+     */
+    func calcCellHeights() {
+        //FIXME: NEED PAGING LOGIC
+        self.isPost = true
+        NotificationCenter.default.post(name: NSNotification.Name("viewHeight")
+                                      , object: self.cellHeights.compactMap({ CGFloat($0.value )}).reduce(0, +))
     }
 }
 
@@ -33,6 +59,7 @@ extension VoteViewController: tableViewExtension {
      * @creator : coder3306
      */
     private func initTableViewCell() {
+        tableVote?.isScrollEnabled = false
         if let tableVote = tableVote {
             VoteTitleTableViewCell.registerXib(targetView: tableVote)
             VoteTableViewCell.registerXib(targetView: tableVote)
@@ -55,7 +82,7 @@ extension VoteViewController: tableViewExtension {
         if section == 0 {
             return 1
         }
-        return 5
+        return testcount
     }
     
     /**
@@ -70,23 +97,20 @@ extension VoteViewController: tableViewExtension {
         switch indexPath.section {
             case 0:
                 if let cell = VoteTitleTableViewCell.dequeueReusableCell(targetView: tableVote) {
-                    cell.didTapAddVote {
-                        self.moveSelectVoteView()
-                    }
                     return cell
                 }
             case 1:
                 if let cell = VoteTableViewCell.dequeueReusableCell(targetView: tableVote) {
                     cell.didTapExpandView { result in
-                        tableVote.performBatchUpdates {
-                            //TODO: 셀 재사용 시, 현재 상태를 저장하는 로직 필요함
-                            UIView.animate(withDuration: 0.25) {
-                                cell.voteDetailStackView?.alpha = (result ?? false) ? 0.0 : 1.0
-                                cell.voteDetailStackView?.isHidden = (result ?? false)
-                            } completion: { _ in
-                                UIView.animate(withDuration: 0.35) {
-                                    if !(result ?? false) {
-                                        self.tableVote?.scrollToRow(at: indexPath, at: .top, animated: false)
+                        DispatchQueue.main.async {
+                            tableVote.performBatchUpdates {
+                                UIView.animate(withDuration: 0.25) {
+                                    cell.voteDetailStackView?.alpha = (result ?? false) ? 0.0 : 1.0
+                                    cell.voteDetailStackView?.isHidden = (result ?? false)
+                                } completion: { _ in
+                                    DispatchQueue.main.async {
+                                        self.cellHeights[indexPath] = cell.frame.size.height
+                                        self.calcCellHeights()
                                     }
                                 }
                             }
@@ -99,16 +123,28 @@ extension VoteViewController: tableViewExtension {
         }
         return UITableViewCell()
     }
-}
-//MARK: - Action
-extension VoteViewController {
+    
     /**
-     * @날짜 선택 화면 이동
+     * @셀 높이 암시적 설정
      * @creator : coder3306
      */
-    private func moveSelectVoteView() {
-        let vc = SelectDatePopupViewController(nibName: "SelectDatePopupViewController", bundle: nil)
-        floatingPanelController = FloatingPanelController(delegate: self)
-        setupFloatingView(vc, targetScrollView: UIScrollView(), position: .full)
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return cellHeights[indexPath] ?? UITableView.automaticDimension
+    }
+    
+    /**
+     * @현재 셀의 높이를 저장
+     * @creator : coder3306
+     * @param cell : 인덱스에 맞는 셀 데이터
+     * @param indexPath : 셀 인덱스
+     */
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        DispatchQueue.main.async {
+            print(indexPath)
+            self.cellHeights[indexPath] = cell.frame.size.height
+            if self.cellHeights.count == self.testcount + 1, !self.isPost {
+                self.calcCellHeights()
+            }
+        }
     }
 }
