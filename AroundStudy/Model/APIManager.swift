@@ -44,17 +44,16 @@ public actor APIManager {
      * @param url : 다운로드할 이미지 주소
      * @Return : (비동기) 다운로드가 완료된 이미지
      */
-    public func downloadImage(_ url: String, complete: @escaping (UIImage?) -> ()) {
+    public func downloadImage(_ url: String, complete: @escaping (Result<UIImage, Error>) -> ()) {
         if let encodingURL = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) {
             AF.request(encodingURL).responseData(completionHandler: { response in
                 switch response.result {
                     case .success(let data):
                         if let image = UIImage(data: data) {
-                            complete(image)
+                            complete(.success(image))
                         }
                     case .failure(let error):
-                        //TODO: 에러처리
-                        print(error)
+                        complete(.failure(error))
                 }
             })
         }

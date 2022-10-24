@@ -100,6 +100,9 @@
 		197CE78B28F550950042A6EA /* CustomCalendarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 197CE78928F550950042A6EA /* CustomCalendarTableViewCell.xib */; };
 		197CE78D28F556B70042A6EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 197CE78C28F556B70042A6EA /* Main.storyboard */; };
 		197CE78F28F557AE0042A6EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197CE78E28F557AE0042A6EA /* ViewController.swift */; };
+		1984E1392906328F00B8CD4D /* MoreStudyTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984E1382906328F00B8CD4D /* MoreStudyTitle.swift */; };
+		1984E13D2906362200B8CD4D /* MoreStudyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984E13C2906362200B8CD4D /* MoreStudyItem.swift */; };
+		1984E13F290638CA00B8CD4D /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984E13E290638CA00B8CD4D /* UITableView+Extension.swift */; };
 		19868C4C28EC5C550093DF76 /* StudyBannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19868C4A28EC5C550093DF76 /* StudyBannerCollectionViewCell.swift */; };
 		19868C4D28EC5C550093DF76 /* StudyBannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19868C4B28EC5C550093DF76 /* StudyBannerCollectionViewCell.xib */; };
 		19877F5529026377004AD3EE /* MoreUserInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19877F5429026377004AD3EE /* MoreUserInfoTableViewCell.swift */; };
@@ -246,6 +249,9 @@
 		197CE78928F550950042A6EA /* CustomCalendarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CustomCalendarTableViewCell.xib; path = ../CustomCalendarTableViewCell.xib; sourceTree = "<group>"; };
 		197CE78C28F556B70042A6EA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		197CE78E28F557AE0042A6EA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1984E1382906328F00B8CD4D /* MoreStudyTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreStudyTitle.swift; sourceTree = "<group>"; };
+		1984E13C2906362200B8CD4D /* MoreStudyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreStudyItem.swift; sourceTree = "<group>"; };
+		1984E13E290638CA00B8CD4D /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		19868C4A28EC5C550093DF76 /* StudyBannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyBannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		19868C4B28EC5C550093DF76 /* StudyBannerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudyBannerCollectionViewCell.xib; sourceTree = "<group>"; };
 		19877F5429026377004AD3EE /* MoreUserInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreUserInfoTableViewCell.swift; sourceTree = "<group>"; };
@@ -420,6 +426,7 @@
 				192C3DB428E56DAA003563D3 /* CALayer+Extension.swift */,
 				191DD3EC28F8F20200889488 /* UIFont+Extension.swift */,
 				DFD3505D29026050004E725A /* UIImage+Extension.swift */,
+				1984E13E290638CA00B8CD4D /* UITableView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -498,6 +505,8 @@
 				08DC525328E8654D00B058ED /* MoreViewController.swift */,
 				08DC525428E8654D00B058ED /* MoreViewController.xib */,
 				19877F5429026377004AD3EE /* MoreUserInfoTableViewCell.swift */,
+				1984E1382906328F00B8CD4D /* MoreStudyTitle.swift */,
+				1984E13C2906362200B8CD4D /* MoreStudyItem.swift */,
 			);
 			name = "더보기";
 			sourceTree = "<group>";
@@ -911,6 +920,7 @@
 				0876385D28F5691700BE6B13 /* HotStudyCollectionViewCell.swift in Sources */,
 				1961AD8328F4EB6F0032FE7A /* VoteViewController.swift in Sources */,
 				DF88223328EFBB5600993F2E /* RegisterCompleteViewController.swift in Sources */,
+				1984E1392906328F00B8CD4D /* MoreStudyTitle.swift in Sources */,
 				1961AD8728F4EC920032FE7A /* VoteTitleTableViewCell.swift in Sources */,
 				DF67C5A328FE70E0004F2D6A /* PlanMainViewController.swift in Sources */,
 				191A969728F6922F007E2F04 /* CustomSegmentControl.swift in Sources */,
@@ -960,9 +970,11 @@
 				DFE0373628E27B5B00BE9E35 /* AppDelegate.swift in Sources */,
 				08DC522F28E4662B00B058ED /* Delegate.swift in Sources */,
 				DF89A80D28E6F0D10039E364 /* ThumbnailImageView.swift in Sources */,
+				1984E13D2906362200B8CD4D /* MoreStudyItem.swift in Sources */,
 				0876384828F40D5300BE6B13 /* InputLocationViewController.swift in Sources */,
 				DF1D5B7F28EAFD2600B875D5 /* RegisterIndicatorView.swift in Sources */,
 				08DC524D28E8653800B058ED /* StudyViewController.swift in Sources */,
+				1984E13F290638CA00B8CD4D /* UITableView+Extension.swift in Sources */,
 				19868C4C28EC5C550093DF76 /* StudyBannerCollectionViewCell.swift in Sources */,
 				08DC527928E9ABD800B058ED /* VoteTableViewCell.swift in Sources */,
 				DFEC1FBA28F675F8009B866E /* AddVoteTextfieldView.swift in Sources */,

@@ -23,9 +23,9 @@ class VoteDetailItemView: UIView {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        DispatchQueue.main.async {
-            self.setupView()
-        }
+//        DispatchQueue.main.async {
+//            self.setupView()
+//        }
     }
 
     func setupView() {
@@ -60,6 +60,7 @@ class VoteDetailItemView: UIView {
         addSubview(containerView)
         
         DispatchQueue.main.async {
+            print(containerView)
             containerView.snp.makeConstraints { make in
                 make.leading.trailing.equalToSuperview().inset(16)
                 make.top.bottom.equalToSuperview()

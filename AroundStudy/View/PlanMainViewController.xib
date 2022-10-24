@@ -92,7 +92,7 @@
                 <constraint firstItem="nFP-NH-Ln3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="teS-5P-7PO"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-11" y="20"/>
+            <point key="canvasLocation" x="-5" y="26"/>
         </view>
     </objects>
     <resources>

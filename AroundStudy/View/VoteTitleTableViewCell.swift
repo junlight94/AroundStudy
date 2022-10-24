@@ -6,7 +6,7 @@
 
 import UIKit
 
-class VoteTitleTableViewCell: UITableViewCell, reusableTableView {
+class VoteTitleTableViewCell: UITableViewCell {
     /// 투표 리스트 정렬 뷰
     @IBOutlet weak var viewSorting: UIView?
     /// 투표 추가하기

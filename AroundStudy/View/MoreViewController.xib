@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MoreViewController" customModule="AroundStudy" customModuleProvider="target">
             <connections>
+                <outlet property="tableMoreMain" destination="bhh-ho-xBM" id="C0S-t5-29s"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,18 +20,22 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hVd-ao-t2D">
-                    <rect key="frame" x="0.0" y="48" width="414" height="814"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bhh-ho-xBM">
+                    <rect key="frame" x="0.0" y="104" width="414" height="758"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="FfG-zP-F0K"/>
+                        <outlet property="delegate" destination="-1" id="u4P-a0-nmr"/>
+                    </connections>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="leading" secondItem="hVd-ao-t2D" secondAttribute="leading" id="0aw-DL-FfF"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hVd-ao-t2D" secondAttribute="trailing" id="TNx-E6-4Ls"/>
-                <constraint firstItem="hVd-ao-t2D" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ZFO-qt-27F"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="hVd-ao-t2D" secondAttribute="bottom" id="r9c-BG-ISP"/>
+                <constraint firstItem="bhh-ho-xBM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="56" id="5zE-hR-xmW"/>
+                <constraint firstItem="bhh-ho-xBM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6GP-fN-wda"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bhh-ho-xBM" secondAttribute="trailing" id="Vmq-7E-vBg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="bhh-ho-xBM" secondAttribute="bottom" id="XgV-q4-IVl"/>
             </constraints>
             <point key="canvasLocation" x="139" y="118"/>
         </view>

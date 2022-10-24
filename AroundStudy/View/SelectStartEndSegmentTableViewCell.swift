@@ -5,7 +5,7 @@
 //
 
 import UIKit
-class SelectStartEndSegmentTableViewCell: UITableViewCell, reusableTableView {
+class SelectStartEndSegmentTableViewCell: UITableViewCell {
     /// 시작일/종료일 선택 세그먼트 컨트롤
     @IBOutlet weak var startEndSegments: CustomSegmentControl?
     

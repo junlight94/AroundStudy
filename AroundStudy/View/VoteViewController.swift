@@ -33,7 +33,6 @@ class VoteViewController: BaseViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         calcCellHeights()
-        NotificationCenter.default.post(name: NSNotification.Name("viewHeight"), object: self.view.bounds.size.height, userInfo: nil)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
