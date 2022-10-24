@@ -85,7 +85,7 @@ class MoreUserInfoTableViewCell: UITableViewCell {
         return stackView
     }()
     
-    lazy var nameLabel: UILabel = {
+    private lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.text = "닉네임"
         label.font = UIFont.setCustomFont(.semiBold, size: 17)
@@ -93,7 +93,7 @@ class MoreUserInfoTableViewCell: UITableViewCell {
         return label
     }()
     
-    lazy var addressLabel: UILabel = {
+    private lazy var addressLabel: UILabel = {
         let label = UILabel()
         label.text = "주소123123123123123"
         label.font = UIFont.setCustomFont(.medium, size: 13)
@@ -129,15 +129,14 @@ class MoreUserInfoTableViewCell: UITableViewCell {
         let view = UIView()
         let label = UILabel()
         label.text = "N"
-        label.font = UIFont.setCustomFont(.semiBold, size: 14)
+        label.font = UIFont.setCustomFont(.semiBold, size: 10)
         label.textColor = .white
         view.addSubview(label)
         label.snp.makeConstraints { make in
             make.centerX.centerY.equalTo(view)
         }
         view.layer.setBorderLayout(radius: 7)
-        //FIXME: - 색상변경(142, 201, 109)
-        view.backgroundColor = .orange
+        view.backgroundColor = UIColor(named: "Main")
         return view
     }()
     

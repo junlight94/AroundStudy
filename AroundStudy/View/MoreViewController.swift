@@ -32,6 +32,10 @@ class MoreViewController: BaseViewController {
         initLayout()
     }
     
+    /**
+     * @더보기 메인 레이아웃 초기화
+     * @creator : coder3306
+     */
     private func initLayout() {
         modifyCompleteView?.layer.setBorderLayout(radius: 8)
     }

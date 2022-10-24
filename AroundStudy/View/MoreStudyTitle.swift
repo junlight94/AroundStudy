@@ -64,9 +64,4 @@ class MoreStudyTitle: UITableViewCell {
     @objc private func showAllStudy(_ sender: UIButton) {
         print("전체보기")
     }
-    
-    public func setData(_ title: String) {
-        print(title)
-        studyTitle.text = title
-    }
 }

@@ -21,15 +21,15 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="AroundStudy" customModuleProvider="target">
             <connections>
                 <outlet property="btnCurrentLocation" destination="gUr-HB-ERD" id="qZN-Lm-c26"/>
-                <outlet property="btnMan" destination="g4a-Ti-c83" id="5H9-Ev-jGc"/>
                 <outlet property="btnSearch" destination="JXj-6e-1A2" id="N78-JC-yBC"/>
-                <outlet property="btnWoman" destination="1NF-DA-c8F" id="iPf-mV-6zP"/>
                 <outlet property="cameraBackgroundView" destination="0WG-ap-xlG" id="AHK-e9-zUg"/>
                 <outlet property="locationView" destination="KP3-iV-nwy" id="rxT-KK-pTF"/>
                 <outlet property="nickNameBorderView" destination="4QH-tl-eho" id="YSS-EE-cuF"/>
                 <outlet property="profileImage" destination="VYn-Fu-p6f" id="xBz-2N-5c8"/>
                 <outlet property="setLocationView" destination="14L-Yf-yMw" id="syz-Wm-ERu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="btnGender" destination="g4a-Ti-c83" collectionClass="NSMutableArray" id="Mrs-lV-ZhB"/>
+                <outletCollection property="btnGender" destination="1NF-DA-c8F" collectionClass="NSMutableArray" id="4aI-uB-h7O"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -95,21 +95,27 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="vRx-lM-egH">
                                     <rect key="frame" x="20" y="358.66666666666669" width="294" height="52"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4a-Ti-c83">
+                                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4a-Ti-c83">
                                             <rect key="frame" x="0.0" y="0.0" width="140.66666666666666" height="52"/>
                                             <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="15"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="남성">
                                                 <color key="titleColor" name="134"/>
                                             </state>
+                                            <connections>
+                                                <action selector="actionSetGender:" destination="-1" eventType="touchUpInside" id="Igj-0R-zXJ"/>
+                                            </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1NF-DA-c8F">
+                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1NF-DA-c8F">
                                             <rect key="frame" x="153.66666666666663" y="0.0" width="140.33333333333337" height="52"/>
                                             <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="15"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="여성">
                                                 <color key="titleColor" name="134"/>
                                             </state>
+                                            <connections>
+                                                <action selector="actionSetGender:" destination="-1" eventType="touchUpInside" id="esr-0A-JFT"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
