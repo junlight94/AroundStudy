@@ -146,11 +146,12 @@ extension PhotoPickerViewController: UICollectionViewDelegate, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        resizePreviewCollectionView()
         return setupCell(collectionView, indexPath: indexPath)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectCell(indexPath: indexPath)
+        selectCell(collectionView, indexPath: indexPath)
     }
     
     /// 셀 사이즈
@@ -211,11 +212,11 @@ extension PhotoPickerViewController: UICollectionViewDelegate, UICollectionViewD
      컬렉션뷰 셀 선택 기본함수 대체
      > coder : **sanghyeon**
      */
-    func selectCell(indexPath: IndexPath) {
-        switch indexPath.row {
-        case 0:
-            return
-        default:
+    func selectCell(_ collectionView: UICollectionView, indexPath: IndexPath) {
+        switch collectionView {
+        case previewCollectionView:
+            selectedPhotos.remove(at: indexPath.row)
+        case photoPickerCollectionView:
             guard let cell = photoPickerCollectionView.cellForItem(at: indexPath) as? PhotoPickerCollectionViewCell else { return }
             
             if let targetIndex = selectedPhotos.firstIndex(where: {$0.index == indexPath.row}) {
@@ -238,19 +239,30 @@ extension PhotoPickerViewController: UICollectionViewDelegate, UICollectionViewD
                             cropViewController.modalPresentationStyle = .fullScreen
                             cropViewController.delegate = self
                             cell.selectCell(select: true)
-                            self.navigationController?.pushViewController(cropViewController, animated: true)
+                            ///self.navigationController?.pushViewController(cropViewController, animated: true)
                             
                             self.selectedPhotos.append(selectedPhoto)
                         }
                     }
                 }
             }
-            
-            DispatchQueue.main.async {
-                self.previewCollectionView.reloadData()
-                self.photoPickerCollectionView.reloadData()
-            }
+        default:
+            return
         }
+        
+        DispatchQueue.main.async {
+            self.previewCollectionView.reloadData()
+            self.photoPickerCollectionView.reloadData()
+        }
+    }
+    
+    /**
+     미리보기 컬렉션뷰 높이 조정
+     - 선택된 사진의 유무에 따라 미리보기 컬렉션뷰 높이를 조정합니다.
+     > coder : **sanghyeon**
+     */
+    func resizePreviewCollectionView() {
+        previewCollectionViewHeightConstraint.constant = selectedPhotos.count > 0 ? 70 : 1
     }
 }
 
