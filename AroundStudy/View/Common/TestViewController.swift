@@ -9,13 +9,42 @@ import UIKit
 
 class TestViewController: BaseViewController {
 
+    var cv: UICollectionView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("테스트뷰컨")
         
+        let clothesCollectionView: UICollectionView = {
+                
+                let layout = UICollectionViewFlowLayout()
+                
+            layout.minimumInteritemSpacing = 15
+                
+                layout.scrollDirection = .horizontal
+
+                layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+               
+                let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+            cv.alwaysBounceHorizontal = false
+                
+                return cv
+            }()
         
+        cv = clothesCollectionView
         
+        let cellNib = UINib(nibName: "PhotoPickerCollectionViewCell", bundle: nil)
+        clothesCollectionView.register(cellNib, forCellWithReuseIdentifier: "PhotoPickerCollectionViewCell")
+        
+        view.addSubview(clothesCollectionView)
+        
+        clothesCollectionView.snp.makeConstraints {
+            $0.top.leading.trailing.equalTo(view.safeAreaLayoutGuide)
+            $0.height.equalTo(100)
+        }
+        
+        clothesCollectionView.delegate = self
+        clothesCollectionView.dataSource = self
         
         /// 위치 권한 요청
         authorizationLocation()
@@ -88,4 +117,20 @@ extension TestViewController {
             }
         }
     }
+}
+
+
+extension TestViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 50
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = cv?.dequeueReusableCell(withReuseIdentifier: "PhotoPickerCollectionViewCell", for: indexPath) as? PhotoPickerCollectionViewCell else { return UICollectionViewCell() }
+        
+        return cell
+    }
+    
+    
+    
 }

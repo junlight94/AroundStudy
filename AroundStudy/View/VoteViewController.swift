@@ -50,6 +50,11 @@ class VoteViewController: BaseViewController {
         NotificationCenter.default.post(name: NSNotification.Name("viewHeight")
                                       , object: self.cellHeights.compactMap({ CGFloat($0.value )}).reduce(0, +))
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        NotificationCenter.default.post(name: NSNotification.Name("viewHeight"), object: self.view.bounds.size.height, userInfo: nil)
+    }
 }
 
 //MARK: - tableViewExtension

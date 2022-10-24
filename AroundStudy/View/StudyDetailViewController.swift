@@ -60,6 +60,7 @@ class StudyDetailViewController: BaseViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(viewHeight), name: NSNotification.Name("viewHeight"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(showSchedulePopup), name: .showSchedulePopup, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(showAddVoteView), name: .showAddVoteView, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(moveVC), name: NSNotification.Name("viewController"), object: nil)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -67,6 +68,7 @@ class StudyDetailViewController: BaseViewController {
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name("viewHeight"), object: nil)
         NotificationCenter.default.removeObserver(self, name: .showSchedulePopup, object: nil)
         NotificationCenter.default.removeObserver(self, name: .showAddVoteView, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name("viewController"), object: nil)
     }
     
     //MARK: - General Function
@@ -171,6 +173,16 @@ class StudyDetailViewController: BaseViewController {
         let vc = AddVoteViewController(nibName: "AddVoteViewController", bundle: nil)
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    @objc func moveVC(_ notification: Notification) {
+        if let vc = notification.object as? String {
+            switch vc {
+            case "addPlan":
+                let vc = AddPlanViewController(nibName: "AddPlanViewController", bundle: nil)
+                self.navigationController?.pushViewController(vc, animated: true)
+            default: break
+            }
+        }
     
     //MARK: - IBAction Function
     @IBAction func btnBackPressed(_ sender: Any) {
