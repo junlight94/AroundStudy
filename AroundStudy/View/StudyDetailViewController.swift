@@ -177,12 +177,13 @@ class StudyDetailViewController: BaseViewController {
     @objc func moveVC(_ notification: Notification) {
         if let vc = notification.object as? String {
             switch vc {
-            case "addPlan":
-                let vc = AddPlanViewController(nibName: "AddPlanViewController", bundle: nil)
-                self.navigationController?.pushViewController(vc, animated: true)
-            default: break
+                case "addPlan":
+                    let vc = AddPlanViewController(nibName: "AddPlanViewController", bundle: nil)
+                    self.navigationController?.pushViewController(vc, animated: true)
+                default: break
             }
         }
+    }
     
     //MARK: - IBAction Function
     @IBAction func btnBackPressed(_ sender: Any) {
