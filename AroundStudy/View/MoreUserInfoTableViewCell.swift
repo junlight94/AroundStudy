@@ -201,6 +201,8 @@ class MoreUserInfoTableViewCell: UITableViewCell {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        setupCell()
+        print(mainContentStackView.subviews)
     }
     
     /**

@@ -27,6 +27,7 @@ class MoreStudyItem: UITableViewCell {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        setupCell()
         initCollectionView()
     }
     

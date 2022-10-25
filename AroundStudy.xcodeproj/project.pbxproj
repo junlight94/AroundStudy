@@ -522,11 +522,7 @@
 		08DC524528E864EB00B058ED /* 더보기 */ = {
 			isa = PBXGroup;
 			children = (
-				08DC525328E8654D00B058ED /* MoreViewController.swift */,
-				08DC525428E8654D00B058ED /* MoreViewController.xib */,
-				19877F5429026377004AD3EE /* MoreUserInfoTableViewCell.swift */,
-				1984E1382906328F00B8CD4D /* MoreStudyTitle.swift */,
-				1984E13C2906362200B8CD4D /* MoreStudyItem.swift */,
+				1970962D29078B2D00895BA0 /* 메인 */,
 				199B5E7A29066F940096E8C6 /* ProfileViewController.swift */,
 				199B5E7B29066F940096E8C6 /* ProfileViewController.xib */,
 				DFD3505829025E52004E725A /* 사진 */,
@@ -579,6 +575,18 @@
 				191DD3EA28F8E76900889488 /* CustomCalendarCell.swift */,
 			);
 			name = "공통-셀";
+			sourceTree = "<group>";
+		};
+		1970962D29078B2D00895BA0 /* 메인 */ = {
+			isa = PBXGroup;
+			children = (
+				08DC525328E8654D00B058ED /* MoreViewController.swift */,
+				08DC525428E8654D00B058ED /* MoreViewController.xib */,
+				19877F5429026377004AD3EE /* MoreUserInfoTableViewCell.swift */,
+				1984E1382906328F00B8CD4D /* MoreStudyTitle.swift */,
+				1984E13C2906362200B8CD4D /* MoreStudyItem.swift */,
+			);
+			name = "메인";
 			sourceTree = "<group>";
 		};
 		A6E5688C91D72101AD1D6F16 /* Pods */ = {
