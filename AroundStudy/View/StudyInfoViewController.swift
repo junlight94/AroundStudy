@@ -16,8 +16,8 @@ class StudyInfoViewController: UIViewController {
     @IBOutlet weak var lbTime: UILabel!
     
     @IBOutlet weak var lbPeople: UILabel!
-    @IBOutlet weak var peopleCollectionView: UICollectionView!
     
+    @IBOutlet weak var peopleCollectionView: UICollectionView!
     @IBOutlet weak var studyCollectionView: UICollectionView!
     
     
@@ -35,7 +35,14 @@ class StudyInfoViewController: UIViewController {
     
     //MARK: - General Function
     func setupView() {
+        peopleCollectionView.delegate = self
+        peopleCollectionView.dataSource = self
+        peopleCollectionView.register(UINib(nibName: "MemberProfileCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MemberProfileCollectionViewCell")
         
+        
+        studyCollectionView.delegate = self
+        studyCollectionView.dataSource = self
+        studyCollectionView.register(UINib(nibName: "StudyInfoGridCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "StudyInfoGridCollectionViewCell")
         
         viewInfo.layer.cornerRadius = 12
     }
@@ -50,3 +57,44 @@ class StudyInfoViewController: UIViewController {
     
 }
 //MARK: - Extension
+
+//MARK: CollectionView
+extension StudyInfoViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        switch collectionView {
+        case peopleCollectionView :
+            return CGSize(width: 52, height: collectionView.frame.height)
+        case studyCollectionView :
+            return CGSize(width: 300, height: collectionView.frame.height)
+        default:
+            return .zero
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        switch collectionView {
+        case peopleCollectionView :
+            return 10
+        case studyCollectionView :
+            return 10
+        default:
+            return 0
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        switch collectionView {
+        case peopleCollectionView :
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MemberProfileCollectionViewCell", for: indexPath) as! MemberProfileCollectionViewCell
+            return cell
+        case studyCollectionView :
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StudyInfoGridCollectionViewCell", for: indexPath) as! StudyInfoGridCollectionViewCell
+            return cell
+        default:
+            return UICollectionViewCell()
+        }
+
+    }
+    
+    
+}
