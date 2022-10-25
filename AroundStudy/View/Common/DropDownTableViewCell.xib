@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Pretendard-Regular.otf">
+            <string>Pretendard-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="DropDownTableViewCell" id="KGk-i7-Jjw" customClass="DropDownTableViewCell" customModule="AroundStudy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="182" height="54"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="182" height="54"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="메뉴이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAB-J0-Vf5">
+                        <rect key="frame" x="12.000000000000004" y="17" width="55.333333333333343" height="20"/>
+                        <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="16"/>
+                        <color key="textColor" name="68"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="(100)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alW-oi-AdB">
+                        <rect key="frame" x="72.333333333333314" y="17" width="97.666666666666686" height="20"/>
+                        <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="16"/>
+                        <color key="textColor" name="173"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="alW-oi-AdB" secondAttribute="trailing" constant="12" id="5Lo-YJ-EtL"/>
+                    <constraint firstItem="ZAB-J0-Vf5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="91k-wy-M0B"/>
+                    <constraint firstItem="ZAB-J0-Vf5" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="aLR-co-enY"/>
+                    <constraint firstItem="alW-oi-AdB" firstAttribute="leading" secondItem="ZAB-J0-Vf5" secondAttribute="trailing" constant="5" id="kUo-aI-1e3"/>
+                    <constraint firstItem="alW-oi-AdB" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="tDp-vK-hWT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="subTitleLabel" destination="alW-oi-AdB" id="ibp-E2-Cq6"/>
+                <outlet property="titleLabel" destination="ZAB-J0-Vf5" id="to8-K3-Uwt"/>
+            </connections>
+            <point key="canvasLocation" x="87.692307692307693" y="20.616113744075829"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="173">
+            <color red="0.67799997329711914" green="0.67799997329711914" blue="0.67799997329711914" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="68">
+            <color red="0.2669999897480011" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

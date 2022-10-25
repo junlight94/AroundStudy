@@ -14,11 +14,15 @@ class PhotoPickerCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var selectButton: UIButton!
     @IBOutlet weak var overlayView: UIView!
     
+    @IBOutlet weak var indexLabel: UILabel!
     var representedAssetIdentifier: String!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        overlayView.backgroundColor = .black.withAlphaComponent(0.4)
+        overlayView.layer.borderWidth = 3
+        overlayView.layer.borderColor = UIColor(named: "Main")?.cgColor
     }
     
     func setupCell(hideIcon: Bool = true, hideButton: Bool = false, selected: Bool = false) {
@@ -38,6 +42,14 @@ class PhotoPickerCollectionViewCell: UICollectionViewCell {
     func setImage(image: UIImage?) {
         if let image = image {
             photoImageView.image = image
+        }
+    }
+    
+    func setIndex(index: Int? = nil) {
+        if let index = index {
+            indexLabel.text = String(index)
+        } else {
+            indexLabel.text = ""
         }
     }
     

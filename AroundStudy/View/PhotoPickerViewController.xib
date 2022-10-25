@@ -4,14 +4,25 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Pretendard-Medium.otf">
+            <string>Pretendard-Medium</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoPickerViewController" customModule="AroundStudy" customModuleProvider="target">
             <connections>
+                <outlet property="allowCountLabel" destination="JZp-3o-3yV" id="mN1-v6-BXe"/>
+                <outlet property="dropDownButton" destination="gni-oR-MNA" id="WO0-de-70L"/>
                 <outlet property="photoPickerCollectionView" destination="Ggl-1H-tuK" id="kws-Rc-otw"/>
+                <outlet property="previewCollectionView" destination="Vln-N3-4wq" id="zrh-OL-zs7"/>
+                <outlet property="previewCollectionViewHeightConstraint" destination="ZpF-9N-3E4" id="wtw-RZ-q6M"/>
+                <outlet property="selectedCountLabel" destination="34V-yA-mFi" id="VbD-XB-BTJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,8 +31,66 @@
             <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yst-iK-yaz" userLabel="NavigationBar">
+                    <rect key="frame" x="0.0" y="47" width="390" height="56"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7k0-i8-KRf">
+                            <rect key="frame" x="20" y="16" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="24" id="QTL-5c-Z05"/>
+                                <constraint firstAttribute="height" constant="24" id="zSs-OX-ShF"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <buttonConfiguration key="configuration" style="plain" image="back"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kwr-05-9JB">
+                            <rect key="frame" x="324" y="14" width="46" height="28"/>
+                            <color key="tintColor" name="40"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="완료" buttonSize="small">
+                                <fontDescription key="titleFontDescription" name="Pretendard-Medium" family="Pretendard" pointSize="15"/>
+                            </buttonConfiguration>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZp-3o-3yV">
+                            <rect key="frame" x="294" y="19" width="24" height="18"/>
+                            <fontDescription key="fontDescription" name="Pretendard-Medium" family="Pretendard" pointSize="15"/>
+                            <color key="textColor" name="173"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34V-yA-mFi">
+                            <rect key="frame" x="284" y="19" width="10" height="18"/>
+                            <fontDescription key="fontDescription" name="Pretendard-Medium" family="Pretendard" pointSize="15"/>
+                            <color key="textColor" name="Main"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gni-oR-MNA">
+                            <rect key="frame" x="56" y="16" width="91" height="24"/>
+                            <fontDescription key="fontDescription" name="Pretendard-Medium" family="Pretendard" pointSize="17"/>
+                            <color key="tintColor" name="40"/>
+                            <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="4" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="4" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="모든 사진" image="navigationDown">
+                                <color key="titleColor" name="40"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="7k0-i8-KRf" firstAttribute="leading" secondItem="yst-iK-yaz" secondAttribute="leading" constant="20" id="3ql-Gj-HvH"/>
+                        <constraint firstItem="gni-oR-MNA" firstAttribute="centerY" secondItem="7k0-i8-KRf" secondAttribute="centerY" id="6u0-3k-FdG"/>
+                        <constraint firstAttribute="height" constant="56" id="KTQ-y0-sMn"/>
+                        <constraint firstItem="gni-oR-MNA" firstAttribute="leading" secondItem="7k0-i8-KRf" secondAttribute="trailing" constant="12" id="QMi-N9-OQr"/>
+                        <constraint firstItem="JZp-3o-3yV" firstAttribute="leading" secondItem="34V-yA-mFi" secondAttribute="trailing" id="U1t-Pz-yTf"/>
+                        <constraint firstItem="7k0-i8-KRf" firstAttribute="centerY" secondItem="yst-iK-yaz" secondAttribute="centerY" id="Y47-gu-RZt"/>
+                        <constraint firstItem="34V-yA-mFi" firstAttribute="centerY" secondItem="Kwr-05-9JB" secondAttribute="centerY" id="ij3-ot-IRb"/>
+                        <constraint firstItem="JZp-3o-3yV" firstAttribute="centerY" secondItem="Kwr-05-9JB" secondAttribute="centerY" id="kr4-fb-6ud"/>
+                        <constraint firstAttribute="trailing" secondItem="Kwr-05-9JB" secondAttribute="trailing" constant="20" id="qKB-Yg-Htg"/>
+                        <constraint firstItem="Kwr-05-9JB" firstAttribute="leading" secondItem="JZp-3o-3yV" secondAttribute="trailing" constant="6" id="vxg-rf-TwL"/>
+                        <constraint firstItem="Kwr-05-9JB" firstAttribute="centerY" secondItem="yst-iK-yaz" secondAttribute="centerY" id="x9Y-uA-fQB"/>
+                    </constraints>
+                </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Ggl-1H-tuK">
-                    <rect key="frame" x="0.0" y="103" width="390" height="741"/>
+                    <rect key="frame" x="0.0" y="104" width="390" height="740"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="3" minimumInteritemSpacing="0.0" id="9CO-gJ-KDA">
                         <size key="itemSize" width="128" height="128"/>
@@ -30,19 +99,49 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Vln-N3-4wq" userLabel="Preview Collection View">
+                    <rect key="frame" x="0.0" y="103" width="390" height="1"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="ZpF-9N-3E4"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="8" id="3g4-wU-mXp">
+                        <size key="itemSize" width="128" height="70"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Vln-N3-4wq" secondAttribute="trailing" id="1Tn-jv-Uj5"/>
+                <constraint firstItem="Vln-N3-4wq" firstAttribute="top" secondItem="yst-iK-yaz" secondAttribute="bottom" id="Ela-mj-i1J"/>
+                <constraint firstItem="yst-iK-yaz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Fzu-k5-veJ"/>
                 <constraint firstAttribute="bottom" secondItem="Ggl-1H-tuK" secondAttribute="bottom" id="Hch-jn-UDy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yst-iK-yaz" secondAttribute="trailing" id="Jp0-x8-XCm"/>
                 <constraint firstItem="Ggl-1H-tuK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="MRX-hp-tVe"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ggl-1H-tuK" secondAttribute="trailing" id="MYs-q2-wbI"/>
-                <constraint firstItem="Ggl-1H-tuK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="56" id="WPh-kU-wqE"/>
+                <constraint firstItem="yst-iK-yaz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Ndv-7B-QJm"/>
+                <constraint firstItem="Vln-N3-4wq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="QcQ-Nf-mxw"/>
+                <constraint firstItem="Ggl-1H-tuK" firstAttribute="top" secondItem="Vln-N3-4wq" secondAttribute="bottom" id="WPh-kU-wqE"/>
             </constraints>
-            <point key="canvasLocation" x="-154" y="-12"/>
+            <point key="canvasLocation" x="-155.38461538461539" y="-12.085308056872037"/>
         </view>
     </objects>
     <resources>
+        <image name="back" width="24" height="24"/>
+        <image name="navigationDown" width="24" height="24"/>
+        <namedColor name="173">
+            <color red="0.67799997329711914" green="0.67799997329711914" blue="0.67799997329711914" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="40">
+            <color red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Main">
+            <color red="0.55699998140335083" green="0.78799998760223389" blue="0.42699998617172241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
