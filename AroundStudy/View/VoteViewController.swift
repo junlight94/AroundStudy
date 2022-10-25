@@ -17,7 +17,7 @@ class VoteViewController: BaseViewController {
     /// 셀 높이 저장
     var cellHeights = [IndexPath: CGFloat]()
     /// DUMMY
-    let testcount = 20
+    let testcount = 2
     // willDisplay의 노티피케이션 전송 여부
     var isPost: Bool = false
     

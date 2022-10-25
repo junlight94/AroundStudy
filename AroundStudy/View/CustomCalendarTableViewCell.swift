@@ -53,7 +53,6 @@ class CustomCalendarTableViewCell: UITableViewCell {
         super.awakeFromNib()
         calendar?.delegate = self
         calendar?.dataSource = self
-        setCustomCalendarStyle()
         
         //******************************************************
         //MARK: - 이벤트가 있는 날짜 테스트 용 더미데이터
@@ -71,12 +70,13 @@ class CustomCalendarTableViewCell: UITableViewCell {
      * @커스텀 캘린더 설정
      * @creator : coder3306
      */
-    private func setCustomCalendarStyle() {
+    public func setCustomCalendarStyle(_ isMultipleSelection: Bool) {
         calendar?.locale = Locale(identifier: "ko_KR")
         calendar?.appearance.titleFont = UIFont.setCustomFont(.medium, size: 15.0)
         calendar?.appearance.weekdayFont = UIFont.setCustomFont(.medium, size: 15.0)
         calendar?.headerHeight = 0
-        calendar?.allowsMultipleSelection = true
+        calendar?.allowsMultipleSelection = isMultipleSelection
+        print(isMultipleSelection)
         calendar?.register(CalendarCell.self, forCellReuseIdentifier: "cell")
         calendar?.today = nil
         let currentMonth = dateFormatter.string(from: Date())
@@ -207,7 +207,6 @@ extension CustomCalendarTableViewCell: FSCalendarDelegate, FSCalendarDataSource,
     func calendarCurrentPageDidChange(_ calendar: FSCalendar) {
         self.currentPage = calendar.currentPage
         //FIXME: - 날짜가 9월30일로 고정되는 이슈, 시뮬레이터에서만 그런건지 확인 필요함.
-        print(self.currentPage)
         self.lblDate?.text = self.dateFormatter.string(from: currentPage ?? Date())
     }
     

@@ -161,6 +161,7 @@ class StudyDetailViewController: BaseViewController {
      */
     @objc private func showSchedulePopup() {
         let vc = StudySchedulePopupViewController(nibName: "StudySchedulePopupViewController", bundle: nil)
+        vc.isMultipleSelection = false
         floatingPanelController = FloatingPanelController(delegate: self)
         setupFloatingView(vc, targetScrollView: UIScrollView(), position: .half)
     }

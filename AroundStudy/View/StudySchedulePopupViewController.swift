@@ -10,6 +10,9 @@ import FSCalendar
 class StudySchedulePopupViewController: BaseViewController {
     @IBOutlet weak var tablePlan: UITableView?
     
+    /// 날짜 다중선택 여부
+    public var isMultipleSelection: Bool = true
+    
     //******************************************************
     //MARK: - ViewController
     //******************************************************
@@ -64,6 +67,7 @@ extension StudySchedulePopupViewController: tableViewExtension {
         switch indexPath.section {
             case 0:
                 if let cell = CustomCalendarTableViewCell.dequeueReusableCell(targetView: tablePlan) {
+                    cell.setCustomCalendarStyle(isMultipleSelection)
                     return cell
                 }
             case 1:

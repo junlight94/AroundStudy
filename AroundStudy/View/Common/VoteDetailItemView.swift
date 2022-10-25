@@ -23,9 +23,9 @@ class VoteDetailItemView: UIView {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-//        DispatchQueue.main.async {
-//            self.setupView()
-//        }
+        DispatchQueue.main.async {
+            self.setupView()
+        }
     }
 
     func setupView() {

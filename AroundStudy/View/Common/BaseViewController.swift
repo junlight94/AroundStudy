@@ -46,6 +46,8 @@ class BaseViewController: UIViewController {
     var floatingTargetViewController: UIViewController?
     /// 사용자가 선택한 플로팅 패널의 포지션 저장
     var floatingState: FloatingPanelState?
+    /// 플로팅 패널 초기화 여부
+    var isInitialCompleteFloatingPanel = false
     
     //******************************************************
     //MARK: - POPUP ID DEFINE
@@ -188,19 +190,22 @@ class BaseViewController: UIViewController {
      * @param targetScrollView : 플로팅 패널 내 스크롤 뷰 설정
      */
     public func setupFloatingView(_ targetViewController: UIViewController, targetScrollView: UIScrollView, position: FloatingPanelState) {
+        self.isInitialCompleteFloatingPanel = false
         floatingTargetViewController = targetViewController
         floatingPanelController?.customPanelLayout()
         floatingPanelController?.set(contentViewController: targetViewController)
+        let layout = CustomFloatingPanelLayout()
+        floatingPanelController?.layout = layout
+        floatingPanelController?.invalidateLayout()
         //FIXME: 스크롤뷰 설정하기?
         floatingPanelController?.track(scrollView: targetScrollView)
         floatingPanelController?.addPanel(toParent: self)
         floatingPanelController?.backdropView.dismissalTapGestureRecognizer.isEnabled = true
-        let layout = CustomFloatingPanelLayout()
-        floatingPanelController?.layout = layout
-        floatingPanelController?.invalidateLayout()
         floatingState = position
-        UIView.animate(withDuration: 0.25) {
+        UIView.animate(withDuration: 0.2) {
             self.floatingPanelController?.move(to: position, animated: false)
+        } completion: { _ in
+            self.isInitialCompleteFloatingPanel = true
         }
     }
 }
@@ -212,7 +217,7 @@ extension BaseViewController: FloatingPanelControllerDelegate {
      * @creator : coder3306
      */
     func floatingPanelDidChangeState(_ fpc: FloatingPanelController) {
-        if floatingPanelController?.state == .tip {
+        if floatingPanelController?.state == .tip && isInitialCompleteFloatingPanel {
             floatingPanelController?.dismiss(animated: true)
         }
     }
