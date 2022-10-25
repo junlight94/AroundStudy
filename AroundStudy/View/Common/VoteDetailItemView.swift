@@ -16,12 +16,16 @@ class VoteDetailItemView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupView()
+        DispatchQueue.main.async {
+            self.setupView()
+        }
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        setupView()
+//        DispatchQueue.main.async {
+//            self.setupView()
+//        }
     }
 
     func setupView() {
@@ -55,28 +59,32 @@ class VoteDetailItemView: UIView {
         containerView.addSubview(voteProgressView)
         addSubview(containerView)
         
-        containerView.snp.makeConstraints { make in
-            make.leading.trailing.equalToSuperview().inset(16)
-            make.top.bottom.equalToSuperview()
+        DispatchQueue.main.async {
+            print(containerView)
+            containerView.snp.makeConstraints { make in
+                make.leading.trailing.equalToSuperview().inset(16)
+                make.top.bottom.equalToSuperview()
+            }
+            self.checkmarkImageView.snp.makeConstraints { make in
+                make.top.equalToSuperview().offset(10)
+                make.leading.equalTo(containerView)
+                make.width.height.equalTo(24)
+            }
+            self.voteTitleLabel.snp.makeConstraints { make in
+                make.leading.equalTo(self.checkmarkImageView.snp.trailing).offset(5)
+                make.centerY.equalTo(self.checkmarkImageView)
+            }
+            self.voteCountLabel.snp.makeConstraints { make in
+                make.trailing.equalToSuperview()
+                make.centerY.equalTo(self.checkmarkImageView)
+            }
+            self.voteProgressView.snp.makeConstraints { make in
+                make.top.equalTo(self.voteTitleLabel.snp.bottom).offset(9)
+                make.leading.equalTo(self.voteTitleLabel)
+                make.trailing.equalTo(self.voteCountLabel)
+                make.height.equalTo(10)
+            }
         }
-        checkmarkImageView.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(10)
-            make.leading.equalTo(containerView)
-            make.width.height.equalTo(24)
-        }
-        voteTitleLabel.snp.makeConstraints { make in
-            make.leading.equalTo(checkmarkImageView.snp.trailing).offset(5)
-            make.centerY.equalTo(checkmarkImageView)
-        }
-        voteCountLabel.snp.makeConstraints { make in
-            make.trailing.equalToSuperview()
-            make.centerY.equalTo(checkmarkImageView)
-        }
-        voteProgressView.snp.makeConstraints { make in
-            make.top.equalTo(voteTitleLabel.snp.bottom).offset(9)
-            make.leading.equalTo(voteTitleLabel)
-            make.trailing.equalTo(voteCountLabel)
-            make.height.equalTo(10)
-        }
+
     }
 }

@@ -13,7 +13,7 @@ class StudyInfoGridCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var lbLocation: UILabel!
     @IBOutlet weak var lbMember: UILabel!
     @IBOutlet weak var lbCategory: UILabel!
-    
+    @IBOutlet weak var imgFavorite: UIImageView!
     
     @IBOutlet weak var viewCategory: UIView!
     @IBOutlet weak var viewLocation: UIView!
@@ -29,12 +29,11 @@ class StudyInfoGridCollectionViewCell: UICollectionViewCell {
         viewMember.layer.cornerRadius = 4
     }
     
-    func setupCell(_ title: String, category: String, location: String, memberCount: Int, image: String? = nil) {
+    func setupCell(_ title: String, category: String, location: String, memberCount: Int, image: String? = nil, isFavorite: Bool = false) {
         lbCategory.text = category
         lbInfo.text = title
         lbLocation.text = location
         lbMember.text = "\(memberCount)"
-        
+        imgFavorite.isHidden = isFavorite ? false : true
     }
-    
 }

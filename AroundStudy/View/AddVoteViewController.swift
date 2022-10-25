@@ -48,6 +48,7 @@ extension AddVoteViewController {
         /// 백버튼 설정
         backButton.setImage(UIImage(named: "back"), for: .normal)
         backButton.tintColor = UIColor(named: "40")
+        backButton.addTarget(self, action: #selector(popToView(_:)), for: .touchUpInside)
         completeButton.setTitle("완료", for: .normal)
         completeButton.titleLabel?.font = UIFont(name: "Pretendard-Regular", size: 15)
         completeButton.tintColor = UIColor(named: "94")

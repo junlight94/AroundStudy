@@ -55,6 +55,7 @@ extension AddPlanViewController {
         /// 네비게이션바 버튼 설정
         backButton.setImage(UIImage(named: "back"), for: .normal)
         backButton.tintColor = UIColor(named: "40")
+        backButton.addTarget(self, action: #selector(didTapBackButton), for: .touchUpInside)
         completeButton.setTitle(isEditMode ? "수정완료" : "등록하기", for: .normal)
         completeButton.titleLabel?.font = UIFont(name: "Pretendard-Regular", size: 15)
         completeButton.tintColor = UIColor(named: "94")
@@ -74,6 +75,13 @@ extension AddPlanViewController {
         
         /// 일정 설명 텍스트뷰 설정
         planDescTextView.delegate = self
+    }
+}
+
+//MARK: - IBAction
+extension AddPlanViewController {
+    @objc func didTapBackButton() {
+        self.navigationController?.popViewController(animated: true)
     }
 }
 

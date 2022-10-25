@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StudyScheduleTitleTableViewCell: UITableViewCell, reusableTableView {
+class StudyScheduleTitleTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

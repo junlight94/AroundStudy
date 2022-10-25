@@ -100,8 +100,14 @@
 		197CE78B28F550950042A6EA /* CustomCalendarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 197CE78928F550950042A6EA /* CustomCalendarTableViewCell.xib */; };
 		197CE78D28F556B70042A6EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 197CE78C28F556B70042A6EA /* Main.storyboard */; };
 		197CE78F28F557AE0042A6EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197CE78E28F557AE0042A6EA /* ViewController.swift */; };
+		1984E1392906328F00B8CD4D /* MoreStudyTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984E1382906328F00B8CD4D /* MoreStudyTitle.swift */; };
+		1984E13D2906362200B8CD4D /* MoreStudyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984E13C2906362200B8CD4D /* MoreStudyItem.swift */; };
+		1984E13F290638CA00B8CD4D /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984E13E290638CA00B8CD4D /* UITableView+Extension.swift */; };
 		19868C4C28EC5C550093DF76 /* StudyBannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19868C4A28EC5C550093DF76 /* StudyBannerCollectionViewCell.swift */; };
 		19868C4D28EC5C550093DF76 /* StudyBannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19868C4B28EC5C550093DF76 /* StudyBannerCollectionViewCell.xib */; };
+		19877F5529026377004AD3EE /* MoreUserInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19877F5429026377004AD3EE /* MoreUserInfoTableViewCell.swift */; };
+		199B5E7C29066F940096E8C6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B5E7A29066F940096E8C6 /* ProfileViewController.swift */; };
+		199B5E7D29066F940096E8C6 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 199B5E7B29066F940096E8C6 /* ProfileViewController.xib */; };
 		CC7CC9DA10D494D83221F8DF /* Pods_AroundStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 132B1B51ED5CA8B98EE79822 /* Pods_AroundStudy.framework */; };
 		DF03FC2C28ED795300C564FA /* HomeCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF03FC2A28ED795300C564FA /* HomeCategoryCollectionViewCell.swift */; };
 		DF03FC2D28ED795300C564FA /* HomeCategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF03FC2B28ED795300C564FA /* HomeCategoryCollectionViewCell.xib */; };
@@ -109,6 +115,8 @@
 		DF068CB228EC496700083917 /* PermissionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF068CB028EC496700083917 /* PermissionViewController.xib */; };
 		DF068CB728EC603800083917 /* PermissionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF068CB528EC603800083917 /* PermissionTableViewCell.swift */; };
 		DF068CB828EC603800083917 /* PermissionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF068CB628EC603800083917 /* PermissionTableViewCell.xib */; };
+		DF13A2762903E23600C7F096 /* PhotoCropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF13A2742903E23600C7F096 /* PhotoCropViewController.swift */; };
+		DF13A2772903E23600C7F096 /* PhotoCropViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF13A2752903E23600C7F096 /* PhotoCropViewController.xib */; };
 		DF15CBDE28E85AB0009F24CB /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = DF15CBDA28E85AB0009F24CB /* Pretendard-Medium.otf */; };
 		DF15CBDF28E85AB0009F24CB /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DF15CBDB28E85AB0009F24CB /* Pretendard-Bold.otf */; };
 		DF15CBE028E85AB0009F24CB /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DF15CBDC28E85AB0009F24CB /* Pretendard-Regular.otf */; };
@@ -116,6 +124,8 @@
 		DF15CBE328E861E1009F24CB /* BoxLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF15CBE228E861E1009F24CB /* BoxLabel.swift */; };
 		DF1D5B7C28EAEFAD00B875D5 /* VoteDetailItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1D5B7B28EAEFAD00B875D5 /* VoteDetailItemView.swift */; };
 		DF1D5B7F28EAFD2600B875D5 /* RegisterIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1D5B7E28EAFD2600B875D5 /* RegisterIndicatorView.swift */; };
+		DF5B530929064C3100E8DE96 /* PhotoPreviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5B530729064C3100E8DE96 /* PhotoPreviewCollectionViewCell.swift */; };
+		DF5B530A29064C3100E8DE96 /* PhotoPreviewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5B530829064C3100E8DE96 /* PhotoPreviewCollectionViewCell.xib */; };
 		DF5EC62228E6D522003411D3 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5EC62028E6D522003411D3 /* TestViewController.xib */; };
 		DF67C5A328FE70E0004F2D6A /* PlanMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF67C5A128FE70E0004F2D6A /* PlanMainViewController.swift */; };
 		DF67C5A428FE70E0004F2D6A /* PlanMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF67C5A228FE70E0004F2D6A /* PlanMainViewController.xib */; };
@@ -125,6 +135,10 @@
 		DF88223328EFBB5600993F2E /* RegisterCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF88223128EFBB5600993F2E /* RegisterCompleteViewController.swift */; };
 		DF88223428EFBB5600993F2E /* RegisterCompleteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF88223228EFBB5600993F2E /* RegisterCompleteViewController.xib */; };
 		DF89A80D28E6F0D10039E364 /* ThumbnailImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF89A80C28E6F0D10039E364 /* ThumbnailImageView.swift */; };
+		DF8F1C49290685E1006FAD9B /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8F1C48290685E1006FAD9B /* DropDownView.swift */; };
+		DF8F1C4E2906893E006FAD9B /* DropDownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8F1C4C2906893E006FAD9B /* DropDownTableViewCell.swift */; };
+		DF8F1C4F2906893E006FAD9B /* DropDownTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF8F1C4D2906893E006FAD9B /* DropDownTableViewCell.xib */; };
+		DFA3A84B2903846300B452F5 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA3A84A2903846300B452F5 /* PhotoPicker.swift */; };
 		DFCBC5B028FD73FF0092BEDC /* AddPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCBC5AE28FD73FF0092BEDC /* AddPlanViewController.swift */; };
 		DFCBC5B128FD73FF0092BEDC /* AddPlanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFCBC5AF28FD73FF0092BEDC /* AddPlanViewController.xib */; };
 		DFCBDD8128E93714008A7E02 /* CommonPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFCBDD7F28E93714008A7E02 /* CommonPopupViewController.xib */; };
@@ -132,6 +146,11 @@
 		DFCBDD8328E94244008A7E02 /* CommonPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCBDD7E28E93714008A7E02 /* CommonPopupViewController.swift */; };
 		DFD26DE028F27E5C0091923A /* AddVoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD26DDE28F27E5C0091923A /* AddVoteViewController.swift */; };
 		DFD26DE128F27E5C0091923A /* AddVoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFD26DDF28F27E5C0091923A /* AddVoteViewController.xib */; };
+		DFD3505B29025E6F004E725A /* PhotoPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD3505929025E6F004E725A /* PhotoPickerViewController.swift */; };
+		DFD3505C29025E6F004E725A /* PhotoPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFD3505A29025E6F004E725A /* PhotoPickerViewController.xib */; };
+		DFD3505E29026050004E725A /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD3505D29026050004E725A /* UIImage+Extension.swift */; };
+		DFD3506129026444004E725A /* PhotoPickerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD3505F29026444004E725A /* PhotoPickerCollectionViewCell.swift */; };
+		DFD3506229026444004E725A /* PhotoPickerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFD3506029026444004E725A /* PhotoPickerCollectionViewCell.xib */; };
 		DFE0373628E27B5B00BE9E35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE0373528E27B5B00BE9E35 /* AppDelegate.swift */; };
 		DFE0373F28E27B5D00BE9E35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFE0373E28E27B5D00BE9E35 /* Assets.xcassets */; };
 		DFE0374228E27B5D00BE9E35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE0374028E27B5D00BE9E35 /* LaunchScreen.storyboard */; };
@@ -141,6 +160,7 @@
 		DFEC1FBD28F6B39E009B866E /* PlanMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEC1FBC28F6B39E009B866E /* PlanMainView.swift */; };
 		DFFD345E28EEFADB00CFCB74 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD345C28EEFADB00CFCB74 /* OnboardingViewController.swift */; };
 		DFFD345F28EEFADB00CFCB74 /* OnboardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFFD345D28EEFADB00CFCB74 /* OnboardingViewController.xib */; };
+		DFFF48792906B5960004F48E /* DropDownModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFF48782906B5960004F48E /* DropDownModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -239,8 +259,14 @@
 		197CE78928F550950042A6EA /* CustomCalendarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CustomCalendarTableViewCell.xib; path = ../CustomCalendarTableViewCell.xib; sourceTree = "<group>"; };
 		197CE78C28F556B70042A6EA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		197CE78E28F557AE0042A6EA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1984E1382906328F00B8CD4D /* MoreStudyTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreStudyTitle.swift; sourceTree = "<group>"; };
+		1984E13C2906362200B8CD4D /* MoreStudyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreStudyItem.swift; sourceTree = "<group>"; };
+		1984E13E290638CA00B8CD4D /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		19868C4A28EC5C550093DF76 /* StudyBannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyBannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		19868C4B28EC5C550093DF76 /* StudyBannerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudyBannerCollectionViewCell.xib; sourceTree = "<group>"; };
+		19877F5429026377004AD3EE /* MoreUserInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreUserInfoTableViewCell.swift; sourceTree = "<group>"; };
+		199B5E7A29066F940096E8C6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		199B5E7B29066F940096E8C6 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		82395ECBC730C264D56A62EC /* Pods-AroundStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundStudy.release.xcconfig"; path = "Target Support Files/Pods-AroundStudy/Pods-AroundStudy.release.xcconfig"; sourceTree = "<group>"; };
 		DF03FC2A28ED795300C564FA /* HomeCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		DF03FC2B28ED795300C564FA /* HomeCategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCategoryCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -248,6 +274,8 @@
 		DF068CB028EC496700083917 /* PermissionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PermissionViewController.xib; sourceTree = "<group>"; };
 		DF068CB528EC603800083917 /* PermissionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionTableViewCell.swift; sourceTree = "<group>"; };
 		DF068CB628EC603800083917 /* PermissionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PermissionTableViewCell.xib; sourceTree = "<group>"; };
+		DF13A2742903E23600C7F096 /* PhotoCropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCropViewController.swift; sourceTree = "<group>"; };
+		DF13A2752903E23600C7F096 /* PhotoCropViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCropViewController.xib; sourceTree = "<group>"; };
 		DF15CBDA28E85AB0009F24CB /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		DF15CBDB28E85AB0009F24CB /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		DF15CBDC28E85AB0009F24CB /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
@@ -258,6 +286,8 @@
 		DF47F20628F7B3D900DDBFDB /* AddPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlanViewController.swift; sourceTree = "<group>"; };
 		DF47F20728F7B3D900DDBFDB /* AddPlanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPlanViewController.xib; sourceTree = "<group>"; };
 		DF56234E28E3322000A00258 /* AroundStudy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AroundStudy.entitlements; sourceTree = "<group>"; };
+		DF5B530729064C3100E8DE96 /* PhotoPreviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPreviewCollectionViewCell.swift; sourceTree = "<group>"; };
+		DF5B530829064C3100E8DE96 /* PhotoPreviewCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoPreviewCollectionViewCell.xib; sourceTree = "<group>"; };
 		DF5EC61F28E6D522003411D3 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		DF5EC62028E6D522003411D3 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		DF67C5A128FE70E0004F2D6A /* PlanMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanMainViewController.swift; sourceTree = "<group>"; };
@@ -268,12 +298,21 @@
 		DF88223128EFBB5600993F2E /* RegisterCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCompleteViewController.swift; sourceTree = "<group>"; };
 		DF88223228EFBB5600993F2E /* RegisterCompleteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterCompleteViewController.xib; sourceTree = "<group>"; };
 		DF89A80C28E6F0D10039E364 /* ThumbnailImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailImageView.swift; sourceTree = "<group>"; };
+		DF8F1C48290685E1006FAD9B /* DropDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownView.swift; sourceTree = "<group>"; };
+		DF8F1C4C2906893E006FAD9B /* DropDownTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownTableViewCell.swift; sourceTree = "<group>"; };
+		DF8F1C4D2906893E006FAD9B /* DropDownTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropDownTableViewCell.xib; sourceTree = "<group>"; };
+		DFA3A84A2903846300B452F5 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		DFCBC5AE28FD73FF0092BEDC /* AddPlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPlanViewController.swift; sourceTree = "<group>"; };
 		DFCBC5AF28FD73FF0092BEDC /* AddPlanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddPlanViewController.xib; sourceTree = "<group>"; };
 		DFCBDD7E28E93714008A7E02 /* CommonPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonPopupViewController.swift; sourceTree = "<group>"; };
 		DFCBDD7F28E93714008A7E02 /* CommonPopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonPopupViewController.xib; sourceTree = "<group>"; };
 		DFD26DDE28F27E5C0091923A /* AddVoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVoteViewController.swift; sourceTree = "<group>"; };
 		DFD26DDF28F27E5C0091923A /* AddVoteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddVoteViewController.xib; sourceTree = "<group>"; };
+		DFD3505929025E6F004E725A /* PhotoPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerViewController.swift; sourceTree = "<group>"; };
+		DFD3505A29025E6F004E725A /* PhotoPickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoPickerViewController.xib; sourceTree = "<group>"; };
+		DFD3505D29026050004E725A /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		DFD3505F29026444004E725A /* PhotoPickerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerCollectionViewCell.swift; sourceTree = "<group>"; };
+		DFD3506029026444004E725A /* PhotoPickerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoPickerCollectionViewCell.xib; sourceTree = "<group>"; };
 		DFE0373228E27B5B00BE9E35 /* AroundStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AroundStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE0373528E27B5B00BE9E35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFE0373E28E27B5D00BE9E35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -285,6 +324,7 @@
 		DFEC1FBC28F6B39E009B866E /* PlanMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanMainView.swift; sourceTree = "<group>"; };
 		DFFD345C28EEFADB00CFCB74 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		DFFD345D28EEFADB00CFCB74 /* OnboardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingViewController.xib; sourceTree = "<group>"; };
+		DFFF48782906B5960004F48E /* DropDownModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -359,6 +399,7 @@
 		088A62C628E319DA00442E6C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				DF8F1C47290685B9006FAD9B /* 공통-드롭다운 */,
 				08DC525A28E9A87D00B058ED /* 공통-셀 */,
 				DFCBDD7828E91273008A7E02 /* 공통-팝업 */,
 				DF5EC61E28E6D50E003411D3 /* 테스트 */,
@@ -404,6 +445,8 @@
 				192C3DB228E56BAF003563D3 /* Notification+Extension.swift */,
 				192C3DB428E56DAA003563D3 /* CALayer+Extension.swift */,
 				191DD3EC28F8F20200889488 /* UIFont+Extension.swift */,
+				DFD3505D29026050004E725A /* UIImage+Extension.swift */,
+				1984E13E290638CA00B8CD4D /* UITableView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -422,6 +465,7 @@
 			children = (
 				08DC523428E467CE00B058ED /* LoginDto.swift */,
 				0876385F28F580AE00BE6B13 /* StudyDto.swift */,
+				DFA3A84A2903846300B452F5 /* PhotoPicker.swift */,
 			);
 			path = Struct;
 			sourceTree = "<group>";
@@ -480,6 +524,12 @@
 			children = (
 				08DC525328E8654D00B058ED /* MoreViewController.swift */,
 				08DC525428E8654D00B058ED /* MoreViewController.xib */,
+				19877F5429026377004AD3EE /* MoreUserInfoTableViewCell.swift */,
+				1984E1382906328F00B8CD4D /* MoreStudyTitle.swift */,
+				1984E13C2906362200B8CD4D /* MoreStudyItem.swift */,
+				199B5E7A29066F940096E8C6 /* ProfileViewController.swift */,
+				199B5E7B29066F940096E8C6 /* ProfileViewController.xib */,
+				DFD3505829025E52004E725A /* 사진 */,
 			);
 			name = "더보기";
 			sourceTree = "<group>";
@@ -600,6 +650,16 @@
 			name = "시작-가입완료";
 			sourceTree = "<group>";
 		};
+		DF8F1C47290685B9006FAD9B /* 공통-드롭다운 */ = {
+			isa = PBXGroup;
+			children = (
+				DF8F1C48290685E1006FAD9B /* DropDownView.swift */,
+				DF8F1C4C2906893E006FAD9B /* DropDownTableViewCell.swift */,
+				DF8F1C4D2906893E006FAD9B /* DropDownTableViewCell.xib */,
+			);
+			name = "공통-드롭다운";
+			sourceTree = "<group>";
+		};
 		DFCBC5AD28FD73850092BEDC /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -632,6 +692,22 @@
 				DFEC1FB928F675F8009B866E /* AddVoteTextfieldView.swift */,
 			);
 			name = "투표";
+			sourceTree = "<group>";
+		};
+		DFD3505829025E52004E725A /* 사진 */ = {
+			isa = PBXGroup;
+			children = (
+				DFD3505929025E6F004E725A /* PhotoPickerViewController.swift */,
+				DFD3505A29025E6F004E725A /* PhotoPickerViewController.xib */,
+				DFD3505F29026444004E725A /* PhotoPickerCollectionViewCell.swift */,
+				DFD3506029026444004E725A /* PhotoPickerCollectionViewCell.xib */,
+				DF13A2742903E23600C7F096 /* PhotoCropViewController.swift */,
+				DF13A2752903E23600C7F096 /* PhotoCropViewController.xib */,
+				DF5B530729064C3100E8DE96 /* PhotoPreviewCollectionViewCell.swift */,
+				DF5B530829064C3100E8DE96 /* PhotoPreviewCollectionViewCell.xib */,
+				DFFF48782906B5960004F48E /* DropDownModel.swift */,
+			);
+			name = "사진";
 			sourceTree = "<group>";
 		};
 		DFE0372928E27B5B00BE9E35 = {
@@ -792,16 +868,21 @@
 				DFEA71C928F42B7F005DFD78 /* AddVoteBorderView.xib in Resources */,
 				DFE0374228E27B5D00BE9E35 /* LaunchScreen.storyboard in Resources */,
 				08DC526228E9AAED00B058ED /* StudyInfoGridCollectionViewCell.xib in Resources */,
+				DF8F1C4F2906893E006FAD9B /* DropDownTableViewCell.xib in Resources */,
+				DF5B530A29064C3100E8DE96 /* PhotoPreviewCollectionViewCell.xib in Resources */,
 				DFE0373F28E27B5D00BE9E35 /* Assets.xcassets in Resources */,
 				DF15CBE028E85AB0009F24CB /* Pretendard-Regular.otf in Resources */,
 				0876385828F42DC500BE6B13 /* SearchViewController.xib in Resources */,
+				DF13A2772903E23600C7F096 /* PhotoCropViewController.xib in Resources */,
 				08E10F3B28F812240021931D /* StudyDetailViewController.xib in Resources */,
 				08E10F4328F8150E0021931D /* FavoriteStudyViewController.xib in Resources */,
 				1972785028F645390029F27D /* SelectDatePopupViewController.xib in Resources */,
+				199B5E7D29066F940096E8C6 /* ProfileViewController.xib in Resources */,
 				08E10F4928F838CB0021931D /* KeywordCollectionViewCell.xib in Resources */,
 				08DC525628E8654D00B058ED /* MoreViewController.xib in Resources */,
 				197CE78D28F556B70042A6EA /* Main.storyboard in Resources */,
 				DF15CBE128E85AB0009F24CB /* Pretendard-SemiBold.otf in Resources */,
+				DFD3506229026444004E725A /* PhotoPickerCollectionViewCell.xib in Resources */,
 				08DC524A28E8652C00B058ED /* HomeViewController.xib in Resources */,
 				08DC526A28E9AB2B00B058ED /* MemberProfileCollectionViewCell.xib in Resources */,
 				08DC525228E8654400B058ED /* ChattingViewController.xib in Resources */,
@@ -823,6 +904,7 @@
 				DF88222F28EFB13F00993F2E /* SocialLoginViewController.xib in Resources */,
 				08DC524E28E8653800B058ED /* StudyViewController.xib in Resources */,
 				191E2E3B28ED12DB00BB92DF /* StudySchedulePopupViewController.xib in Resources */,
+				DFD3505C29025E6F004E725A /* PhotoPickerViewController.xib in Resources */,
 				DF67C5A428FE70E0004F2D6A /* PlanMainViewController.xib in Resources */,
 				08DC526628E9AAFE00B058ED /* StudyInfoCollectionViewCell.xib in Resources */,
 			);
@@ -880,6 +962,7 @@
 				0876385D28F5691700BE6B13 /* HotStudyCollectionViewCell.swift in Sources */,
 				1961AD8328F4EB6F0032FE7A /* VoteViewController.swift in Sources */,
 				DF88223328EFBB5600993F2E /* RegisterCompleteViewController.swift in Sources */,
+				1984E1392906328F00B8CD4D /* MoreStudyTitle.swift in Sources */,
 				1961AD8728F4EC920032FE7A /* VoteTitleTableViewCell.swift in Sources */,
 				DF67C5A328FE70E0004F2D6A /* PlanMainViewController.swift in Sources */,
 				191A969728F6922F007E2F04 /* CustomSegmentControl.swift in Sources */,
@@ -890,11 +973,13 @@
 				DFCBDD8228E94240008A7E02 /* TestViewController.swift in Sources */,
 				191E2E3A28ED12DB00BB92DF /* StudySchedulePopupViewController.swift in Sources */,
 				19690EA828F0F9F0006EEE8D /* CategoryItemCollectionViewCell.swift in Sources */,
+				DFFF48792906B5960004F48E /* DropDownModel.swift in Sources */,
 				DFEA71C728F42B77005DFD78 /* AddVoteBorderView.swift in Sources */,
 				191DD3ED28F8F20200889488 /* UIFont+Extension.swift in Sources */,
 				08DC525528E8654D00B058ED /* MoreViewController.swift in Sources */,
 				192C3DAF28E55FCF003563D3 /* CustomNavigationBar.swift in Sources */,
 				088DC36A2900CF7700E3EDFB /* StudyInfoViewController.swift in Sources */,
+				DF5B530929064C3100E8DE96 /* PhotoPreviewCollectionViewCell.swift in Sources */,
 				DF068CB128EC496700083917 /* PermissionViewController.swift in Sources */,
 				08DC526928E9AB2B00B058ED /* MemberProfileCollectionViewCell.swift in Sources */,
 				197CE78A28F550950042A6EA /* CustomCalendarTableViewCell.swift in Sources */,
@@ -904,9 +989,11 @@
 				0876386028F580AE00BE6B13 /* StudyDto.swift in Sources */,
 				08DC527528E9AB9F00B058ED /* ColorSetCollectionViewCell.swift in Sources */,
 				197CE78F28F557AE0042A6EA /* ViewController.swift in Sources */,
+				DFD3505E29026050004E725A /* UIImage+Extension.swift in Sources */,
 				197CE78228F526530042A6EA /* StudyScheduleTitleTableViewCell.swift in Sources */,
 				DF15CBE328E861E1009F24CB /* BoxLabel.swift in Sources */,
 				0876384428F40D4500BE6B13 /* InputGenderViewController.swift in Sources */,
+				DFD3505B29025E6F004E725A /* PhotoPickerViewController.swift in Sources */,
 				0876386328F5834400BE6B13 /* SearchHistoryCollectionViewCell.swift in Sources */,
 				DFEC1FBD28F6B39E009B866E /* PlanMainView.swift in Sources */,
 				08DC523528E467CE00B058ED /* LoginDto.swift in Sources */,
@@ -914,7 +1001,10 @@
 				08DC524928E8652C00B058ED /* HomeViewController.swift in Sources */,
 				197CE78628F528490042A6EA /* CustomPickerTableViewCell.swift in Sources */,
 				DF068CB728EC603800083917 /* PermissionTableViewCell.swift in Sources */,
+				DF8F1C4E2906893E006FAD9B /* DropDownTableViewCell.swift in Sources */,
 				DFCBC5B028FD73FF0092BEDC /* AddPlanViewController.swift in Sources */,
+				DFD3506129026444004E725A /* PhotoPickerCollectionViewCell.swift in Sources */,
+				199B5E7C29066F940096E8C6 /* ProfileViewController.swift in Sources */,
 				DFFD345E28EEFADB00CFCB74 /* OnboardingViewController.swift in Sources */,
 				08DC525D28E9A9C300B058ED /* SearchHistoryTableViewCell.swift in Sources */,
 				191DD3EB28F8E76900889488 /* CustomCalendarCell.swift in Sources */,
@@ -926,9 +1016,11 @@
 				DFE0373628E27B5B00BE9E35 /* AppDelegate.swift in Sources */,
 				08DC522F28E4662B00B058ED /* Delegate.swift in Sources */,
 				DF89A80D28E6F0D10039E364 /* ThumbnailImageView.swift in Sources */,
+				1984E13D2906362200B8CD4D /* MoreStudyItem.swift in Sources */,
 				0876384828F40D5300BE6B13 /* InputLocationViewController.swift in Sources */,
 				DF1D5B7F28EAFD2600B875D5 /* RegisterIndicatorView.swift in Sources */,
 				08DC524D28E8653800B058ED /* StudyViewController.swift in Sources */,
+				1984E13F290638CA00B8CD4D /* UITableView+Extension.swift in Sources */,
 				19868C4C28EC5C550093DF76 /* StudyBannerCollectionViewCell.swift in Sources */,
 				08DC527928E9ABD800B058ED /* VoteTableViewCell.swift in Sources */,
 				DFEC1FBA28F675F8009B866E /* AddVoteTextfieldView.swift in Sources */,
@@ -937,7 +1029,9 @@
 				088A62CD28E32B4A00442E6C /* BaseViewController.swift in Sources */,
 				0876383E28F40CFF00BE6B13 /* InputNickNameViewController.swift in Sources */,
 				08DC526D28E9AB6E00B058ED /* ScheduleDetailTableViewCell.swift in Sources */,
+				19877F5529026377004AD3EE /* MoreUserInfoTableViewCell.swift in Sources */,
 				192C3DB528E56DAA003563D3 /* CALayer+Extension.swift in Sources */,
+				DF13A2762903E23600C7F096 /* PhotoCropViewController.swift in Sources */,
 				192C3DB328E56BAF003563D3 /* Notification+Extension.swift in Sources */,
 				0876385728F42DC500BE6B13 /* SearchViewController.swift in Sources */,
 				191A969028F66382007E2F04 /* SelectStartEndSegmentTableViewCell.swift in Sources */,
@@ -947,7 +1041,9 @@
 				08E10F3A28F812240021931D /* StudyDetailViewController.swift in Sources */,
 				0876386628F5856D00BE6B13 /* SearchHistoryDB.swift in Sources */,
 				08DC525828E9806C00B058ED /* TextField+General.swift in Sources */,
+				DF8F1C49290685E1006FAD9B /* DropDownView.swift in Sources */,
 				08DC526528E9AAFE00B058ED /* StudyInfoCollectionViewCell.swift in Sources */,
+				DFA3A84B2903846300B452F5 /* PhotoPicker.swift in Sources */,
 				08DC527128E9AB7700B058ED /* ScheduleTableViewCell.swift in Sources */,
 				08E10F4228F8150E0021931D /* FavoriteStudyViewController.swift in Sources */,
 				08DC523928E478D700B058ED /* RootTabViewController.swift in Sources */,

@@ -99,6 +99,7 @@ class BaseViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
         self.customNavigationBar.backgroundColor = .white
         customNavigationBar.setNavigationBar(title, leftBarButton: leftBarButton, rightBarButton: rightBarButton)
+        customNavigationBar.navigationTitleLabel.font = UIFont.setCustomFont(.regular, size: 17)
         
         self.view.addSubview(customNavigationBar)
         customNavigationBar.snp.makeConstraints {
@@ -117,6 +118,7 @@ class BaseViewController: UIViewController {
                 }
             }
         } else if isLeftSetting && leftBarButton == nil {
+            customNavigationBar.navigationTitleLabel.font = UIFont.setCustomFont(.semiBold, size: 20)
             customNavigationBar.navigationTitleLabel.snp.remakeConstraints { make in
                 make.centerY.equalTo(customNavigationBar.containerView)
                 make.leading.equalTo(self.view).offset(20)

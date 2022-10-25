@@ -9,7 +9,7 @@ import SnapKit
 class CustomNavigationBar: UIView {
     //******************************************************
     //MARK: - Properties
-    //******************************************************
+    //**************************************** **************
     /// 네비게이션 바 컨테이너 뷰
     let containerView = UIView()
     /// 네비게이션 바 타이틀
@@ -46,7 +46,7 @@ class CustomNavigationBar: UIView {
      */
     private func setNavigationBarTitle(_ title: String) {
         navigationTitleLabel.text = title
-        navigationTitleLabel.textColor = .black
+        navigationTitleLabel.textColor = UIColor(named: "40")
         navigationTitleLabel.textAlignment = .left
         navigationTitleLabel.sizeToFit()
         let newSize = navigationTitleLabel.sizeThatFits(navigationTitleLabel.frame.size)

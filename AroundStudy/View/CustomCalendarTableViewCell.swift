@@ -7,7 +7,7 @@
 import UIKit
 import FSCalendar
 
-class CustomCalendarTableViewCell: UITableViewCell, reusableTableView {
+class CustomCalendarTableViewCell: UITableViewCell {
     //******************************************************
     //MARK: - IBOutlet
     //******************************************************

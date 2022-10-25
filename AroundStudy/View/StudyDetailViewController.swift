@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FloatingPanel
 
 class StudyDetailViewController: BaseViewController {
     
@@ -57,11 +58,17 @@ class StudyDetailViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         NotificationCenter.default.addObserver(self, selector: #selector(viewHeight), name: NSNotification.Name("viewHeight"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(showSchedulePopup), name: .showSchedulePopup, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(showAddVoteView), name: .showAddVoteView, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(moveVC), name: NSNotification.Name("viewController"), object: nil)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name("viewHeight"), object: nil)
+        NotificationCenter.default.removeObserver(self, name: .showSchedulePopup, object: nil)
+        NotificationCenter.default.removeObserver(self, name: .showAddVoteView, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name("viewController"), object: nil)
     }
     
     //MARK: - General Function
@@ -141,9 +148,40 @@ class StudyDetailViewController: BaseViewController {
     @objc func viewHeight(_ notification: Notification) {
         if let viewHeight = notification.object as? CGFloat {
             let vcHeight = view.frame.height
-print("vcHeight: \(vcHeight), viewHeight: \(viewHeight)")
+            print("vcHeight: \(vcHeight), viewHeight: \(viewHeight)")
             viewContentHeight.constant = viewHeight < vcHeight ? vcHeight + 200 : viewHeight
+            
             print(viewContentHeight.constant)
+        }
+    }
+    
+    /**
+     * @스케줄 팝업 뷰 호출
+     * @creator : coder3306
+     */
+    @objc private func showSchedulePopup() {
+        let vc = StudySchedulePopupViewController(nibName: "StudySchedulePopupViewController", bundle: nil)
+        floatingPanelController = FloatingPanelController(delegate: self)
+        setupFloatingView(vc, targetScrollView: UIScrollView(), position: .half)
+    }
+    
+    /**
+     * @투표 추가하기 뷰 호출
+     * @creator : coder3306
+     */
+    @objc private func showAddVoteView() {
+        let vc = AddVoteViewController(nibName: "AddVoteViewController", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func moveVC(_ notification: Notification) {
+        if let vc = notification.object as? String {
+            switch vc {
+                case "addPlan":
+                    let vc = AddPlanViewController(nibName: "AddPlanViewController", bundle: nil)
+                    self.navigationController?.pushViewController(vc, animated: true)
+                default: break
+            }
         }
     }
     
@@ -177,7 +215,9 @@ print("vcHeight: \(vcHeight), viewHeight: \(viewHeight)")
     @IBAction func btnVotePressed(_ sender: Any) {
         seleteTap(index: 2)
         guard let pageController = pageController else { return }
-        pageController.setViewControllers([pageContent[2]], direction: .forward, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            pageController.setViewControllers([self.pageContent[2]], direction: .forward, animated: true, completion: nil)
+        }
     }
 }
 //MARK: - Extension

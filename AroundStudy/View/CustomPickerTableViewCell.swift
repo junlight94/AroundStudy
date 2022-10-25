@@ -6,7 +6,7 @@
 
 import UIKit
 
-class CustomPickerTableViewCell: UITableViewCell, reusableTableView {
+class CustomPickerTableViewCell: UITableViewCell {
     /// 커스텀 피커 뷰
     @IBOutlet weak var timePickerView: UIPickerView?
     

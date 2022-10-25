@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -38,10 +38,10 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kgl-ah-aNf">
-                                <rect key="frame" x="8" y="8" width="53.5" height="20.5"/>
+                                <rect key="frame" x="8" y="8" width="53.5" height="20"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="카테고리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9U-Xb-tcR">
-                                        <rect key="frame" x="6" y="3" width="41.5" height="14.5"/>
+                                        <rect key="frame" x="6" y="3" width="41.5" height="14"/>
                                         <fontDescription key="fontDescription" name="Pretendard-Medium" family="Pretendard" pointSize="12"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -116,6 +116,14 @@
                                     <constraint firstItem="KaN-Sq-NdP" firstAttribute="top" secondItem="Tbl-S2-5Tx" secondAttribute="top" constant="3" id="Xb1-hs-uKI"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="favorite_red" translatesAutoresizingMaskIntoConstraints="NO" id="BcK-4V-VVU">
+                                <rect key="frame" x="205" y="8" width="22" height="22"/>
+                                <color key="backgroundColor" name="248"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="DWe-Xn-ude"/>
+                                    <constraint firstAttribute="width" constant="22" id="tYf-T2-fOL"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
@@ -125,6 +133,7 @@
                             <constraint firstItem="Tbl-S2-5Tx" firstAttribute="centerY" secondItem="zMp-jq-Grp" secondAttribute="centerY" id="Ai8-Nk-Amo"/>
                             <constraint firstItem="Koh-a9-GMW" firstAttribute="leading" secondItem="RYr-Rp-Szh" secondAttribute="leading" id="GfP-9X-qVk"/>
                             <constraint firstAttribute="trailing" secondItem="T89-be-TWc" secondAttribute="trailing" id="ISk-5e-tRF"/>
+                            <constraint firstItem="BcK-4V-VVU" firstAttribute="top" secondItem="RYr-Rp-Szh" secondAttribute="top" constant="8" id="Isz-eX-g1l"/>
                             <constraint firstItem="zMp-jq-Grp" firstAttribute="top" secondItem="Koh-a9-GMW" secondAttribute="bottom" constant="10" id="Pc2-a1-aB8"/>
                             <constraint firstItem="T89-be-TWc" firstAttribute="top" secondItem="RYr-Rp-Szh" secondAttribute="top" id="a5w-6Z-seB"/>
                             <constraint firstItem="Koh-a9-GMW" firstAttribute="top" secondItem="T89-be-TWc" secondAttribute="bottom" constant="12" id="bbn-5Z-XAJ"/>
@@ -132,6 +141,7 @@
                             <constraint firstItem="Tbl-S2-5Tx" firstAttribute="leading" secondItem="zMp-jq-Grp" secondAttribute="trailing" constant="6" id="ioi-vf-ca8"/>
                             <constraint firstItem="zMp-jq-Grp" firstAttribute="leading" secondItem="RYr-Rp-Szh" secondAttribute="leading" id="uAX-SH-zix"/>
                             <constraint firstAttribute="trailing" secondItem="Koh-a9-GMW" secondAttribute="trailing" id="uJo-ky-gXJ"/>
+                            <constraint firstAttribute="trailing" secondItem="BcK-4V-VVU" secondAttribute="trailing" constant="8" id="whG-vE-V23"/>
                             <constraint firstItem="Kgl-ah-aNf" firstAttribute="leading" secondItem="RYr-Rp-Szh" secondAttribute="leading" constant="8" id="yB8-uf-NNf"/>
                         </constraints>
                     </view>
@@ -146,6 +156,7 @@
             </constraints>
             <size key="customSize" width="235" height="179"/>
             <connections>
+                <outlet property="imgFavorite" destination="BcK-4V-VVU" id="zJJ-dG-Pbz"/>
                 <outlet property="imgMain" destination="T89-be-TWc" id="PFO-mN-7IU"/>
                 <outlet property="lbCategory" destination="N9U-Xb-tcR" id="zoE-mt-B2n"/>
                 <outlet property="lbInfo" destination="Koh-a9-GMW" id="xM9-e5-uTP"/>
@@ -159,6 +170,7 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="favorite_red" width="22" height="22"/>
         <image name="locationFill" width="14" height="14"/>
         <image name="people" width="14" height="14"/>
         <namedColor name="109">

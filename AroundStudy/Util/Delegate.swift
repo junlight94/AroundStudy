@@ -30,6 +30,36 @@ protocol VoteRemoveProtocol {
 }
 
 /**
+ 드롭다운(큰) 제어를 위한 델리케이트
+ > coder : **sanghyeon**
+ */
+@objc protocol DropDownLargeDelegate {
+    /// 드롭다운 동작 버튼
+    @objc func dropDownTargetButton() -> UIButton
+    /// 드롭다운 출력 표시
+    @objc optional func maximumDropCount() -> Int
+    /// 드롭다운 항목 높이
+    @objc optional func dropDownHeight() -> CGFloat
+    /// 드롭다운 인디케이터 표시 여부
+    @objc optional func showIndicator() -> Bool
+    /// 드롭다운 아이템 폰트 설정
+    @objc optional func itemFont() -> UIFont?
+    /// 드롭다운 버튼 타이틀 변경 여부
+    @objc func changeDropDownButtonTitle() -> Bool
+    /// 드롭다운 아이템
+    @objc func dropDownItem() -> [Any]
+    /// 드롭다운 타겟 뷰 중첩 여부
+    @objc func overOffset() -> Bool
+    /// 드롭다운 아이템 클릭시 이벤트
+    @objc func tappedDropDown(item: String)
+    /// 드롭다운 활성화시 버튼 이미지
+    @objc optional func activeDropDownButtonImage() -> UIImage?
+    /// 드롭다운 비활성화시 버튼 이미지
+    @objc optional func disableDropDownButtonImage() -> UIImage?
+    
+}
+
+/**
  * @테이블뷰 재사용 설정을 위한 프로토콜
  * @creator : coder3306
  */
@@ -115,4 +145,12 @@ extension reusableCollectionView where Self: UICollectionViewCell {
         let cell = targetView.dequeueReusableCell(withReuseIdentifier: self.reuseIdentifier, for: indexPath)
         return cell as? Self
     }
+}
+
+/**
+ * @프로필 수정완료 델리게이트
+ * @creator : coder3306
+ */
+protocol ProfileEditCompleteDelegate: AnyObject {
+    func didCompleteEdit()
 }

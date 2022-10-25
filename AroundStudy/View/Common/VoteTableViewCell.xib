@@ -36,7 +36,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="340" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Q." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhZ-PW-ziy">
-                                                <rect key="frame" x="16" y="12" width="21" height="28"/>
+                                                <rect key="frame" x="16" y="12" width="19.5" height="28"/>
                                                 <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="20"/>
                                                 <color key="textColor" name="Main"/>
                                                 <nil key="highlightedColor"/>
@@ -50,7 +50,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="화상 플랫폼으로 줌 어떠신가요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bL4-eP-jGi">
-                                                <rect key="frame" x="43" y="15.5" width="251" height="19"/>
+                                                <rect key="frame" x="41.5" y="15.5" width="252.5" height="19.5"/>
                                                 <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -96,10 +96,10 @@
                                         <rect key="frame" x="0.0" y="111" width="340" height="66"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kya-dX-6j2">
-                                                <rect key="frame" x="260" y="21" width="64" height="24.5"/>
+                                                <rect key="frame" x="259" y="21" width="65" height="24.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="30명 참여" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yox-8q-j45">
-                                                        <rect key="frame" x="8" y="5" width="48" height="14.5"/>
+                                                        <rect key="frame" x="8" y="5" width="49" height="14.5"/>
                                                         <fontDescription key="fontDescription" name="Pretendard-Medium" family="Pretendard" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -115,16 +115,16 @@
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="-5" translatesAutoresizingMaskIntoConstraints="NO" id="hUa-xt-QL5">
-                                                <rect key="frame" x="66" y="13" width="87" height="40"/>
+                                                <rect key="frame" x="66" y="13" width="90" height="40"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="홍길동" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cp-h3-ZUX">
-                                                        <rect key="frame" x="0.0" y="0.0" width="87" height="22.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="90" height="22.5"/>
                                                         <fontDescription key="fontDescription" name="Pretendard-Medium" family="Pretendard" pointSize="15"/>
                                                         <color key="textColor" name="51"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22.00.00 10:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vgw-Gc-2Zq">
-                                                        <rect key="frame" x="0.0" y="17.5" width="87" height="22.5"/>
+                                                        <rect key="frame" x="0.0" y="17.5" width="90" height="22.5"/>
                                                         <fontDescription key="fontDescription" name="Pretendard-Medium" family="Pretendard" pointSize="13"/>
                                                         <color key="textColor" name="155"/>
                                                         <nil key="highlightedColor"/>
@@ -144,12 +144,11 @@
                                             </imageView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="66" id="0CC-ze-iLM"/>
+                                            <constraint firstAttribute="height" priority="999" constant="66" id="0CC-ze-iLM"/>
                                             <constraint firstAttribute="trailing" secondItem="kya-dX-6j2" secondAttribute="trailing" constant="16" id="7en-8a-zeq"/>
                                             <constraint firstItem="hUa-xt-QL5" firstAttribute="leading" secondItem="OI8-Mb-6rS" secondAttribute="trailing" constant="10" id="7hr-q9-se2"/>
                                             <constraint firstItem="kya-dX-6j2" firstAttribute="centerY" secondItem="70x-75-026" secondAttribute="centerY" id="KzY-WR-bgh"/>
                                             <constraint firstItem="hUa-xt-QL5" firstAttribute="centerY" secondItem="OI8-Mb-6rS" secondAttribute="centerY" id="MyS-05-TZT"/>
-                                            <constraint firstItem="kya-dX-6j2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hUa-xt-QL5" secondAttribute="trailing" constant="10" id="Q6O-4s-VfF"/>
                                             <constraint firstItem="OI8-Mb-6rS" firstAttribute="leading" secondItem="70x-75-026" secondAttribute="leading" constant="16" id="S4J-Xc-hEf"/>
                                             <constraint firstItem="OI8-Mb-6rS" firstAttribute="centerY" secondItem="70x-75-026" secondAttribute="centerY" id="cii-wA-yks"/>
                                         </constraints>
@@ -158,7 +157,7 @@
                                         <rect key="frame" x="0.0" y="177" width="340" height="42"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="투표하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycB-0t-7Jh">
-                                                <rect key="frame" x="20" y="12.5" width="52" height="17.5"/>
+                                                <rect key="frame" x="20" y="12" width="52" height="18"/>
                                                 <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>

@@ -14,9 +14,4 @@ class ViewController: BaseViewController {
         super.viewDidLoad()
         appDelegate.switchMain()
     }
-    override func loadView() {
-        super.loadView()
-        let vc = PlanMainViewController(nibName: "PlanMainViewController", bundle: nil)
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
 }
