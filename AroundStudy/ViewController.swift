@@ -12,11 +12,6 @@ class ViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //appDelegate.switchMain()
-    }
-    override func loadView() {
-        super.loadView()
-        let vc = PhotoPickerViewController(nibName: "PhotoPickerViewController", bundle: nil)
-        self.navigationController?.pushViewController(vc, animated: true)
+        appDelegate.switchMain()
     }
 }

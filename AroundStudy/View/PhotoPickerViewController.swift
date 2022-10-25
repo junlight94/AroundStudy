@@ -10,10 +10,11 @@ import Photos
 import Mantis
 
 class PhotoPickerViewController: BaseViewController {
+
     
     //MARK: Properties
     /// 멀티 셀렉트모드
-    var isSingleSelectMode: Bool = false
+    var isSingleSelectMode: Bool = true
     /// 사진 최대 선택 개수
     let maxAllowSelectCount: Int = 20
     /// 썸네일 사이즈
@@ -27,10 +28,10 @@ class PhotoPickerViewController: BaseViewController {
     /// 선택된 사진 인덱스
     var selectedPhotoIndex: Int = 0
     
-    
-    /// 네비게이션바 버튼
-    let backButton: UIButton = UIButton(type: .custom)
-    let completeButton: UIButton = UIButton(type: .custom)
+    /// 네비게이션바 요소
+    @IBOutlet weak var allowCountLabel: UILabel!
+    @IBOutlet weak var selectedCountLabel: UILabel!
+    @IBOutlet weak var dropDownButton: UIButton!
     
     /// 제약 조건
     @IBOutlet weak var previewCollectionViewHeightConstraint: NSLayoutConstraint!
@@ -39,9 +40,11 @@ class PhotoPickerViewController: BaseViewController {
     @IBOutlet weak var previewCollectionView: UICollectionView!
     @IBOutlet weak var photoPickerCollectionView: UICollectionView!
     
+    /// 드롭다운
+    let dropDown = DropDownView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigation()
         setupView()
         checkAuthorization()
     }
@@ -49,22 +52,6 @@ class PhotoPickerViewController: BaseViewController {
 
 //MARK: - Layout & Functions
 extension PhotoPickerViewController {
-    /**
-     초기 네비게이션바 설정
-     > coder : **sanghyeon**
-     */
-    func setupNavigation() {
-        /// 백버튼 설정
-        backButton.setImage(.navigationBack, for: .normal)
-        /// 우측 버튼 설정
-        completeButton.setTitle("선택완료", for: .normal)
-        completeButton.setTitleColor(.init(named: "94"), for: .normal)
-        completeButton.titleLabel?.font = .setCustomFont(.regular, size: 15)
-        completeButton.isHidden = isSingleSelectMode
-        
-        /// 네비게이션바 세팅
-        setNavigationBar("사진선택", leftBarButton: [backButton], rightBarButton: [completeButton], isLeftSetting: true)
-    }
     /**
      초기 레이아웃 설정
      > coder : **sanghyeon**
@@ -80,6 +67,18 @@ extension PhotoPickerViewController {
         photoPickerCollectionView.register(cellNib, forCellWithReuseIdentifier: "PhotoPickerCollectionViewCell")
         photoPickerCollectionView.delegate = self
         photoPickerCollectionView.dataSource = self
+        
+        if isSingleSelectMode {
+            allowCountLabel.isHidden = true
+            selectedCountLabel.isHidden = true
+        } else {
+            /// 최대 선택 가능 개수 라벨 설정
+            allowCountLabel.text = "/\(maxAllowSelectCount)"
+            selectedCountLabel.text = "0"
+        }
+        
+        print("VC dropDown: \(dropDown)")
+        dropDown.delegate = self
     }
     /**
      포토라이브러리 권한 체크
@@ -132,6 +131,62 @@ extension PhotoPickerViewController {
     }
 }
 
+//MARK: - DropDown
+extension PhotoPickerViewController: DropDownLargeDelegate {
+    func tappedDropDown(item: String) {
+        print("드롭다운 아이템 클릭, item: \(item)")
+    }
+    
+    func dropDownItem() -> [Any] {
+        /// 드롭다운 더미데이터
+        let dummyDropDown: [DropDown] = [
+            DropDown(title: "전체", subTitle: "(1000)"),
+            DropDown(title: "앨범1", subTitle: "(250)"),
+            DropDown(title: "앨범2", subTitle: "(100)"),
+            DropDown(title: "앨범33333333", subTitle: "(500)"),
+            DropDown(title: "앨범 44444", subTitle: "(150)"),
+            DropDown(title: "앨범1", subTitle: "(250)"),
+            DropDown(title: "앨범2", subTitle: "(100)"),
+            DropDown(title: "앨범33333333", subTitle: "(500)"),
+            DropDown(title: "앨범 44444", subTitle: "(150)")
+        ]
+        
+        return dummyDropDown
+    }
+    
+    func dropDownTargetButton() -> UIButton {
+        return dropDownButton
+    }
+    
+    func overOffset() -> Bool {
+        return false
+    }
+    
+    func changeDropDownButtonTitle() -> Bool {
+        return true
+    }
+    
+    func itemFont() -> UIFont? {
+        return UIFont.setCustomFont(.medium, size: 16)
+    }
+    
+    func dropDownHeight() -> CGFloat {
+        return 54
+    }
+    
+    func showIndicator() -> Bool {
+        return false
+    }
+    
+    func activeDropDownButtonImage() -> UIImage? {
+        return UIImage(named: "navigationUp")
+    }
+    
+    func disableDropDownButtonImage() -> UIImage? {
+        return UIImage(named: "navigationDown")
+    }
+}
+
 //MARK: - CollectionView
 extension PhotoPickerViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -152,6 +207,7 @@ extension PhotoPickerViewController: UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectCell(collectionView, indexPath: indexPath)
+        resizePreviewCollectionView()
     }
     
     /// 셀 사이즈
@@ -217,31 +273,39 @@ extension PhotoPickerViewController: UICollectionViewDelegate, UICollectionViewD
         case previewCollectionView:
             selectedPhotos.remove(at: indexPath.row)
         case photoPickerCollectionView:
-            guard let cell = photoPickerCollectionView.cellForItem(at: indexPath) as? PhotoPickerCollectionViewCell else { return }
+            if indexPath.row == 0 {
+                return
+            }
             
-            if let targetIndex = selectedPhotos.firstIndex(where: {$0.index == indexPath.row}) {
-                selectedPhotos.remove(at: targetIndex)
-                cell.selectCell(select: false)
+            if isSingleSelectMode {
+                
             } else {
-                if maxAllowSelectCount <= selectedPhotos.count {
-                    print("최대 선택 개수를 초과함")
-                    return
-                }
-                fetchPhotos(index: indexPath.row - 1, highQuality: true) { result in
-                    if let image = result {
-                        let selectedPhoto: PhotoPicker = .init(index: indexPath.row, data: ImageData(original: image, processed: nil))
-                        if let _ = self.selectedPhotos.firstIndex(where: {$0.index == indexPath.row}) { } else {
-                            /// 현재 선택된 사진의 인덱스 저장
-                            self.selectedPhotoIndex = indexPath.row
-                            /// Mantis CropViewController 설정
-                            let cropViewController = Mantis.cropCustomizableViewController(image: selectedPhoto.data.original)
-                            cropViewController.modalTransitionStyle = .crossDissolve
-                            cropViewController.modalPresentationStyle = .fullScreen
-                            cropViewController.delegate = self
-                            cell.selectCell(select: true)
-                            ///self.navigationController?.pushViewController(cropViewController, animated: true)
-                            
-                            self.selectedPhotos.append(selectedPhoto)
+                guard let cell = photoPickerCollectionView.cellForItem(at: indexPath) as? PhotoPickerCollectionViewCell else { return }
+                
+                if let targetIndex = selectedPhotos.firstIndex(where: {$0.index == indexPath.row}) {
+                    selectedPhotos.remove(at: targetIndex)
+                    cell.selectCell(select: false)
+                } else {
+                    if maxAllowSelectCount <= selectedPhotos.count {
+                        print("최대 선택 개수를 초과함")
+                        return
+                    }
+                    fetchPhotos(index: indexPath.row - 1, highQuality: true) { result in
+                        if let image = result {
+                            let selectedPhoto: PhotoPicker = .init(index: indexPath.row, data: ImageData(original: image, processed: nil))
+                            if let _ = self.selectedPhotos.firstIndex(where: {$0.index == indexPath.row}) { } else {
+                                /// 현재 선택된 사진의 인덱스 저장
+                                self.selectedPhotoIndex = indexPath.row
+                                /// Mantis CropViewController 설정
+                                let cropViewController = Mantis.cropCustomizableViewController(image: selectedPhoto.data.original)
+                                cropViewController.modalTransitionStyle = .crossDissolve
+                                cropViewController.modalPresentationStyle = .fullScreen
+                                cropViewController.delegate = self
+                                cell.selectCell(select: true)
+                                ///self.navigationController?.pushViewController(cropViewController, animated: true)
+                                
+                                self.selectedPhotos.append(selectedPhoto)
+                            }
                         }
                     }
                 }
@@ -251,6 +315,7 @@ extension PhotoPickerViewController: UICollectionViewDelegate, UICollectionViewD
         }
         
         DispatchQueue.main.async {
+            self.selectedCountLabel.text = "\(self.selectedPhotos.count)"
             self.previewCollectionView.reloadData()
             self.photoPickerCollectionView.reloadData()
         }
@@ -263,6 +328,9 @@ extension PhotoPickerViewController: UICollectionViewDelegate, UICollectionViewD
      */
     func resizePreviewCollectionView() {
         previewCollectionViewHeightConstraint.constant = selectedPhotos.count > 0 ? 70 : 1
+        UIView.animate(withDuration: 0.3, delay: 0, animations: {
+            self.view.layoutIfNeeded()
+        })
     }
 }
 
