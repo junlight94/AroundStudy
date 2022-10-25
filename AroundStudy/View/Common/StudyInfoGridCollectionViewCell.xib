@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -56,13 +56,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="스터디에 대한 대용이 들어" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Koh-a9-GMW">
-                                <rect key="frame" x="0.0" y="112" width="235" height="18"/>
+                                <rect key="frame" x="0.0" y="112" width="235" height="37"/>
                                 <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="15"/>
                                 <color key="textColor" name="68"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zMp-jq-Grp">
-                                <rect key="frame" x="0.0" y="140" width="67" height="20"/>
+                                <rect key="frame" x="0.0" y="159" width="67" height="20"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="해운대구" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aX0-eU-YB2">
                                         <rect key="frame" x="19" y="3" width="42" height="14"/>
@@ -90,7 +90,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tbl-S2-5Tx">
-                                <rect key="frame" x="73" y="140" width="40" height="20"/>
+                                <rect key="frame" x="73" y="159" width="40" height="20"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KaN-Sq-NdP">
                                         <rect key="frame" x="19" y="3" width="15" height="14"/>
@@ -130,6 +130,7 @@
                             <constraint firstAttribute="trailing" secondItem="Koh-a9-GMW" secondAttribute="trailing" id="6Ph-T1-Fgf"/>
                             <constraint firstItem="Kgl-ah-aNf" firstAttribute="top" secondItem="RYr-Rp-Szh" secondAttribute="top" constant="8" id="7un-Wg-Ca9"/>
                             <constraint firstItem="T89-be-TWc" firstAttribute="leading" secondItem="RYr-Rp-Szh" secondAttribute="leading" id="8TN-oX-YIr"/>
+                            <constraint firstAttribute="bottom" secondItem="zMp-jq-Grp" secondAttribute="bottom" id="9hP-8q-tiu"/>
                             <constraint firstItem="Tbl-S2-5Tx" firstAttribute="centerY" secondItem="zMp-jq-Grp" secondAttribute="centerY" id="Ai8-Nk-Amo"/>
                             <constraint firstItem="Koh-a9-GMW" firstAttribute="leading" secondItem="RYr-Rp-Szh" secondAttribute="leading" id="GfP-9X-qVk"/>
                             <constraint firstAttribute="trailing" secondItem="T89-be-TWc" secondAttribute="trailing" id="ISk-5e-tRF"/>
@@ -158,6 +159,7 @@
             <connections>
                 <outlet property="imgFavorite" destination="BcK-4V-VVU" id="zJJ-dG-Pbz"/>
                 <outlet property="imgMain" destination="T89-be-TWc" id="PFO-mN-7IU"/>
+                <outlet property="ivHeight" destination="Jjc-6G-MYu" id="C11-NE-Hrj"/>
                 <outlet property="lbCategory" destination="N9U-Xb-tcR" id="zoE-mt-B2n"/>
                 <outlet property="lbInfo" destination="Koh-a9-GMW" id="xM9-e5-uTP"/>
                 <outlet property="lbLocation" destination="aX0-eU-YB2" id="Q8Z-km-nYA"/>

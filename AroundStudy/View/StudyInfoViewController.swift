@@ -65,7 +65,7 @@ extension StudyInfoViewController: UICollectionViewDelegate, UICollectionViewDat
         case peopleCollectionView :
             return CGSize(width: 52, height: collectionView.frame.height)
         case studyCollectionView :
-            return CGSize(width: 300, height: collectionView.frame.height)
+            return CGSize(width: collectionView.frame.width - 55, height: collectionView.frame.height)
         default:
             return .zero
         }
@@ -89,6 +89,7 @@ extension StudyInfoViewController: UICollectionViewDelegate, UICollectionViewDat
             return cell
         case studyCollectionView :
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StudyInfoGridCollectionViewCell", for: indexPath) as! StudyInfoGridCollectionViewCell
+            cell.ivHeight.constant = 150
             return cell
         default:
             return UICollectionViewCell()
