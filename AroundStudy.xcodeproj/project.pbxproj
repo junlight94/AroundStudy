@@ -523,8 +523,7 @@
 			isa = PBXGroup;
 			children = (
 				1970962D29078B2D00895BA0 /* 메인 */,
-				199B5E7A29066F940096E8C6 /* ProfileViewController.swift */,
-				199B5E7B29066F940096E8C6 /* ProfileViewController.xib */,
+				1970962E29078B7900895BA0 /* 프로필 */,
 				DFD3505829025E52004E725A /* 사진 */,
 			);
 			name = "더보기";
@@ -587,6 +586,15 @@
 				1984E13C2906362200B8CD4D /* MoreStudyItem.swift */,
 			);
 			name = "메인";
+			sourceTree = "<group>";
+		};
+		1970962E29078B7900895BA0 /* 프로필 */ = {
+			isa = PBXGroup;
+			children = (
+				199B5E7A29066F940096E8C6 /* ProfileViewController.swift */,
+				199B5E7B29066F940096E8C6 /* ProfileViewController.xib */,
+			);
+			name = "프로필";
 			sourceTree = "<group>";
 		};
 		A6E5688C91D72101AD1D6F16 /* Pods */ = {
