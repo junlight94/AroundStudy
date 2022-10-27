@@ -37,6 +37,4 @@ extension ProgressViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
-    
-    
 }

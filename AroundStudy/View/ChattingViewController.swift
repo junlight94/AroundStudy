@@ -59,6 +59,9 @@ class ChattingViewController: BaseViewController {
         pageController.view.frame = pageViewRect
         pageController.didMove(toParent: self)
         
+        //scrollView
+        setKeyboardNotification(targetView: scrollView)
+        
         //Mode
         viewSearch.isHidden = true
         let viewHeight = self.view.frame.height - 98
