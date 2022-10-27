@@ -28,6 +28,7 @@
                 <outlet property="studyCollectionView" destination="y9y-o6-Acf" id="2ZA-dq-nyE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewContent" destination="G2L-gI-Avj" id="cDL-9l-Gc6"/>
+                <outlet property="viewContentHeight" destination="KtF-uA-yEG" id="YWS-ru-eZA"/>
                 <outlet property="viewInfo" destination="fRG-Jc-Gcd" id="luv-BW-gd9"/>
             </connections>
         </placeholder>
@@ -109,6 +110,7 @@
                                 <constraint firstAttribute="trailing" secondItem="fRG-Jc-Gcd" secondAttribute="trailing" constant="20" id="IOR-Nw-tex"/>
                                 <constraint firstAttribute="bottom" secondItem="fRG-Jc-Gcd" secondAttribute="bottom" constant="32" id="XSZ-aD-xjL"/>
                                 <constraint firstItem="fRG-Jc-Gcd" firstAttribute="top" secondItem="eUu-lM-Bk6" secondAttribute="top" constant="32" id="Zu0-29-Fqa"/>
+                                <constraint firstAttribute="height" constant="175" id="cNp-bB-xZD"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GOf-ZF-Eao" userLabel="ViewLine">
@@ -242,6 +244,7 @@
                         <constraint firstAttribute="trailing" secondItem="IzC-xl-Maw" secondAttribute="trailing" id="E4L-Hd-LNX"/>
                         <constraint firstAttribute="trailing" secondItem="y0u-WD-YyH" secondAttribute="trailing" id="EBl-DJ-om0"/>
                         <constraint firstItem="e2E-LX-Mbx" firstAttribute="top" secondItem="IzC-xl-Maw" secondAttribute="bottom" id="Hzn-iB-i1l"/>
+                        <constraint firstAttribute="height" constant="670" id="KtF-uA-yEG"/>
                         <constraint firstItem="e2E-LX-Mbx" firstAttribute="leading" secondItem="G2L-gI-Avj" secondAttribute="leading" id="aph-xa-bpe"/>
                         <constraint firstItem="IzC-xl-Maw" firstAttribute="leading" secondItem="G2L-gI-Avj" secondAttribute="leading" id="b57-WH-VVh"/>
                         <constraint firstItem="GOf-ZF-Eao" firstAttribute="top" secondItem="eUu-lM-Bk6" secondAttribute="bottom" id="cO8-wb-bqB"/>

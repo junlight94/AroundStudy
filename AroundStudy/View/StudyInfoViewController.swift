@@ -10,6 +10,7 @@ import UIKit
 class StudyInfoViewController: UIViewController {
 
     @IBOutlet weak var viewContent: UIView!
+    @IBOutlet weak var viewContentHeight: NSLayoutConstraint!
     @IBOutlet weak var viewInfo: UIView!
     @IBOutlet weak var lbProcess: UILabel!
     @IBOutlet weak var lbPlace: UILabel!
@@ -30,7 +31,7 @@ class StudyInfoViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        NotificationCenter.default.post(name: NSNotification.Name("viewHeight"), object: viewContent.frame.height, userInfo: nil)
+        NotificationCenter.default.post(name: NSNotification.Name("viewHeight"), object: viewContentHeight.constant, userInfo: nil)
     }
     
     //MARK: - General Function
@@ -63,7 +64,7 @@ extension StudyInfoViewController: UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch collectionView {
         case peopleCollectionView :
-            return CGSize(width: 52, height: collectionView.frame.height)
+            return CGSize(width: 50, height: collectionView.frame.height)
         case studyCollectionView :
             return CGSize(width: collectionView.frame.width - 55, height: collectionView.frame.height)
         default:
