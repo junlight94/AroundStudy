@@ -14,7 +14,7 @@ class PhotoPickerViewController: BaseViewController {
     
     //MARK: Properties
     /// 멀티 셀렉트모드
-    var isSingleSelectMode: Bool = true
+    var isSingleSelectMode: Bool = false
     /// 사진 최대 선택 개수
     let maxAllowSelectCount: Int = 20
     /// 썸네일 사이즈
@@ -27,6 +27,9 @@ class PhotoPickerViewController: BaseViewController {
     var selectedPhotos: [PhotoPicker] = []
     /// 선택된 사진 인덱스
     var selectedPhotoIndex: Int = 0
+    
+    /// 크롭 뷰컨트롤러
+    var cropVC: CropViewController?
     
     /// 네비게이션바 요소
     @IBOutlet weak var allowCountLabel: UILabel!
@@ -76,8 +79,7 @@ extension PhotoPickerViewController {
             allowCountLabel.text = "/\(maxAllowSelectCount)"
             selectedCountLabel.text = "0"
         }
-        
-        print("VC dropDown: \(dropDown)")
+
         dropDown.delegate = self
     }
     /**
@@ -274,6 +276,13 @@ extension PhotoPickerViewController: UICollectionViewDelegate, UICollectionViewD
             selectedPhotos.remove(at: indexPath.row)
         case photoPickerCollectionView:
             if indexPath.row == 0 {
+                let cameraViewController = UIImagePickerController()
+                cameraViewController.sourceType = .camera
+                cameraViewController.allowsEditing = true
+                cameraViewController.cameraDevice = .rear
+                cameraViewController.cameraCaptureMode = .photo
+                cameraViewController.delegate = self
+                present(cameraViewController, animated: true, completion: nil)
                 return
             }
             
@@ -296,15 +305,19 @@ extension PhotoPickerViewController: UICollectionViewDelegate, UICollectionViewD
                             if let _ = self.selectedPhotos.firstIndex(where: {$0.index == indexPath.row}) { } else {
                                 /// 현재 선택된 사진의 인덱스 저장
                                 self.selectedPhotoIndex = indexPath.row
-                                /// Mantis CropViewController 설정
-                                let cropViewController = Mantis.cropCustomizableViewController(image: selectedPhoto.data.original)
-                                cropViewController.modalTransitionStyle = .crossDissolve
-                                cropViewController.modalPresentationStyle = .fullScreen
-                                cropViewController.delegate = self
                                 cell.selectCell(select: true)
-                                ///self.navigationController?.pushViewController(cropViewController, animated: true)
-                                
                                 self.selectedPhotos.append(selectedPhoto)
+                                
+                                let cropViewController = self.setCropViewController()
+                                
+                                self.navigationController?.pushViewController(cropViewController, animated: true)
+
+                                let cropViewControllerNavigationBar = self.navigationBar(cropViewController: cropViewController)
+                                cropViewController.view.addSubview(cropViewControllerNavigationBar)
+                                cropViewControllerNavigationBar.snp.makeConstraints { make in
+                                    make.top.leading.trailing.equalTo(cropViewController.view.safeAreaLayoutGuide)
+                                    make.height.equalTo(56)
+                                }
                             }
                         }
                     }
@@ -334,26 +347,96 @@ extension PhotoPickerViewController: UICollectionViewDelegate, UICollectionViewD
     }
 }
 
-//MARK: - MantisDelegate
-extension PhotoPickerViewController: CropViewControllerDelegate {
+//MARK: - PhotoCrop & Capture
+extension PhotoPickerViewController: CropViewControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    //MARK: Crop
     func cropViewControllerDidCrop(_ cropViewController: Mantis.CropViewController, cropped: UIImage, transformation: Mantis.Transformation, cropInfo: Mantis.CropInfo) {
-        print("\(selectedPhotoIndex)번째 이미지가 크랍됨")
-        cropViewController.navigationController?.popViewController(animated: true)
-        /// 선택된 이미지 인덱스 초기화
-        selectedPhotoIndex = 0
+        print("이미지 크롭! \(cropped)")
+        cropVC?.navigationController?.popViewController(animated: true)
     }
     
     func cropViewControllerDidCancel(_ cropViewController: Mantis.CropViewController, original: UIImage) {
-        cropViewController.navigationController?.popViewController(animated: true)
-        guard let cell = photoPickerCollectionView.cellForItem(at: IndexPath(row: selectedPhotoIndex, section: 0)) as? PhotoPickerCollectionViewCell else { return }
-        if let targetIndex = selectedPhotos.firstIndex(where: {$0.index == selectedPhotoIndex}) {
-            selectedPhotos.remove(at: targetIndex)
-            cell.selectCell(select: false)
-        }
+        
     }
     
+    func cropImage() -> UIImage {
+        let targetIndex = selectedPhotos.firstIndex(where: {$0.index == selectedPhotoIndex}) ?? 0
+        return selectedPhotos[targetIndex].data.original
+    }
+    
+    func setCropViewController() -> CropViewController {
+        var mantisConfig = Mantis.Config()
+        mantisConfig.cropViewConfig.showRotationDial = false
+        mantisConfig.cropToolbarConfig.mode = .simple
+        mantisConfig.showAttachedCropToolbar = false
+        //mantisConfig.cropToolbarConfig.heightForVerticalOrientation = 0
 
+        let cropViewController = Mantis.cropCustomizableViewController(image: self.cropImage(), config: mantisConfig)
+        cropViewController.delegate = self
+        cropVC = cropViewController
+        return cropViewController
+    }
+    
+    func navigationBar(cropViewController: CropViewController) -> UIView {
+        let backgroundView = UIView()
+        let navigationBackgroundView = UIView()
+        let navigationBackButton = UIButton(type: .custom)
+        let navigationCompleteButton = UIButton(type: .custom)
+        let navigationTitleLabel = UILabel()
+        
+        backgroundView.backgroundColor = .white
+        
+        navigationBackgroundView.backgroundColor = .white
+        
+        navigationBackButton.setImage(.init(named: "back"), for: .normal)
+        navigationBackButton.addTarget(self, action: #selector(didTapNavigationBackButton), for: .touchUpInside)
+        
+        navigationCompleteButton.setTitle("편집완료", for: .normal)
+        navigationCompleteButton.setTitleColor(.init(named: "94"), for: .normal)
+        navigationCompleteButton.titleLabel?.font = .setCustomFont(.regular, size: 15)
+        navigationCompleteButton.addTarget(self, action: #selector(didTapNavigationCompleteButton), for: .touchUpInside)
+        
+        navigationTitleLabel.text = "사진편집"
+        navigationTitleLabel.sizeToFit()
+        navigationTitleLabel.font = .setCustomFont(.medium, size: 17)
+        navigationTitleLabel.textColor = .init(named: "40")
+        
+        cropViewController.view.addSubview(backgroundView)
+        navigationBackgroundView.addSubview(navigationBackButton)
+        navigationBackgroundView.addSubview(navigationTitleLabel)
+        navigationBackgroundView.addSubview(navigationCompleteButton)
+        
+        backgroundView.snp.makeConstraints { make in
+            make.top.leading.trailing.equalToSuperview()
+            make.bottom.equalTo(cropViewController.view.safeAreaLayoutGuide.snp.top)
+        }
+        navigationBackButton.snp.makeConstraints { make in
+            make.centerY.equalTo(navigationBackgroundView)
+            make.leading.equalTo(navigationBackgroundView).offset(20)
+        }
+        navigationTitleLabel.snp.makeConstraints { make in
+            make.leading.equalTo(navigationBackButton.snp.trailing).offset(12)
+            make.centerY.equalTo(navigationBackgroundView)
+        }
+        navigationCompleteButton.snp.makeConstraints { make in
+            make.trailing.equalTo(navigationBackgroundView).offset(-20)
+            make.centerY.equalTo(navigationBackgroundView)
+        }
+        
+        return navigationBackgroundView
+    }
+    
+    @objc func didTapNavigationCompleteButton() {
+        cropVC?.crop()
+    }
+    
+    @objc func didTapNavigationBackButton() {
+        cropVC?.navigationController?.popViewController(animated: true)
+    }
     
     
-    
+    //MARK: Capture
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+    }
 }

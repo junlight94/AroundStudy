@@ -30,7 +30,7 @@ protocol VoteRemoveProtocol {
 }
 
 /**
- 드롭다운(큰) 제어를 위한 델리케이트
+ 드롭다운 제어를 위한 델리케이트
  > coder : **sanghyeon**
  */
 @objc protocol DropDownLargeDelegate {
@@ -56,7 +56,19 @@ protocol VoteRemoveProtocol {
     @objc optional func activeDropDownButtonImage() -> UIImage?
     /// 드롭다운 비활성화시 버튼 이미지
     @objc optional func disableDropDownButtonImage() -> UIImage?
-    
+}
+
+/**
+ 사진 편집(크롭)을 위한 델리게이트
+ > coder : **sanghyeon**
+ */
+protocol PhotoCropDelegate {
+    /**
+     편집할 사진을 전달하기 위한 함수
+     - return : UIImage
+     > coder : **sanghyeon**
+     */
+    func cropImage() -> UIImage
 }
 
 /**
