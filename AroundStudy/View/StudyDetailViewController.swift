@@ -93,6 +93,7 @@ class StudyDetailViewController: BaseViewController {
         
         viewContent.addSubview(pageController.view)
         let pageViewRect = viewContent.bounds
+        viewContentHeight.constant = 670
         
         pageController.view.frame = pageViewRect
         pageController.didMove(toParent: self)
@@ -149,9 +150,10 @@ class StudyDetailViewController: BaseViewController {
         if let viewHeight = notification.object as? CGFloat {
             let vcHeight = view.frame.height
             print("vcHeight: \(vcHeight), viewHeight: \(viewHeight)")
-            viewContentHeight.constant = viewHeight < vcHeight ? vcHeight + 200 : viewHeight
+//            viewContentHeight.constant = viewHeight < vcHeight ? vcHeight + 200 : viewHeight
+            viewContentHeight.constant = viewHeight
             
-            print(viewContentHeight.constant)
+            print("viewContentHeight: ", viewContentHeight.constant)
         }
     }
     
