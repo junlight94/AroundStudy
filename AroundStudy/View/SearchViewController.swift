@@ -51,6 +51,7 @@ class SearchViewController: BaseViewController {
         super.viewDidLoad()
         setupView()
         // Do any additional setup after loading the view.
+        print("Realm저장위치=\n\(Realm.Configuration.defaultConfiguration.fileURL!)\n")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -183,6 +184,8 @@ class SearchViewController: BaseViewController {
                 searchHistoryData = realm.objects(SearchHistoryDB.self).sorted(byKeyPath: "date", ascending: false).map{$0}
                 filterHistoryData = searchHistoryData.filter{$0.title.contains(text)}
                 searchHistoryTableView.reloadData()
+                
+
             } else {
                 viewSearch.isHidden = true
                 viewContent.isHidden = false

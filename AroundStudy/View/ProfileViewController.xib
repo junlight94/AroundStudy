@@ -40,8 +40,8 @@
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0kk-tg-lPg">
                     <rect key="frame" x="0.0" y="0.0" width="334" height="624"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ylh-2k-hfJ">
-                            <rect key="frame" x="0.0" y="0.0" width="334" height="624"/>
+                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ylh-2k-hfJ">
+                            <rect key="frame" x="0.0" y="-8" width="334" height="624"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0WG-ap-xlG">
                                     <rect key="frame" x="183" y="136" width="28" height="28"/>
@@ -284,7 +284,7 @@
                 <constraint firstAttribute="trailing" secondItem="0kk-tg-lPg" secondAttribute="trailing" id="L9X-ia-lkJ"/>
                 <constraint firstItem="0kk-tg-lPg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="a3v-EO-tSP"/>
             </constraints>
-            <point key="canvasLocation" x="124.61538461538461" y="-7.1090047393364921"/>
+            <point key="canvasLocation" x="75" y="-31"/>
         </view>
     </objects>
     <resources>
