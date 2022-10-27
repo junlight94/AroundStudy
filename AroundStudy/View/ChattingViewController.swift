@@ -8,7 +8,6 @@
 import UIKit
 
 class ChattingViewController: BaseViewController {
-    @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var lbProgress: UILabel!
     @IBOutlet weak var viewProgressLine: UIView!
@@ -17,16 +16,8 @@ class ChattingViewController: BaseViewController {
     @IBOutlet weak var viewWaitingLine: UIView!
     
     @IBOutlet weak var viewContent: UIView!
-    @IBOutlet weak var viewContentHeight: NSLayoutConstraint!
-    
-    @IBOutlet weak var viewSearch: UIView!
-    @IBOutlet weak var viewSearchHeight: NSLayoutConstraint!
-    
     
     var pageController: UIPageViewController?
-    
-    // true: 채팅, false: 검색
-    var contentMode = true
     
     lazy var pageContent = [ProgressViewController(nibName: "ProgressViewController", bundle: nil),
                             WaitingViewController(nibName: "WaitingViewController", bundle: nil)]
@@ -59,24 +50,10 @@ class ChattingViewController: BaseViewController {
         pageController.view.frame = pageViewRect
         pageController.didMove(toParent: self)
         
-        //scrollView
-        setKeyboardNotification(targetView: scrollView)
-        
-        //Mode
-        viewSearch.isHidden = true
-        let viewHeight = self.view.frame.height - 98
-        viewContentHeight.constant = viewHeight
-        viewSearchHeight.constant = viewHeight
     }
     
     func updateView() {
-        if contentMode == true {
-            viewContent.isHidden = false
-            viewSearch.isHidden = true
-        } else {
-            viewContent.isHidden = true
-            viewSearch.isHidden = false
-        }
+        
     }
     
     func pageChanged(page: Int) {
@@ -100,8 +77,8 @@ class ChattingViewController: BaseViewController {
     // btnSearch
     @objc func btnSearchPressed(_ sender: UIButton) {
         print(#function)
-        contentMode = false
-        updateView()
+        let vc = ChattingSearchViewController(nibName: "ChattingSearchViewController", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
         
