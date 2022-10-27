@@ -115,8 +115,6 @@
 		DF068CB228EC496700083917 /* PermissionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF068CB028EC496700083917 /* PermissionViewController.xib */; };
 		DF068CB728EC603800083917 /* PermissionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF068CB528EC603800083917 /* PermissionTableViewCell.swift */; };
 		DF068CB828EC603800083917 /* PermissionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF068CB628EC603800083917 /* PermissionTableViewCell.xib */; };
-		DF13A2762903E23600C7F096 /* PhotoCropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF13A2742903E23600C7F096 /* PhotoCropViewController.swift */; };
-		DF13A2772903E23600C7F096 /* PhotoCropViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF13A2752903E23600C7F096 /* PhotoCropViewController.xib */; };
 		DF15CBDE28E85AB0009F24CB /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = DF15CBDA28E85AB0009F24CB /* Pretendard-Medium.otf */; };
 		DF15CBDF28E85AB0009F24CB /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DF15CBDB28E85AB0009F24CB /* Pretendard-Bold.otf */; };
 		DF15CBE028E85AB0009F24CB /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DF15CBDC28E85AB0009F24CB /* Pretendard-Regular.otf */; };
@@ -274,8 +272,6 @@
 		DF068CB028EC496700083917 /* PermissionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PermissionViewController.xib; sourceTree = "<group>"; };
 		DF068CB528EC603800083917 /* PermissionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionTableViewCell.swift; sourceTree = "<group>"; };
 		DF068CB628EC603800083917 /* PermissionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PermissionTableViewCell.xib; sourceTree = "<group>"; };
-		DF13A2742903E23600C7F096 /* PhotoCropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCropViewController.swift; sourceTree = "<group>"; };
-		DF13A2752903E23600C7F096 /* PhotoCropViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCropViewController.xib; sourceTree = "<group>"; };
 		DF15CBDA28E85AB0009F24CB /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		DF15CBDB28E85AB0009F24CB /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		DF15CBDC28E85AB0009F24CB /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
@@ -701,8 +697,6 @@
 				DFD3505A29025E6F004E725A /* PhotoPickerViewController.xib */,
 				DFD3505F29026444004E725A /* PhotoPickerCollectionViewCell.swift */,
 				DFD3506029026444004E725A /* PhotoPickerCollectionViewCell.xib */,
-				DF13A2742903E23600C7F096 /* PhotoCropViewController.swift */,
-				DF13A2752903E23600C7F096 /* PhotoCropViewController.xib */,
 				DF5B530729064C3100E8DE96 /* PhotoPreviewCollectionViewCell.swift */,
 				DF5B530829064C3100E8DE96 /* PhotoPreviewCollectionViewCell.xib */,
 				DFFF48782906B5960004F48E /* DropDownModel.swift */,
@@ -873,7 +867,6 @@
 				DFE0373F28E27B5D00BE9E35 /* Assets.xcassets in Resources */,
 				DF15CBE028E85AB0009F24CB /* Pretendard-Regular.otf in Resources */,
 				0876385828F42DC500BE6B13 /* SearchViewController.xib in Resources */,
-				DF13A2772903E23600C7F096 /* PhotoCropViewController.xib in Resources */,
 				08E10F3B28F812240021931D /* StudyDetailViewController.xib in Resources */,
 				08E10F4328F8150E0021931D /* FavoriteStudyViewController.xib in Resources */,
 				1972785028F645390029F27D /* SelectDatePopupViewController.xib in Resources */,
@@ -1031,7 +1024,6 @@
 				08DC526D28E9AB6E00B058ED /* ScheduleDetailTableViewCell.swift in Sources */,
 				19877F5529026377004AD3EE /* MoreUserInfoTableViewCell.swift in Sources */,
 				192C3DB528E56DAA003563D3 /* CALayer+Extension.swift in Sources */,
-				DF13A2762903E23600C7F096 /* PhotoCropViewController.swift in Sources */,
 				192C3DB328E56BAF003563D3 /* Notification+Extension.swift in Sources */,
 				0876385728F42DC500BE6B13 /* SearchViewController.swift in Sources */,
 				191A969028F66382007E2F04 /* SelectStartEndSegmentTableViewCell.swift in Sources */,
