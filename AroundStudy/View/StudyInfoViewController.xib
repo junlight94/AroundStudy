@@ -159,10 +159,10 @@
                                         <constraint firstItem="84y-Ak-FzC" firstAttribute="centerY" secondItem="Tcm-j5-yLp" secondAttribute="centerY" id="wjo-u8-eAW"/>
                                     </constraints>
                                 </view>
-                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="I6U-Ez-yvP">
-                                    <rect key="frame" x="0.0" y="61" width="414" height="117"/>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="I6U-Ez-yvP">
+                                    <rect key="frame" x="20" y="61" width="394" height="85"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5KP-M5-474">
+                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="12" id="5KP-M5-474">
                                         <size key="itemSize" width="128" height="128"/>
                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -174,9 +174,9 @@
                             <constraints>
                                 <constraint firstItem="Tcm-j5-yLp" firstAttribute="top" secondItem="y0u-WD-YyH" secondAttribute="top" id="1B4-N6-zw4"/>
                                 <constraint firstItem="I6U-Ez-yvP" firstAttribute="top" secondItem="Tcm-j5-yLp" secondAttribute="bottom" id="3tG-eG-wom"/>
-                                <constraint firstItem="I6U-Ez-yvP" firstAttribute="leading" secondItem="y0u-WD-YyH" secondAttribute="leading" id="Kvl-Bu-syp"/>
+                                <constraint firstItem="I6U-Ez-yvP" firstAttribute="leading" secondItem="y0u-WD-YyH" secondAttribute="leading" constant="20" id="Kvl-Bu-syp"/>
                                 <constraint firstItem="Tcm-j5-yLp" firstAttribute="leading" secondItem="y0u-WD-YyH" secondAttribute="leading" id="NYE-vg-9Ke"/>
-                                <constraint firstAttribute="bottom" secondItem="I6U-Ez-yvP" secondAttribute="bottom" id="eMr-mk-9nX"/>
+                                <constraint firstAttribute="bottom" secondItem="I6U-Ez-yvP" secondAttribute="bottom" constant="32" id="eMr-mk-9nX"/>
                                 <constraint firstAttribute="trailing" secondItem="Tcm-j5-yLp" secondAttribute="trailing" id="iyz-LQ-Zpv"/>
                                 <constraint firstAttribute="trailing" secondItem="I6U-Ez-yvP" secondAttribute="trailing" id="jDF-UQ-nDx"/>
                                 <constraint firstAttribute="height" constant="178" id="uLg-su-Hcm"/>
@@ -209,10 +209,10 @@
                                         <constraint firstItem="Cmr-7H-GOn" firstAttribute="centerY" secondItem="vV6-5k-nRw" secondAttribute="centerY" id="Xwn-Dy-szU"/>
                                     </constraints>
                                 </view>
-                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="y9y-o6-Acf">
-                                    <rect key="frame" x="0.0" y="61" width="414" height="222"/>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="y9y-o6-Acf">
+                                    <rect key="frame" x="20" y="61" width="394" height="222"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1R7-r8-6Pd">
+                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="16" id="1R7-r8-6Pd">
                                         <size key="itemSize" width="128" height="128"/>
                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -229,7 +229,7 @@
                                 <constraint firstAttribute="trailing" secondItem="y9y-o6-Acf" secondAttribute="trailing" id="cxZ-6U-0ZR"/>
                                 <constraint firstItem="y9y-o6-Acf" firstAttribute="top" secondItem="vV6-5k-nRw" secondAttribute="bottom" id="q7y-Z9-ORi"/>
                                 <constraint firstAttribute="bottom" secondItem="y9y-o6-Acf" secondAttribute="bottom" constant="18" id="qdc-RZ-49p"/>
-                                <constraint firstItem="y9y-o6-Acf" firstAttribute="leading" secondItem="e2E-LX-Mbx" secondAttribute="leading" id="zfA-B4-PQd"/>
+                                <constraint firstItem="y9y-o6-Acf" firstAttribute="leading" secondItem="e2E-LX-Mbx" secondAttribute="leading" constant="20" id="zfA-B4-PQd"/>
                             </constraints>
                         </view>
                     </subviews>

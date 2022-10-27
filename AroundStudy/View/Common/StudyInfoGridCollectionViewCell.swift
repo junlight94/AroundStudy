@@ -18,6 +18,7 @@ class StudyInfoGridCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var viewCategory: UIView!
     @IBOutlet weak var viewLocation: UIView!
     @IBOutlet weak var viewMember: UIView!
+    @IBOutlet weak var ivHeight: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()
