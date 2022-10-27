@@ -10,6 +10,7 @@ import RealmSwift
 
 class SearchViewController: BaseViewController {
 
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var tfSearch: TextField_Search!
     @IBOutlet weak var hotStudyCollectionView: UICollectionView!
     @IBOutlet weak var historyCollectionView: UICollectionView!
@@ -88,6 +89,8 @@ class SearchViewController: BaseViewController {
 
     //MARK: - General Function
     func setupView() {
+        setKeyboardNotification(targetView: scrollView)
+        
         //CollectionView
         hotStudyCollectionView.delegate = self
         hotStudyCollectionView.dataSource = self

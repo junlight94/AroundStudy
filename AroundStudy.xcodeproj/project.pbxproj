@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		086632EF290A32F400286BEA /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086632ED290A32F400286BEA /* ProgressViewController.swift */; };
+		086632F0290A32F400286BEA /* ProgressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 086632EE290A32F400286BEA /* ProgressViewController.xib */; };
+		086632F3290A330400286BEA /* WaitingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086632F1290A330400286BEA /* WaitingViewController.swift */; };
+		086632F4290A330400286BEA /* WaitingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 086632F2290A330400286BEA /* WaitingViewController.xib */; };
+		086632FB290A3C9C00286BEA /* ChattingListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086632F9290A3C9C00286BEA /* ChattingListTableViewCell.swift */; };
+		086632FC290A3C9C00286BEA /* ChattingListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 086632FA290A3C9C00286BEA /* ChattingListTableViewCell.xib */; };
 		0876383E28F40CFF00BE6B13 /* InputNickNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0876383C28F40CFF00BE6B13 /* InputNickNameViewController.swift */; };
 		0876383F28F40CFF00BE6B13 /* InputNickNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0876383D28F40CFF00BE6B13 /* InputNickNameViewController.xib */; };
 		0876384428F40D4500BE6B13 /* InputGenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0876384228F40D4500BE6B13 /* InputGenderViewController.swift */; };
@@ -165,6 +171,12 @@
 
 /* Begin PBXFileReference section */
 		0003277DD7AD64CED1AF30D9 /* Pods-AroundStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundStudy.debug.xcconfig"; path = "Target Support Files/Pods-AroundStudy/Pods-AroundStudy.debug.xcconfig"; sourceTree = "<group>"; };
+		086632ED290A32F400286BEA /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
+		086632EE290A32F400286BEA /* ProgressViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressViewController.xib; sourceTree = "<group>"; };
+		086632F1290A330400286BEA /* WaitingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingViewController.swift; sourceTree = "<group>"; };
+		086632F2290A330400286BEA /* WaitingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WaitingViewController.xib; sourceTree = "<group>"; };
+		086632F9290A3C9C00286BEA /* ChattingListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingListTableViewCell.swift; sourceTree = "<group>"; };
+		086632FA290A3C9C00286BEA /* ChattingListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChattingListTableViewCell.xib; sourceTree = "<group>"; };
 		0876383C28F40CFF00BE6B13 /* InputNickNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputNickNameViewController.swift; sourceTree = "<group>"; };
 		0876383D28F40CFF00BE6B13 /* InputNickNameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputNickNameViewController.xib; sourceTree = "<group>"; };
 		0876384228F40D4500BE6B13 /* InputGenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputGenderViewController.swift; sourceTree = "<group>"; };
@@ -339,6 +351,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		086632FD290A447900286BEA /* 채팅-상세 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "채팅-상세";
+			sourceTree = "<group>";
+		};
+		086632FE290A448500286BEA /* 채팅-메인 */ = {
+			isa = PBXGroup;
+			children = (
+				08DC524F28E8654400B058ED /* ChattingViewController.swift */,
+				08DC525028E8654400B058ED /* ChattingViewController.xib */,
+				086632ED290A32F400286BEA /* ProgressViewController.swift */,
+				086632EE290A32F400286BEA /* ProgressViewController.xib */,
+				086632F1290A330400286BEA /* WaitingViewController.swift */,
+				086632F2290A330400286BEA /* WaitingViewController.xib */,
+				086632F9290A3C9C00286BEA /* ChattingListTableViewCell.swift */,
+				086632FA290A3C9C00286BEA /* ChattingListTableViewCell.xib */,
+			);
+			name = "채팅-메인";
+			sourceTree = "<group>";
+		};
 		0876385428F42DB600BE6B13 /* 홈-검색 */ = {
 			isa = PBXGroup;
 			children = (
@@ -513,8 +547,8 @@
 		08DC524428E864D400B058ED /* 채팅 */ = {
 			isa = PBXGroup;
 			children = (
-				08DC524F28E8654400B058ED /* ChattingViewController.swift */,
-				08DC525028E8654400B058ED /* ChattingViewController.xib */,
+				086632FE290A448500286BEA /* 채팅-메인 */,
+				086632FD290A447900286BEA /* 채팅-상세 */,
 			);
 			name = "채팅";
 			sourceTree = "<group>";
@@ -875,6 +909,7 @@
 				19690EA928F0F9F0006EEE8D /* CategoryItemCollectionViewCell.xib in Resources */,
 				0876383F28F40CFF00BE6B13 /* InputNickNameViewController.xib in Resources */,
 				DFFD345F28EEFADB00CFCB74 /* OnboardingViewController.xib in Resources */,
+				086632F0290A32F400286BEA /* ProgressViewController.xib in Resources */,
 				0876385E28F5691700BE6B13 /* HotStudyCollectionViewCell.xib in Resources */,
 				08DC527A28E9ABD800B058ED /* VoteTableViewCell.xib in Resources */,
 				19690EAA28F0F9F0006EEE8D /* CategoryViewController.xib in Resources */,
@@ -888,6 +923,7 @@
 				DF5B530A29064C3100E8DE96 /* PhotoPreviewCollectionViewCell.xib in Resources */,
 				DFE0373F28E27B5D00BE9E35 /* Assets.xcassets in Resources */,
 				DF15CBE028E85AB0009F24CB /* Pretendard-Regular.otf in Resources */,
+				086632F4290A330400286BEA /* WaitingViewController.xib in Resources */,
 				0876385828F42DC500BE6B13 /* SearchViewController.xib in Resources */,
 				DF13A2772903E23600C7F096 /* PhotoCropViewController.xib in Resources */,
 				08E10F3B28F812240021931D /* StudyDetailViewController.xib in Resources */,
@@ -896,6 +932,7 @@
 				199B5E7D29066F940096E8C6 /* ProfileViewController.xib in Resources */,
 				08E10F4928F838CB0021931D /* KeywordCollectionViewCell.xib in Resources */,
 				08DC525628E8654D00B058ED /* MoreViewController.xib in Resources */,
+				086632FC290A3C9C00286BEA /* ChattingListTableViewCell.xib in Resources */,
 				197CE78D28F556B70042A6EA /* Main.storyboard in Resources */,
 				DF15CBE128E85AB0009F24CB /* Pretendard-SemiBold.otf in Resources */,
 				DFD3506229026444004E725A /* PhotoPickerCollectionViewCell.xib in Resources */,
@@ -977,6 +1014,7 @@
 			files = (
 				0876385D28F5691700BE6B13 /* HotStudyCollectionViewCell.swift in Sources */,
 				1961AD8328F4EB6F0032FE7A /* VoteViewController.swift in Sources */,
+				086632EF290A32F400286BEA /* ProgressViewController.swift in Sources */,
 				DF88223328EFBB5600993F2E /* RegisterCompleteViewController.swift in Sources */,
 				1984E1392906328F00B8CD4D /* MoreStudyTitle.swift in Sources */,
 				1961AD8728F4EC920032FE7A /* VoteTitleTableViewCell.swift in Sources */,
@@ -984,6 +1022,7 @@
 				191A969728F6922F007E2F04 /* CustomSegmentControl.swift in Sources */,
 				191DD3EF28F930E900889488 /* CustomFloatingPanel.swift in Sources */,
 				08E10F3E28F814FF0021931D /* JoinedStudyViewController.swift in Sources */,
+				086632FB290A3C9C00286BEA /* ChattingListTableViewCell.swift in Sources */,
 				08E10F4828F838CB0021931D /* KeywordCollectionViewCell.swift in Sources */,
 				DFCBDD8328E94244008A7E02 /* CommonPopupViewController.swift in Sources */,
 				DFCBDD8228E94240008A7E02 /* TestViewController.swift in Sources */,
@@ -1038,6 +1077,7 @@
 				08DC524D28E8653800B058ED /* StudyViewController.swift in Sources */,
 				1984E13F290638CA00B8CD4D /* UITableView+Extension.swift in Sources */,
 				19868C4C28EC5C550093DF76 /* StudyBannerCollectionViewCell.swift in Sources */,
+				086632F3290A330400286BEA /* WaitingViewController.swift in Sources */,
 				08DC527928E9ABD800B058ED /* VoteTableViewCell.swift in Sources */,
 				DFEC1FBA28F675F8009B866E /* AddVoteTextfieldView.swift in Sources */,
 				088A62D128E32B6800442E6C /* String+Extension.swift in Sources */,

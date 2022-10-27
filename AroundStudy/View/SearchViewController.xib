@@ -24,6 +24,7 @@
                 <outlet property="historyCollectionViewHeight" destination="GTv-PN-YpH" id="Dy5-sx-kVW"/>
                 <outlet property="hotStudyCollectionView" destination="KUz-ww-yax" id="q08-dF-vSm"/>
                 <outlet property="pcHotStudy" destination="Soe-al-aBW" id="Ejr-M1-WQx"/>
+                <outlet property="scrollView" destination="EhK-Pe-ses" id="WYV-qJ-S8o"/>
                 <outlet property="searchHistoryTableView" destination="A6I-3F-rMf" id="LCK-3R-7Ri"/>
                 <outlet property="searchHistoryTableViewHeight" destination="oOH-Wz-dtY" id="EkJ-yd-Vkm"/>
                 <outlet property="textField" destination="Ukl-kl-jcr" id="1Au-9Z-h79"/>
