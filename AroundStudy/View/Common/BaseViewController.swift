@@ -6,6 +6,7 @@
 import UIKit
 import CoreLocation
 import FloatingPanel
+import Kingfisher
 
 //******************************************************
 //MARK: - Typealias
@@ -74,6 +75,7 @@ class BaseViewController: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+        removeCache()
     }
     
     override func viewSafeAreaInsetsDidChange() {
@@ -268,6 +270,15 @@ extension BaseViewController {
             return
         }
         keyboardTargetView.contentInset = .zero
+    }
+    
+    /**
+     * @Kingfisher 이미지 캐시 삭제
+     * @creator : coder3306
+     */
+    private func removeCache() {
+        ImageCache.default.clearMemoryCache()
+        ImageCache.default.clearDiskCache()
     }
 }
 

@@ -6,6 +6,7 @@
 
 import Foundation
 import Alamofire
+import Kingfisher
 
 public actor APIManager {
     /// API 호출 싱글턴 인스턴스
@@ -36,27 +37,6 @@ public actor APIManager {
         guard await (request.response.response?.statusCode == 200) else { throw ApiError.statusCodeError }
         guard await (request.response.value != nil) else { throw ApiError.emptyData }
         return try await request.value
-    }
-    
-    /**
-     * @이미지 다운로드
-     * @creator : coder3306
-     * @param url : 다운로드할 이미지 주소
-     * @Return : (비동기) 다운로드가 완료된 이미지
-     */
-    public func downloadImage(_ url: String, complete: @escaping (Result<UIImage, Error>) -> ()) {
-        if let encodingURL = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) {
-            AF.request(encodingURL).responseData(completionHandler: { response in
-                switch response.result {
-                    case .success(let data):
-                        if let image = UIImage(data: data) {
-                            complete(.success(image))
-                        }
-                    case .failure(let error):
-                        complete(.failure(error))
-                }
-            })
-        }
     }
 }
 
