@@ -95,6 +95,7 @@
 		1956F47529232CBE006D3266 /* OpenStudySelectTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1956F47329232CBE006D3266 /* OpenStudySelectTimeViewController.xib */; };
 		1956F47A29235407006D3266 /* OpenStudySelectOnlinePlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956F47829235407006D3266 /* OpenStudySelectOnlinePlaceViewController.swift */; };
 		1956F47B29235407006D3266 /* OpenStudySelectOnlinePlaceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1956F47929235407006D3266 /* OpenStudySelectOnlinePlaceViewController.xib */; };
+		1956F47E29237EFE006D3266 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956F47D29237EFE006D3266 /* UIView+Extension.swift */; };
 		1961AD8328F4EB6F0032FE7A /* VoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1961AD8128F4EB6F0032FE7A /* VoteViewController.swift */; };
 		1961AD8428F4EB6F0032FE7A /* VoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1961AD8228F4EB6F0032FE7A /* VoteViewController.xib */; };
 		1961AD8728F4EC920032FE7A /* VoteTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1961AD8528F4EC920032FE7A /* VoteTitleTableViewCell.swift */; };
@@ -267,6 +268,7 @@
 		1956F47329232CBE006D3266 /* OpenStudySelectTimeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenStudySelectTimeViewController.xib; sourceTree = "<group>"; };
 		1956F47829235407006D3266 /* OpenStudySelectOnlinePlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenStudySelectOnlinePlaceViewController.swift; sourceTree = "<group>"; };
 		1956F47929235407006D3266 /* OpenStudySelectOnlinePlaceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenStudySelectOnlinePlaceViewController.xib; sourceTree = "<group>"; };
+		1956F47D29237EFE006D3266 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		1961AD8128F4EB6F0032FE7A /* VoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteViewController.swift; sourceTree = "<group>"; };
 		1961AD8228F4EB6F0032FE7A /* VoteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VoteViewController.xib; sourceTree = "<group>"; };
 		1961AD8528F4EC920032FE7A /* VoteTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteTitleTableViewCell.swift; sourceTree = "<group>"; };
@@ -505,6 +507,7 @@
 				191DD3EC28F8F20200889488 /* UIFont+Extension.swift */,
 				DFD3505D29026050004E725A /* UIImage+Extension.swift */,
 				1984E13E290638CA00B8CD4D /* UITableView+Extension.swift */,
+				1956F47D29237EFE006D3266 /* UIView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1158,6 +1161,7 @@
 				DF88222E28EFB13F00993F2E /* SocialLoginViewController.swift in Sources */,
 				08DC523128E4663B00B058ED /* DataManager.swift in Sources */,
 				1972784F28F645390029F27D /* SelectDatePopupViewController.swift in Sources */,
+				1956F47E29237EFE006D3266 /* UIView+Extension.swift in Sources */,
 				08DC522D28E4647400B058ED /* Button+General.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -74,6 +74,7 @@ class OpenStudySelectOnlinePlaceViewController: BaseViewController {
      */
     private func initLayout() {
         aryOnlinePlace?.enumerated().forEach({
+            $1.setResizeFont()
             $1.tag = $0
         })
         btnClear?.layer.setBorderLayout(radius: 8, width: 1, color: UIColor(named: "236"))
@@ -122,5 +123,14 @@ extension OpenStudySelectOnlinePlaceViewController {
     @IBAction private func actionSelectPlace(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
         selectedPlace[sender.tag].1 = sender.isSelected
+    }
+    
+    /**
+     * @시간설정 화면 종료
+     * @creator : coder3306
+     * @param sender : UIButton
+     */
+    @IBAction private func actionClose(_ sender: UIButton) {
+        self.dismiss(animated: true)
     }
 }

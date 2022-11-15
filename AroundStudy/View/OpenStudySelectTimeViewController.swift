@@ -40,7 +40,7 @@ class OpenStudySelectTimeViewController: BaseViewController {
     /**
      * @선택한 시간 콜백 처리
      * @creator : coder3306
-     * @Return : 선택하ㅏ
+     * @Return : 선택한 시간 정보를 콜백 메서드로 전달(HH:mm)
      */
     public func selectedTimeHandler(_ complete: @escaping dataClosure) {
         self.selectedTime = complete
@@ -51,23 +51,44 @@ class OpenStudySelectTimeViewController: BaseViewController {
      * @creator : coder3306
      * @param sender : UIButton
      */
-    @IBAction private func didSelectTime(_ sender: UIButton) {
+    @IBAction private func actionSelectTime(_ sender: UIButton) {
         selectedTime?("\(selectedHour):\(selectedMinute)")
+        self.dismiss(animated: true)
+    }
+    
+    /**
+     * @화면 종료
+     * @creator : coder3306
+     * @param sender : UIButton
+     */
+    @IBAction private func actionClose(_ sender: UIButton) {
         self.dismiss(animated: true)
     }
 }
 
 extension OpenStudySelectTimeViewController: tableViewExtension {
+    /**
+     * @테이블뷰 초기화
+     * @creator : coder3306
+     */
     private func initTableViewCell() {
         if let tableTime = tableTime {
             CustomPickerTableViewCell.registerXib(targetView: tableTime)
         }
     }
     
+    /**
+     * @테이블뷰 로우 설정
+     * @creator : coder3306
+     */
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
+    /**
+     * @테이블뷰 셀 설정
+     * @creator : coder3306
+     */
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let tableTime = tableTime else {
             return UITableViewCell()
