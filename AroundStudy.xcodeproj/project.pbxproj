@@ -89,6 +89,8 @@
 		192C3DAF28E55FCF003563D3 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C3DAE28E55FCF003563D3 /* CustomNavigationBar.swift */; };
 		192C3DB328E56BAF003563D3 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C3DB228E56BAF003563D3 /* Notification+Extension.swift */; };
 		192C3DB528E56DAA003563D3 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C3DB428E56DAA003563D3 /* CALayer+Extension.swift */; };
+		1956F47029231749006D3266 /* OpenStudyStep3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956F46E29231749006D3266 /* OpenStudyStep3ViewController.swift */; };
+		1956F47129231749006D3266 /* OpenStudyStep3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1956F46F29231749006D3266 /* OpenStudyStep3ViewController.xib */; };
 		1961AD8328F4EB6F0032FE7A /* VoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1961AD8128F4EB6F0032FE7A /* VoteViewController.swift */; };
 		1961AD8428F4EB6F0032FE7A /* VoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1961AD8228F4EB6F0032FE7A /* VoteViewController.xib */; };
 		1961AD8728F4EC920032FE7A /* VoteTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1961AD8528F4EC920032FE7A /* VoteTitleTableViewCell.swift */; };
@@ -255,6 +257,8 @@
 		192C3DAE28E55FCF003563D3 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		192C3DB228E56BAF003563D3 /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
 		192C3DB428E56DAA003563D3 /* CALayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
+		1956F46E29231749006D3266 /* OpenStudyStep3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenStudyStep3ViewController.swift; sourceTree = "<group>"; };
+		1956F46F29231749006D3266 /* OpenStudyStep3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenStudyStep3ViewController.xib; sourceTree = "<group>"; };
 		1961AD8128F4EB6F0032FE7A /* VoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteViewController.swift; sourceTree = "<group>"; };
 		1961AD8228F4EB6F0032FE7A /* VoteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VoteViewController.xib; sourceTree = "<group>"; };
 		1961AD8528F4EC920032FE7A /* VoteTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteTitleTableViewCell.swift; sourceTree = "<group>"; };
@@ -542,6 +546,7 @@
 		08DC524328E864BB00B058ED /* 스터디 */ = {
 			isa = PBXGroup;
 			children = (
+				1956F46929231585006D3266 /* 개설 */,
 				088DC3672900CF6000E3EDFB /* 정보 */,
 				DFEC1FBB28F6B37B009B866E /* 일정 */,
 				DFD26DDD28F27E410091923A /* 투표 */,
@@ -621,6 +626,15 @@
 				191DD3EA28F8E76900889488 /* CustomCalendarCell.swift */,
 			);
 			name = "공통-셀";
+			sourceTree = "<group>";
+		};
+		1956F46929231585006D3266 /* 개설 */ = {
+			isa = PBXGroup;
+			children = (
+				1956F46E29231749006D3266 /* OpenStudyStep3ViewController.swift */,
+				1956F46F29231749006D3266 /* OpenStudyStep3ViewController.xib */,
+			);
+			name = "개설";
 			sourceTree = "<group>";
 		};
 		1970962D29078B2D00895BA0 /* 메인 */ = {
@@ -948,6 +962,7 @@
 				DFD3506229026444004E725A /* PhotoPickerCollectionViewCell.xib in Resources */,
 				08DC524A28E8652C00B058ED /* HomeViewController.xib in Resources */,
 				08DC526A28E9AB2B00B058ED /* MemberProfileCollectionViewCell.xib in Resources */,
+				1956F47129231749006D3266 /* OpenStudyStep3ViewController.xib in Resources */,
 				08DC525228E8654400B058ED /* ChattingViewController.xib in Resources */,
 				DF068CB828EC603800083917 /* PermissionTableViewCell.xib in Resources */,
 				197CE78328F526530042A6EA /* StudyScheduleTitleTableViewCell.xib in Resources */,
@@ -1099,6 +1114,7 @@
 				0876383E28F40CFF00BE6B13 /* InputNickNameViewController.swift in Sources */,
 				08DC526D28E9AB6E00B058ED /* ScheduleDetailTableViewCell.swift in Sources */,
 				19877F5529026377004AD3EE /* MoreUserInfoTableViewCell.swift in Sources */,
+				1956F47029231749006D3266 /* OpenStudyStep3ViewController.swift in Sources */,
 				192C3DB528E56DAA003563D3 /* CALayer+Extension.swift in Sources */,
 				192C3DB328E56BAF003563D3 /* Notification+Extension.swift in Sources */,
 				0876385728F42DC500BE6B13 /* SearchViewController.swift in Sources */,

@@ -118,7 +118,7 @@ class BaseViewController: UIViewController {
                     make.leading.equalTo(leftItems.snp.trailing).offset(12)
                 }
                 if let rightItems = customNavigationBar.containerView.subviews.filter({$0.accessibilityIdentifier == "NAVIGATIONRIGHTITEMS"}).first {
-                    make.trailing.greaterThanOrEqualTo(rightItems.snp.leading).offset(-12)
+                    make.trailing.lessThanOrEqualTo(rightItems.snp.leading).offset(-12)
                 }
             }
         } else if isLeftSetting && leftBarButton == nil {
