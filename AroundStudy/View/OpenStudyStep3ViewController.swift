@@ -127,7 +127,7 @@ extension OpenStudyStep3ViewController {
                     self.lblSelectPlace?.text = onlinePlace
                 }
             }
-            setupFloatingView(vc, targetScrollView: UIScrollView(), position: .half, setHalfOnly: true)
+            setupFloatingView(vc, targetScrollView: UIScrollView(), position: .half, setHalfOnly: true, halfHeight: 298)
         }
     }
     
@@ -155,7 +155,7 @@ extension OpenStudyStep3ViewController {
             }
         }
         floatingPanelController = FloatingPanelController(delegate: self)
-        setupFloatingView(vc, targetScrollView: UIScrollView(), position: .half, setHalfOnly: true)
+        setupFloatingView(vc, targetScrollView: UIScrollView(), position: .half, setHalfOnly: true, halfHeight: 346)
     }
     
     /**

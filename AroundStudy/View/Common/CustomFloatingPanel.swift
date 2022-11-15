@@ -18,19 +18,25 @@ class CustomFloatingPanelLayout: FloatingPanelLayout {
     
     /// 팝업 노출 높이 플래그 설정
     var setHalfOnly = false
+    /// 절반 노출 시 , 노출높이 조절용 프로퍼티
+    var halfHeight = UIScreen.main.bounds.height / 2
     
     /// 전체화면 레이아웃 설정
-    private let fullAnchor: [FloatingPanelState: FloatingPanelLayoutAnchoring]  = [
+    private let fullAnchor: [FloatingPanelState: FloatingPanelLayoutAnchoring] = [
         .full: FloatingPanelLayoutAnchor(absoluteInset: 16.0, edge: .top, referenceGuide: .safeArea),
         .half: FloatingPanelLayoutAnchor(absoluteInset: UIScreen.main.bounds.height / 2, edge: .bottom, referenceGuide: .safeArea),
         .tip: FloatingPanelLayoutAnchor(absoluteInset: 150, edge: .bottom, referenceGuide: .safeArea)
     ]
     
     /// 절반만 노출하는 레이아웃 설정
-    private let halfOnly: [FloatingPanelState: FloatingPanelLayoutAnchoring]  = [
-        .half: FloatingPanelLayoutAnchor(absoluteInset: UIScreen.main.bounds.height / 2, edge: .bottom, referenceGuide: .safeArea),
-        .tip: FloatingPanelLayoutAnchor(absoluteInset: 150, edge: .bottom, referenceGuide: .safeArea)
-    ]
+    private var halfOnly: [FloatingPanelState: FloatingPanelLayoutAnchoring] {
+        get {
+            return [
+                .half: FloatingPanelLayoutAnchor(absoluteInset: halfHeight, edge: .bottom, referenceGuide: .safeArea),
+                .tip: FloatingPanelLayoutAnchor(absoluteInset: 150, edge: .bottom, referenceGuide: .safeArea)
+            ]
+        }
+    }
     
     /// 플로팅 패널 제약조건 설정
     var anchors: [FloatingPanelState: FloatingPanelLayoutAnchoring] {
