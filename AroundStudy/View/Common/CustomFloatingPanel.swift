@@ -16,13 +16,25 @@ class CustomFloatingPanelLayout: FloatingPanelLayout {
     /// 패널 초기상태 설정
     var initialState: FloatingPanelState = .tip
     
+    /// 팝업 노출 높이 플래그 설정
+    var setHalfOnly = false
+    
+    /// 전체화면 레이아웃 설정
+    private let fullAnchor: [FloatingPanelState: FloatingPanelLayoutAnchoring]  = [
+        .full: FloatingPanelLayoutAnchor(absoluteInset: 16.0, edge: .top, referenceGuide: .safeArea),
+        .half: FloatingPanelLayoutAnchor(absoluteInset: UIScreen.main.bounds.height / 2, edge: .bottom, referenceGuide: .safeArea),
+        .tip: FloatingPanelLayoutAnchor(absoluteInset: 150, edge: .bottom, referenceGuide: .safeArea)
+    ]
+    
+    /// 절반만 노출하는 레이아웃 설정
+    private let halfOnly: [FloatingPanelState: FloatingPanelLayoutAnchoring]  = [
+        .half: FloatingPanelLayoutAnchor(absoluteInset: UIScreen.main.bounds.height / 2, edge: .bottom, referenceGuide: .safeArea),
+        .tip: FloatingPanelLayoutAnchor(absoluteInset: 150, edge: .bottom, referenceGuide: .safeArea)
+    ]
+    
     /// 플로팅 패널 제약조건 설정
     var anchors: [FloatingPanelState: FloatingPanelLayoutAnchoring] {
-        return [
-            .full: FloatingPanelLayoutAnchor(absoluteInset: 16.0, edge: .top, referenceGuide: .safeArea),
-            .half: FloatingPanelLayoutAnchor(absoluteInset: UIScreen.main.bounds.height / 2, edge: .bottom, referenceGuide: .safeArea),
-            .tip: FloatingPanelLayoutAnchor(absoluteInset: layoutBottomInset ?? 150, edge: .bottom, referenceGuide: .safeArea)
-        ]
+        return setHalfOnly ? halfOnly : fullAnchor
     }
     
     /**
@@ -32,7 +44,8 @@ class CustomFloatingPanelLayout: FloatingPanelLayout {
      */
     func backdropAlpha(for state: FloatingPanelState) -> CGFloat {
         switch state {
-            case .full, .half: return 0.5
+            case .full: return 0.6
+            case .half: return 0.4
             case .tip: return 0.1
         default: return 0.0
         }

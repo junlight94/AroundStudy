@@ -190,13 +190,16 @@ class BaseViewController: UIViewController {
      * @creator : coder3306
      * @param targetViewController : 플로팅 패널로 올릴 뷰 컨트롤러 설정
      * @param targetScrollView : 플로팅 패널 내 스크롤 뷰 설정
+     * @param position : 플로팅 패널 초기 노출 위치 설정
+     * @param setHalfOnly : 플로팅 패널의 노출 높이를 전체화면 또는 절반으로 설정할때 사용(디폴트: 전체화면)
      */
-    public func setupFloatingView(_ targetViewController: UIViewController, targetScrollView: UIScrollView, position: FloatingPanelState) {
+    public func setupFloatingView(_ targetViewController: UIViewController, targetScrollView: UIScrollView, position: FloatingPanelState, setHalfOnly: Bool = false) {
         self.isInitialCompleteFloatingPanel = false
         floatingTargetViewController = targetViewController
         floatingPanelController?.customPanelLayout()
         floatingPanelController?.set(contentViewController: targetViewController)
         let layout = CustomFloatingPanelLayout()
+        layout.setHalfOnly = setHalfOnly
         floatingPanelController?.layout = layout
         floatingPanelController?.invalidateLayout()
         //FIXME: 스크롤뷰 설정하기?

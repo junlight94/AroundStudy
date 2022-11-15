@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Pretendard-Medium.otf">
+            <string>Pretendard-Medium</string>
+        </array>
+        <array key="Pretendard-Regular.otf">
+            <string>Pretendard-Regular</string>
+        </array>
+        <array key="Pretendard-SemiBold.otf">
+            <string>Pretendard-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OpenStudySelectOnlinePlaceViewController" customModule="AroundStudy" customModuleProvider="target">
+            <connections>
+                <outlet property="btnClear" destination="Y9w-a8-fHG" id="Iu6-7s-F7D"/>
+                <outlet property="btnComplete" destination="bfc-Xe-pF7" id="I7y-Ya-Rb5"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="aryOnlinePlace" destination="twt-WB-QfH" collectionClass="NSMutableArray" id="7g6-VZ-n2i"/>
+                <outletCollection property="aryOnlinePlace" destination="QGw-Wt-Yv7" collectionClass="NSMutableArray" id="Zak-NP-YUS"/>
+                <outletCollection property="aryOnlinePlace" destination="HE7-dE-rp7" collectionClass="NSMutableArray" id="aOq-IV-oKs"/>
+                <outletCollection property="aryOnlinePlace" destination="PB8-cD-9nL" collectionClass="NSMutableArray" id="nge-Wx-zIq"/>
+                <outletCollection property="aryOnlinePlace" destination="Tcw-eR-yXv" collectionClass="NSMutableArray" id="w5E-DF-z0M"/>
+                <outletCollection property="aryOnlinePlace" destination="sS6-BF-Mqj" collectionClass="NSMutableArray" id="IBK-14-iWV"/>
+                <outletCollection property="aryOnlinePlace" destination="XOY-0X-pI7" collectionClass="NSMutableArray" id="KNI-Ex-BHB"/>
+                <outletCollection property="aryOnlinePlace" destination="uyc-Qs-6BX" collectionClass="NSMutableArray" id="t9j-eT-q8i"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1AE-cb-BgO">
+                    <rect key="frame" x="331" y="244" width="24" height="24"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="close"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시간 설정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKZ-ek-I1r">
+                    <rect key="frame" x="156" y="59" width="63" height="394"/>
+                    <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="17"/>
+                    <color key="textColor" name="40"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="3Ud-I1-rWT">
+                    <rect key="frame" x="20" y="589" width="335" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9w-a8-fHG">
+                            <rect key="frame" x="0.0" y="0.0" width="161" height="44"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" name="Pretendard-Medium" family="Pretendard" pointSize="15"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="초기화">
+                                <color key="titleColor" name="134"/>
+                            </state>
+                            <connections>
+                                <action selector="actionClear:" destination="-1" eventType="touchUpInside" id="VfP-sG-hqk"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfc-Xe-pF7">
+                            <rect key="frame" x="174" y="0.0" width="161" height="44"/>
+                            <color key="backgroundColor" name="Main"/>
+                            <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="15"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="완료">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="actionComplete:" destination="-1" eventType="touchUpInside" id="Hct-x3-cVa"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="fUW-qQ-uQd"/>
+                    </constraints>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Tu1-Hr-1y4">
+                    <rect key="frame" x="20" y="473" width="335" height="96"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="sah-3N-Aso">
+                            <rect key="frame" x="0.0" y="0.0" width="335" height="36"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twt-WB-QfH">
+                                    <rect key="frame" x="0.0" y="0.0" width="41" height="36"/>
+                                    <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="15"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="줌" image="check">
+                                        <color key="titleColor" name="68"/>
+                                    </state>
+                                    <state key="selected" image="checkFill">
+                                        <color key="titleColor" name="68"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="actionSelectPlace:" destination="-1" eventType="touchUpInside" id="Nji-Gh-Bdo"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGw-Wt-Yv7">
+                                    <rect key="frame" x="63.333333333333329" y="0.0" width="79.999999999999986" height="36"/>
+                                    <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="15"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="구글미트" image="check">
+                                        <color key="titleColor" name="68"/>
+                                    </state>
+                                    <state key="selected" image="checkFill">
+                                        <color key="titleColor" name="68"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="actionSelectPlace:" destination="-1" eventType="touchUpInside" id="L8s-4G-oXW"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HE7-dE-rp7">
+                                    <rect key="frame" x="165.66666666666666" y="0.0" width="67" height="36"/>
+                                    <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="15"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="웨일온" image="check">
+                                        <color key="titleColor" name="68"/>
+                                    </state>
+                                    <state key="selected" image="checkFill">
+                                        <color key="titleColor" name="68"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="actionSelectPlace:" destination="-1" eventType="touchUpInside" id="tIm-nP-eA3"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PB8-cD-9nL">
+                                    <rect key="frame" x="255" y="0.0" width="80" height="36"/>
+                                    <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="15"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="디스코드" image="check">
+                                        <color key="titleColor" name="68"/>
+                                    </state>
+                                    <state key="selected" image="checkFill">
+                                        <color key="titleColor" name="68"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="actionSelectPlace:" destination="-1" eventType="touchUpInside" id="FJC-Xl-nOq"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="36" id="ejI-M4-Dpu"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="IOA-XE-wnS">
+                            <rect key="frame" x="0.0" y="60" width="335" height="36"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tcw-eR-yXv">
+                                    <rect key="frame" x="0.0" y="0.0" width="67" height="36"/>
+                                    <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="15"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="웹엑스" image="check">
+                                        <color key="titleColor" name="68"/>
+                                    </state>
+                                    <state key="selected" image="checkFill">
+                                        <color key="titleColor" name="68"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="actionSelectPlace:" destination="-1" eventType="touchUpInside" id="18t-6V-TWt"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sS6-BF-Mqj">
+                                    <rect key="frame" x="93.666666666666671" y="0.0" width="54.000000000000014" height="36"/>
+                                    <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="15"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="팀즈" image="check">
+                                        <color key="titleColor" name="68"/>
+                                    </state>
+                                    <state key="selected" image="checkFill">
+                                        <color key="titleColor" name="68"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="actionSelectPlace:" destination="-1" eventType="touchUpInside" id="dg5-NN-q80"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOY-0X-pI7">
+                                    <rect key="frame" x="174.33333333333334" y="0.0" width="80" height="36"/>
+                                    <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="15"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="스카이프" image="check">
+                                        <color key="titleColor" name="68"/>
+                                    </state>
+                                    <state key="selected" image="checkFill">
+                                        <color key="titleColor" name="68"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="actionSelectPlace:" destination="-1" eventType="touchUpInside" id="Sqm-PE-Ydp"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyc-Qs-6BX">
+                                    <rect key="frame" x="281" y="0.0" width="54" height="36"/>
+                                    <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="15"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="기타" image="check">
+                                        <color key="titleColor" name="68"/>
+                                    </state>
+                                    <state key="selected" image="checkFill">
+                                        <color key="titleColor" name="68"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="actionSelectPlace:" destination="-1" eventType="touchUpInside" id="CgG-jT-Fww"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="3Ud-I1-rWT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="1sB-IZ-3or"/>
+                <constraint firstItem="Tu1-Hr-1y4" firstAttribute="top" secondItem="ZKZ-ek-I1r" secondAttribute="bottom" constant="20" id="3OD-34-bvq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3Ud-I1-rWT" secondAttribute="trailing" constant="20" id="COG-nQ-xz9"/>
+                <constraint firstItem="ZKZ-ek-I1r" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Hvq-hH-SKE"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1AE-cb-BgO" secondAttribute="trailing" constant="20" id="SAU-yZ-fLF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="3Ud-I1-rWT" secondAttribute="bottom" constant="34" id="V9E-1U-f4c"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Tu1-Hr-1y4" secondAttribute="trailing" constant="20" id="ev6-FU-SAk"/>
+                <constraint firstItem="3Ud-I1-rWT" firstAttribute="top" secondItem="Tu1-Hr-1y4" secondAttribute="bottom" constant="20" id="ost-bz-SFk"/>
+                <constraint firstItem="ZKZ-ek-I1r" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="qUb-nS-cY0"/>
+                <constraint firstItem="ZKZ-ek-I1r" firstAttribute="centerY" secondItem="1AE-cb-BgO" secondAttribute="centerY" id="sMa-ci-72w"/>
+                <constraint firstItem="Tu1-Hr-1y4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="yOb-ir-6HK"/>
+            </constraints>
+            <point key="canvasLocation" x="41.984732824427482" y="-11.267605633802818"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="check" width="28" height="28"/>
+        <image name="checkFill" width="28" height="28"/>
+        <image name="close" width="24" height="24"/>
+        <namedColor name="134">
+            <color red="0.52549019607843139" green="0.52549019607843139" blue="0.52549019607843139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="40">
+            <color red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="68">
+            <color red="0.2669999897480011" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Main">
+            <color red="0.55699998140335083" green="0.78799998760223389" blue="0.42699998617172241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
