@@ -31,6 +31,8 @@ class OpenStudyStep3ViewController: BaseViewController {
     @IBOutlet weak var lblSelectPlace: UILabel?
     /// 선택한 장소를 보여주는 뷰
     @IBOutlet weak var viewSelectedPlace: UIView?
+    /// 장소 진행방식을 나타내는 아이콘
+    @IBOutlet weak var imgPlaceIcon: UIImageView?
     
     /// 선택된 인원
     private var selectedPersonnel = 2
@@ -114,13 +116,24 @@ extension OpenStudyStep3ViewController {
      */
     @IBAction private func actionSelectPlace(_ sender: UIButton) {
         if isOffline {
-            
+            let vc = SearchAddressViewController(nibName: "SearchAddressViewController", bundle: nil)
+            vc.didSelectAddress { address in
+                if let address = address as? String {
+                    self.viewSelectedPlace?.isHidden = false
+                    self.imgPlaceIcon?.image = UIImage(named: "location")
+                    self.viewSelectedPlace?.bringSubviewToFront(self.view)
+                    self.btnPlace?.isHidden = true
+                    self.lblSelectPlace?.text = address
+                }
+            }
+            self.navigationController?.pushViewController(vc, animated: true)
         } else {
             let vc = OpenStudySelectOnlinePlaceViewController(nibName: "OpenStudySelectOnlinePlaceViewController", bundle: nil)
             floatingPanelController = FloatingPanelController(delegate: self)
             vc.didSelectOnlinePlace { place in
                 if let place = place as? [String] {
                     let onlinePlace = place.joined(separator: ", ")
+                    self.imgPlaceIcon?.image = UIImage(named: "etcOnline")
                     self.viewSelectedPlace?.isHidden = false
                     self.viewSelectedPlace?.bringSubviewToFront(self.view)
                     self.btnPlace?.isHidden = true

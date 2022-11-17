@@ -27,12 +27,11 @@ public actor APIManager {
      * @param header : 서버에 요청할 부가적인 정보
      * @Return : (비동기) 모델에 매핑된 데이터 반환
      */
-    public func requestJSON<T:Codable>(url: String, type: T.Type, method: HTTPMethod, uri: String = "", param: [String: String]? = nil, header: [HTTPHeader]? = nil) async throws -> T {
-        ///TODO: API ID, HEADER 설정해서 url 작업 들어가야하고, 헤더도 부가적으로 필요하다.
+    public func requestJSON<T:Decodable>(url: String, type: T.Type, method: HTTPMethod, uri: String = "", param: [String: Any]? = nil, header: HTTPHeaders? = nil) async throws -> T {
         let request = AF.request(url
-                                , method: method
-                                , parameters: param
-                                , encoding: JSONEncoding.default).serializingDecodable(type)
+                                 , method: method
+                                 , parameters: param
+                                 , headers: header).serializingDecodable(type)
         //FIXME: - 모델 매핑 미스에 대한 오류처리 추가 필요함
         guard await (request.response.response?.statusCode == 200) else { throw ApiError.statusCodeError }
         guard await (request.response.value != nil) else { throw ApiError.emptyData }

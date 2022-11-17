@@ -78,6 +78,12 @@
 		08E10F4328F8150E0021931D /* FavoriteStudyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08E10F4128F8150E0021931D /* FavoriteStudyViewController.xib */; };
 		08E10F4828F838CB0021931D /* KeywordCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E10F4628F838CB0021931D /* KeywordCollectionViewCell.swift */; };
 		08E10F4928F838CB0021931D /* KeywordCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08E10F4728F838CB0021931D /* KeywordCollectionViewCell.xib */; };
+		1904E111292469F500BE3300 /* SearchCurrentAddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1904E10F292469F500BE3300 /* SearchCurrentAddressTableViewCell.swift */; };
+		1904E112292469F500BE3300 /* SearchCurrentAddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1904E110292469F500BE3300 /* SearchCurrentAddressTableViewCell.xib */; };
+		1904E11529246A0200BE3300 /* SearchAddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1904E11329246A0200BE3300 /* SearchAddressTableViewCell.swift */; };
+		1904E11629246A0200BE3300 /* SearchAddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1904E11429246A0200BE3300 /* SearchAddressTableViewCell.xib */; };
+		1904E11829249E9200BE3300 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1904E11729249E9200BE3300 /* Address.swift */; };
+		1904E11A2924AECD00BE3300 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1904E1192924AECD00BE3300 /* LocationManager.swift */; };
 		191A969028F66382007E2F04 /* SelectStartEndSegmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191A968E28F66382007E2F04 /* SelectStartEndSegmentTableViewCell.swift */; };
 		191A969128F66382007E2F04 /* SelectStartEndSegmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 191A968F28F66382007E2F04 /* SelectStartEndSegmentTableViewCell.xib */; };
 		191A969728F6922F007E2F04 /* CustomSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191A969628F6922F007E2F04 /* CustomSegmentControl.swift */; };
@@ -89,6 +95,8 @@
 		192C3DAF28E55FCF003563D3 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C3DAE28E55FCF003563D3 /* CustomNavigationBar.swift */; };
 		192C3DB328E56BAF003563D3 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C3DB228E56BAF003563D3 /* Notification+Extension.swift */; };
 		192C3DB528E56DAA003563D3 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C3DB428E56DAA003563D3 /* CALayer+Extension.swift */; };
+		1954E5152924676B00DF54FD /* SearchAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1954E5132924676B00DF54FD /* SearchAddressViewController.swift */; };
+		1954E5162924676B00DF54FD /* SearchAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1954E5142924676B00DF54FD /* SearchAddressViewController.xib */; };
 		1956F47029231749006D3266 /* OpenStudyStep3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956F46E29231749006D3266 /* OpenStudyStep3ViewController.swift */; };
 		1956F47129231749006D3266 /* OpenStudyStep3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1956F46F29231749006D3266 /* OpenStudyStep3ViewController.xib */; };
 		1956F47429232CBE006D3266 /* OpenStudySelectTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956F47229232CBE006D3266 /* OpenStudySelectTimeViewController.swift */; };
@@ -251,6 +259,12 @@
 		08E10F4628F838CB0021931D /* KeywordCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordCollectionViewCell.swift; sourceTree = "<group>"; };
 		08E10F4728F838CB0021931D /* KeywordCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeywordCollectionViewCell.xib; sourceTree = "<group>"; };
 		132B1B51ED5CA8B98EE79822 /* Pods_AroundStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AroundStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1904E10F292469F500BE3300 /* SearchCurrentAddressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCurrentAddressTableViewCell.swift; sourceTree = "<group>"; };
+		1904E110292469F500BE3300 /* SearchCurrentAddressTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCurrentAddressTableViewCell.xib; sourceTree = "<group>"; };
+		1904E11329246A0200BE3300 /* SearchAddressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAddressTableViewCell.swift; sourceTree = "<group>"; };
+		1904E11429246A0200BE3300 /* SearchAddressTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchAddressTableViewCell.xib; sourceTree = "<group>"; };
+		1904E11729249E9200BE3300 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		1904E1192924AECD00BE3300 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		191A968E28F66382007E2F04 /* SelectStartEndSegmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectStartEndSegmentTableViewCell.swift; sourceTree = "<group>"; };
 		191A968F28F66382007E2F04 /* SelectStartEndSegmentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectStartEndSegmentTableViewCell.xib; sourceTree = "<group>"; };
 		191A969628F6922F007E2F04 /* CustomSegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentControl.swift; sourceTree = "<group>"; };
@@ -262,6 +276,8 @@
 		192C3DAE28E55FCF003563D3 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		192C3DB228E56BAF003563D3 /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
 		192C3DB428E56DAA003563D3 /* CALayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
+		1954E5132924676B00DF54FD /* SearchAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAddressViewController.swift; sourceTree = "<group>"; };
+		1954E5142924676B00DF54FD /* SearchAddressViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchAddressViewController.xib; sourceTree = "<group>"; };
 		1956F46E29231749006D3266 /* OpenStudyStep3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenStudyStep3ViewController.swift; sourceTree = "<group>"; };
 		1956F46F29231749006D3266 /* OpenStudyStep3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenStudyStep3ViewController.xib; sourceTree = "<group>"; };
 		1956F47229232CBE006D3266 /* OpenStudySelectTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenStudySelectTimeViewController.swift; sourceTree = "<group>"; };
@@ -434,6 +450,7 @@
 				08DC522E28E4662B00B058ED /* Delegate.swift */,
 				08DC523028E4663B00B058ED /* DataManager.swift */,
 				DF7B4C5528E47C350031B56B /* Authorization.swift */,
+				1904E1192924AECD00BE3300 /* LocationManager.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -527,6 +544,7 @@
 				08DC523428E467CE00B058ED /* LoginDto.swift */,
 				0876385F28F580AE00BE6B13 /* StudyDto.swift */,
 				DFA3A84A2903846300B452F5 /* PhotoPicker.swift */,
+				1904E11729249E9200BE3300 /* Address.swift */,
 			);
 			path = Struct;
 			sourceTree = "<group>";
@@ -717,6 +735,12 @@
 				0876384328F40D4500BE6B13 /* InputGenderViewController.xib */,
 				0876384628F40D5300BE6B13 /* InputLocationViewController.swift */,
 				0876384728F40D5300BE6B13 /* InputLocationViewController.xib */,
+				1954E5132924676B00DF54FD /* SearchAddressViewController.swift */,
+				1954E5142924676B00DF54FD /* SearchAddressViewController.xib */,
+				1904E10F292469F500BE3300 /* SearchCurrentAddressTableViewCell.swift */,
+				1904E110292469F500BE3300 /* SearchCurrentAddressTableViewCell.xib */,
+				1904E11329246A0200BE3300 /* SearchAddressTableViewCell.swift */,
+				1904E11429246A0200BE3300 /* SearchAddressTableViewCell.xib */,
 			);
 			name = "시작-정보입력";
 			sourceTree = "<group>";
@@ -978,11 +1002,13 @@
 				08E10F3B28F812240021931D /* StudyDetailViewController.xib in Resources */,
 				08E10F4328F8150E0021931D /* FavoriteStudyViewController.xib in Resources */,
 				1972785028F645390029F27D /* SelectDatePopupViewController.xib in Resources */,
+				1904E112292469F500BE3300 /* SearchCurrentAddressTableViewCell.xib in Resources */,
 				199B5E7D29066F940096E8C6 /* ProfileViewController.xib in Resources */,
 				08E10F4928F838CB0021931D /* KeywordCollectionViewCell.xib in Resources */,
 				08DC525628E8654D00B058ED /* MoreViewController.xib in Resources */,
 				086632FC290A3C9C00286BEA /* ChattingListTableViewCell.xib in Resources */,
 				197CE78D28F556B70042A6EA /* Main.storyboard in Resources */,
+				1904E11629246A0200BE3300 /* SearchAddressTableViewCell.xib in Resources */,
 				DF15CBE128E85AB0009F24CB /* Pretendard-SemiBold.otf in Resources */,
 				DFD3506229026444004E725A /* PhotoPickerCollectionViewCell.xib in Resources */,
 				08DC524A28E8652C00B058ED /* HomeViewController.xib in Resources */,
@@ -998,6 +1024,7 @@
 				08E10F3F28F814FF0021931D /* JoinedStudyViewController.xib in Resources */,
 				0876386428F5834400BE6B13 /* SearchHistoryCollectionViewCell.xib in Resources */,
 				08DC527228E9AB7700B058ED /* ScheduleTableViewCell.xib in Resources */,
+				1954E5162924676B00DF54FD /* SearchAddressViewController.xib in Resources */,
 				08DC526E28E9AB6E00B058ED /* ScheduleDetailTableViewCell.xib in Resources */,
 				DF068CB228EC496700083917 /* PermissionViewController.xib in Resources */,
 				197CE78B28F550950042A6EA /* CustomCalendarTableViewCell.xib in Resources */,
@@ -1080,7 +1107,9 @@
 				191E2E3A28ED12DB00BB92DF /* StudySchedulePopupViewController.swift in Sources */,
 				19690EA828F0F9F0006EEE8D /* CategoryItemCollectionViewCell.swift in Sources */,
 				DFFF48792906B5960004F48E /* DropDownModel.swift in Sources */,
+				1904E11A2924AECD00BE3300 /* LocationManager.swift in Sources */,
 				DFEA71C728F42B77005DFD78 /* AddVoteBorderView.swift in Sources */,
+				1904E111292469F500BE3300 /* SearchCurrentAddressTableViewCell.swift in Sources */,
 				191DD3ED28F8F20200889488 /* UIFont+Extension.swift in Sources */,
 				08DC525528E8654D00B058ED /* MoreViewController.swift in Sources */,
 				192C3DAF28E55FCF003563D3 /* CustomNavigationBar.swift in Sources */,
@@ -1092,6 +1121,7 @@
 				088A62D328E32B8D00442E6C /* Nofile.swift in Sources */,
 				0876384C28F4161D00BE6B13 /* Button+Select.swift in Sources */,
 				0876385A28F5606200BE6B13 /* TextField+Search.swift in Sources */,
+				1954E5152924676B00DF54FD /* SearchAddressViewController.swift in Sources */,
 				0876386028F580AE00BE6B13 /* StudyDto.swift in Sources */,
 				08DC527528E9AB9F00B058ED /* ColorSetCollectionViewCell.swift in Sources */,
 				1956F47429232CBE006D3266 /* OpenStudySelectTimeViewController.swift in Sources */,
@@ -1115,6 +1145,7 @@
 				199B5E7C29066F940096E8C6 /* ProfileViewController.swift in Sources */,
 				DFFD345E28EEFADB00CFCB74 /* OnboardingViewController.swift in Sources */,
 				08DC525D28E9A9C300B058ED /* SearchHistoryTableViewCell.swift in Sources */,
+				1904E11829249E9200BE3300 /* Address.swift in Sources */,
 				191DD3EB28F8E76900889488 /* CustomCalendarCell.swift in Sources */,
 				08DC526128E9AAED00B058ED /* StudyInfoGridCollectionViewCell.swift in Sources */,
 				DF7B4C5628E47C350031B56B /* Authorization.swift in Sources */,
@@ -1143,6 +1174,7 @@
 				1956F47029231749006D3266 /* OpenStudyStep3ViewController.swift in Sources */,
 				192C3DB528E56DAA003563D3 /* CALayer+Extension.swift in Sources */,
 				192C3DB328E56BAF003563D3 /* Notification+Extension.swift in Sources */,
+				1904E11529246A0200BE3300 /* SearchAddressTableViewCell.swift in Sources */,
 				0876385728F42DC500BE6B13 /* SearchViewController.swift in Sources */,
 				191A969028F66382007E2F04 /* SelectStartEndSegmentTableViewCell.swift in Sources */,
 				19690EAE28F0FA05006EEE8D /* AgreementsViewController.swift in Sources */,
