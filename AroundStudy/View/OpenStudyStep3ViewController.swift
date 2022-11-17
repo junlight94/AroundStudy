@@ -11,6 +11,8 @@ class OpenStudyStep3ViewController: BaseViewController {
     //******************************************************
     //MARK: - Properties
     //******************************************************
+    /// 스터디 개설 컨텐츠가 담겨있는 스크롤 뷰
+    @IBOutlet weak var scrollContentView: UIScrollView?
     /// 장소 선택 버튼
     @IBOutlet weak var btnPlace: UIButton?
     /// 시간 선택 뷰
@@ -22,7 +24,7 @@ class OpenStudyStep3ViewController: BaseViewController {
     /// 스터디 날짜 선택 버튼 리스트
     @IBOutlet var aryWeekday: [UIButton]?
     /// 스터디 선택된 인원 라벨
-    @IBOutlet weak var lblPersonnel: UILabel?
+    @IBOutlet weak var tfPersonnel: UITextField?
     /// 장소선택 뷰
     @IBOutlet weak var viewPlace: UIView?
     /// 선택한 시간 라벨
@@ -43,6 +45,17 @@ class OpenStudyStep3ViewController: BaseViewController {
         super.viewDidLoad()
         initNavigationBar()
         initLayout()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if let scrollView = scrollContentView {
+            setKeyboardNotification(targetView: scrollView)
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        removeKeyboardNotification()
     }
     
     /**
@@ -71,7 +84,7 @@ class OpenStudyStep3ViewController: BaseViewController {
         viewTime?.layer.setBorderLayout(radius: 8, width: 1, color: UIColor(named: "236"))
         btnFinish?.layer.setBorderLayout(radius: 8)
         viewSelectedPlace?.layer.setBorderLayout(radius: 8, width: 1, color: UIColor(named: "236"))
-        lblPersonnel?.text = "\(selectedPersonnel)"
+        tfPersonnel?.text = "\(selectedPersonnel)"
         viewPlace?.isHidden = true
     }
 }
@@ -86,6 +99,9 @@ extension OpenStudyStep3ViewController {
     @IBAction private func actionSelectProcess(_ sender: UIButton) {
         if sender.isSelected {
             return
+        }
+        if tfPersonnel?.isFirstResponder == true {
+            tfPersonnel?.resignFirstResponder()
         }
         
         if viewPlace?.isHidden == true {
@@ -115,6 +131,9 @@ extension OpenStudyStep3ViewController {
      * @creator : coder3306
      */
     @IBAction private func actionSelectPlace(_ sender: UIButton) {
+        if tfPersonnel?.isFirstResponder == true {
+            tfPersonnel?.resignFirstResponder()
+        }
         if isOffline {
             let vc = SearchAddressViewController(nibName: "SearchAddressViewController", bundle: nil)
             vc.didSelectAddress { address in
@@ -145,6 +164,9 @@ extension OpenStudyStep3ViewController {
     }
     
     @IBAction private func actionSelectWeekday(_ sender: UIButton) {
+        if tfPersonnel?.isFirstResponder == true {
+            tfPersonnel?.resignFirstResponder()
+        }
         sender.isSelected = !sender.isSelected
         let color = sender.isSelected ? UIColor(named: "Main") : UIColor(named: "236")
         let font = sender.isSelected ? UIFont.setCustomFont(.medium, size: 15)
@@ -161,6 +183,9 @@ extension OpenStudyStep3ViewController {
      * @creator : coder3306
      */
     @IBAction private func actionSelectTime(_ sender: UIButton) {
+        if tfPersonnel?.isFirstResponder == true {
+            tfPersonnel?.resignFirstResponder()
+        }
         let vc = OpenStudySelectTimeViewController(nibName: "OpenStudySelectTimeViewController", bundle: nil)
         vc.selectedTimeHandler { [weak self] time in
             if let time = time as? String {
@@ -182,7 +207,7 @@ extension OpenStudyStep3ViewController {
             return
         }
         selectedPersonnel += sender.tag
-        lblPersonnel?.text = "\(selectedPersonnel)"
+        tfPersonnel?.text = "\(selectedPersonnel)"
     }
     
     @IBAction private func actionDeletePlace(_ sender: UIButton) {
@@ -190,5 +215,35 @@ extension OpenStudyStep3ViewController {
         self.btnPlace?.isHidden = false
         self.viewSelectedPlace?.sendSubviewToBack(self.view)
         self.viewSelectedPlace?.isHidden = true
+    }
+}
+
+//MARK: - UITextFieldDelegate
+extension OpenStudyStep3ViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let text = textField.text as? NSString
+        let str = string.replacingOccurrences(of: "\n", with: "")
+        let newText = text?.replacingCharacters(in: range, with: str) ?? ""
+        if let textCount = Int(newText) {
+            if textCount > 100 {
+                self.selectedPersonnel = 100
+                tfPersonnel?.text = "100"
+                return false
+            } else if textCount < 2 {
+                self.selectedPersonnel = 2
+                tfPersonnel?.text = "2"
+                return false
+            }
+            self.selectedPersonnel = textCount
+        }
+        return true
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        if tfPersonnel?.text == "" {
+            self.selectedPersonnel = 2
+            tfPersonnel?.text = "2"
+        }
+        return true
     }
 }
