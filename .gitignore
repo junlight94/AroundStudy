@@ -130,4 +130,7 @@ iOSInjectionProject/
 /*.gcno
 **/xcshareddata/WorkspaceSettings.xcsettings
 
+# Files not to be uploaded to Gltlab
+AroundStudy/AroundStudyKey.plist
+
 # End of https://www.toptal.com/developers/gitignore/api/swift,xcode,macos

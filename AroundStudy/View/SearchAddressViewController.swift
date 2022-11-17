@@ -49,8 +49,7 @@ class SearchAddressViewController: BaseViewController {
      */
     private func searchAddress(_ requestAddressName: String) {
         let headers: HTTPHeaders = [
-            //FIXME: - 헤더 위치 히든처리 필요함.
-            "Authorization": "KakaoAK 14524f0b57fdfcd9f4a8f3892db1b0ff"
+            "Authorization": "KakaoAK"
         ]
         let parameters: [String: Any] = [
             "query": requestAddressName,
