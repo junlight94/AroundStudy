@@ -49,7 +49,7 @@ class SearchAddressViewController: BaseViewController {
      */
     private func searchAddress(_ requestAddressName: String) {
         let headers: HTTPHeaders = [
-            "Authorization": "KakaoAK"
+            "Authorization": "KakaoAK \(Bundle.main.KAKAO_RESTAPI_KEY)"
         ]
         let parameters: [String: Any] = [
             "query": requestAddressName,
