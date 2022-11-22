@@ -17,7 +17,7 @@ class VoteViewController: BaseViewController {
     /// 셀 높이 저장
     var cellHeights = [IndexPath: CGFloat]()
     /// DUMMY
-    let testcount = 2
+    let testcount = 0
     // willDisplay의 노티피케이션 전송 여부
     var isPost: Bool = false
     
@@ -46,9 +46,11 @@ class VoteViewController: BaseViewController {
      */
     func calcCellHeights() {
         //FIXME: NEED PAGING LOGIC
-        self.isPost = true
-        NotificationCenter.default.post(name: NSNotification.Name("viewHeight")
-                                      , object: self.cellHeights.compactMap({ CGFloat($0.value )}).reduce(0, +))
+        DispatchQueue.main.async {
+            self.isPost = true
+            NotificationCenter.default.post(name: NSNotification.Name("viewHeight")
+                                          , object: self.cellHeights.compactMap({ CGFloat($0.value )}).reduce(0, +))
+        }
     }
 }
 
@@ -82,7 +84,7 @@ extension VoteViewController: tableViewExtension {
         if section == 0 {
             return 1
         }
-        return testcount
+        return (testcount == 0) ? 1 : testcount
     }
     
     /**
@@ -101,6 +103,7 @@ extension VoteViewController: tableViewExtension {
                 }
             case 1:
                 if let cell = VoteTableViewCell.dequeueReusableCell(targetView: tableVote) {
+                    cell.setData(false)
                     cell.didTapExpandView { result in
                         DispatchQueue.main.async {
                             tableVote.performBatchUpdates {

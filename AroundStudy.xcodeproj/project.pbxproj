@@ -130,6 +130,10 @@
 		19868C4C28EC5C550093DF76 /* StudyBannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19868C4A28EC5C550093DF76 /* StudyBannerCollectionViewCell.swift */; };
 		19868C4D28EC5C550093DF76 /* StudyBannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19868C4B28EC5C550093DF76 /* StudyBannerCollectionViewCell.xib */; };
 		19877F5529026377004AD3EE /* MoreUserInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19877F5429026377004AD3EE /* MoreUserInfoTableViewCell.swift */; };
+		199851AB2927090400AC41CD /* OpenStudyStep1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199851A92927090400AC41CD /* OpenStudyStep1ViewController.swift */; };
+		199851AC2927090400AC41CD /* OpenStudyStep1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 199851AA2927090400AC41CD /* OpenStudyStep1ViewController.xib */; };
+		199851B6292728E600AC41CD /* OpenStudyStep2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199851B4292728E600AC41CD /* OpenStudyStep2ViewController.swift */; };
+		199851B7292728E600AC41CD /* OpenStudyStep2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 199851B5292728E600AC41CD /* OpenStudyStep2ViewController.xib */; };
 		199B5E7C29066F940096E8C6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B5E7A29066F940096E8C6 /* ProfileViewController.swift */; };
 		199B5E7D29066F940096E8C6 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 199B5E7B29066F940096E8C6 /* ProfileViewController.xib */; };
 		19A57B2529261A46008BEEBC /* AroundStudyKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 19A57B2429261A46008BEEBC /* AroundStudyKey.plist */; };
@@ -313,6 +317,10 @@
 		19868C4A28EC5C550093DF76 /* StudyBannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyBannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		19868C4B28EC5C550093DF76 /* StudyBannerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudyBannerCollectionViewCell.xib; sourceTree = "<group>"; };
 		19877F5429026377004AD3EE /* MoreUserInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreUserInfoTableViewCell.swift; sourceTree = "<group>"; };
+		199851A92927090400AC41CD /* OpenStudyStep1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenStudyStep1ViewController.swift; sourceTree = "<group>"; };
+		199851AA2927090400AC41CD /* OpenStudyStep1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenStudyStep1ViewController.xib; sourceTree = "<group>"; };
+		199851B4292728E600AC41CD /* OpenStudyStep2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenStudyStep2ViewController.swift; sourceTree = "<group>"; };
+		199851B5292728E600AC41CD /* OpenStudyStep2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenStudyStep2ViewController.xib; sourceTree = "<group>"; };
 		199B5E7A29066F940096E8C6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		199B5E7B29066F940096E8C6 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		19A57B2429261A46008BEEBC /* AroundStudyKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AroundStudyKey.plist; sourceTree = "<group>"; };
@@ -665,6 +673,8 @@
 		1956F46929231585006D3266 /* 개설 */ = {
 			isa = PBXGroup;
 			children = (
+				199851A8292708ED00AC41CD /* 1단계 */,
+				199851AD2927090700AC41CD /* 2단계 */,
 				1956F47C2923540A006D3266 /* 3단계 */,
 			);
 			name = "개설";
@@ -702,6 +712,24 @@
 				199B5E7B29066F940096E8C6 /* ProfileViewController.xib */,
 			);
 			name = "프로필";
+			sourceTree = "<group>";
+		};
+		199851A8292708ED00AC41CD /* 1단계 */ = {
+			isa = PBXGroup;
+			children = (
+				199851A92927090400AC41CD /* OpenStudyStep1ViewController.swift */,
+				199851AA2927090400AC41CD /* OpenStudyStep1ViewController.xib */,
+			);
+			name = "1단계";
+			sourceTree = "<group>";
+		};
+		199851AD2927090700AC41CD /* 2단계 */ = {
+			isa = PBXGroup;
+			children = (
+				199851B4292728E600AC41CD /* OpenStudyStep2ViewController.swift */,
+				199851B5292728E600AC41CD /* OpenStudyStep2ViewController.xib */,
+			);
+			name = "2단계";
 			sourceTree = "<group>";
 		};
 		A6E5688C91D72101AD1D6F16 /* Pods */ = {
@@ -974,6 +1002,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				199851AC2927090400AC41CD /* OpenStudyStep1ViewController.xib in Resources */,
 				19690EAF28F0FA05006EEE8D /* AgreementsViewController.xib in Resources */,
 				08DC523A28E478D700B058ED /* RootTabViewController.xib in Resources */,
 				DF5EC62228E6D522003411D3 /* TestViewController.xib in Resources */,
@@ -1045,6 +1074,7 @@
 				DFD3505C29025E6F004E725A /* PhotoPickerViewController.xib in Resources */,
 				DF67C5A428FE70E0004F2D6A /* PlanMainViewController.xib in Resources */,
 				08DC526628E9AAFE00B058ED /* StudyInfoCollectionViewCell.xib in Resources */,
+				199851B7292728E600AC41CD /* OpenStudyStep2ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1102,6 +1132,7 @@
 				086632EF290A32F400286BEA /* ProgressViewController.swift in Sources */,
 				DF88223328EFBB5600993F2E /* RegisterCompleteViewController.swift in Sources */,
 				1984E1392906328F00B8CD4D /* MoreStudyTitle.swift in Sources */,
+				199851B6292728E600AC41CD /* OpenStudyStep2ViewController.swift in Sources */,
 				1961AD8728F4EC920032FE7A /* VoteTitleTableViewCell.swift in Sources */,
 				DF67C5A328FE70E0004F2D6A /* PlanMainViewController.swift in Sources */,
 				191A969728F6922F007E2F04 /* CustomSegmentControl.swift in Sources */,
@@ -1115,6 +1146,7 @@
 				19690EA828F0F9F0006EEE8D /* CategoryItemCollectionViewCell.swift in Sources */,
 				DFFF48792906B5960004F48E /* DropDownModel.swift in Sources */,
 				1904E11A2924AECD00BE3300 /* LocationManager.swift in Sources */,
+				199851AB2927090400AC41CD /* OpenStudyStep1ViewController.swift in Sources */,
 				DFEA71C728F42B77005DFD78 /* AddVoteBorderView.swift in Sources */,
 				1904E111292469F500BE3300 /* SearchCurrentAddressTableViewCell.swift in Sources */,
 				191DD3ED28F8F20200889488 /* UIFont+Extension.swift in Sources */,

@@ -163,6 +163,11 @@ extension OpenStudyStep3ViewController {
         }
     }
     
+    /**
+     * @요일 선택
+     * @creator : coder3306
+     * @param sender : UIButton
+     */
     @IBAction private func actionSelectWeekday(_ sender: UIButton) {
         if tfPersonnel?.isFirstResponder == true {
             tfPersonnel?.resignFirstResponder()

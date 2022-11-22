@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,6 +12,9 @@
         <array key="Pretendard-Medium.otf">
             <string>Pretendard-Medium</string>
         </array>
+        <array key="Pretendard-Regular.otf">
+            <string>Pretendard-Regular</string>
+        </array>
         <array key="Pretendard-SemiBold.otf">
             <string>Pretendard-SemiBold</string>
         </array>
@@ -19,21 +22,21 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VoteTableViewCell" rowHeight="226" id="KGk-i7-Jjw" customClass="VoteTableViewCell" customModule="AroundStudy" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="380" height="239"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VoteTableViewCell" rowHeight="374" id="KGk-i7-Jjw" customClass="VoteTableViewCell" customModule="AroundStudy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="391" height="387"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="380" height="239"/>
+                <rect key="frame" x="0.0" y="0.0" width="391" height="387"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6l7-kE-qc1">
-                        <rect key="frame" x="20" y="10" width="340" height="219"/>
+                        <rect key="frame" x="20" y="10" width="351" height="367"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="2uf-j0-3K6">
-                                <rect key="frame" x="0.0" y="0.0" width="340" height="219"/>
+                                <rect key="frame" x="0.0" y="0.0" width="351" height="367"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yms-8N-Vuf">
-                                        <rect key="frame" x="0.0" y="0.0" width="340" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="351" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Q." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhZ-PW-ziy">
                                                 <rect key="frame" x="16" y="12" width="19.5" height="28"/>
@@ -42,7 +45,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ellipsis" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="5sf-1A-3Q9">
-                                                <rect key="frame" x="300" y="20" width="24" height="9.5"/>
+                                                <rect key="frame" x="311" y="20" width="24" height="9.5"/>
                                                 <color key="tintColor" name="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="24" id="Ztf-ex-kr2"/>
@@ -50,13 +53,13 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="화상 플랫폼으로 줌 어떠신가요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bL4-eP-jGi">
-                                                <rect key="frame" x="41.5" y="15.5" width="252.5" height="19.5"/>
+                                                <rect key="frame" x="41.5" y="15.5" width="263.5" height="19.5"/>
                                                 <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UYj-mh-Ofd">
-                                                <rect key="frame" x="0.0" y="49" width="340" height="1"/>
+                                                <rect key="frame" x="0.0" y="49" width="351" height="1"/>
                                                 <color key="backgroundColor" name="235"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="Zf1-7p-0pf"/>
@@ -80,23 +83,23 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9XV-FA-7y6">
-                                        <rect key="frame" x="0.0" y="50" width="340" height="60"/>
+                                        <rect key="frame" x="0.0" y="50" width="351" height="208"/>
                                         <constraints>
                                             <constraint firstAttribute="height" priority="250" constant="1" id="Kmu-Cp-H91"/>
                                         </constraints>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="djV-Jv-ddz">
-                                        <rect key="frame" x="0.0" y="110" width="340" height="1"/>
+                                        <rect key="frame" x="0.0" y="258" width="351" height="1"/>
                                         <color key="backgroundColor" name="235"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="lM6-aL-jhW"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="70x-75-026">
-                                        <rect key="frame" x="0.0" y="111" width="340" height="66"/>
+                                        <rect key="frame" x="0.0" y="259" width="351" height="66"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kya-dX-6j2">
-                                                <rect key="frame" x="259" y="21" width="65" height="24.5"/>
+                                                <rect key="frame" x="270" y="21" width="65" height="24.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="30명 참여" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yox-8q-j45">
                                                         <rect key="frame" x="8" y="5" width="49" height="14.5"/>
@@ -154,7 +157,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oeb-mu-RWD">
-                                        <rect key="frame" x="0.0" y="177" width="340" height="42"/>
+                                        <rect key="frame" x="0.0" y="325" width="351" height="42"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="투표하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycB-0t-7Jh">
                                                 <rect key="frame" x="20" y="12" width="52" height="18"/>
@@ -163,7 +166,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3Tl-EK-8R6">
-                                                <rect key="frame" x="296" y="14" width="24" height="14.5"/>
+                                                <rect key="frame" x="307" y="14" width="24" height="14.5"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="24" id="PVw-Qk-Duw"/>
@@ -171,7 +174,7 @@
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09o-o3-T3G">
-                                                <rect key="frame" x="0.0" y="0.0" width="340" height="42"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="351" height="42"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <connections>
                                                     <action selector="showVoteDetail:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="IMK-rI-zkd"/>
@@ -203,29 +206,87 @@
                             <constraint firstItem="2uf-j0-3K6" firstAttribute="leading" secondItem="6l7-kE-qc1" secondAttribute="leading" id="klU-0B-fki"/>
                         </constraints>
                     </view>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e3L-Wo-kLx">
+                        <rect key="frame" x="20" y="10" width="351" height="367"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="actionPlus" translatesAutoresizingMaskIntoConstraints="NO" id="DWt-hA-lwc">
+                                <rect key="frame" x="125.5" y="45" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="ly7-7z-MKo"/>
+                                    <constraint firstAttribute="height" constant="100" id="mn1-53-sVE"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6WG-sM-bas">
+                                <rect key="frame" x="98.5" y="169" width="154" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="kHE-ID-s6n"/>
+                                </constraints>
+                                <string key="text">진행중인 투표가 없어요.
+새로운 투표를 올려보세요.</string>
+                                <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="15"/>
+                                <color key="textColor" name="94"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cs9-Yu-tdd">
+                                <rect key="frame" x="58" y="233" width="236" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="3gc-wo-HG6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="투표 올리기">
+                                    <color key="titleColor" name="134"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionAddVote:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="8wM-xb-V3c"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Cs9-Yu-tdd" firstAttribute="top" secondItem="6WG-sM-bas" secondAttribute="bottom" constant="28" id="39Z-SF-Rdz"/>
+                            <constraint firstItem="6WG-sM-bas" firstAttribute="top" secondItem="DWt-hA-lwc" secondAttribute="bottom" constant="24" id="DAf-g9-Gha"/>
+                            <constraint firstAttribute="trailing" secondItem="Cs9-Yu-tdd" secondAttribute="trailing" constant="57" id="NQM-yn-dak"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Cs9-Yu-tdd" secondAttribute="bottom" constant="50" id="Sxk-wU-p9C"/>
+                            <constraint firstItem="DWt-hA-lwc" firstAttribute="top" secondItem="e3L-Wo-kLx" secondAttribute="top" constant="45" id="W6d-pW-E9G"/>
+                            <constraint firstItem="6WG-sM-bas" firstAttribute="centerX" secondItem="DWt-hA-lwc" secondAttribute="centerX" id="dnv-aG-Vfi"/>
+                            <constraint firstItem="DWt-hA-lwc" firstAttribute="centerX" secondItem="e3L-Wo-kLx" secondAttribute="centerX" id="qNm-M6-qgP"/>
+                            <constraint firstItem="Cs9-Yu-tdd" firstAttribute="leading" secondItem="e3L-Wo-kLx" secondAttribute="leading" constant="58" id="tjv-PL-dg8"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="6l7-kE-qc1" secondAttribute="bottom" constant="10" id="5FS-Mg-Ch9"/>
                     <constraint firstItem="6l7-kE-qc1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="7FK-Sp-hMS"/>
+                    <constraint firstAttribute="trailing" secondItem="e3L-Wo-kLx" secondAttribute="trailing" constant="20" id="EeW-Zi-xiV"/>
                     <constraint firstItem="6l7-kE-qc1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Lj7-kM-EtL"/>
+                    <constraint firstItem="e3L-Wo-kLx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="UhH-GH-lvC"/>
                     <constraint firstAttribute="trailing" secondItem="6l7-kE-qc1" secondAttribute="trailing" constant="20" id="cQM-ba-oyA"/>
+                    <constraint firstAttribute="bottom" secondItem="e3L-Wo-kLx" secondAttribute="bottom" constant="10" id="dlI-Hy-Qgd"/>
+                    <constraint firstItem="e3L-Wo-kLx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ea7-hk-a8M"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="btnAddVote" destination="Cs9-Yu-tdd" id="R9H-n1-Ftr"/>
                 <outlet property="profileImageView" destination="OI8-Mb-6rS" id="7CB-so-Err"/>
                 <outlet property="profileLineView" destination="djV-Jv-ddz" id="ncW-Mq-qqx"/>
                 <outlet property="statusBoxView" destination="kya-dX-6j2" id="CIP-HP-chR"/>
                 <outlet property="voteContentsStackView" destination="2uf-j0-3K6" id="jZS-Ab-Cke"/>
                 <outlet property="voteDetailStackView" destination="9XV-FA-7y6" id="rjm-WE-LcN"/>
+                <outlet property="voteEmptyView" destination="e3L-Wo-kLx" id="a9g-jL-8Y9"/>
                 <outlet property="voteWrapperView" destination="6l7-kE-qc1" id="g4t-jG-Ig1"/>
             </connections>
-            <point key="canvasLocation" x="279.71014492753625" y="-278.90625"/>
+            <point key="canvasLocation" x="287.68115942028987" y="-229.35267857142856"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="actionPlus" width="24" height="24"/>
         <image name="chevron.down" catalog="system" width="128" height="70"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
+        <namedColor name="134">
+            <color red="0.52549019607843139" green="0.52549019607843139" blue="0.52549019607843139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="155">
             <color red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -237,6 +298,9 @@
         </namedColor>
         <namedColor name="51">
             <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="94">
+            <color red="0.36899998784065247" green="0.36899998784065247" blue="0.36899998784065247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Main">
             <color red="0.55699998140335083" green="0.78799998760223389" blue="0.42699998617172241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

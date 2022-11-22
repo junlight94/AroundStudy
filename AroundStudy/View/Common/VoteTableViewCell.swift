@@ -23,9 +23,15 @@ class VoteTableViewCell: UITableViewCell {
     @IBOutlet weak var profileLineView: UIView?
     /// 투표하기 내용 뷰
     @IBOutlet weak var voteContentsStackView: UIStackView?
+    /// 투표가 없을 시 노출하는 뷰
+    @IBOutlet weak var voteEmptyView: UIView?
+    /// 투표 추가하기 버튼
+    @IBOutlet weak var btnAddVote: UIButton?
     
-    /// 투표하기 버튼을 선택한 후,
+    /// 투표하기 버튼 선택 핸들러
     private var selectHandler: boolClosure?
+    /// 투표 올리기 요청 핸들러
+    private var addVoteHandler: voidClosure?
     //******************************************************
     //MARK: - DUMMY
     //******************************************************
@@ -40,20 +46,7 @@ class VoteTableViewCell: UITableViewCell {
      */
     override func awakeFromNib() {
         super.awakeFromNib()
-        /// 테스트용
-        //FIXME: EXPENSIVE COST LOGIC
-        self.testVote1.snp.makeConstraints { make in
-            /// 스텍뷰의 높이가 고정이므로, 하나의 뷰만 높이 설정해서 추가
-            make.height.equalTo(70)
-        }
-        self.addArrangedSubviews([self.testVote1, self.testVote2, self.testVote3, self.testVote4])
         initLayout()
-    }
-    
-    func addArrangedSubviews(_ views: [UIView]) {
-        for view in views {
-            voteDetailStackView?.addArrangedSubview(view)
-        }
     }
     
     /**
@@ -66,6 +59,18 @@ class VoteTableViewCell: UITableViewCell {
         profileImageView?.layer.setBorderLayout(radius: 20)
         statusBoxView?.layer.setBorderLayout(radius: 8)
         voteContentsStackView?.layer.setBorderLayout(radius: 12)
+        btnAddVote?.layer.setBorderLayout(radius: 8, width: 1, color: UIColor(named: "236"))
+    }
+    
+    /**
+     * @투표 데이터 설정
+     * @creator : coder3306
+     */
+    public func setData(_ haveItems: Bool) {
+        DispatchQueue.main.async {
+            self.voteEmptyView?.isHidden = haveItems
+            self.voteWrapperView?.isHidden = !haveItems
+        }
     }
     
     /**
@@ -76,7 +81,6 @@ class VoteTableViewCell: UITableViewCell {
     public func didTapExpandView(_ complete: @escaping boolClosure) {
         self.selectHandler = complete
     }
-    
     //******************************************************
     //MARK: - Action
     //******************************************************
@@ -89,5 +93,14 @@ class VoteTableViewCell: UITableViewCell {
         sender.isSelected = !sender.isSelected
         profileLineView?.isHidden = sender.isSelected
         selectHandler?(sender.isSelected)
+    }
+    
+    /**
+     * @투표 추가하기
+     * @creator : coder3306
+     * @param sender : UIButton
+     */
+    @IBAction private func actionAddVote(_ sender: UIButton) {
+        NotificationCenter.default.post(name: .showAddVoteView, object: nil)
     }
 }

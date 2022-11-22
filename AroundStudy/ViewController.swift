@@ -12,11 +12,6 @@ class ViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        appDelegate.switchMain()
-    }
-    
-    @IBAction func actionMoveOpen(_ sender: Any) {
-        let vc = OpenStudyStep3ViewController(nibName: "OpenStudyStep3ViewController", bundle: nil)
-        self.navigationController?.pushViewController(vc, animated: true)
+        appDelegate.switchMain()
     }
 }
