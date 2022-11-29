@@ -14,7 +14,7 @@ extension Bundle {
         guard let file = self.path(forResource: Bundle.keyName, ofType: "plist") else { return "" }
         guard let resource = NSDictionary(contentsOfFile: file) else { return "" }
         guard let key = resource["KAKAO_RESTAPI_KEY"] as? String else {
-            fatalError("API KEY MISSMACHING")
+            return ""
         }
         return key
     }

@@ -87,8 +87,8 @@ extension ProfileViewController {
     @objc private func actionNaviBack(_ sender: UIButton) {
         //FIXME: - 데이터의 수정된 부분이 있는지 검사 후 수정되었을 시에 팝업 띄우기, 그외에는 바로 나가게 설정
         showPopup(self, id: 0, title: "프로필 수정 나가기", message: "수정한 정보들이 저장되지 않았습니다.\n저장하지 않고 나가시겠습니까?", oneButtonTitle: "나가기", twoButtonTitle: "취소")
-
     }
+    
     /**
      * @프로필 수정사항 저장하기
      * @creator : coder3306

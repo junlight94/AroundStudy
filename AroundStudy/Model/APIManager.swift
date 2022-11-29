@@ -21,7 +21,7 @@ public actor APIManager {
      * @creator : coder3306
      * @param url : 서버에 요청할 URL 주소
      * @param type : 모델 데이터
-     * @param method : 요청방식(get,post,put,delete)
+     * @param method : RESTful API 요청방식(get,post,put,delete) 설정
      * @param uri : 서버에 있는 리소스 주소 설정
      * @param param : 서버에 요청할 데이터의 파라미터
      * @param header : 서버에 요청할 부가적인 정보
@@ -32,7 +32,6 @@ public actor APIManager {
                                  , method: method
                                  , parameters: param
                                  , headers: header).serializingDecodable(type)
-        //FIXME: - 모델 매핑 미스에 대한 오류처리 추가 필요함
         guard await (request.response.response?.statusCode == 200) else { throw ApiError.statusCodeError }
         guard await (request.response.value != nil) else { throw ApiError.emptyData }
         return try await request.value

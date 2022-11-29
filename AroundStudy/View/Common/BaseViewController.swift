@@ -205,7 +205,6 @@ class BaseViewController: UIViewController {
         }
         floatingPanelController?.layout = layout
         floatingPanelController?.invalidateLayout()
-        //FIXME: 스크롤뷰 설정하기?
         floatingPanelController?.track(scrollView: targetScrollView)
         floatingPanelController?.addPanel(toParent: self)
         floatingPanelController?.backdropView.dismissalTapGestureRecognizer.isEnabled = true

@@ -35,6 +35,7 @@ extension UIImageView {
                         self.kf.setImage(with: resource)
                     }
                 case .failure(let error):
+                    //FIXME: - 에러 핸들링 필요
                     print(error)
             }
         }
