@@ -17,7 +17,7 @@ class VoteViewController: BaseViewController {
     /// 셀 높이 저장
     var cellHeights = [IndexPath: CGFloat]()
     /// DUMMY
-    let testcount = 0
+    var testcount = 0
     // willDisplay의 노티피케이션 전송 여부
     var isPost: Bool = false
     
@@ -27,7 +27,7 @@ class VoteViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initTableViewCell()
-        NotificationCenter.default.post(name: NSNotification.Name("viewHeight"), object: 500000)
+        NotificationCenter.default.post(name: NSNotification.Name("viewHeight"), object: testcount * 230)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -49,7 +49,7 @@ class VoteViewController: BaseViewController {
         DispatchQueue.main.async {
             self.isPost = true
             NotificationCenter.default.post(name: NSNotification.Name("viewHeight")
-                                          , object: self.cellHeights.compactMap({ CGFloat($0.value )}).reduce(0, +))
+                                          , object: self.cellHeights.compactMap({ CGFloat($0.value) }).reduce(0, +))
         }
     }
 }
@@ -61,7 +61,7 @@ extension VoteViewController: tableViewExtension {
      * @creator : coder3306
      */
     private func initTableViewCell() {
-        tableVote?.isScrollEnabled = false
+        tableVote?.isScrollEnabled = true
         if let tableVote = tableVote {
             VoteTitleTableViewCell.registerXib(targetView: tableVote)
             VoteTableViewCell.registerXib(targetView: tableVote)

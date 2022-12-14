@@ -59,7 +59,8 @@ extension AddPlanViewController {
         completeButton.setTitle(isEditMode ? "수정완료" : "등록하기", for: .normal)
         completeButton.titleLabel?.font = UIFont(name: "Pretendard-Regular", size: 15)
         completeButton.tintColor = UIColor(named: "94")
-        setNavigationBar(isEditMode ? "일정 수정" : "새 일정 등록", leftBarButton: [backButton], rightBarButton: [completeButton], isLeftSetting: true)
+        let naviItems = NavigationBarItems(title: isEditMode ? "일정 수정" : "새 일정 등록", leftBarButton: [backButton], rightBarButton: [completeButton], isLeftSetting: true)
+        setNavigationBar(naviItems: naviItems)
         
         /// 컬러 피커 컬렉션뷰 설정
         let colorPickerCellNib = UINib(nibName: "ColorSetCollectionViewCell", bundle: nil)

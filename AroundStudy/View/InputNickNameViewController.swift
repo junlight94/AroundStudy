@@ -24,7 +24,8 @@ class InputNickNameViewController: BaseViewController {
         let backButton = UIButton()
         backButton.setImage(UIImage(named: "back"), for: .normal)
         backButton.addTarget(self, action: #selector(btnBackPressed), for: .touchUpInside)
-        setNavigationBar("정보입력", leftBarButton: [backButton], rightBarButton: nil, isLeftSetting: false)
+        let naviItems = NavigationBarItems(title: "정보입력", leftBarButton: [backButton], rightBarButton: nil, isLeftSetting: false)
+        setNavigationBar(naviItems: naviItems)
         
         btnNext.isEnabled = false
         

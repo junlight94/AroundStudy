@@ -8,8 +8,8 @@ import UIKit
 
 class CustomSegmentControl: UISegmentedControl {
     /**
-     * 레이아웃 초기화
-     * - Author: coder3306
+     * @레이아웃 초기화
+     * @creator : coder3306
      */
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -24,24 +24,28 @@ class CustomSegmentControl: UISegmentedControl {
         super.gestureRecognizerShouldBegin(gestureRecognizer)
         return true
     }
+    /**
+     * @커스텀 세그먼트 텍스트 속성 설정
+     * @creator : coder3306
+     * @param isSelected : 세그먼트 선택 여부
+     * @Return : 설정된 세그먼트 속성 반환
+     */
+    private func setSegmentString(_ isSelected: Bool) -> [NSAttributedString.Key: Any] {
+        let segmentSetting: [NSAttributedString.Key: Any] = [
+            .font : UIFont.setCustomFont(.medium, size: 15) ?? UIFont(),
+            .foregroundColor : isSelected ? #colorLiteral(red: 0.2079616189, green: 0.2079616189, blue: 0.2079616189, alpha: 1) : #colorLiteral(red: 0.6745098039, green: 0.6745098039, blue: 0.6745098039, alpha: 1)
+        ]
+        return segmentSetting
+    }
     
     /**
      * @레이아웃 설정
      * @creator : coder3306
      */
     private func setLayout() {
-        let segmentStringSelected: [NSAttributedString.Key : Any] = [
-            NSAttributedString.Key.font : UIFont(name: "Pretendard-Medium", size: 15)!,
-            NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0.2079616189, green: 0.2079616189, blue: 0.2079616189, alpha: 1)
-        ]
-        let segmentStringNormal: [NSAttributedString.Key : Any] = [
-            NSAttributedString.Key.font : UIFont(name: "Pretendard-Medium", size: 15)!,
-            NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0.6745098039, green: 0.6745098039, blue: 0.6745098039, alpha: 1)
-        ]
-
-        setTitleTextAttributes(segmentStringNormal, for: .normal)
-        setTitleTextAttributes(segmentStringSelected, for: .selected)
-        setTitleTextAttributes(segmentStringNormal, for: .highlighted)
+        setTitleTextAttributes(setSegmentString(false), for: .normal)
+        setTitleTextAttributes(setSegmentString(true), for: .selected)
+        setTitleTextAttributes(setSegmentString(false), for: .highlighted)
         
         if #available(iOS 13.0, *) {
             selectedSegmentTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)

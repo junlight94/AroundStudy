@@ -85,6 +85,38 @@ class CustomPickerTableViewCell: UITableViewCell {
     }
     
     /**
+     * @커스텀 피커 뷰 생성
+     * @creator : coder3306
+     * @param components : 피커뷰 아이템 위치 설정
+     * @param row : 피커뷰 열 갯수
+     * @Return : 제작된 뷰 반환
+     */
+    private func makePickerView(_ component: Int, row: Int) -> UIView {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 56, height: 50))
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 56, height: 50))
+        if component == 0 {
+            label.text = hour[row]
+            label.textAlignment = .center
+            label.font = UIFont.setCustomFont(.bold, size: 25)
+            view.addSubview(label)
+            return view
+        } else if component == 1 {
+            label.text = ":"
+            label.textAlignment = .center
+            label.font = UIFont.setCustomFont(.bold, size: 25)
+            view.addSubview(label)
+            return view
+        } else if component == 2 {
+            label.text = minute[row]
+            label.textAlignment = .center
+            label.font = UIFont.setCustomFont(.bold, size: 25)
+            view.addSubview(label)
+            return view
+        }
+        return view
+    }
+    
+    /**
      * @선택된 시간 데이터 콜백 메서드
      * @creator : coder3306
      * @Return : 선택된 시간을 전달함.
@@ -144,33 +176,7 @@ extension CustomPickerTableViewCell: UIPickerViewDataSource, UIPickerViewDelegat
      * @creator : coder3306
      */
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-        if component == 0 {
-            let view = UIView(frame: CGRect(x: 0, y: 0, width: 56, height: 50))
-            let hourLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 56, height: 50))
-            hourLabel.text = hour[row]
-            hourLabel.textAlignment = .center
-            hourLabel.font = UIFont.setCustomFont(.bold, size: 25)
-            view.addSubview(hourLabel)
-            return view
-        } else if component == 1 {
-            let view = UIView(frame: CGRect(x: 0, y: 0, width: 8, height: 50))
-            let dot = UILabel(frame: CGRect(x: 0, y: 0, width: 8, height: 50))
-            dot.text = ":"
-            dot.textAlignment = .center
-            dot.font = UIFont.setCustomFont(.bold, size: 25)
-            view.addSubview(dot)
-            return view
-        } else if component == 2 {
-            let view = UIView(frame: CGRect(x: 0, y: 0, width: 56, height: 50))
-            let minuteLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 56, height: 50))
-            minuteLabel.text = minute[row]
-            minuteLabel.textAlignment = .center
-            minuteLabel.font = UIFont.setCustomFont(.bold, size: 25)
-            view.addSubview(minuteLabel)
-            return view
-        }
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: 56, height: 50))
-        return view
+        return makePickerView(component, row: row)
     }
     
     /**

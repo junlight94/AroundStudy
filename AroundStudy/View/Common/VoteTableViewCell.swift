@@ -32,6 +32,7 @@ class VoteTableViewCell: UITableViewCell {
     private var selectHandler: boolClosure?
     /// 투표 올리기 요청 핸들러
     private var addVoteHandler: voidClosure?
+    
     //******************************************************
     //MARK: - DUMMY
     //******************************************************

@@ -41,7 +41,8 @@ class OpenStudyStep1ViewController: BaseViewController {
         let back = UIButton(type: .custom)
         back.setImage(UIImage(named: "back"), for: .normal)
         back.addTarget(self, action: #selector(popToView(_:)), for: .touchUpInside)
-        setNavigationBar("스터디 개설", leftBarButton: [back])
+        let naviItems = NavigationBarItems(title: "스터디 개설", leftBarButton: [back])
+        setNavigationBar(naviItems: naviItems)
     }
 }
 

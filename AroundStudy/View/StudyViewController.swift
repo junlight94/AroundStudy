@@ -42,7 +42,8 @@ class StudyViewController: BaseViewController {
         let btnSearch = UIButton()
         btnSearch.setImage(UIImage(named: "search"), for: .normal)
         btnSearch.addTarget(self, action: #selector(btnSearchPressed), for: .touchUpInside)
-        setNavigationBar("스터디", leftBarButton: nil, rightBarButton: [btnSearch], isLeftSetting: true)
+        let naviItems = NavigationBarItems(title: "스터디", leftBarButton: nil, rightBarButton: [btnSearch], isLeftSetting: true)
+        setNavigationBar(naviItems: naviItems)
         
         // PageViewController
         pageController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)

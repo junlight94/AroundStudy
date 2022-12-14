@@ -46,3 +46,12 @@ extension UIView {
         }
     }
 }
+
+extension UIViewController {
+    static var viewControllerName: String {
+        return String(describing: Self.self)
+    }
+    static var controller: UIViewController {
+        return self.init(nibName: viewControllerName, bundle: nil)
+    }
+}

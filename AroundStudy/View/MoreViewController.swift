@@ -48,7 +48,8 @@ class MoreViewController: BaseViewController {
         let setting = UIButton(type: .custom)
         setting.setImage(UIImage(named: "setting"), for: .normal)
         setting.addTarget(self, action: #selector(moveSetting(_:)), for: .touchUpInside)
-        setNavigationBar("더보기", rightBarButton: [setting], isLeftSetting: true)
+        let naviItems = NavigationBarItems(title: "더보기", rightBarButton: [setting], isLeftSetting: true)
+        setNavigationBar(naviItems: naviItems)
     }
 }
 

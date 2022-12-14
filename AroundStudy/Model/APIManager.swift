@@ -6,7 +6,6 @@
 
 import Foundation
 import Alamofire
-import Kingfisher
 
 public actor APIManager {
     /// API 호출 싱글턴 인스턴스

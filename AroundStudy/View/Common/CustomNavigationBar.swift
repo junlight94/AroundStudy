@@ -71,11 +71,7 @@ class CustomNavigationBar: UIView {
         stackView.axis = .horizontal
         stackView.alignment = .center
         stackView.spacing = 16
-        if isLeft {
-            stackView.accessibilityIdentifier = "NAVIGATIONLEFTITEMS"
-        } else {
-            stackView.accessibilityIdentifier = "NAVIGATIONRIGHTITEMS"
-        }
+        stackView.accessibilityIdentifier = isLeft ? "NAVIGATIONLEFTITEMS" : "NAVIGATIONRIGHTITEMS"
         
         containerView.addSubview(stackView)
         stackView.snp.makeConstraints {

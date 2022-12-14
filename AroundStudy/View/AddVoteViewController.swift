@@ -52,7 +52,8 @@ extension AddVoteViewController {
         completeButton.setTitle("완료", for: .normal)
         completeButton.titleLabel?.font = UIFont(name: "Pretendard-Regular", size: 15)
         completeButton.tintColor = UIColor(named: "94")
-        setNavigationBar("투표 올리기", leftBarButton: [backButton], rightBarButton: [completeButton], isLeftSetting: true)
+        let naviItems = NavigationBarItems(title: "투표 올리기", leftBarButton: [backButton], rightBarButton: [completeButton], isLeftSetting: true)
+        setNavigationBar(naviItems: naviItems)
         
         completeButton.addTarget(self, action: #selector(didTapCompleteButton), for: .touchUpInside)
     }

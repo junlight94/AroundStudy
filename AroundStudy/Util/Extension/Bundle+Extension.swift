@@ -13,9 +13,7 @@ extension Bundle {
     var KAKAO_RESTAPI_KEY: String {
         guard let file = self.path(forResource: Bundle.keyName, ofType: "plist") else { return "" }
         guard let resource = NSDictionary(contentsOfFile: file) else { return "" }
-        guard let key = resource["KAKAO_RESTAPI_KEY"] as? String else {
-            return ""
-        }
+        guard let key = resource["KAKAO_RESTAPI_KEY"] as? String else { return "" }
         return key
     }
 }

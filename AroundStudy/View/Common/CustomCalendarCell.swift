@@ -46,8 +46,9 @@ class CalendarCell: FSCalendarCell {
      * @필요 시 초기화 설정
      * @creator : coder3306
      */
-    required init!(coder aDecoder: NSCoder!) {
+    required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        initLayout()
     }
     
     /**
@@ -75,6 +76,16 @@ class CalendarCell: FSCalendarCell {
             return
         }
         connectionRect.size.height = connectionRect.height * 5 / 6
+        setConnectionLayer(connectionRect)
+        setSelectionLayer(connectionRect)
+    }
+    
+    /**
+     * @선택된 날짜 간 연결부 레이어 설정
+     * @creator : coder3306
+     * @param connectionRect : 날짜간 연결부 사이즈
+     */
+    private func setConnectionLayer(_ connectionRect: CGRect) {
         switch selectionType {
             case .none, .single:
                 break
@@ -94,7 +105,14 @@ class CalendarCell: FSCalendarCell {
                 rect.size.width = connectionRect.width / 2
                 self.connectionLayer?.path = UIBezierPath(rect: rect).cgPath
         }
-        
+    }
+    
+    /**
+     * @선택된 날짜의 레이어 설정
+     * @creator : coder3306
+     * @param connectionRect : 날짜간 연결부 사이즈
+     */
+    private func setSelectionLayer(_ connectionRect: CGRect) {
         if selectionType == .single || selectionType == .leftBorder || selectionType == .rightBorder {
             self.selectionLayer?.isHidden = false
             let diameter: CGFloat = min(connectionRect.height, connectionRect.width)

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CategoryItemCollectionViewCell: UICollectionViewCell, reusableCollectionView {
+class CategoryItemCollectionViewCell: UICollectionViewCell, ReusableCollectionView {
     /// 카테고리 이미지
     @IBOutlet weak var imgCategory: UIImageView?
     /// 카테고리 타이틀

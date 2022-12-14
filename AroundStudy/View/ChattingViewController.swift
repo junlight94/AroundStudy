@@ -35,7 +35,8 @@ class ChattingViewController: BaseViewController {
         let btnSearch = UIButton()
         btnSearch.setImage(UIImage(named: "search"), for: .normal)
         btnSearch.addTarget(self, action: #selector(btnSearchPressed), for: .touchUpInside)
-        setNavigationBar("채팅", leftBarButton: nil, rightBarButton: [btnSearch], isLeftSetting: true)
+        let naviItems = NavigationBarItems(title: "채팅", rightBarButton: [btnSearch], isLeftSetting: true)
+        setNavigationBar(naviItems: naviItems)
         
         //UIPageViewController
         pageController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)

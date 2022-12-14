@@ -72,7 +72,8 @@ class ProfileViewController: BaseViewController {
         save.titleLabel?.font = UIFont.setCustomFont(.regular, size: 15)
         save.setTitleColor(UIColor(named: "94"), for: .normal)
         
-        setNavigationBar("프로필 정보", leftBarButton: [back], rightBarButton: [save], isLeftSetting: true)
+        let naviItems = NavigationBarItems(title: "프로필 정보", leftBarButton: [back], rightBarButton: [save], isLeftSetting: true)
+        setNavigationBar(naviItems: naviItems)
     }
 }
 

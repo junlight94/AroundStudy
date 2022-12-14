@@ -75,7 +75,7 @@ protocol PhotoCropDelegate {
  * @컬렉션뷰 재사용 설정을 위한 프로토콜
  * @creator : coder3306
  */
-protocol reusableCollectionView {
+protocol ReusableCollectionView {
     /// 재사용 셀 식별자
     static var reuseIdentifier: String { get }
     /// 재사용 셀 파일 이름
@@ -94,7 +94,7 @@ protocol reusableCollectionView {
     static func dequeueReusableCell(targetView: UICollectionView, indexPath: IndexPath) -> Self?
 }
 
-extension reusableCollectionView where Self: UICollectionViewCell {
+extension ReusableCollectionView where Self: UICollectionViewCell {
     static var reuseIdentifier: String {
         return String(describing: Self.self)
     }
@@ -120,4 +120,25 @@ extension reusableCollectionView where Self: UICollectionViewCell {
  */
 protocol ProfileEditCompleteDelegate: AnyObject {
     func didCompleteEdit()
+}
+
+protocol NavigationBarItemsProtocol {
+    var title: String? { get }
+    var leftBarButton: [UIView]? { get }
+    var rightBarButton: [UIView]? { get }
+    var isLeftSetting: Bool { get }
+}
+
+struct NavigationBarItems: NavigationBarItemsProtocol {
+    var title: String?
+    var leftBarButton: [UIView]?
+    var rightBarButton: [UIView]?
+    var isLeftSetting: Bool
+    
+    init(title: String? = nil, leftBarButton: [UIView]? = nil, rightBarButton: [UIView]? = nil, isLeftSetting: Bool = false) {
+        self.title = title
+        self.leftBarButton = leftBarButton
+        self.rightBarButton = rightBarButton
+        self.isLeftSetting = isLeftSetting
+    }
 }

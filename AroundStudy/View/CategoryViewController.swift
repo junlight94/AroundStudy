@@ -38,7 +38,9 @@ class CategoryViewController: BaseViewController {
         let search = UIButton(type: .custom)
         search.addTarget(self, action: #selector(actionSearch(_:)), for: .touchUpInside)
         search.setImage(UIImage(named: "search"), for: .normal)
-        setNavigationBar("카테고리", leftBarButton: [button], rightBarButton: [search], isLeftSetting: true)
+        
+        let naviItems = NavigationBarItems(title: "카테고리", leftBarButton: [button], rightBarButton: [search], isLeftSetting: true)
+        setNavigationBar(naviItems: naviItems)
     }
 }
 

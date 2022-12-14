@@ -92,17 +92,15 @@ class BaseViewController: UIViewController {
     //MARK: - Method
     //******************************************************
     /**
-     * @커스텀 네비게이션 바 생성 처리
+     * @커스텀 네비게이션 바 생성
      * @creator : coder3306
-     * @param title : 네비게이션 바 타이틀
-     * @param leftBarButton : 네비게이션 바 왼쪽 버튼 리스트
-     * @param rightbarButton : 네비게이션 바 오른쪽 버튼 리스트
+     * @param naviItems: 네비게이션 바 생성에 필요한 아이템 설정
      */
-    public func setNavigationBar(_ title: String? = nil, leftBarButton: [UIView]? = nil, rightBarButton: [UIView]? = nil, isLeftSetting: Bool = false) {
+    public func setNavigationBar(naviItems: NavigationBarItems) {
         /// 기본 네비게이션바 숨기기
         self.navigationController?.navigationBar.isHidden = true
         self.customNavigationBar.backgroundColor = .white
-        customNavigationBar.setNavigationBar(title, leftBarButton: leftBarButton, rightBarButton: rightBarButton)
+        customNavigationBar.setNavigationBar(naviItems.title, leftBarButton: naviItems.leftBarButton, rightBarButton: naviItems.rightBarButton)
         customNavigationBar.navigationTitleLabel.font = UIFont.setCustomFont(.regular, size: 17)
         
         self.view.addSubview(customNavigationBar)
@@ -111,7 +109,7 @@ class BaseViewController: UIViewController {
             $0.bottom.equalTo(customNavigationBar.containerView)
         }
         
-        if isLeftSetting && leftBarButton != nil {
+        if naviItems.isLeftSetting && naviItems.leftBarButton != nil {
             customNavigationBar.navigationTitleLabel.snp.remakeConstraints { make in
                 make.centerY.equalTo(customNavigationBar.containerView)
                 if let leftItems = customNavigationBar.containerView.subviews.filter({$0.accessibilityIdentifier == "NAVIGATIONLEFTITEMS"}).first {
@@ -121,7 +119,7 @@ class BaseViewController: UIViewController {
                     make.trailing.lessThanOrEqualTo(rightItems.snp.leading).offset(-12)
                 }
             }
-        } else if isLeftSetting && leftBarButton == nil {
+        } else if naviItems.isLeftSetting && naviItems.leftBarButton == nil {
             customNavigationBar.navigationTitleLabel.font = UIFont.setCustomFont(.semiBold, size: 20)
             customNavigationBar.navigationTitleLabel.snp.remakeConstraints { make in
                 make.centerY.equalTo(customNavigationBar.containerView)
